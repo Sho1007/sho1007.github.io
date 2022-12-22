@@ -9,7 +9,7 @@ tag:
 toc: true
 toc_sticky: true
 date: 2022-12-17
-last-modified-at: 2022-12-17
+last-modified-at: 2022-12-22
 ---
 이 문서는 Udemy의  'RPG Core Combat Creator' 강의를 보고 배운 점을 적은 것입니다.
 {: .notice}
@@ -23,6 +23,15 @@ last-modified-at: 2022-12-17
 
 ## Animator Component
 게임 오브젝트에 붙여서, 특정 애니메이터 컨트롤러를 통해 해당 오브젝트에 애니메이션을 적용시킨다.
+
+### Animator Component의 Parameter 접근하기
+```c#
+private void Function()
+{
+    float value = 0.5f;
+    GetComponent<Animator>().SetFloat("MyParameterName", value);
+}
+```
 
 ## Animator Controller
 애니메이션들과 변환 과정으로 구성된 State Machine
