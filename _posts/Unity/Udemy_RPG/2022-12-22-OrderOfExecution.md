@@ -11,6 +11,8 @@ toc_sticky: true
 date: 2022-12-22
 last-modified-at: 2022-12-22
 ---
+이 문서는 Udemy의  'RPG Core Combat Creator' 강의를 보고 배운 점을 적은 것입니다.
+{: .notice}
 
 # Order Of Execution
 유니티에서 이벤트 함수의 실행 순서는 아래와 같다.   
