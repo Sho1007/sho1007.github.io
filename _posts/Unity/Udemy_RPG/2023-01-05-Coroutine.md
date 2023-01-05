@@ -82,7 +82,55 @@ private void Update()
 ```
 
 # yield 의 종류
-## 1. 
+## 1. null
+Update()가 끝나면 실행 (다음 프레임에 실행)
+## 2. new WaitForEndOfFrame()
+한 프레임워크가 모두 종료된 후 실행   
+즉, 모든 Update가 끝나고, 화면 렌더링까지 마친 후 실행
+## 3. new WaitForFixedUpdate()
+FixedUpdate()가 끝나면 실행
+## 4. new WaitForSeconds(1.0f)
+해당 초가 끝나면 실행
+## 5. new WaitForSecondsRealTime(1.0f)
+해당 초가 끝나면 실행, 하지만 여기서 초(시간)은 Time.timeScale의 영향을 받지 않는 <B>절대 시간</B>을 의미
+## 6. new WaitUntil(bool)
+매개변수인 bool의 값이 참이 될때 실행   
+실행 위치는 Update() 와 LateUpdate() 사이
+```c#
+public class TestClass : MonoBehaviour
+{
+    private int num1 = 10, num2 = 20;
+
+    private void Start()
+    {
+        StartCoroutine(CompareCoroutine());
+    }
+
+    private IEnumerator CompareCoroutine()
+    {
+        Debug.Log("비교 시작");
+        yield return new WaitUntil(()=>num1 > num2);
+        Debug.Log("비교 끝");
+    }
+    
+    private void Update()
+    {
+        num1++; // 11번의 업데이트가 끝나면 "비교 끝" 출력
+    }
+}
+```
+## 7. new WaitWhile(bool)
+WaitUntil과 똑같지만 bool 값이 false 일 때 실행
+
+## 8. StartCoroutine(IEnumerator)
+함수 안의 Coroutine이 끝나면 실행
+
+## 기타
+yield return new www(string) : 웹 통신 작업이 끝날 때까지 대기   
+yield return new AsyncIoeration : 비동기 작업이 끝날 때까지 대기 (씬 로딩);
+
 
 # 참조
+https://docs.unity3d.com/kr/560/Manual/Coroutines.html   
+https://ansohxxn.github.io/c%20sharp/enumerate/   
 https://yeobi27.tistory.com/entry/Unity-yield-return-%EC%A2%85%EB%A5%98
