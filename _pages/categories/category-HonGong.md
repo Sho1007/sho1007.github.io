@@ -1,5 +1,5 @@
 ---
-title:          "혼공학습단"
+title:          "혼공컴운 11기"
 layout:         archive
 permalink:      categories/HonGong
 author_profile: true
