@@ -1,0 +1,994 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>1049 기타줄 - Today I Learned</title>
+<meta name="description" content="1049. 기타줄 / c++ / Silver4 / 20분">
+
+
+  <meta name="author" content="Sho1007">
+  
+  <meta property="article:author" content="Sho1007">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Today I Learned">
+<meta property="og:title" content="1049 기타줄">
+<meta property="og:url" content="https://sho1007.github.io/boj/1049/">
+
+
+  <meta property="og:description" content="1049. 기타줄 / c++ / Silver4 / 20분">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-01-17T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://sho1007.github.io/boj/1049/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Sho1007",
+      "url": "https://sho1007.github.io/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="k2bJup-vss3c_EqpZldH9RF0_HoTiOygqrsuWut1nxY" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Today I Learned Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+<!-- Use Math -->
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Today I Learned
+          <span class="site-subtitle">내가 공부한 것들을 기록하는 공간</span>
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://sho1007.github.io/">
+        <img src="/assets/images/logo.jpg" alt="Sho1007" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://sho1007.github.io/" itemprop="url">Sho1007</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MMORPG 클라이언트 개발자 지망생</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul / Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/Sho1007" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+
+  
+    <!-- 이 파일은 식빵맘(ansohxxn)님의 포스트를 보고 따라서 직접 타이핑한 것입니다 -->
+<!-- 전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장 -->
+
+
+
+<nav class = "nav__list">
+    <input id = "ac-toc" name = "accordion-toc" type = "checkbox" />
+    <label for = "ac-toc">Toggle menu</label>
+    <ul class = "nav__items" id = "category_tag_menu">
+        <!-- 전체 글 수 -->
+        <li>
+            <span>전체 글 수</span><span>135</span>
+        </li>
+        <li>
+            <!-- span 태그로 카테고리들을 크게 분류 ex.C/C++/C -->
+            <span class = "nav__sub-title">혼공학습단</span>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/HonGong" class=""> 혼공컴운 11기 (7)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            <span class = "nav__sub-title">Programming Language</span>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/ProgrammingLanguage/CSharp" class=""> C # (1)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            <span class = "nav__sub-title">Coding Test</span>
+                <!-- ul 태그로 같은 카테고리들 모아둔 페이지들 나열 -->
+                <ul>
+                    <!-- BOJ 카테고리 글들을 모아둔 페이지인 /categories/boj 주소의 글로 링크 연결 -->
+                    <!-- category[1].size 로 해당 카테고리를 가진 글의 개수 표시 -->
+                    
+                        
+                            <li><a href="/categories/boj" class="">BOJ (94)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/programmers" class="">Programmers (9)</a></li>
+                        
+                    
+                        
+                    
+                </ul>
+                <ul>
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/algorithm" class="">Algorithm (4)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            <span class = "nav__sub-title">Mathmatics</span>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/math/highschool" class="">고등 수학 (1)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            <span class = "nav__sub-title">Unity</span>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/Unity" class="">유니티 (1)</a></li>
+                        
+                    
+                </ul>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/Unity/Udemy" class="">유니티 유데미 강의 (16)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            <span class = "nav__sub-title">Design Pattern</span>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/DesignPattern" class="">디자인 패턴 (2)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+        </li>
+    </ul>
+</nav>
+  
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="1049 기타줄">
+    <meta itemprop="description" content="1049. 기타줄 / c++ / Silver4 / 20분">
+    <meta itemprop="datePublished" content="2023-01-17T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://sho1007.github.io/boj/1049/" class="u-url" itemprop="url">1049 기타줄
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-01-17T00:00:00+00:00">January 17, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#1049-기타줄--c--silver4--20분">1049. 기타줄 / c++ / Silver4 / 20분</a><ul><li><a href="#문제">문제</a></li><li><a href="#접근-방식">접근 방식</a></li><li><a href="#문제-풀이">문제 풀이</a></li><li><a href="#다시-생각해-볼-점">다시 생각해 볼 점</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="1049-기타줄--c--silver4--20분">1049. 기타줄 / c++ / Silver4 / 20분</h1>
+
+<h2 id="문제">문제</h2>
+<p>https://www.acmicpc.net/problem/1049</p>
+<ol>
+  <li>새로 사야할 기타 줄 N개와 기타줄 판매 업체 수 M개가 주어진다. (1 &lt;= N &lt;= 100), (1 &lt;= M &lt;= 50)</li>
+  <li>각 판매 업체마다 6개들이 가격과 1개들이 가격이 다를 때, 적어도 N개를 살 수 있는 최소 가격은? (가격은 0 이상, 1’000 이하)</li>
+</ol>
+
+<h2 id="접근-방식">접근 방식</h2>
+<p>그리디</p>
+<ol>
+  <li>6개들이와 1개들이를 각각 벡터에 저장하여 정렬하려고 생각했다.</li>
+  <li>그런데 생각하다보니 굳이 다른 가격을 저장할 필요 없이 6개들이와 1개들이의 최저가들만 저장하면 된다는 사실을 깨달았다.</li>
+  <li>만약 1개들이 가격 * 6이 6개들이 가격보다 작거나 같다면, 고민할 필요없이 N개만큼 사면 될 일이었고,</li>
+  <li>6개 가격보다 크다면, 일단 6의 배수만큼은 6개들이 가격만큼 사고,</li>
+  <li>그 후 남은 갯수 * 1개들이 가격과 6개들이 가격을 다시 비교하여 더 싼쪽으로 사면 해결</li>
+</ol>
+
+<h2 id="문제-풀이">문제 풀이</h2>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#pragma GCC optimize("Ofast")
+#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="kt">int</span> <span class="nf">Min</span><span class="p">(</span><span class="kt">int</span> <span class="n">A</span><span class="p">,</span> <span class="kt">int</span> <span class="n">B</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="n">A</span> <span class="o">&lt;</span> <span class="n">B</span> <span class="o">?</span> <span class="n">A</span> <span class="o">:</span> <span class="n">B</span><span class="p">;}</span>
+
+<span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">num</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">onePrice</span><span class="p">,</span> <span class="n">sixPrice</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span> <span class="o">&gt;&gt;</span> <span class="n">M</span><span class="p">;</span>
+    
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">sixPrice</span> <span class="o">&gt;&gt;</span> <span class="n">onePrice</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
+            <span class="n">sixPrice</span> <span class="o">=</span> <span class="n">Min</span><span class="p">(</span><span class="n">sixPrice</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
+            <span class="n">onePrice</span> <span class="o">=</span> <span class="n">Min</span><span class="p">(</span><span class="n">onePrice</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="kt">int</span> <span class="n">totalPrice</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">onePrice</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">&lt;=</span> <span class="n">sixPrice</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">totalPrice</span> <span class="o">=</span> <span class="n">N</span> <span class="o">*</span> <span class="n">onePrice</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">totalPrice</span> <span class="o">=</span> <span class="p">(</span><span class="n">N</span> <span class="o">/</span> <span class="mi">6</span><span class="p">)</span> <span class="o">*</span> <span class="n">sixPrice</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">remain</span> <span class="o">=</span> <span class="p">(</span><span class="n">N</span><span class="o">%</span><span class="mi">6</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">remain</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">totalPrice</span> <span class="o">+=</span> <span class="n">Min</span><span class="p">(</span><span class="n">sixPrice</span><span class="p">,</span> <span class="n">onePrice</span> <span class="o">*</span> <span class="n">remain</span><span class="p">);</span>
+        <span class="p">}</span>
+        
+    <span class="p">}</span>
+    
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">totalPrice</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+    
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
+<ol>
+  <li>가장 싼 가격들만 저장하면 된다는걸 깨닫는게 중요했다. (그리디는 항상 최소 혹은 최대만 필요하기 때문에)</li>
+  <li>조건을 검사할 때 세분화하여 잘 처리하는 것이 중요했다.
+    <ol>
+      <li>1개들이로 다 사도 되는경우</li>
+      <li>6개들이를 살 필요가 있는 경우
+        <ol>
+          <li>남은 갯수도 6개들이로 사야하는 경우</li>
+          <li>남은 갯수는 1개들이로 사야하는 경우</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>실버4라 그런지 큰 무리없이 한번에 클리어</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
+    
+      <a href="/tags/#greedy" class="page__taxonomy-item p-category" rel="tag">Greedy</a><span class="sep">, </span>
+    
+      <a href="/tags/#sort" class="page__taxonomy-item p-category" rel="tag">Sort</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#boj" class="page__taxonomy-item p-category" rel="tag">BOJ</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-01-17T00:00:00+00:00">January 17, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=1049+%EA%B8%B0%ED%83%80%EC%A4%84%20https%3A%2F%2Fsho1007.github.io%2Fboj%2F1049%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fboj%2F1049%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fboj%2F1049%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/boj/1700/" class="pagination--pager" title="1700 멀티탭 스케줄링
+">Previous</a>
+    
+    
+      <a href="/boj/10799/" class="pagination--pager" title="10799 쇠막대기
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/programmers/42579/" rel="permalink">99클럽 코테 스터디 1일차 TIL - 42579 베스트앨범
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-05-20T00:00:00+00:00">May 20, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">42579. 베스트앨범 / c++ / level3 / 13분
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/boj/18352/" rel="permalink">18352 특정 거리의 도시 찾기
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-05-14T00:00:00+00:00">May 14, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">18352 특정 거리의 도시 찾기 / c++ / Silver2 / 30분
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/boj/11652/" rel="permalink">11652 카드
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-05-05T00:00:00+00:00">May 5, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">11652 카드 / c++ / Silver4 / 8분
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/boj/3085/" rel="permalink">3085 사탕 게임
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-05-04T00:00:00+00:00">May 4, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">3085 사탕 게임 / c++ / Silver2 / 40분
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/Sho1007" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> GitLab</a></li>
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Sho1007. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+
+  </body>
+</html>
