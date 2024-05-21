@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[혼공컴운] 5주차 - Today I Learned</title>
-<meta name="description" content="">
+<!-- begin _includes/seo.html --><title>99클럽 코테 스터디 2일차 TIL - 42578 의상 - Today I Learned</title>
+<meta name="description" content="42578. 의상 / c++ / level2 / 8분">
 
 
   <meta name="author" content="Sho1007">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Today I Learned">
-<meta property="og:title" content="[혼공컴운] 5주차">
-<meta property="og:url" content="https://sho1007.github.io/hongong/Week5/">
+<meta property="og:title" content="99클럽 코테 스터디 2일차 TIL - 42578 의상">
+<meta property="og:url" content="https://sho1007.github.io/programmers/42578/">
 
 
-  <meta property="og:description" content="">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-02-04T00:00:00+00:00">
+  <meta property="og:description" content="42578. 의상 / c++ / level2 / 8분">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-05-21T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://sho1007.github.io/hongong/Week5/">
+
+<link rel="canonical" href="https://sho1007.github.io/programmers/42578/">
 
 
 
@@ -498,16 +498,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[혼공컴운] 5주차">
-    <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2024-02-04T00:00:00+00:00">
+    <meta itemprop="headline" content="99클럽 코테 스터디 2일차 TIL - 42578 의상">
+    <meta itemprop="description" content="42578. 의상 / c++ / level2 / 8분">
+    <meta itemprop="datePublished" content="2024-05-21T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://sho1007.github.io/hongong/Week5/" class="u-url" itemprop="url">[혼공컴운] 5주차
+            <a href="https://sho1007.github.io/programmers/42578/" class="u-url" itemprop="url">99클럽 코테 스터디 2일차 TIL - 42578 의상
 </a>
           </h1>
           
@@ -518,7 +518,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2024-02-04T00:00:00+00:00">February 4, 2024</time>
+        <time datetime="2024-05-21T00:00:00+00:00">May 21, 2024</time>
       </span>
     
 
@@ -546,34 +546,40 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#기본미션">기본미션</a></li><li><a href="#선택-미션">선택 미션</a></li></ul>
+              <ul class="toc__menu"><li><a href="#42578-의상--c--level2--8분">42578. 의상 / c++ / level2 / 8분</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#자료구조--해시">자료구조 / 해시</a></li></ul></li><li><a href="#생각해-볼-점">생각해 볼 점</a><ul><li><a href="#해시태그">해시태그</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <p><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/B9177037040_l.jpg?raw=true" alt="image" /></p>
+        <h1 id="42578-의상--c--level2--8분">42578. 의상 / c++ / level2 / 8분</h1>
 
-<p>진도 Chapter 12 ~ 13 (1/29 ~ 2/4)</p>
+<h2 id="문제-및-코드">문제 및 코드</h2>
 
-<h2 id="기본미션">기본미션</h2>
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/42578.%E2%80%85%EC%9D%98%EC%83%81"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="자료구조--해시">자료구조 / 해시</h3>
 <ol>
-  <li><b>p.363의 확인 문제 1번</b> <br />
- 뮤테스 락과 세마포에 대한 설명으로 옳지 않은 것을 고르세요. <b>답 : 4번</b>
+  <li>매일 다른 옷을 입어야 하고 종류별로 최대 1가지 의상을 착용하거나 착용하지 않을 수 있는데, 최소 1가지의 옷은 입어야 한다.</li>
+  <li>문제를 보고 든 생각은 종류 (카테고리) 별로 옷을 나누고, 그 옷들의 조합의 수를 구하는 것이었다.</li>
+  <li>이 때 주의해야 할 점은 3가지이다.
     <ol>
-      <li>뮤테스 락은 임계 구역을 잠근 뒤 임계 구역에 진입함으로써 상호 배제를 위한 동기화를 이룹니다.</li>
-      <li>세마포는 공유 자원이 여러 개 있는 상황에서도 이용할 수 있습니다.</li>
-      <li>세마포를 이용해 프로세스 실행 순서 제어를 위한 동기화도 이룰 수 있습니다.</li>
-      <li>세마포를 이용하면 반드시 바쁜 대기를 해야합니다.</li>
+      <li>각 종류별로 1가지를 입거나 입지 않을 수 있기 때문에 종류의 가짓수 + 1을 한 값에서 조합을 구해야 한다.</li>
+      <li>최소 1개의 옷을 입어야 하기 때문에 모두 입지 않은 경우는 빼야한다.</li>
+      <li>마지막으로 옷의 종류가 1가지만 있는 경우 1번과 2번이 상충되어 해당 종류의 가짓수를 그대로 출력한다.</li>
     </ol>
   </li>
 </ol>
 
-<h2 id="선택-미션">선택 미션</h2>
-<p><b>Ch.12(12-1) 임계 구역, 상호 배제 개념을 정리하기</b></p>
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
 <ol>
-  <li>임계구역 : 동시에 실행하면 문제가 발생하는 자원에 접근하는 코드 영역</li>
-  <li>상호배제 : 한 프로세스가 임계 구역에 진입했다면 다른 프로세스는 임계 구역에 들어올 수 없다.</li>
+  <li>챌린저 문제를 한참 고민하다 시간이 촉박하여 미들러 문제를 풀게 되었다.</li>
+  <li>해싱을 통해 데이터를 정리 (나는 이것을 재료 손질이라고 부른다.) 하고 그 데이터를 가지고 추가적인 로직(여기서는 조합)과 예외 조건 등을 처리하는 문제였다.</li>
+  <li>해싱은 그 자체로 문제 해결 알고리즘이 될 수 있지만, 이렇게 문제를 풀기 위한 사전 작업이 될 수도 있다는 점을 다시 한번 깨달았다.</li>
 </ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>
 
         
       </section>
@@ -590,9 +596,17 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#computer-structure" class="page__taxonomy-item p-category" rel="tag">Computer Structure</a><span class="sep">, </span>
+      <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a><span class="sep">, </span>
     
-      <a href="/tags/#operating-system" class="page__taxonomy-item p-category" rel="tag">Operating System</a>
+      <a href="/tags/#codingtest" class="page__taxonomy-item p-category" rel="tag">CodingTest</a><span class="sep">, </span>
+    
+      <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
+    
+      <a href="/tags/#data-structure" class="page__taxonomy-item p-category" rel="tag">Data Structure</a><span class="sep">, </span>
+    
+      <a href="/tags/#hash" class="page__taxonomy-item p-category" rel="tag">Hash</a><span class="sep">, </span>
+    
+      <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
     
     </span>
   </p>
@@ -609,7 +623,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#hongong" class="page__taxonomy-item p-category" rel="tag">HonGong</a>
+      <a href="/categories/#programmers" class="page__taxonomy-item p-category" rel="tag">Programmers</a>
     
     </span>
   </p>
@@ -617,7 +631,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-02-04T00:00:00+00:00">February 4, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-05-21T00:00:00+00:00">May 21, 2024</time></p>
 
       </footer>
 
@@ -626,23 +640,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5B%ED%98%BC%EA%B3%B5%EC%BB%B4%EC%9A%B4%5D+5%EC%A3%BC%EC%B0%A8%20https%3A%2F%2Fsho1007.github.io%2Fhongong%2FWeek5%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=99%ED%81%B4%EB%9F%BD+%EC%BD%94%ED%85%8C+%EC%8A%A4%ED%84%B0%EB%94%94+2%EC%9D%BC%EC%B0%A8+TIL+-+42578+%EC%9D%98%EC%83%81%20https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F42578%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fhongong%2FWeek5%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F42578%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fhongong%2FWeek5%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F42578%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/hongong/Week4/" class="pagination--pager" title="[혼공컴운] 4주차
+      <a href="/programmers/42579/" class="pagination--pager" title="99클럽 코테 스터디 1일차 TIL - 42579 베스트앨범
 ">Previous</a>
     
     
-      <a href="/hongong/Week6/" class="pagination--pager" title="[혼공컴운] 6주차
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -656,53 +669,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/programmers/42578/" rel="permalink">99클럽 코테 스터디 2일차 TIL - 42578 의상
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2024-05-21T00:00:00+00:00">May 21, 2024</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">42578. 의상 / c++ / level2 / 8분
-</p>
-  </article>
-</div>
-
         
           
 
@@ -840,6 +806,53 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">11652 카드 / c++ / Silver4 / 8분
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/boj/3085/" rel="permalink">3085 사탕 게임
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-05-04T00:00:00+00:00">May 4, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">3085 사탕 게임 / c++ / Silver2 / 40분
 </p>
   </article>
 </div>

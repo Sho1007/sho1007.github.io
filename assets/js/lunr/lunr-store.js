@@ -808,4 +808,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Data Structure","Hash","Sort"],
         "url": "/programmers/42579/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 2일차 TIL - 42578 의상",
+        "excerpt":"42578. 의상 / c++ / level2 / 8분 문제 및 코드 접근 방식 자료구조 / 해시 매일 다른 옷을 입어야 하고 종류별로 최대 1가지 의상을 착용하거나 착용하지 않을 수 있는데, 최소 1가지의 옷은 입어야 한다. 문제를 보고 든 생각은 종류 (카테고리) 별로 옷을 나누고, 그 옷들의 조합의 수를 구하는 것이었다....","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Data Structure","Hash"],
+        "url": "/programmers/42578/",
+        "teaser": null
       }]

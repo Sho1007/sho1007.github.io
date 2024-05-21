@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-05-20T10:04:45+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 1일차 TIL - 42579 베스트앨범</title><link href="https://sho1007.github.io/programmers/42579/" rel="alternate" type="text/html" title="99클럽 코테 스터디 1일차 TIL - 42579 베스트앨범" /><published>2024-05-20T00:00:00+00:00</published><updated>2024-05-20T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42579</id><content type="html" xml:base="https://sho1007.github.io/programmers/42579/"><![CDATA[<h1 id="42579-베스트앨범--c--level3--13분">42579. 베스트앨범 / c++ / level3 / 13분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-05-21T14:55:30+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 2일차 TIL - 42578 의상</title><link href="https://sho1007.github.io/programmers/42578/" rel="alternate" type="text/html" title="99클럽 코테 스터디 2일차 TIL - 42578 의상" /><published>2024-05-21T00:00:00+00:00</published><updated>2024-05-21T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42578</id><content type="html" xml:base="https://sho1007.github.io/programmers/42578/"><![CDATA[<h1 id="42578-의상--c--level2--8분">42578. 의상 / c++ / level2 / 8분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/42578.%E2%80%85%EC%9D%98%EC%83%81"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="자료구조--해시">자료구조 / 해시</h3>
+<ol>
+  <li>매일 다른 옷을 입어야 하고 종류별로 최대 1가지 의상을 착용하거나 착용하지 않을 수 있는데, 최소 1가지의 옷은 입어야 한다.</li>
+  <li>문제를 보고 든 생각은 종류 (카테고리) 별로 옷을 나누고, 그 옷들의 조합의 수를 구하는 것이었다.</li>
+  <li>이 때 주의해야 할 점은 3가지이다.
+    <ol>
+      <li>각 종류별로 1가지를 입거나 입지 않을 수 있기 때문에 종류의 가짓수 + 1을 한 값에서 조합을 구해야 한다.</li>
+      <li>최소 1개의 옷을 입어야 하기 때문에 모두 입지 않은 경우는 빼야한다.</li>
+      <li>마지막으로 옷의 종류가 1가지만 있는 경우 1번과 2번이 상충되어 해당 종류의 가짓수를 그대로 출력한다.</li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>챌린저 문제를 한참 고민하다 시간이 촉박하여 미들러 문제를 풀게 되었다.</li>
+  <li>해싱을 통해 데이터를 정리 (나는 이것을 재료 손질이라고 부른다.) 하고 그 데이터를 가지고 추가적인 로직(여기서는 조합)과 예외 조건 등을 처리하는 문제였다.</li>
+  <li>해싱은 그 자체로 문제 해결 알고리즘이 될 수 있지만, 이렇게 문제를 풀기 위한 사전 작업이 될 수도 있다는 점을 다시 한번 깨달았다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Hash" /><summary type="html"><![CDATA[42578. 의상 / c++ / level2 / 8분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 1일차 TIL - 42579 베스트앨범</title><link href="https://sho1007.github.io/programmers/42579/" rel="alternate" type="text/html" title="99클럽 코테 스터디 1일차 TIL - 42579 베스트앨범" /><published>2024-05-20T00:00:00+00:00</published><updated>2024-05-20T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42579</id><content type="html" xml:base="https://sho1007.github.io/programmers/42579/"><![CDATA[<h1 id="42579-베스트앨범--c--level3--13분">42579. 베스트앨범 / c++ / level3 / 13분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -306,25 +334,4 @@
 <h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
 <ol>
   <li>점화식만 찾을 수 있다면, 금방 해결할 수 있는 문제였다.</li>
-</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Dynamic Programming" /><summary type="html"><![CDATA[9625 BABBA / c++ / Silver5 / 5분]]></summary></entry><entry><title type="html">2161 카드1</title><link href="https://sho1007.github.io/boj/2161/" rel="alternate" type="text/html" title="2161 카드1" /><published>2024-04-28T00:00:00+00:00</published><updated>2024-04-28T00:00:00+00:00</updated><id>https://sho1007.github.io/boj/2161</id><content type="html" xml:base="https://sho1007.github.io/boj/2161/"><![CDATA[<h1 id="2161-카드1--c--silver5--3분">2161 카드1 / c++ / Silver5 / 3분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Silver/2161.%E2%80%85%EC%B9%B4%EB%93%9C1"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="자료구조-큐">자료구조 (큐)</h3>
-<ol>
-  <li>단순 큐 구현 문제</li>
-  <li>큐의 사이즈가 1보다 클 동안 아래를 반복
-    <ol>
-      <li>큐의 front 출력 후 pop</li>
-      <li>큐의 front 를 push 후 pop</li>
-    </ol>
-  </li>
-  <li>마지막 남은 원소 출력</li>
-</ol>
-
-<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
-<ol>
-  <li>카드 셔플은 큐 자료구조를 활용하면 쉽게 풀 수 있다는 점을 알게 되었다.</li>
-</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Queue" /><summary type="html"><![CDATA[2161 카드1 / c++ / Silver5 / 3분]]></summary></entry></feed>
+</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Dynamic Programming" /><summary type="html"><![CDATA[9625 BABBA / c++ / Silver5 / 5분]]></summary></entry></feed>
