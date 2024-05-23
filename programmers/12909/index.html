@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>9019 DSLR - Today I Learned</title>
-<meta name="description" content="9019 DSLR (c++)">
+<!-- begin _includes/seo.html --><title>99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호 - Today I Learned</title>
+<meta name="description" content="12909. 옳바른 괄호 / c++ / level2 / 8분">
 
 
   <meta name="author" content="Sho1007">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Today I Learned">
-<meta property="og:title" content="9019 DSLR">
-<meta property="og:url" content="https://sho1007.github.io/boj/9019/">
+<meta property="og:title" content="99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호">
+<meta property="og:url" content="https://sho1007.github.io/programmers/12909/">
 
 
-  <meta property="og:description" content="9019 DSLR (c++)">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-11-07T00:00:00+00:00">
+  <meta property="og:description" content="12909. 옳바른 괄호 / c++ / level2 / 8분">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-05-23T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://sho1007.github.io/boj/9019/">
+
+<link rel="canonical" href="https://sho1007.github.io/programmers/12909/">
 
 
 
@@ -498,16 +498,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="9019 DSLR">
-    <meta itemprop="description" content="9019 DSLR (c++)">
-    <meta itemprop="datePublished" content="2022-11-07T00:00:00+00:00">
+    <meta itemprop="headline" content="99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호">
+    <meta itemprop="description" content="12909. 옳바른 괄호 / c++ / level2 / 8분">
+    <meta itemprop="datePublished" content="2024-05-23T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://sho1007.github.io/boj/9019/" class="u-url" itemprop="url">9019 DSLR
+            <a href="https://sho1007.github.io/programmers/12909/" class="u-url" itemprop="url">99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호
 </a>
           </h1>
           
@@ -518,7 +518,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2022-11-07T00:00:00+00:00">November 7, 2022</time>
+        <time datetime="2024-05-23T00:00:00+00:00">May 23, 2024</time>
       </span>
     
 
@@ -531,7 +531,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          less than 1 minute read
         
       </span>
     
@@ -546,105 +546,43 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#9019-dslr-c">9019 DSLR (c++)</a><ul><li><a href="#문제">문제</a></li><li><a href="#접근-방식">접근 방식</a></li><li><a href="#문제-풀이">문제 풀이</a></li><li><a href="#다시-생각해-볼-점">다시 생각해 볼 점</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#12909-옳바른-괄호--c--level2--8분">12909. 옳바른 괄호 / c++ / level2 / 8분</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#자료구조--스택">자료구조 / 스택</a></li></ul></li><li><a href="#생각해-볼-점">생각해 볼 점</a><ul><li><a href="#해시태그">해시태그</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="9019-dslr-c">9019 DSLR (c++)</h1>
+        <h1 id="12909-옳바른-괄호--c--level2--8분">12909. 옳바른 괄호 / c++ / level2 / 8분</h1>
 
-<h2 id="문제">문제</h2>
-<p>https://www.acmicpc.net/problem/9019</p>
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12909.%E2%80%85%EC%98%AC%EB%B0%94%EB%A5%B8%E2%80%85%EA%B4%84%ED%98%B8"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
 
 <h2 id="접근-방식">접근 방식</h2>
-<p>BFS <br />
-가중치가 1인 탐색 (D, S, L, R),  시작노드 A로부터 도착노드 B까지의 최단 경로를 탐색하는 문제 <br />
-(이걸 왜 BFS로 생각하지 못했을까.. BFS는 무조건 2차원 배열, 또는 그래프에서만 써야한다고 생각했었다.) <br />
-(하지만 특정 노드 N에서 D, S, L, R 방향으로 탐색하여 도착지까지의 최단 경로(거리)를 탐색한다고 생각하면 충분히 BFS를 적용시킬 수 있었다.)</p>
-
-<h2 id="문제-풀이">문제 풀이</h2>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;queue&gt;</span><span class="cp">
-#define endl '\n'
-#define MAX_SIZE 10'000
-</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="n">T</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">;</span>
-
-<span class="kt">void</span> <span class="nf">BFS</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">string</span> <span class="n">visited</span><span class="p">[</span><span class="n">MAX_SIZE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
-
-    <span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">q</span><span class="p">;</span>
-    <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">A</span><span class="p">);</span>
-
-    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-    <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">now</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">();</span> <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">now</span> <span class="o">==</span> <span class="n">B</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">visited</span><span class="p">[</span><span class="n">now</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-            <span class="k">return</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="kt">int</span> <span class="n">nextNum</span><span class="p">;</span>
-        
-
-        <span class="c1">// S</span>
-        <span class="n">nextNum</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">MAX_SIZE</span><span class="p">)</span> <span class="o">%</span> <span class="n">MAX_SIZE</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">visited</span><span class="p">[</span><span class="n">nextNum</span><span class="p">]</span> <span class="o">==</span> <span class="s">""</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">visited</span><span class="p">[</span><span class="n">nextNum</span><span class="p">]</span> <span class="o">=</span> <span class="n">visited</span><span class="p">[</span><span class="n">now</span><span class="p">]</span> <span class="o">+</span> <span class="sc">'S'</span><span class="p">;</span>
-            <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">nextNum</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="k">if</span> <span class="p">(</span><span class="n">now</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="c1">// D</span>
-            <span class="n">nextNum</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="o">%</span> <span class="n">MAX_SIZE</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">visited</span><span class="p">[</span><span class="n">nextNum</span><span class="p">]</span> <span class="o">==</span> <span class="s">""</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">visited</span><span class="p">[</span><span class="n">nextNum</span><span class="p">]</span> <span class="o">=</span> <span class="n">visited</span><span class="p">[</span><span class="n">now</span><span class="p">]</span> <span class="o">+</span> <span class="sc">'D'</span><span class="p">;</span>
-                <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">nextNum</span><span class="p">);</span>
-            <span class="p">}</span>
-
-            <span class="c1">// L </span>
-            <span class="n">nextNum</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">%</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="p">(</span><span class="n">now</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">);</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">visited</span><span class="p">[</span><span class="n">nextNum</span><span class="p">]</span> <span class="o">==</span> <span class="s">""</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">visited</span><span class="p">[</span><span class="n">nextNum</span><span class="p">]</span> <span class="o">=</span> <span class="n">visited</span><span class="p">[</span><span class="n">now</span><span class="p">]</span> <span class="o">+</span> <span class="sc">'L'</span><span class="p">;</span>
-                <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">nextNum</span><span class="p">);</span>
-            <span class="p">}</span>
-
-            <span class="c1">// R</span>
-            <span class="n">nextNum</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">+</span> <span class="p">(</span><span class="n">now</span> <span class="o">/</span> <span class="mi">10</span><span class="p">);</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">visited</span><span class="p">[</span><span class="n">nextNum</span><span class="p">]</span> <span class="o">==</span> <span class="s">""</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">visited</span><span class="p">[</span><span class="n">nextNum</span><span class="p">]</span> <span class="o">=</span> <span class="n">visited</span><span class="p">[</span><span class="n">now</span><span class="p">]</span> <span class="o">+</span> <span class="sc">'R'</span><span class="p">;</span>
-                <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">nextNum</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">T</span><span class="p">;</span>
-
-    <span class="k">while</span> <span class="p">(</span><span class="n">T</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">A</span> <span class="o">&gt;&gt;</span> <span class="n">B</span><span class="p">;</span>
-        <span class="n">BFS</span><span class="p">();</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
+<h3 id="자료구조--스택">자료구조 / 스택</h3>
 <ol>
-  <li>BFS는 그래프나 2차원 배열에서만 할 수 있는게 아니다.</li>
-  <li>이 BFS는 4가지 탐색 다 가중치가 1이었다. (가중치가 같지 않을 수도 있다.)</li>
+  <li>괄호 문제는 일단 스택을 생각하고 봐야한다.</li>
+  <li>만약 배열의 원소의 갯수가 홀수라면 false를 리턴</li>
+  <li>아니라면 배열을 순회하며
+    <ol>
+      <li>여는 괄호가 나오면 스택에 push</li>
+      <li>닫는 괄호가 나오면 스택의 top이 여는 괄호인지 체크
+        <ol>
+          <li>스택이 비어있거나 스택의 top이 여는 괄호가 아니라면 false 리턴</li>
+          <li>스택의 top이 여는 괄호라면 스택을 pop</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>배열 순회가 무사히 끝나면 true 리턴</li>
 </ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>괄호 문제 = 스택이라는 공식을 다시 한번 체감할 수 있는 문제였다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>
 
         
       </section>
@@ -661,9 +599,17 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#bfs" class="page__taxonomy-item p-category" rel="tag">BFS</a><span class="sep">, </span>
+      <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a><span class="sep">, </span>
     
-      <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a>
+      <a href="/tags/#codingtest" class="page__taxonomy-item p-category" rel="tag">CodingTest</a><span class="sep">, </span>
+    
+      <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
+    
+      <a href="/tags/#data-structure" class="page__taxonomy-item p-category" rel="tag">Data Structure</a><span class="sep">, </span>
+    
+      <a href="/tags/#stack" class="page__taxonomy-item p-category" rel="tag">Stack</a><span class="sep">, </span>
+    
+      <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
     
     </span>
   </p>
@@ -680,7 +626,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#boj" class="page__taxonomy-item p-category" rel="tag">BOJ</a>
+      <a href="/categories/#programmers" class="page__taxonomy-item p-category" rel="tag">Programmers</a>
     
     </span>
   </p>
@@ -688,7 +634,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-11-07T00:00:00+00:00">November 7, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-05-23T00:00:00+00:00">May 23, 2024</time></p>
 
       </footer>
 
@@ -697,23 +643,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=9019+DSLR%20https%3A%2F%2Fsho1007.github.io%2Fboj%2F9019%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=99%ED%81%B4%EB%9F%BD+%EC%BD%94%ED%85%8C+%EC%8A%A4%ED%84%B0%EB%94%94+4%EC%9D%BC%EC%B0%A8+TIL+-+12909+%EC%98%B3%EB%B0%94%EB%A5%B8+%EA%B4%84%ED%98%B8%20https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F12909%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fboj%2F9019%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F12909%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fboj%2F9019%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F12909%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/boj/1916/" class="pagination--pager" title="1916 최소비용 구하기 (80등)
+      <a href="/programmers/42586/" class="pagination--pager" title="99클럽 코테 스터디 3일차 TIL - 42586 기능개발
 ">Previous</a>
     
     
-      <a href="/boj/11725/" class="pagination--pager" title="11725 트리의 부모 찾기
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -727,53 +672,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/programmers/12909/" rel="permalink">99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2024-05-23T00:00:00+00:00">May 23, 2024</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">12909. 옳바른 괄호 / c++ / level2 / 8분
-</p>
-  </article>
-</div>
-
         
           
 
@@ -911,6 +809,53 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">42579. 베스트앨범 / c++ / level3 / 13분
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/boj/18352/" rel="permalink">18352 특정 거리의 도시 찾기
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-05-14T00:00:00+00:00">May 14, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">18352 특정 거리의 도시 찾기 / c++ / Silver2 / 30분
 </p>
   </article>
 </div>

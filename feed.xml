@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-05-21T15:00:59+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 2일차 TIL - 42578 의상</title><link href="https://sho1007.github.io/programmers/42578/" rel="alternate" type="text/html" title="99클럽 코테 스터디 2일차 TIL - 42578 의상" /><published>2024-05-21T00:00:00+00:00</published><updated>2024-05-21T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42578</id><content type="html" xml:base="https://sho1007.github.io/programmers/42578/"><![CDATA[<h1 id="42578-의상--c--level2--8분">42578. 의상 / c++ / level2 / 8분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-05-23T08:56:09+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호</title><link href="https://sho1007.github.io/programmers/12909/" rel="alternate" type="text/html" title="99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호" /><published>2024-05-23T00:00:00+00:00</published><updated>2024-05-23T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/12909</id><content type="html" xml:base="https://sho1007.github.io/programmers/12909/"><![CDATA[<h1 id="12909-옳바른-괄호--c--level2--8분">12909. 옳바른 괄호 / c++ / level2 / 8분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12909.%E2%80%85%EC%98%AC%EB%B0%94%EB%A5%B8%E2%80%85%EA%B4%84%ED%98%B8"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="자료구조--스택">자료구조 / 스택</h3>
+<ol>
+  <li>괄호 문제는 일단 스택을 생각하고 봐야한다.</li>
+  <li>만약 배열의 원소의 갯수가 홀수라면 false를 리턴</li>
+  <li>아니라면 배열을 순회하며
+    <ol>
+      <li>여는 괄호가 나오면 스택에 push</li>
+      <li>닫는 괄호가 나오면 스택의 top이 여는 괄호인지 체크
+        <ol>
+          <li>스택이 비어있거나 스택의 top이 여는 괄호가 아니라면 false 리턴</li>
+          <li>스택의 top이 여는 괄호라면 스택을 pop</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>배열 순회가 무사히 끝나면 true 리턴</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>괄호 문제 = 스택이라는 공식을 다시 한번 체감할 수 있는 문제였다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Stack" /><summary type="html"><![CDATA[12909. 옳바른 괄호 / c++ / level2 / 8분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 3일차 TIL - 42586 기능개발</title><link href="https://sho1007.github.io/programmers/42586/" rel="alternate" type="text/html" title="99클럽 코테 스터디 3일차 TIL - 42586 기능개발" /><published>2024-05-22T00:00:00+00:00</published><updated>2024-05-22T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42586</id><content type="html" xml:base="https://sho1007.github.io/programmers/42586/"><![CDATA[<h1 id="42586-기능개발--c--level2--11분">42586. 기능개발 / c++ / level2 / 11분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/42586.%E2%80%85%EA%B8%B0%EB%8A%A5%EA%B0%9C%EB%B0%9C"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="구현">구현</h3>
+<ol>
+  <li>완료되지 않은 가장 앞의 작업이 100을 넘길때까지 계속 작업량을 한번씩 더함</li>
+  <li>완료되지 않은 가장 앞의 작업이 100을 넘기면, 그 뒤로 100이 넘어간 작업이 몇개 더 있는지 체크</li>
+  <li>해당 갯수만큼 정답 벡터에 삽입, 만약 완료되지 않은 작업이 남았다면 다시 완료되지 않은 가장 앞의 작업에서 1번부터 반복</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>문제의 카테고리에는 자료구조와 큐가 적혀있었는데 이 문제는 단순 구현으로만 풀어서 뭔가 더 좋은 방법이 없나 고민해봤다.</li>
+  <li>while 문으로 현재 작업이 100%를 넘길때까지 반복할게 아니라, (100 - 현재 작업량)/작업 속도를 해서 작업일을 구하고, 그 뒤로 해당 작업일까지 작업했을 때 같이 배포할 수 있는 것들의 수를 더해서 벡터에 삽입하는 방식이 더 효율적이라고 생각했다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Queue" /><summary type="html"><![CDATA[42586. 기능개발 / c++ / level2 / 11분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 2일차 TIL - 42578 의상</title><link href="https://sho1007.github.io/programmers/42578/" rel="alternate" type="text/html" title="99클럽 코테 스터디 2일차 TIL - 42578 의상" /><published>2024-05-21T00:00:00+00:00</published><updated>2024-05-21T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42578</id><content type="html" xml:base="https://sho1007.github.io/programmers/42578/"><![CDATA[<h1 id="42578-의상--c--level2--8분">42578. 의상 / c++ / level2 / 8분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -291,47 +343,4 @@
 
 <ul>
   <li>절차형 프로그래밍의 경우 간단한 선형 구조의 프로그램을 구현하는데 유리하고, 함수형 프로그래밍의 경우 컴퓨터 과학이나, 데이터 처리 등의 프로그램을 구현하는데 유리하다. 하지만 둘은 함수 작성과 같은 특정 구현 세부 사항에 중점을 두는데, 이로 인해 프로그램의 흐름이 그물처럼 얽힌 관계가 복잡한 프로그램의 경우 객체 지향 프로그래밍에 비해 효율이 떨어진다. 반면 객체 지향 프로그래밍의 경우 상속, 다형성, 캡슐화, 추상화 의 특징을 활용하여 클래스 설계를 비롯한 코드 모듈 설계에 중점을 두므로 복잡한 구조의 프로그래밍 설계에 유리하고 재사용, 확장, 유지 관리가 쉽다.</li>
-</ul>]]></content><author><name>Sho1007</name></author><category term="[&quot;Design Pattern&quot;]" /><category term="Study" /><summary type="html"><![CDATA[Summary]]></summary></entry><entry><title type="html">2503 숫자 야구</title><link href="https://sho1007.github.io/boj/2503/" rel="alternate" type="text/html" title="2503 숫자 야구" /><published>2024-04-30T00:00:00+00:00</published><updated>2024-04-30T00:00:00+00:00</updated><id>https://sho1007.github.io/boj/2503</id><content type="html" xml:base="https://sho1007.github.io/boj/2503/"><![CDATA[<h1 id="2503-숫자-야구--c--silver3--35분">2503 숫자 야구 / c++ / Silver3 / 35분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Silver/2503.%E2%80%85%EC%88%AB%EC%9E%90%E2%80%85%EC%95%BC%EA%B5%AC"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="백트래킹--브루트-포스">백트래킹 / 브루트 포스</h3>
-<ol>
-  <li>처음엔 주어진 숫자들을 순회하며 규칙을 찾아 판별해내려고 했다.</li>
-  <li>사람인 내가 생각하기에는 충분한 규칙이었지만 코딩하기엔 애매한 규칙들이었다.</li>
-  <li>다른 방법을 생각하던 중 시간 복잡도를 계산해봤다.</li>
-  <li>1 부터 9 까지의 숫자 중 중복되지 않도록 3개를 뽑는다고 하면 9 * 8 * 7 총 504 가지의 경우의 수가 나왔고, 이 숫자들 마다 주어지는 질문의 최대 개수인 100개를 순회한다고 하더라도 50400 번의 계산으로 전부 확인(브루트 포스)이 가능했다.</li>
-  <li>제한 시간은 1초였고, 1초는 약 1억번의 계산이 가능하므로 충분히 시간 내에 풀 수 있었다.</li>
-  <li>백트래킹을 사용하여 1부터 9까지 들어있는 벡터로 3자리 숫자를 만들어냈고, 각 숫자마다 질문을 순회하여 아래 로직을 수행했다.
-    <ol>
-      <li>현재 3자리 숫자를 string A, 현재 순회중인 질문의 3자리 숫자를 string B 로 변환</li>
-      <li>A 에 B[0], B[1], B[2] 각 자리 숫자가 존재할 경우 Ball++</li>
-      <li>그 후 A의 각 자리를 순회하면서 A[i] == B[i] 인 경우, Strike++, Ball–</li>
-      <li>계산된 Strike와 Ball 값이 현재 질문의 Strike와 Ball 갯수와 같지 않다면 break 후 return;</li>
-      <li>같다면 전역변수인 Answer++;</li>
-    </ol>
-  </li>
-  <li>백트래킹 종료 후 Answer 출력</li>
-</ol>
-
-<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
-<ol>
-  <li>규칙을 찾기보다 시간 복잡도 계산 후 브루트 포스를 먼저 생각해야하는데, 그게 참 쉽지 않다. 이번에도 규칙을 찾는다고 초반에 시간을 많이 잡아먹었다. 주의해야겠다.</li>
-</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Back Tracking" /><category term="Brute Force" /><summary type="html"><![CDATA[2503 숫자 야구 / c++ / Silver3 / 35분]]></summary></entry><entry><title type="html">9625 BABBA</title><link href="https://sho1007.github.io/boj/9625/" rel="alternate" type="text/html" title="9625 BABBA" /><published>2024-04-29T00:00:00+00:00</published><updated>2024-04-29T00:00:00+00:00</updated><id>https://sho1007.github.io/boj/9625</id><content type="html" xml:base="https://sho1007.github.io/boj/9625/"><![CDATA[<h1 id="9625-babba--c--silver5--5분">9625 BABBA / c++ / Silver5 / 5분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Silver/9625.%E2%80%85BABBA"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="동적-계획법">동적 계획법</h3>
-<ol>
-  <li>dp[0] (한번도 누르지 않은 경우) A = 1, B = 0</li>
-  <li>dp[i] (i &gt; 0) 의 경우, dp[i][0] = dp[i-1][1], dp[i][1] = dp[i-1][1] + dp[i-1][0]</li>
-</ol>
-
-<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
-<ol>
-  <li>점화식만 찾을 수 있다면, 금방 해결할 수 있는 문제였다.</li>
-</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Dynamic Programming" /><summary type="html"><![CDATA[9625 BABBA / c++ / Silver5 / 5분]]></summary></entry></feed>
+</ul>]]></content><author><name>Sho1007</name></author><category term="[&quot;Design Pattern&quot;]" /><category term="Study" /><summary type="html"><![CDATA[Summary]]></summary></entry></feed>

@@ -814,4 +814,16 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Data Structure","Hash"],
         "url": "/programmers/42578/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 3일차 TIL - 42586 기능개발",
+        "excerpt":"42586. 기능개발 / c++ / level2 / 11분 문제 및 코드 접근 방식 구현 완료되지 않은 가장 앞의 작업이 100을 넘길때까지 계속 작업량을 한번씩 더함 완료되지 않은 가장 앞의 작업이 100을 넘기면, 그 뒤로 100이 넘어간 작업이 몇개 더 있는지 체크 해당 갯수만큼 정답 벡터에 삽입, 만약 완료되지 않은 작업이...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Data Structure","Queue"],
+        "url": "/programmers/42586/",
+        "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호",
+        "excerpt":"12909. 옳바른 괄호 / c++ / level2 / 8분 문제 및 코드 접근 방식 자료구조 / 스택 괄호 문제는 일단 스택을 생각하고 봐야한다. 만약 배열의 원소의 갯수가 홀수라면 false를 리턴 아니라면 배열을 순회하며 여는 괄호가 나오면 스택에 push 닫는 괄호가 나오면 스택의 top이 여는 괄호인지 체크 스택이 비어있거나 스택의 top이...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Data Structure","Stack"],
+        "url": "/programmers/12909/",
+        "teaser": null
       }]
