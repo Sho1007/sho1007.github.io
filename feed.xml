@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-05-23T08:56:09+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호</title><link href="https://sho1007.github.io/programmers/12909/" rel="alternate" type="text/html" title="99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호" /><published>2024-05-23T00:00:00+00:00</published><updated>2024-05-23T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/12909</id><content type="html" xml:base="https://sho1007.github.io/programmers/12909/"><![CDATA[<h1 id="12909-옳바른-괄호--c--level2--8분">12909. 옳바른 괄호 / c++ / level2 / 8분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-05-24T14:52:06+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 5일차 TIL - 42627 디스크 컨트롤러</title><link href="https://sho1007.github.io/programmers/42627/" rel="alternate" type="text/html" title="99클럽 코테 스터디 5일차 TIL - 42627 디스크 컨트롤러" /><published>2024-05-24T00:00:00+00:00</published><updated>2024-05-24T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42627</id><content type="html" xml:base="https://sho1007.github.io/programmers/42627/"><![CDATA[<h1 id="42627-디스크-컨트롤러--c--level3--1시간">42627. 디스크 컨트롤러 / c++ / level3 / 1시간+</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/42627.%E2%80%85%EB%94%94%EC%8A%A4%ED%81%AC%E2%80%85%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="자료구조--힙--우선순위-큐">자료구조 / 힙 / 우선순위 큐</h3>
+<ol>
+  <li>문제 자체는 단순했다.</li>
+  <li>현재 처리할 수 있는 일들 중 가장 짧은 일을 처리한다.</li>
+  <li>모든 일을 처리할 때까지 반복</li>
+  <li>이 때, 일을 짧은 순서로 정리하기 위해서 우선순위 큐를 사용했다.</li>
+  <li>하지만 간과한 것이 2가지 있었다.
+    <ol>
+      <li>매번 일을 하나 처리할 때마다, 현재 시간이 증가하기 때문에, 새로운 일들이 들어온다. 이를 놓쳐서 큐에 있는 모든 일을 처리한 뒤 새로운 일들을 큐에 받아들였더니 틀린 답이 나왔었다.</li>
+      <li>첫 일을 정할때도 가장 짧은 일을 골라야 한다. jobs 벡터가 정렬되어 있지 않을 것이라고 생각해서 정렬을 했었지만, 단순 시작 시간으로만 정렬을 했었다. 그랬더니 아마 첫 일을 가장 빠른 일이지만 가장 짧은 일을 고르지 못해서 틀렸던 것 같다.</li>
+    </ol>
+  </li>
+  <li>위의 두가지 문제를 해결했더니 정답을 맞출 수 있었다.</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>문제 자체는 굉장히 단순하다고 생각했는데, 엣지 케이스를 찾는데 너무 많은 시간을 허비했다.</li>
+  <li>다음부터 이렇게 뭔가 놓치는 부분이 보이면 수도코드로 어느정도 정리해서 엣지 케이스를 잡을 수 있도록 해야겠다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Heap" /><summary type="html"><![CDATA[42627. 디스크 컨트롤러 / c++ / level3 / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호</title><link href="https://sho1007.github.io/programmers/12909/" rel="alternate" type="text/html" title="99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호" /><published>2024-05-23T00:00:00+00:00</published><updated>2024-05-23T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/12909</id><content type="html" xml:base="https://sho1007.github.io/programmers/12909/"><![CDATA[<h1 id="12909-옳바른-괄호--c--level2--8분">12909. 옳바른 괄호 / c++ / level2 / 8분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -224,123 +253,4 @@
 <ol>
   <li>스택의 값이 다시 배열로 돌아갈 수 없다는 조건을 처음에 발견하지 못해서 시간을 소모했다. 문제를 제대로 읽는 습관을 들여야겠다.</li>
   <li>스택의 성질만 안다면 쉽게 풀 수 있는 문제였다.</li>
-</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Stack" /><summary type="html"><![CDATA[12789 도키도키 간식드리미 / c++ / Silver3 / 20분]]></summary></entry><entry><title type="html">OOP</title><link href="https://sho1007.github.io/design%20pattern/OOP/" rel="alternate" type="text/html" title="OOP" /><published>2024-05-01T00:00:00+00:00</published><updated>2024-05-01T00:00:00+00:00</updated><id>https://sho1007.github.io/design%20pattern/OOP</id><content type="html" xml:base="https://sho1007.github.io/design%20pattern/OOP/"><![CDATA[<h1 id="summary"><strong>Summary</strong></h1>
-
-<h3 id="절차지향과-함수지향-프로그래밍과-비교한-객체지향-프로그래밍의-장단점">절차지향과 함수지향 프로그래밍과 비교한 객체지향 프로그래밍의 장단점</h3>
-
-<h1 id="concept"><strong>Concept</strong></h1>
-
-<h3 id="절차형">절차형:</h3>
-
-<ul>
-  <li>멤버 변수, 속성과 같은 데이터가 메서드와 분리되어 있는 것이 특징이다.</li>
-  <li>메서드와 데이터 구조의 정의는 서로 관계가 없다.</li>
-  <li>간단한 프로그램으로, 작업 흐름이 가지를 뻗어나가지 않고 일직선 형태를 띄는 경우에 유리하다.</li>
-  <li>복잡한 대규모 프로그램의 경우 흐름이 그물망이나 나뭇가지처럼 여러 방향으로 얽히게 되는데, 이를 구현하기 위해서는 객체지향에 비해 훨씬 더 많은 노력이 필요하다.</li>
-</ul>
-
-<h3 id="함수형-">함수형 :</h3>
-
-<ul>
-  <li>함수형 프로그래밍의 함수는 수학의 함수 또는 포현식을 의미한다.</li>
-  <li>프로그램이 수학적 표현의 조합 또는 표현식의 조합으로 표현될 수 있다고 생각한다.
-    <ul>
-      <li>이론적으로는 가능하지만 모든 프로그램이 이에 적합한 것은 아니다.</li>
-    </ul>
-  </li>
-  <li>코드의 구성 단위로 함수를 사용한다.
-    <ul>
-      <li>스테이트리스 함수 라는 점에서 절차적 프로그래밍과 다르다.</li>
-      <li>절차적 프로그래밍의 경우 전역 변수를 활용하는 반면 함수형 프로그래밍은 입력 매개변수만을 사용한다.</li>
-    </ul>
-  </li>
-  <li>프로그래밍의 특수성 때문에 함수형 프로그래밍은 컴퓨터 과학, 데이터 처리, 통계 분석과 같은 특수한 분야에서만 그 장점을 충분히 발휘할 수 있다.</li>
-</ul>
-
-<h3 id="객체-지향-">객체 지향 :</h3>
-
-<h3 id="캡슐화">캡슐화</h3>
-
-<ul>
-  <li>정보 은닉, 데이터 액세스 보호</li>
-  <li>은행 계좌 클래스의 경우 balance(잔고) 를 다른 클래스에서 마음대로 가져다 변경할 경우 문제가 생길 수 있다.</li>
-  <li>언어 자체에서 이를 지원하는 문법을 제공해야한다.</li>
-</ul>
-
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">java</span><span class="p">,</span> <span class="n">C</span><span class="o">++</span> <span class="err">의</span> <span class="k">public</span> <span class="o">/</span> <span class="k">private</span> <span class="err">키워드</span>
-</code></pre></div></div>
-
-<h3 id="추상화">추상화</h3>
-
-<ul>
-  <li>메서드의 내부 구현을 숨기는 것</li>
-  <li>기능의 구현 방식이 아닌, 메서드가 제공하는 기능에만 집중할 수 있다.</li>
-  <li>클래스의 메서드를 정의하거나 이름을 붙일 때는 추상적인 사고가 필요하다.</li>
-  <li>에를 들어 getNaverCloudPictureUrl()은 네이버 클라우드가 아닌 다른 곳에 사진을 저장하게 되면 이름의 수정이 필요하다. getPictureUrl() 같이 보다 추상적인 이름을 사용하는 것이 좋다.</li>
-</ul>
-
-<h3 id="상속">상속</h3>
-
-<ul>
-  <li>‘is-a’ 관계</li>
-  <li>단일 상속 : 하위 클래스가 단 하나의 상위 클래스만을 상속하는 것</li>
-  <li>다중 상속 : 하위 클래스가 여러 상위 클래스를 동시에 상속할 수 있음을 의미
-    <ul>
-      <li>다중 상속의 경우 상속을 지원하는 모든 언어가 지원하는 것은 아니다.</li>
-      <li>다이아몬드 상속 문제가 발생할 수 있다.</li>
-    </ul>
-  </li>
-  <li>프로그래밍 언어가 상속을 표현하는 문법을 별도로 지원해야 한다.</li>
-  <li>재사용성 : 상속을 이용하여 공통 부분을 상위 클래스로 모으면, 코드를 재사용하여 불필요한 반복을 줄일 수 있다.</li>
-  <li>상속의 계층구조가 너무 깊고 복잡하면 코드의 가독성과 유지 관리성이 떨어진다. 그러므로 적게, 혹은 사용하지 않는 것이 좋고 ‘상속보다 합성’을 사용하는 것이 좋다.</li>
-</ul>
-
-<h3 id="다형성">다형성</h3>
-
-<ul>
-  <li>코드를 실행하는 과정에서 하위 클래스를 상위 클래스 대신 사용하고, 하위 클래스의 메서드를 호출할 수 있는 특성</li>
-  <li>다형성을 충족시키기 위한 문법 (상속과 메서드 재정의를 활용한 방식)
-    <ul>
-      <li>상위 클래스 객체가 하위 클래스 객체를 참조할 수 있어야 한다.</li>
-      <li>상속을 지원해야 한다.</li>
-      <li>상위 클래스의 메서드를 재정의하는 하위 클래스를 지원해야 한다.</li>
-    </ul>
-
-    <aside>
-  💡 상위 클래스를 상속한 하위 클래스에서 상위 클래스의 함수를 재정의 한 경우, 이를 상위 클래스가 참조할 수 있다면, 해상 함수를 호출 함으로써 다형성을 충족시켰다고 할 수 있다.
-    
-  </aside>
-  </li>
-  <li>이 밖에도 인터페이스 문법을 사용하거나 duck-typing 문법을 사용할 수있다.
-    <ul>
-      <li>Interface 문법
-        <ul>
-          <li>동일한 인터페이스를 구현하여 서로 다른 클래스여도 같은 인터페이스 형으로 사용될 수 있다.</li>
-        </ul>
-      </li>
-      <li>duck-typing 문법
-        <ul>
-          <li>모든 언어에서 지원하는 것은 아니다. (C++에서는 지원하지 않고 Python에서는 지원한다.)</li>
-          <li>동일한 함수명을 정의하여 같은 형식으로 활용할 수있다.</li>
-          <li>다형성을 훨씬 유연하게 구현할 수 있다.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>다형성은 코드의 재사용성을 향상시킨다.</li>
-</ul>
-
-<h1 id="advantages"><strong>Advantages</strong></h1>
-
-<ul>
-  <li>재사용성</li>
-  <li>확장성</li>
-  <li>유지 보수 용이</li>
-  <li>복잡한 관계에 대한 설계의 용이성</li>
-</ul>
-
-<h1 id="wrap-up"><strong>Wrap-up</strong></h1>
-
-<ul>
-  <li>절차형 프로그래밍의 경우 간단한 선형 구조의 프로그램을 구현하는데 유리하고, 함수형 프로그래밍의 경우 컴퓨터 과학이나, 데이터 처리 등의 프로그램을 구현하는데 유리하다. 하지만 둘은 함수 작성과 같은 특정 구현 세부 사항에 중점을 두는데, 이로 인해 프로그램의 흐름이 그물처럼 얽힌 관계가 복잡한 프로그램의 경우 객체 지향 프로그래밍에 비해 효율이 떨어진다. 반면 객체 지향 프로그래밍의 경우 상속, 다형성, 캡슐화, 추상화 의 특징을 활용하여 클래스 설계를 비롯한 코드 모듈 설계에 중점을 두므로 복잡한 구조의 프로그래밍 설계에 유리하고 재사용, 확장, 유지 관리가 쉽다.</li>
-</ul>]]></content><author><name>Sho1007</name></author><category term="[&quot;Design Pattern&quot;]" /><category term="Study" /><summary type="html"><![CDATA[Summary]]></summary></entry></feed>
+</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Stack" /><summary type="html"><![CDATA[12789 도키도키 간식드리미 / c++ / Silver3 / 20분]]></summary></entry></feed>

@@ -826,4 +826,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Data Structure","Stack"],
         "url": "/programmers/12909/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 5일차 TIL - 42627 디스크 컨트롤러",
+        "excerpt":"42627. 디스크 컨트롤러 / c++ / level3 / 1시간+ 문제 및 코드 접근 방식 자료구조 / 힙 / 우선순위 큐 문제 자체는 단순했다. 현재 처리할 수 있는 일들 중 가장 짧은 일을 처리한다. 모든 일을 처리할 때까지 반복 이 때, 일을 짧은 순서로 정리하기 위해서 우선순위 큐를 사용했다. 하지만 간과한...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Data Structure","Heap"],
+        "url": "/programmers/42627/",
+        "teaser": null
       }]
