@@ -832,4 +832,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Data Structure","Heap"],
         "url": "/programmers/42627/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 6일차 TIL - 42628 이중우선순위큐",
+        "excerpt":"42628. 이중우선순위큐 / c++ / level3 / 32분 문제 및 코드 접근 방식 구현 / 자료구조 / 힙 / 셋 (Set) 해당 요구사항에 맞게 자료구조를 구현하면 되는 문제였다. multiset을 사용해서 혹시 모를 중복에 대비하며, 자료를 입력과 동시에 정렬해줬다. D 1 의 경우 최대값을 삭제해야하므로 set 의 마지막 원소를 erase 해줬다....","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Data Structure","Heap"],
+        "url": "/programmers/42628/",
+        "teaser": null
       }]
