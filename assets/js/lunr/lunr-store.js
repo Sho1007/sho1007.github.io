@@ -838,4 +838,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Data Structure","Heap"],
         "url": "/programmers/42628/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 7일차 TIL - 2551 Put Marbles in Bags",
+        "excerpt":"2551. Put Marbles in Bags / c++ / Hard / 1시간+ 문제 및 코드 #include &lt;iostream&gt; #include &lt;algorithm&gt; vector&lt;int&gt; costVector; class Solution { public: long long putMarbles(vector&lt;int&gt;&amp; weights, int k) { costVector = vector&lt;int&gt;(weights.size()-1); for (int i = 0; i &lt; weights.size() - 1; ++i) { costVector[i] = weights[i] +...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Sort"],
+        "url": "/leetcode/2551/",
+        "teaser": null
       }]

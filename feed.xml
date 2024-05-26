@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-05-25T14:56:30+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 6일차 TIL - 42628 이중우선순위큐</title><link href="https://sho1007.github.io/programmers/42628/" rel="alternate" type="text/html" title="99클럽 코테 스터디 6일차 TIL - 42628 이중우선순위큐" /><published>2024-05-25T00:00:00+00:00</published><updated>2024-05-25T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42628</id><content type="html" xml:base="https://sho1007.github.io/programmers/42628/"><![CDATA[<h1 id="42628-이중우선순위큐--c--level3--32분">42628. 이중우선순위큐 / c++ / level3 / 32분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-05-26T11:46:37+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 7일차 TIL - 2551 Put Marbles in Bags</title><link href="https://sho1007.github.io/leetcode/2551/" rel="alternate" type="text/html" title="99클럽 코테 스터디 7일차 TIL - 2551 Put Marbles in Bags" /><published>2024-05-26T00:00:00+00:00</published><updated>2024-05-26T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2551</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2551/"><![CDATA[<h1 id="2551-put-marbles-in-bags--c--hard--1시간">2551. Put Marbles in Bags / c++ / Hard / 1시간+</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">costVector</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">long</span> <span class="kt">long</span> <span class="n">putMarbles</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">weights</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="n">costVector</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">weights</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">weights</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">costVector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">weights</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+        <span class="p">}</span>
+
+        <span class="n">sort</span><span class="p">(</span><span class="n">costVector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">costVector</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+        <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxCost</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">maxCost</span> <span class="o">+=</span> <span class="n">costVector</span><span class="p">[</span><span class="n">costVector</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">];</span>
+        <span class="p">}</span>
+        <span class="kt">long</span> <span class="kt">long</span> <span class="n">minCost</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">minCost</span> <span class="o">+=</span> <span class="n">costVector</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>   
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">maxCost</span> <span class="o">-</span> <span class="n">minCost</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="정렬">정렬</h3>
+<ol>
+  <li>가장 단순하게 모든 구간을 잘라봤다. (전수조사, 백트래킹) -&gt; 시간 초과</li>
+  <li>시간을 단축할 수 있는 방법을 찾아보려 했지만 결국 찾지 못했고, 힌트를 봤다.</li>
+  <li>힌트에서 나눠지는 부분의 앞과 뒤를 사용해라고 나와 있었다.</li>
+  <li>pair&lt;int,int&gt; 를 원소로 가지는 우선순위 큐를 선언하여 끊어질 수 있는 부분을 모두 넣었다.</li>
+  <li>이러면 크거나 작은 한가지의 기준으로 정렬된 값을 꺼낼 수 있지만 여기선 최소값과 최대값 두가지의 기준이 필요했고, 기존 방법으로는 정렬의 반대 순서로 꺼내는게 번거로웠다.</li>
+  <li>다시 생각해보니 굳이 우선순위 큐를 쓰지 않고, 벡터에 다 넣은 다음 정렬하면 앞뒤로 꺼낼 수 있었다.</li>
+  <li>다른 분들의 풀이를 보니 또 굳이 pair&lt;int,int&gt; 로 나눠지는 부분을 받지 않고, 어차피 더해질 거 그냥 int 로 처음부터 더한 값을 원소로 받으면 된다는 점을 깨달았다.</li>
+  <li>마지막으로 항상 maxSum - minSum을 반환하기 때문에, 맨 앞과 맨 뒤 원소는 maxSum과 minSum에 모두 포함되어 결국 상쇄되는 값이었다.</li>
+  <li>이런 최적화 과정을 통해 최종 식이 (내림차순 정렬의 k-1개의 원소의 합) - (오름차순 정렬의 k-1개의 원소의 합) 이라는 점을 깨달았다.</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>리트코드는 힌트와 풀이 방법을 제공해준다는 점이 신기했다.</li>
+  <li>힌트도 단계별로 나눠져 있어서 하다가 도저히 안되겠을 때 차례로 한 개씩 열어볼 수 있다는 점이 좋았다.</li>
+  <li>이해하고 나니 단순 정렬 문제였는데, 풀이 과정을 유추해 내는 것이 너무 어려웠다.</li>
+  <li>마치 구현 방법을 식으로 나타내고 그 식을 최적화하여 최종 계산식을 뽑아내는 느낌이었다.</li>
+  <li>내가 부족한 부분이 문제 전체를 도식화하여 해결하는 능력이라는 것을 다시 한번 깨달을 수 있었다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Sort" /><summary type="html"><![CDATA[2551. Put Marbles in Bags / c++ / Hard / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 6일차 TIL - 42628 이중우선순위큐</title><link href="https://sho1007.github.io/programmers/42628/" rel="alternate" type="text/html" title="99클럽 코테 스터디 6일차 TIL - 42628 이중우선순위큐" /><published>2024-05-25T00:00:00+00:00</published><updated>2024-05-25T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42628</id><content type="html" xml:base="https://sho1007.github.io/programmers/42628/"><![CDATA[<h1 id="42628-이중우선순위큐--c--level3--32분">42628. 이중우선순위큐 / c++ / level3 / 32분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -226,19 +289,4 @@
   <li>내가 바꾸지 않은 부분에서 최대값이 나올 수 있다는 것을 알았을 때, 처음엔 바꿀 때마다 전체 보드를 다 탐색해야 하나 생각했다.</li>
   <li>하지만 너무 비효율적이었고, 다른 방법을 찾던 중, 결국 내가 바꿨다면 변화가 거기에서만 오기때문에 그 부분만 찾는게 맞고, 아니라면 바꾸기 전 상태를 먼저 체크하면 되는게 아닌가 생각이 들었다.</li>
   <li>생각한대로 수정하고 문제를 해결하게 되어 엄청 뿌듯했다.</li>
-</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Brute Force" /><summary type="html"><![CDATA[3085 사탕 게임 / c++ / Silver2 / 40분]]></summary></entry><entry><title type="html">11399 ATM</title><link href="https://sho1007.github.io/boj/11399/" rel="alternate" type="text/html" title="11399 ATM" /><published>2024-05-03T00:00:00+00:00</published><updated>2024-05-03T00:00:00+00:00</updated><id>https://sho1007.github.io/boj/11399</id><content type="html" xml:base="https://sho1007.github.io/boj/11399/"><![CDATA[<h1 id="11399-atm--c--silver4--11분">11399 ATM / c++ / Silver4 / 11분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Silver/11399.%E2%80%85ATM"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="그리디--정렬">그리디 / 정렬</h3>
-<ol>
-  <li>시간의 총 합을 최소로 줄이기 위해선, 인출 시간이 짧은 순서대로 정렬하면 된다.</li>
-</ol>
-
-<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
-<ol>
-  <li>정렬로 쉽게 풀 수 있는 문제였다.</li>
-  <li>문제가 요구하는 총 인출 시간은 각 사람마다 대기시간 + 인출시간 을 더한 값의 총합이었는데, 처음에는 이를 혼동하여 마지막 사람의 대기시간 + 인출시간을 출력했었다.</li>
-</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Greedy" /><category term="Sort" /><summary type="html"><![CDATA[11399 ATM / c++ / Silver4 / 11분]]></summary></entry></feed>
+</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Brute Force" /><summary type="html"><![CDATA[3085 사탕 게임 / c++ / Silver2 / 40분]]></summary></entry></feed>
