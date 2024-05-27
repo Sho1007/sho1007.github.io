@@ -844,4 +844,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Sort"],
         "url": "/leetcode/2551/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 8일차 TIL - 899 Orderly Queue",
+        "excerpt":"899. Orderly Queue / c++ / Hard / 30분 문제 및 코드 #include &lt;queue&gt; struct Cmp { bool operator()(char&amp; a, char&amp; b) { return a &gt; b; } }; class Solution { public: string orderlyQueue(string s, int k) { string Answer = s; if (k == 1) { int count...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Sort"],
+        "url": "/leetcode/899/",
+        "teaser": null
       }]

@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-05-26T11:46:37+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 7일차 TIL - 2551 Put Marbles in Bags</title><link href="https://sho1007.github.io/leetcode/2551/" rel="alternate" type="text/html" title="99클럽 코테 스터디 7일차 TIL - 2551 Put Marbles in Bags" /><published>2024-05-26T00:00:00+00:00</published><updated>2024-05-26T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2551</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2551/"><![CDATA[<h1 id="2551-put-marbles-in-bags--c--hard--1시간">2551. Put Marbles in Bags / c++ / Hard / 1시간+</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-05-27T14:19:56+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 8일차 TIL - 899 Orderly Queue</title><link href="https://sho1007.github.io/leetcode/899/" rel="alternate" type="text/html" title="99클럽 코테 스터디 8일차 TIL - 899 Orderly Queue" /><published>2024-05-27T00:00:00+00:00</published><updated>2024-05-27T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/899</id><content type="html" xml:base="https://sho1007.github.io/leetcode/899/"><![CDATA[<h1 id="899-orderly-queue--c--hard--30분">899. Orderly Queue / c++ / Hard / 30분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;queue&gt;</span><span class="cp">
+</span>
+<span class="k">struct</span> <span class="nc">Cmp</span>
+<span class="p">{</span>
+    <span class="kt">bool</span> <span class="k">operator</span><span class="p">()(</span><span class="kt">char</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="kt">char</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">string</span> <span class="n">orderlyQueue</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">string</span> <span class="n">Answer</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">count</span><span class="o">--&gt;</span><span class="mi">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">&lt;</span> <span class="n">Answer</span><span class="p">)</span> <span class="n">Answer</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">sort</span><span class="p">(</span><span class="n">Answer</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">Answer</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">Answer</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="정렬">정렬</h3>
+<ol>
+  <li>처음엔 단순 정렬인 줄 알았는데, k가 1인 경우엔 정렬할 수 없이 계속 순환할 뿐이었다.</li>
+  <li>그래서 Answer를 s로 초기화 해주고 k가 1인 경우와 아닌 경우로 나눈 뒤
+    <ol>
+      <li>k가 1이면 s.size() - 1 번 만큼 (한번 더 돌면 원래 상태이므로 -1 해줌) 돌면서 맨 앞 글자를 맨 뒤로 보내준다. 그 후 Answer 보다 작다면 Answer 갱신</li>
+      <li>k가 2 이상이면 단순히 Answer를 정렬해준다.</li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>리트코드 문제는 단순히 구현하는게 아니라 해당 문제의 본질을 찾는 것이 다른 곳들보다 더 중요하다고 느꼈다.</li>
+  <li>앞에서 2개 중 하나만 골라 뒤로 보낼 수 있더라도 정렬이 가능하다는 것을 다시금 깨달았다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Sort" /><summary type="html"><![CDATA[899. Orderly Queue / c++ / Hard / 30분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 7일차 TIL - 2551 Put Marbles in Bags</title><link href="https://sho1007.github.io/leetcode/2551/" rel="alternate" type="text/html" title="99클럽 코테 스터디 7일차 TIL - 2551 Put Marbles in Bags" /><published>2024-05-26T00:00:00+00:00</published><updated>2024-05-26T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2551</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2551/"><![CDATA[<h1 id="2551-put-marbles-in-bags--c--hard--1시간">2551. Put Marbles in Bags / c++ / Hard / 1시간+</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -262,31 +319,4 @@
 <ol>
   <li>자료형의 범위와 맵의 특징을 알고 있다면 쉽게 풀 수 있는 문제였다.</li>
   <li>맵을 벡터로 변환하여 정렬 후 가장 앞의 값을 출력해도 풀 수 있을 것 같다.</li>
-</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Map" /><category term="Sort" /><summary type="html"><![CDATA[11652 카드 / c++ / Silver4 / 8분]]></summary></entry><entry><title type="html">3085 사탕 게임</title><link href="https://sho1007.github.io/boj/3085/" rel="alternate" type="text/html" title="3085 사탕 게임" /><published>2024-05-04T00:00:00+00:00</published><updated>2024-05-04T00:00:00+00:00</updated><id>https://sho1007.github.io/boj/3085</id><content type="html" xml:base="https://sho1007.github.io/boj/3085/"><![CDATA[<h1 id="3085-사탕-게임--c--silver2--40분">3085 사탕 게임 / c++ / Silver2 / 40분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Silver/3085.%E2%80%85%EC%82%AC%ED%83%95%E2%80%85%EA%B2%8C%EC%9E%84"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="브루트-포스--구현">브루트 포스 / 구현</h3>
-<ol>
-  <li>인접한 4칸 중 색이 다른 칸을 찾기
- (왼쪽위에서 우하향으로 내려오기 때문에 오른쪽, 아래만 검사하면 됨)</li>
-  <li>서로 색을 바꾸기</li>
-  <li>바꾼 칸 두 칸을 기준으로 4방향으로 뻗었을 때, 가장 긴 수를 반환</li>
-  <li>최대값 갱신</li>
-  <li>순회가 끝나면 최대값 출력</li>
-</ol>
-
-<p>-&gt; 내가 바꾸지 않은 부분에서 최대값이 나오는 경우를 탐지하지 못했다. (에제 2번)</p>
-
-<p>그래서 1번 전에 우선 현재 칸 기준으로 최대값을 한번 찾는 로직을 추가했다. <br />
--&gt; 해결</p>
-
-<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
-<ol>
-  <li>코딩을 시작하기 전에 문제를 한번 분석하고 수도 코드를 작성하고 풀었더니 훨씬 쉽게 풀렸다.</li>
-  <li>내가 바꾸지 않은 부분에서 최대값이 나올 수 있다는 것을 알았을 때, 처음엔 바꿀 때마다 전체 보드를 다 탐색해야 하나 생각했다.</li>
-  <li>하지만 너무 비효율적이었고, 다른 방법을 찾던 중, 결국 내가 바꿨다면 변화가 거기에서만 오기때문에 그 부분만 찾는게 맞고, 아니라면 바꾸기 전 상태를 먼저 체크하면 되는게 아닌가 생각이 들었다.</li>
-  <li>생각한대로 수정하고 문제를 해결하게 되어 엄청 뿌듯했다.</li>
-</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Brute Force" /><summary type="html"><![CDATA[3085 사탕 게임 / c++ / Silver2 / 40분]]></summary></entry></feed>
+</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Map" /><category term="Sort" /><summary type="html"><![CDATA[11652 카드 / c++ / Silver4 / 8분]]></summary></entry></feed>
