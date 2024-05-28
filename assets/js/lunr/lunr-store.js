@@ -850,4 +850,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Sort"],
         "url": "/leetcode/899/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 9일차 TIL - 84512 모음 사전",
+        "excerpt":"84512. 모음 사전 / c++ / level2 / 8분 문제 및 코드 접근 방식 완전 탐색 빈 문자열 “” 부터 시작해서 큐에 집어넣는다. 큐가 빌 때까지 아래를 반복 큐에서 하나를 꺼내서 만약 길이가 5라면, 더 이상 추가할 수 없으므로 continue for 문을 돌면서 현재 문자열에 ‘A’, ‘E’, ‘I’, ‘O’, ‘U’...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Brute Force"],
+        "url": "/programmers/84512/",
+        "teaser": null
       }]
