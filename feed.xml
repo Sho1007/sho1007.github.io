@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-05-28T13:46:26+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 9일차 TIL - 84512 모음 사전</title><link href="https://sho1007.github.io/programmers/84512/" rel="alternate" type="text/html" title="99클럽 코테 스터디 9일차 TIL - 84512 모음 사전" /><published>2024-05-28T00:00:00+00:00</published><updated>2024-05-28T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/84512</id><content type="html" xml:base="https://sho1007.github.io/programmers/84512/"><![CDATA[<h1 id="84512-모음-사전--c--level2--8분">84512. 모음 사전 / c++ / level2 / 8분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-05-29T03:01:04+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 10일차 TIL - 86971 전력망을 둘로 나누기</title><link href="https://sho1007.github.io/programmers/86971/" rel="alternate" type="text/html" title="99클럽 코테 스터디 10일차 TIL - 86971 전력망을 둘로 나누기" /><published>2024-05-29T00:00:00+00:00</published><updated>2024-05-29T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/86971</id><content type="html" xml:base="https://sho1007.github.io/programmers/86971/"><![CDATA[<h1 id="86971-전력망을-둘로-나누기--c--level2--18분">86971. 전력망을 둘로 나누기 / c++ / level2 / 18분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/86971.%E2%80%85%EC%A0%84%EB%A0%A5%EB%A7%9D%EC%9D%84%E2%80%85%EB%91%98%EB%A1%9C%E2%80%85%EB%82%98%EB%88%84%EA%B8%B0"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="완전-탐색">완전 탐색</h3>
+<ol>
+  <li>노드가 100개이므로 인접행렬을 만들어도 100 * 100 개, 메모리 크기는 40KB(정수의 경우)가 되므로 충분했다.</li>
+  <li>wires를 돌면서 두 노드를 모두 연결해줬다. (양방향 그래프)</li>
+  <li>다시 wires를 돌면서, 이번엔 두 노드를 모두 끊어준 뒤, 각 노드를 시작점으로 하여 DFS를 계산해줬다.</li>
+  <li>그렇게 나온 두 수 (두 전력망이 가지고 있는 송전탑의 개수)를 뺀 값의 절대값을 미리 최대값 (101)개를 취한 answer와 비교하여 더 작다면 answer를 갱신해줬다.</li>
+  <li>answer를 반환</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>DFS를 맨 처음 시작할 때, 나눠진 두 노드의 방문 처리를 안해줬더니 테스트 케이스 1번이 틀렸었다. 사소해서 놓치기 쉬운 부분이므로 다음부터는 꼭 집고 넘어가야겠다.</li>
+  <li>인접행렬에 비용이 들어가는게 아니라 연결 되어있는지 여부가 들어가므로 bool로 선언했다면 메모리를 아낄 수 있었다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Brute Force" /><summary type="html"><![CDATA[86971. 전력망을 둘로 나누기 / c++ / level2 / 18분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 9일차 TIL - 84512 모음 사전</title><link href="https://sho1007.github.io/programmers/84512/" rel="alternate" type="text/html" title="99클럽 코테 스터디 9일차 TIL - 84512 모음 사전" /><published>2024-05-28T00:00:00+00:00</published><updated>2024-05-28T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/84512</id><content type="html" xml:base="https://sho1007.github.io/programmers/84512/"><![CDATA[<h1 id="84512-모음-사전--c--level2--8분">84512. 모음 사전 / c++ / level2 / 8분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -303,26 +326,4 @@
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Hash" /><category term="Sort" /><summary type="html"><![CDATA[42579. 베스트앨범 / c++ / level3 / 13분]]></summary></entry><entry><title type="html">18352 특정 거리의 도시 찾기</title><link href="https://sho1007.github.io/boj/18352/" rel="alternate" type="text/html" title="18352 특정 거리의 도시 찾기" /><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://sho1007.github.io/boj/18352</id><content type="html" xml:base="https://sho1007.github.io/boj/18352/"><![CDATA[<h1 id="18352-특정-거리의-도시-찾기--c--silver2--30분">18352 특정 거리의 도시 찾기 / c++ / Silver2 / 30분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Silver/18352.%E2%80%85%ED%8A%B9%EC%A0%95%E2%80%85%EA%B1%B0%EB%A6%AC%EC%9D%98%E2%80%85%EB%8F%84%EC%8B%9C%E2%80%85%EC%B0%BE%EA%B8%B0"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="그래프--다익스트라">그래프 / 다익스트라</h3>
-<ol>
-  <li>각 도시간의 거리는 1이다.</li>
-  <li>최대 도시 수는 300’000으로, 인접행렬로 구하기엔 공간 복잡도가 높다. <br />
- -&gt; 인접 리스트를 사용</li>
-  <li>시작 도시 X에서 다익스트라 알고리즘으로 각 도시까지의 거리를 구한다.</li>
-  <li>계산이 끝나면 그 중 거리가 K인 도시를 사전 순으로 출력, 없다면 -1을 출력한다.</li>
-</ol>
-
-<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
-<ol>
-  <li>다익스트라 알고리즘을 적용해 볼 수 있는 비교적 간단한 문제였다.</li>
-  <li>각 도시간의 거리가 1이라는 점, 큐와 다익스트라의 성질에 의해 먼저 접근한 도시가 당연히 거리가 짧게 된다. (그래서 거리를 비교할게 아니라 방문만 했다면 바로 건너뛰면 됨)</li>
-  <li>1차 시도에서 시간이 960ms가 나와서 왜 그런지 찾아봤더니 인접 리스트를 저장할 때 Map으로 저장한게 시간을 지연시켰었다.
-300’000개나 되는 도시를 다 저장하지 않아도 된다고 생각해서 검색 속도가 빠른 Map을 사용한 것이었는데, 이정도 규모에서는 그냥 Vector를 사용하는 것이 훨씬 효율이 좋았다. (심지어 메모리도 더 적게 차지했다.)</li>
-  <li>간만에 자료구조에 대해 다시 생각해볼 수 있는 좋은 경험이었다.</li>
-</ol>]]></content><author><name>Sho1007</name></author><category term="[&quot;BOJ&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="Dijkstra" /><summary type="html"><![CDATA[18352 특정 거리의 도시 찾기 / c++ / Silver2 / 30분]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Hash" /><category term="Sort" /><summary type="html"><![CDATA[42579. 베스트앨범 / c++ / level3 / 13분]]></summary></entry></feed>

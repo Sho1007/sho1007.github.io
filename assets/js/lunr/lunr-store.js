@@ -856,4 +856,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Brute Force"],
         "url": "/programmers/84512/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 10일차 TIL - 86971 전력망을 둘로 나누기",
+        "excerpt":"86971. 전력망을 둘로 나누기 / c++ / level2 / 18분 문제 및 코드 접근 방식 완전 탐색 노드가 100개이므로 인접행렬을 만들어도 100 * 100 개, 메모리 크기는 40KB(정수의 경우)가 되므로 충분했다. wires를 돌면서 두 노드를 모두 연결해줬다. (양방향 그래프) 다시 wires를 돌면서, 이번엔 두 노드를 모두 끊어준 뒤, 각 노드를...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Brute Force"],
+        "url": "/programmers/86971/",
+        "teaser": null
       }]
