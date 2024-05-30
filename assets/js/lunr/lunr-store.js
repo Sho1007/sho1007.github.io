@@ -862,4 +862,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Brute Force"],
         "url": "/programmers/86971/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 11일차 TIL - 84021 퍼즐 조각 채우기",
+        "excerpt":"84021. 퍼즐 조각 채우기 / c++ / level3 / 1시간+ 문제 및 코드 접근 방식 그래프 탐색 / BFS / 구현 먼저 table 에서 블록(위치값의 벡터)들을 BFS 로 구한다. table을 탐색할 때, 좌상단부터 우하단 방향으로 탐색하기에, 블록의 첫 번째 부분은 항상 가장 위에 있고, 그 중 가장 왼쪽에 위치한다. 구한...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","BFS"],
+        "url": "/programmers/84021/",
+        "teaser": null
       }]
