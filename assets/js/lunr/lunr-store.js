@@ -868,4 +868,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","BFS"],
         "url": "/programmers/84021/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 12일차 TIL - 43164 여행경로",
+        "excerpt":"43164. 여행경로 / c++ / level3 / 1시간+ 문제 및 코드 접근 방식 그래프 탐색 / BFS / 구현 / 백트래킹 우선 tickets 을 순회 하면서 인접리스트인 adjMap (unordered_map&lt;string,vector&gt;) 을 준비 여행 경로를 담을 vector currentPath를 선언 currentPath에 출발지인 ICN을 삽입 adjMap에서 ICN을 출발지로 하는 인접리스트를 돌면서 백트래킹 시작 currentPath.back...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","BFS","BackTracking"],
+        "url": "/programmers/43164/",
+        "teaser": null
       }]
