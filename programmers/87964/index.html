@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>1766 문제집 - Today I Learned</title>
-<meta name="description" content="1766. 문제집 / c++ / Gold2 / 1시간 +">
+<!-- begin _includes/seo.html --><title>99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기 - Today I Learned</title>
+<meta name="description" content="87964. 아이템 줍기 / c++ / level3 / 1시간+">
 
 
   <meta name="author" content="Sho1007">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Today I Learned">
-<meta property="og:title" content="1766 문제집">
-<meta property="og:url" content="https://sho1007.github.io/boj/1766/">
+<meta property="og:title" content="99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기">
+<meta property="og:url" content="https://sho1007.github.io/programmers/87964/">
 
 
-  <meta property="og:description" content="1766. 문제집 / c++ / Gold2 / 1시간 +">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-01-31T00:00:00+00:00">
+  <meta property="og:description" content="87964. 아이템 줍기 / c++ / level3 / 1시간+">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-01T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://sho1007.github.io/boj/1766/">
+
+<link rel="canonical" href="https://sho1007.github.io/programmers/87964/">
 
 
 
@@ -541,16 +541,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="1766 문제집">
-    <meta itemprop="description" content="1766. 문제집 / c++ / Gold2 / 1시간 +">
-    <meta itemprop="datePublished" content="2023-01-31T00:00:00+00:00">
+    <meta itemprop="headline" content="99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기">
+    <meta itemprop="description" content="87964. 아이템 줍기 / c++ / level3 / 1시간+">
+    <meta itemprop="datePublished" content="2024-06-01T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://sho1007.github.io/boj/1766/" class="u-url" itemprop="url">1766 문제집
+            <a href="https://sho1007.github.io/programmers/87964/" class="u-url" itemprop="url">99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기
 </a>
           </h1>
           
@@ -561,7 +561,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2023-01-31T00:00:00+00:00">January 31, 2023</time>
+        <time datetime="2024-06-01T00:00:00+00:00">June 1, 2024</time>
       </span>
     
 
@@ -574,7 +574,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          less than 1 minute read
         
       </span>
     
@@ -589,90 +589,37 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#1766-문제집--c--gold2--1시간-">1766. 문제집 / c++ / Gold2 / 1시간 +</a><ul><li><a href="#문제">문제</a></li><li><a href="#접근-방식">접근 방식</a></li><li><a href="#문제-풀이">문제 풀이</a></li><li><a href="#다시-생각해-볼-점">다시 생각해 볼 점</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#87964-아이템-줍기--c--level3--1시간">87964. 아이템 줍기 / c++ / level3 / 1시간+</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#그래프-탐색--bfs">그래프 탐색 / BFS</a></li></ul></li><li><a href="#생각해-볼-점">생각해 볼 점</a><ul><li><a href="#해시태그">해시태그</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="1766-문제집--c--gold2--1시간-">1766. 문제집 / c++ / Gold2 / 1시간 +</h1>
+        <h1 id="87964-아이템-줍기--c--level3--1시간">87964. 아이템 줍기 / c++ / level3 / 1시간+</h1>
 
-<h2 id="문제">문제</h2>
-<p>https://www.acmicpc.net/problem/1766</p>
-<ol>
-  <li>문제 N개, 선행 문제 M개</li>
-  <li>문제는 숫자가 클 수록 어려운 문제</li>
-  <li>선행문제는 반드시 먼저 풀어야 한다.</li>
-  <li>N개의 문제를 다 풀었을 때 그 순서는?</li>
-</ol>
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/87694.%E2%80%85%EC%95%84%EC%9D%B4%ED%85%9C%E2%80%85%EC%A4%8D%EA%B8%B0"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
 
 <h2 id="접근-방식">접근 방식</h2>
-<p>자료구조, 우선순위 큐, 위상정렬</p>
+<h3 id="그래프-탐색--bfs">그래프 탐색 / BFS</h3>
 <ol>
-  <li>연결 리스트로 풀어보려고 직접 연결 리스트를 만들었다. (시간초과)</li>
-  <li>아무리 생각해보 모르겠어서, 문제 분류를 봤다. 우선순위 큐와 위상 정렬이 적혀있었다.</li>
-  <li>구글에 위상 정렬을 찾아봤다.</li>
-  <li>위상 정렬대로 풀어봤다. (해결)</li>
+  <li>점이 겹치는 뭉치는 문제를 해결하기 위해 사각형의 각 좌표를 * 2 해줌</li>
+  <li>사각형을 돌면서 2차원 bool 배열 map에 테두리를 true 표시해줌</li>
+  <li>다시 사각형을 돌면서 사각형 안쪽을 false로 바꿔줌</li>
+  <li>해당 map을 기준으로 BFS 진행 (이 때, 시작 좌표도 각각 *2)</li>
+  <li>마지막으로 item 좌표 * 2 한 위치의 비용값의 절반을 return</li>
 </ol>
 
-<h2 id="문제-풀이">문제 풀이</h2>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#pragma GCC optimize("Ofast")
-#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;queue&gt;</span><span class="cp">
-</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">adjVec</span><span class="p">[</span><span class="mi">32'001</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
-<span class="kt">int</span> <span class="n">degreeArr</span><span class="p">[</span><span class="mi">32'001</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
-<span class="kt">int</span> <span class="n">order</span><span class="p">[</span><span class="mi">32'001</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
-<span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">fromNum</span> <span class="p">,</span><span class="n">toNum</span><span class="p">;</span>
-
-<span class="n">priority_queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">greater</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">q</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
-<span class="p">{</span>
-	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span> <span class="o">&gt;&gt;</span> <span class="n">M</span><span class="p">;</span>
-
-	<span class="k">while</span> <span class="p">(</span><span class="n">M</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">fromNum</span> <span class="o">&gt;&gt;</span> <span class="n">toNum</span><span class="p">;</span>
-		<span class="n">adjVec</span><span class="p">[</span><span class="n">fromNum</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">toNum</span><span class="p">);</span>
-		<span class="n">degreeArr</span><span class="p">[</span><span class="n">toNum</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
-	<span class="p">}</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">degreeArr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-	<span class="p">}</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="kt">int</span> <span class="n">now</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">top</span><span class="p">();</span> <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-		<span class="n">order</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">now</span><span class="p">;</span>
-		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">adjVec</span><span class="p">[</span><span class="n">now</span><span class="p">].</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
-		<span class="p">{</span>
-			<span class="kt">int</span> <span class="n">next</span> <span class="o">=</span> <span class="n">adjVec</span><span class="p">[</span><span class="n">now</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
-			<span class="k">if</span> <span class="p">(</span><span class="o">--</span><span class="n">degreeArr</span><span class="p">[</span><span class="n">next</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">next</span><span class="p">);</span>
-			<span class="p">}</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-
-	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-	<span class="p">{</span>
-		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">order</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="sc">' '</span><span class="p">;</span>
-	<span class="p">}</span>
-	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
 <ol>
-  <li>위상 정렬을 알게 되었다.</li>
-  <li>내가 본 글에서 위상정렬은 그냥 큐를 사용했었는데, 문제에서는 기본적으로 낮은 번호의 문제를 더 빨리 풀도록 되어 있어서 우선순위 큐를 사용했다.</li>
+  <li>사각형들의 테두리를 잇는 부분은 크게 어렵지 않았다.</li>
+  <li>그런데 좌표가 1단위로 나눠져서, 분명 이어져있지 않은 길인데도 bfs할 때 이어진 것처럼 작동하는 문제가 있었다.</li>
+  <li>예전에 이걸 *2해서 (지도가 커지면 좌표가 더 세밀해지는 느낌) 해결했던 경험이 있었는데, 이걸 다시 생각해내기까지가 정말 오래 걸렸다.</li>
+  <li>다음에는 지금처럼 좌표값을 더 세분화해야 할 때, * 2 하는 방법을 바로 기억해낼 수 있도록 해야겠다.</li>
 </ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>
 
         
       </section>
@@ -689,15 +636,17 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
+      <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a><span class="sep">, </span>
+    
+      <a href="/tags/#bfs" class="page__taxonomy-item p-category" rel="tag">BFS</a><span class="sep">, </span>
+    
+      <a href="/tags/#codingtest" class="page__taxonomy-item p-category" rel="tag">CodingTest</a><span class="sep">, </span>
+    
       <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
     
-      <a href="/tags/#data-structure" class="page__taxonomy-item p-category" rel="tag">Data Structure</a><span class="sep">, </span>
+      <a href="/tags/#graph" class="page__taxonomy-item p-category" rel="tag">Graph</a><span class="sep">, </span>
     
-      <a href="/tags/#priority-queue" class="page__taxonomy-item p-category" rel="tag">Priority Queue</a><span class="sep">, </span>
-    
-      <a href="/tags/#sort" class="page__taxonomy-item p-category" rel="tag">Sort</a><span class="sep">, </span>
-    
-      <a href="/tags/#topology-sort" class="page__taxonomy-item p-category" rel="tag">Topology Sort</a>
+      <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
     
     </span>
   </p>
@@ -714,7 +663,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#boj" class="page__taxonomy-item p-category" rel="tag">BOJ</a>
+      <a href="/categories/#programmers" class="page__taxonomy-item p-category" rel="tag">Programmers</a>
     
     </span>
   </p>
@@ -722,7 +671,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-01-31T00:00:00+00:00">January 31, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-01T00:00:00+00:00">June 1, 2024</time></p>
 
       </footer>
 
@@ -731,23 +680,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=1766+%EB%AC%B8%EC%A0%9C%EC%A7%91%20https%3A%2F%2Fsho1007.github.io%2Fboj%2F1766%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=99%ED%81%B4%EB%9F%BD+%EC%BD%94%ED%85%8C+%EC%8A%A4%ED%84%B0%EB%94%94+13%EC%9D%BC%EC%B0%A8+TIL+-+87964+%EC%95%84%EC%9D%B4%ED%85%9C+%EC%A4%8D%EA%B8%B0%20https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F87964%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fboj%2F1766%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F87964%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fboj%2F1766%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F87964%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/algorithm/TopologySort/" class="pagination--pager" title="위상 정렬 (Topology Sort)
+      <a href="/programmers/43164/" class="pagination--pager" title="99클럽 코테 스터디 12일차 TIL - 43164 여행경로
 ">Previous</a>
     
     
-      <a href="/algorithm/Trie/" class="pagination--pager" title="트라이 (Trie)
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -761,53 +709,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/programmers/87964/" rel="permalink">99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2024-06-01T00:00:00+00:00">June 1, 2024</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">87964. 아이템 줍기 / c++ / level3 / 1시간+
-</p>
-  </article>
-</div>
-
         
           
 
@@ -945,6 +846,53 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">86971. 전력망을 둘로 나누기 / c++ / level2 / 18분
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/programmers/84512/" rel="permalink">99클럽 코테 스터디 9일차 TIL - 84512 모음 사전
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-05-28T00:00:00+00:00">May 28, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">84512. 모음 사전 / c++ / level2 / 8분
 </p>
   </article>
 </div>

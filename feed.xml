@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-05-31T09:04:37+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 12일차 TIL - 43164 여행경로</title><link href="https://sho1007.github.io/programmers/43164/" rel="alternate" type="text/html" title="99클럽 코테 스터디 12일차 TIL - 43164 여행경로" /><published>2024-05-31T00:00:00+00:00</published><updated>2024-05-31T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43164</id><content type="html" xml:base="https://sho1007.github.io/programmers/43164/"><![CDATA[<h1 id="43164-여행경로--c--level3--1시간">43164. 여행경로 / c++ / level3 / 1시간+</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-01T17:40:32+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기</title><link href="https://sho1007.github.io/programmers/87964/" rel="alternate" type="text/html" title="99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기" /><published>2024-06-01T00:00:00+00:00</published><updated>2024-06-01T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/87964</id><content type="html" xml:base="https://sho1007.github.io/programmers/87964/"><![CDATA[<h1 id="87964-아이템-줍기--c--level3--1시간">87964. 아이템 줍기 / c++ / level3 / 1시간+</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/87694.%E2%80%85%EC%95%84%EC%9D%B4%ED%85%9C%E2%80%85%EC%A4%8D%EA%B8%B0"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="그래프-탐색--bfs">그래프 탐색 / BFS</h3>
+<ol>
+  <li>점이 겹치는 뭉치는 문제를 해결하기 위해 사각형의 각 좌표를 * 2 해줌</li>
+  <li>사각형을 돌면서 2차원 bool 배열 map에 테두리를 true 표시해줌</li>
+  <li>다시 사각형을 돌면서 사각형 안쪽을 false로 바꿔줌</li>
+  <li>해당 map을 기준으로 BFS 진행 (이 때, 시작 좌표도 각각 *2)</li>
+  <li>마지막으로 item 좌표 * 2 한 위치의 비용값의 절반을 return</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>사각형들의 테두리를 잇는 부분은 크게 어렵지 않았다.</li>
+  <li>그런데 좌표가 1단위로 나눠져서, 분명 이어져있지 않은 길인데도 bfs할 때 이어진 것처럼 작동하는 문제가 있었다.</li>
+  <li>예전에 이걸 *2해서 (지도가 커지면 좌표가 더 세밀해지는 느낌) 해결했던 경험이 있었는데, 이걸 다시 생각해내기까지가 정말 오래 걸렸다.</li>
+  <li>다음에는 지금처럼 좌표값을 더 세분화해야 할 때, * 2 하는 방법을 바로 기억해낼 수 있도록 해야겠다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="BFS" /><summary type="html"><![CDATA[87964. 아이템 줍기 / c++ / level3 / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 12일차 TIL - 43164 여행경로</title><link href="https://sho1007.github.io/programmers/43164/" rel="alternate" type="text/html" title="99클럽 코테 스터디 12일차 TIL - 43164 여행경로" /><published>2024-05-31T00:00:00+00:00</published><updated>2024-05-31T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43164</id><content type="html" xml:base="https://sho1007.github.io/programmers/43164/"><![CDATA[<h1 id="43164-여행경로--c--level3--1시간">43164. 여행경로 / c++ / level3 / 1시간+</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -309,25 +334,4 @@
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Stack" /><summary type="html"><![CDATA[12909. 옳바른 괄호 / c++ / level2 / 8분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 3일차 TIL - 42586 기능개발</title><link href="https://sho1007.github.io/programmers/42586/" rel="alternate" type="text/html" title="99클럽 코테 스터디 3일차 TIL - 42586 기능개발" /><published>2024-05-22T00:00:00+00:00</published><updated>2024-05-22T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42586</id><content type="html" xml:base="https://sho1007.github.io/programmers/42586/"><![CDATA[<h1 id="42586-기능개발--c--level2--11분">42586. 기능개발 / c++ / level2 / 11분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/42586.%E2%80%85%EA%B8%B0%EB%8A%A5%EA%B0%9C%EB%B0%9C"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="구현">구현</h3>
-<ol>
-  <li>완료되지 않은 가장 앞의 작업이 100을 넘길때까지 계속 작업량을 한번씩 더함</li>
-  <li>완료되지 않은 가장 앞의 작업이 100을 넘기면, 그 뒤로 100이 넘어간 작업이 몇개 더 있는지 체크</li>
-  <li>해당 갯수만큼 정답 벡터에 삽입, 만약 완료되지 않은 작업이 남았다면 다시 완료되지 않은 가장 앞의 작업에서 1번부터 반복</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>문제의 카테고리에는 자료구조와 큐가 적혀있었는데 이 문제는 단순 구현으로만 풀어서 뭔가 더 좋은 방법이 없나 고민해봤다.</li>
-  <li>while 문으로 현재 작업이 100%를 넘길때까지 반복할게 아니라, (100 - 현재 작업량)/작업 속도를 해서 작업일을 구하고, 그 뒤로 해당 작업일까지 작업했을 때 같이 배포할 수 있는 것들의 수를 더해서 벡터에 삽입하는 방식이 더 효율적이라고 생각했다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Queue" /><summary type="html"><![CDATA[42586. 기능개발 / c++ / level2 / 11분]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Stack" /><summary type="html"><![CDATA[12909. 옳바른 괄호 / c++ / level2 / 8분]]></summary></entry></feed>

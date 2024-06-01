@@ -874,4 +874,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","BFS","BackTracking"],
         "url": "/programmers/43164/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기",
+        "excerpt":"87964. 아이템 줍기 / c++ / level3 / 1시간+ 문제 및 코드 접근 방식 그래프 탐색 / BFS 점이 겹치는 뭉치는 문제를 해결하기 위해 사각형의 각 좌표를 * 2 해줌 사각형을 돌면서 2차원 bool 배열 map에 테두리를 true 표시해줌 다시 사각형을 돌면서 사각형 안쪽을 false로 바꿔줌 해당 map을 기준으로 BFS...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","BFS"],
+        "url": "/programmers/87964/",
+        "teaser": null
       }]
