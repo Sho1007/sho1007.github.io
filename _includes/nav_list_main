@@ -25,15 +25,22 @@
                 <ul>
                     {% for category in site.categories %}
                         {% if category[0] == "DataStructure" %}
-                            <li><a href="/categories/DataStructure" class=""> C # ({{category[1].size}})</a></li>
+                            <li><a href="/categories/DataStructure" class=""> 자료구조 ({{category[1].size}})</a></li>
                         {% endif %}
                     {% endfor %}
                 </ul>
             <span class = "nav__sub-title">Programming Language</span>
                 <ul>
                     {% for category in site.categories %}
+                        {% if category[0] == "C++" %}
+                            <li><a href="/categories/ProgrammingLanguage/C++" class=""> C++ ({{category[1].size}})</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <ul>
+                    {% for category in site.categories %}
                         {% if category[0] == "C Sharp" %}
-                            <li><a href="/categories/ProgrammingLanguage/CSharp" class=""> C # ({{category[1].size}})</a></li>
+                            <li><a href="/categories/ProgrammingLanguage/CSharp" class=""> C# ({{category[1].size}})</a></li>
                         {% endif %}
                     {% endfor %}
                 </ul>
