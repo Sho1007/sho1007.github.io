@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-02T11:26:48+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 14일차 TIL - 43163 단어 변환</title><link href="https://sho1007.github.io/programmers/43163/" rel="alternate" type="text/html" title="99클럽 코테 스터디 14일차 TIL - 43163 단어 변환" /><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43163</id><content type="html" xml:base="https://sho1007.github.io/programmers/43163/"><![CDATA[<h1 id="43163-단어-변환--c--level3--18분">43163. 단어 변환 / c++ / level3 / 18분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-02T12:39:41+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 14일차 TIL - 43163 단어 변환</title><link href="https://sho1007.github.io/programmers/43163/" rel="alternate" type="text/html" title="99클럽 코테 스터디 14일차 TIL - 43163 단어 변환" /><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43163</id><content type="html" xml:base="https://sho1007.github.io/programmers/43163/"><![CDATA[<h1 id="43163-단어-변환--c--level3--18분">43163. 단어 변환 / c++ / level3 / 18분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -25,7 +25,56 @@
 <h3 id="해시태그">해시태그</h3>
 <p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="DFS" /><summary type="html"><![CDATA[43163. 단어 변환 / c++ / level3 / 18분]]></summary></entry><entry><title type="html">Stable &amp;amp; Unstable Sort</title><link href="https://sho1007.github.io/datastructure/Stable&UnStableSort/" rel="alternate" type="text/html" title="Stable &amp;amp; Unstable Sort" /><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://sho1007.github.io/datastructure/Stable&amp;UnStableSort</id><content type="html" xml:base="https://sho1007.github.io/datastructure/Stable&amp;UnStableSort/"><![CDATA[<h1 id="stable--unstalbe-sort">Stable &amp; Unstalbe Sort</h1>
 
-<p>정렬 시 같은 key 값을 가지는 원소들의 순서가 유지된다면 stable sort이고, 순서가 유지되지 않는다면 unstable sort이다.</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;DataStructure&quot;]" /><category term="Sort" /><category term="DataStructure" /><summary type="html"><![CDATA[Stable &amp; Unstalbe Sort]]></summary></entry><entry><title type="html">Uniform Initialization</title><link href="https://sho1007.github.io/c++/UniformInitialization/" rel="alternate" type="text/html" title="Uniform Initialization" /><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://sho1007.github.io/c++/UniformInitialization</id><content type="html" xml:base="https://sho1007.github.io/c++/UniformInitialization/"><![CDATA[<h1 id="uniform-initialization">Uniform Initialization</h1>
+<p>정렬 시 같은 key 값을 가지는 원소들의 순서가 유지된다면 stable sort이고, 순서가 유지되지 않는다면 unstable sort이다.</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;DataStructure&quot;]" /><category term="Sort" /><category term="DataStructure" /><summary type="html"><![CDATA[Stable &amp; Unstalbe Sort]]></summary></entry><entry><title type="html">운영체제 시작하기</title><link href="https://sho1007.github.io/operatingsystem/OperatingSystem/" rel="alternate" type="text/html" title="운영체제 시작하기" /><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://sho1007.github.io/operatingsystem/OperatingSystem</id><content type="html" xml:base="https://sho1007.github.io/operatingsystem/OperatingSystem/"><![CDATA[<h1 id="운영체제란">운영체제란</h1>
+
+<p>실행할 프로그램에 필요한 자원을 할당하고, 프로그램이 올바르게 실행되도록 돕는 특별한 프로그램</p>
+
+<h1 id="커널-영역--사용자-영역">커널 영역 / 사용자 영역</h1>
+<p><strong>커널 영역</strong> : 운영체제가 적재되는 메모리 공간 <br />
+<strong>사용자 영역</strong> : 사용자가 이용하는 응용 프로그램이 적재될 커널 영역 이외의 공간</p>
+
+<h1 id="운영체제의-핵심-서비스">운영체제의 핵심 서비스</h1>
+<h2 id="프로세스-관리">프로세스 관리</h2>
+<p>실행 중인 프로그램을 프로세스라고 하는데, 일반적으로 CPU는 한번에 한 프로세스만 처리할 수 있으므로 운영체제가 프로세스들을 전환해가며 CPU를 사용하게 한다. 이 때 <strong>프로세스 동기화</strong>가 필수적이고, <strong>교착 상태</strong>를 해결해야 한다.</p>
+<h2 id="자원-접근-및-할당">자원 접근 및 할당</h2>
+<h3 id="cpu">CPU</h3>
+<p>일반적으로 메모리에 여러 프로세스가 적재되고, 하나의 CPU에는 한번에 하나의 프로세스만 실행되므로, 다른 프로세스들은 CPU를 사용할 동안 기다려야 하는데, 운영체제에서 이를 관리하는 것을 <strong>CPU 스케쥴링</strong>이라고 한다.</p>
+<h3 id="메모리">메모리</h3>
+<p>메모리에 적재된 프로세스들은 크기도, 주소도 다 다르다.
+운영체제는 새로운 프로세스가 적재될 때의 주소를 결정해야 하고, 메모리 공간도 관리해야 한다.</p>
+<h3 id="입출력장치">입출력장치</h3>
+<p>인터럽트 서비스 루틴은 운영체제의 기능으로 커널 영역에 있다. 입출력장치가 발생시키는 하드웨어 인터럽트도 마찬가지이다.</p>
+<h2 id="파일-시스템">파일 시스템</h2>
+<p>파일 열기, 닫기, 생성, 삭제, 디렉터리 관리도 운영체제가 담당한다.</p>
+
+<blockquote>
+  <p>가상 머신은 응용 프로그램으로 사용자 모드로 실행된다. 하지만 가상 머신에 운영체제가 존재할 때, 이 운영체제는 어떻게 커널 영역의 서비스를 제공받을 수 있을까? -&gt; 가상화를 지원하는 CPU는 커널 모드와 사용자 모드 이외에 <strong>하이퍼바이저 모드</strong>를 따로 둔다. 가상 머신 위에서 작동하는 응용 프로그램들은 하이퍼바이저모드로써 운영체제 서비스를 받을 수 있다.</p>
+</blockquote>
+
+<h1 id="커널">커널</h1>
+<p>운영체제의 핵심 서비스를 담당하는 부분을 커널이라고 하는데, 운영체제는 커널 이외에도 사용자 인터페이스 (GUI, CLI)도 제공한다.</p>
+
+<h1 id="이중모드">이중모드</h1>
+<p>이중모드란, CPU가 명령어를 실행하는 모드를 <strong>사용자 모드</strong>와 <strong>커널 모드</strong>로 구분하는 방식이다.</p>
+<h2 id="사용-이유">사용 이유</h2>
+<p>운영체제는 응용 프로그램이 하드웨어 자원에 직접 접근하는 것을 방지하고, 오직 자신을 통해서만 접근하도록 하여 자원을 보호한다. <br />
+이러한 운영체제의 문지기 역할은 <strong>이중 모드</strong> 를 사용하여 구현된다.</p>
+<h2 id="사용자-모드">사용자 모드</h2>
+<p>운영체제의 서비스를 제공받을 수 없는 실행 모드 (슈퍼바이저 플래그 off)</p>
+<h2 id="커널-모드">커널 모드</h2>
+<p>운영체제 서비스를 제공받을 수 있는 실행 모드 (슈퍼바이저 플래그 on)</p>
+<h2 id="시스템-호출">시스템 호출</h2>
+<p>사용자 모드에서 실행되는 프로그램이 자원에 접근하기 위해 운영체제 서비스를 제공받으려면 커널 모드로 전환되어야 하는데, 이 때 <strong>시스템 호출</strong>을 통해 커널 모드로 전환할 수 있다.</p>
+<blockquote>
+  <p>시스템 호출도 일종의 소프트웨어 인터럽트이다.</p>
+  <ol>
+    <li>시스템 호출 실행 (사용자 모드 -&gt; 커널 모드)</li>
+    <li>운영체제 코드 실행 (커널 모드)</li>
+    <li>시스템 호출로부터 복귀 (커널 모드 -&gt; 사용자 모드)</li>
+  </ol>
+</blockquote>
+
+<p>응용 프로그램은 실행 도중 빈번하게 시스템 호출을 발생시키고, 사용자 모드와 커널 모드를 오가며 실행된다.</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;OperatingSystem&quot;]" /><category term="OperatingSystem" /><category term="HonGong" /><summary type="html"><![CDATA[운영체제란]]></summary></entry><entry><title type="html">Uniform Initialization</title><link href="https://sho1007.github.io/c++/UniformInitialization/" rel="alternate" type="text/html" title="Uniform Initialization" /><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://sho1007.github.io/c++/UniformInitialization</id><content type="html" xml:base="https://sho1007.github.io/c++/UniformInitialization/"><![CDATA[<h1 id="uniform-initialization">Uniform Initialization</h1>
 <p>유니폼 초기화 혹은 균일 초기화라고 부른다.</p>
 <h2 id="생기게된-계기">생기게된 계기</h2>
 <p>C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다.</p>
@@ -342,67 +391,4 @@
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Sort" /><summary type="html"><![CDATA[899. Orderly Queue / c++ / Hard / 30분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 7일차 TIL - 2551 Put Marbles in Bags</title><link href="https://sho1007.github.io/leetcode/2551/" rel="alternate" type="text/html" title="99클럽 코테 스터디 7일차 TIL - 2551 Put Marbles in Bags" /><published>2024-05-26T00:00:00+00:00</published><updated>2024-05-26T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2551</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2551/"><![CDATA[<h1 id="2551-put-marbles-in-bags--c--hard--1시간">2551. Put Marbles in Bags / c++ / Hard / 1시간+</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
-</span>
-<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">costVector</span><span class="p">;</span>
-
-<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="nl">public:</span>
-    <span class="kt">long</span> <span class="kt">long</span> <span class="n">putMarbles</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">weights</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
-
-        <span class="n">costVector</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">weights</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">weights</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">costVector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">weights</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
-        <span class="p">}</span>
-
-        <span class="n">sort</span><span class="p">(</span><span class="n">costVector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">costVector</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-
-        <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxCost</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">maxCost</span> <span class="o">+=</span> <span class="n">costVector</span><span class="p">[</span><span class="n">costVector</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">];</span>
-        <span class="p">}</span>
-        <span class="kt">long</span> <span class="kt">long</span> <span class="n">minCost</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">minCost</span> <span class="o">+=</span> <span class="n">costVector</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>   
-        <span class="p">}</span>
-
-        <span class="k">return</span> <span class="n">maxCost</span> <span class="o">-</span> <span class="n">minCost</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div></div>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="정렬">정렬</h3>
-<ol>
-  <li>가장 단순하게 모든 구간을 잘라봤다. (전수조사, 백트래킹) -&gt; 시간 초과</li>
-  <li>시간을 단축할 수 있는 방법을 찾아보려 했지만 결국 찾지 못했고, 힌트를 봤다.</li>
-  <li>힌트에서 나눠지는 부분의 앞과 뒤를 사용해라고 나와 있었다.</li>
-  <li>pair&lt;int,int&gt; 를 원소로 가지는 우선순위 큐를 선언하여 끊어질 수 있는 부분을 모두 넣었다.</li>
-  <li>이러면 크거나 작은 한가지의 기준으로 정렬된 값을 꺼낼 수 있지만 여기선 최소값과 최대값 두가지의 기준이 필요했고, 기존 방법으로는 정렬의 반대 순서로 꺼내는게 번거로웠다.</li>
-  <li>다시 생각해보니 굳이 우선순위 큐를 쓰지 않고, 벡터에 다 넣은 다음 정렬하면 앞뒤로 꺼낼 수 있었다.</li>
-  <li>다른 분들의 풀이를 보니 또 굳이 pair&lt;int,int&gt; 로 나눠지는 부분을 받지 않고, 어차피 더해질 거 그냥 int 로 처음부터 더한 값을 원소로 받으면 된다는 점을 깨달았다.</li>
-  <li>마지막으로 항상 maxSum - minSum을 반환하기 때문에, 맨 앞과 맨 뒤 원소는 maxSum과 minSum에 모두 포함되어 결국 상쇄되는 값이었다.</li>
-  <li>이런 최적화 과정을 통해 최종 식이 (내림차순 정렬의 k-1개의 원소의 합) - (오름차순 정렬의 k-1개의 원소의 합) 이라는 점을 깨달았다.</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>리트코드는 힌트와 풀이 방법을 제공해준다는 점이 신기했다.</li>
-  <li>힌트도 단계별로 나눠져 있어서 하다가 도저히 안되겠을 때 차례로 한 개씩 열어볼 수 있다는 점이 좋았다.</li>
-  <li>이해하고 나니 단순 정렬 문제였는데, 풀이 과정을 유추해 내는 것이 너무 어려웠다.</li>
-  <li>마치 구현 방법을 식으로 나타내고 그 식을 최적화하여 최종 계산식을 뽑아내는 느낌이었다.</li>
-  <li>내가 부족한 부분이 문제 전체를 도식화하여 해결하는 능력이라는 것을 다시 한번 깨달을 수 있었다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Sort" /><summary type="html"><![CDATA[2551. Put Marbles in Bags / c++ / Hard / 1시간+]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Sort" /><summary type="html"><![CDATA[899. Orderly Queue / c++ / Hard / 30분]]></summary></entry></feed>

@@ -1,0 +1,1159 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>운영체제 시작하기 - Today I Learned</title>
+<meta name="description" content="운영체제란">
+
+
+  <meta name="author" content="Sho1007">
+  
+  <meta property="article:author" content="Sho1007">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Today I Learned">
+<meta property="og:title" content="운영체제 시작하기">
+<meta property="og:url" content="https://sho1007.github.io/operatingsystem/OperatingSystem/">
+
+
+  <meta property="og:description" content="운영체제란">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-06-02T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://sho1007.github.io/operatingsystem/OperatingSystem/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Sho1007",
+      "url": "https://sho1007.github.io/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="k2bJup-vss3c_EqpZldH9RF0_HoTiOygqrsuWut1nxY" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Today I Learned Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+<!-- Use Math -->
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Today I Learned
+          <span class="site-subtitle">내가 공부한 것들을 기록하는 공간</span>
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://sho1007.github.io/">
+        <img src="/assets/images/logo.jpg" alt="Sho1007" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://sho1007.github.io/" itemprop="url">Sho1007</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MMORPG 클라이언트 개발자 지망생</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul / Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/Sho1007" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+
+  
+    <!-- 이 파일은 식빵맘(ansohxxn)님의 포스트를 보고 따라서 직접 타이핑한 것입니다 -->
+<!-- 전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장 -->
+
+
+
+<nav class = "nav__list">
+    <input id = "ac-toc" name = "accordion-toc" type = "checkbox" />
+    <label for = "ac-toc">Toggle menu</label>
+    <ul class = "nav__items" id = "category_tag_menu">
+        <!-- 전체 글 수 -->
+        <li>
+            <span>전체 글 수</span><span>151</span>
+        </li>
+        <li>
+            <!-- span 태그로 카테고리들을 크게 분류 ex.C/C++/C -->
+            <span class = "nav__sub-title">혼공학습단</span>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/HonGong" class=""> 혼공컴운 11기 (7)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            <span class = "nav__sub-title">Programming Language</span>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/ProgrammingLanguage/C++" class=""> C++ (1)</a></li>
+                        
+                    
+                </ul>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/ProgrammingLanguage/CSharp" class=""> C# (1)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            <span class = "nav__sub-title">Data Structure</span>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/DataStructure" class=""> 자료구조 (1)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            <span class = "nav__sub-title">Coding Test</span>
+                <!-- ul 태그로 같은 카테고리들 모아둔 페이지들 나열 -->
+                <ul>
+                    <!-- BOJ 카테고리 글들을 모아둔 페이지인 /categories/boj 주소의 글로 링크 연결 -->
+                    <!-- category[1].size 로 해당 카테고리를 가진 글의 개수 표시 -->
+                    
+                        
+                            <li><a href="/categories/boj" class="">BOJ (94)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/programmers" class="">Programmers (20)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/LeetCode" class="">LeetCode (2)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+                <ul>
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/algorithm" class="">Algorithm (4)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            <span class = "nav__sub-title">Operating System</span>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/OperatingSystem" class=""> 운영체제 (1)</a></li>
+                        
+                    
+                        
+                    
+                </ul>
+            <span class = "nav__sub-title">Mathmatics</span>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/math/highschool" class="">고등 수학 (1)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            <span class = "nav__sub-title">Unity</span>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/Unity" class="">유니티 (1)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/Unity/Udemy" class="">유니티 유데미 강의 (16)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            <span class = "nav__sub-title">Design Pattern</span>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/categories/DesignPattern" class="">디자인 패턴 (2)</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+        </li>
+    </ul>
+</nav>
+  
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="운영체제 시작하기">
+    <meta itemprop="description" content="운영체제란">
+    <meta itemprop="datePublished" content="2024-06-02T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://sho1007.github.io/operatingsystem/OperatingSystem/" class="u-url" itemprop="url">운영체제 시작하기
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-02T00:00:00+00:00">June 2, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#운영체제란">운영체제란</a></li><li><a href="#커널-영역--사용자-영역">커널 영역 / 사용자 영역</a></li><li><a href="#운영체제의-핵심-서비스">운영체제의 핵심 서비스</a><ul><li><a href="#프로세스-관리">프로세스 관리</a></li><li><a href="#자원-접근-및-할당">자원 접근 및 할당</a><ul><li><a href="#cpu">CPU</a></li><li><a href="#메모리">메모리</a></li><li><a href="#입출력장치">입출력장치</a></li></ul></li><li><a href="#파일-시스템">파일 시스템</a></li></ul></li><li><a href="#커널">커널</a></li><li><a href="#이중모드">이중모드</a><ul><li><a href="#사용-이유">사용 이유</a></li><li><a href="#사용자-모드">사용자 모드</a></li><li><a href="#커널-모드">커널 모드</a></li><li><a href="#시스템-호출">시스템 호출</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="운영체제란">운영체제란</h1>
+
+<p>실행할 프로그램에 필요한 자원을 할당하고, 프로그램이 올바르게 실행되도록 돕는 특별한 프로그램</p>
+
+<h1 id="커널-영역--사용자-영역">커널 영역 / 사용자 영역</h1>
+<p><strong>커널 영역</strong> : 운영체제가 적재되는 메모리 공간 <br />
+<strong>사용자 영역</strong> : 사용자가 이용하는 응용 프로그램이 적재될 커널 영역 이외의 공간</p>
+
+<h1 id="운영체제의-핵심-서비스">운영체제의 핵심 서비스</h1>
+<h2 id="프로세스-관리">프로세스 관리</h2>
+<p>실행 중인 프로그램을 프로세스라고 하는데, 일반적으로 CPU는 한번에 한 프로세스만 처리할 수 있으므로 운영체제가 프로세스들을 전환해가며 CPU를 사용하게 한다. 이 때 <strong>프로세스 동기화</strong>가 필수적이고, <strong>교착 상태</strong>를 해결해야 한다.</p>
+<h2 id="자원-접근-및-할당">자원 접근 및 할당</h2>
+<h3 id="cpu">CPU</h3>
+<p>일반적으로 메모리에 여러 프로세스가 적재되고, 하나의 CPU에는 한번에 하나의 프로세스만 실행되므로, 다른 프로세스들은 CPU를 사용할 동안 기다려야 하는데, 운영체제에서 이를 관리하는 것을 <strong>CPU 스케쥴링</strong>이라고 한다.</p>
+<h3 id="메모리">메모리</h3>
+<p>메모리에 적재된 프로세스들은 크기도, 주소도 다 다르다.
+운영체제는 새로운 프로세스가 적재될 때의 주소를 결정해야 하고, 메모리 공간도 관리해야 한다.</p>
+<h3 id="입출력장치">입출력장치</h3>
+<p>인터럽트 서비스 루틴은 운영체제의 기능으로 커널 영역에 있다. 입출력장치가 발생시키는 하드웨어 인터럽트도 마찬가지이다.</p>
+<h2 id="파일-시스템">파일 시스템</h2>
+<p>파일 열기, 닫기, 생성, 삭제, 디렉터리 관리도 운영체제가 담당한다.</p>
+
+<blockquote>
+  <p>가상 머신은 응용 프로그램으로 사용자 모드로 실행된다. 하지만 가상 머신에 운영체제가 존재할 때, 이 운영체제는 어떻게 커널 영역의 서비스를 제공받을 수 있을까? -&gt; 가상화를 지원하는 CPU는 커널 모드와 사용자 모드 이외에 <strong>하이퍼바이저 모드</strong>를 따로 둔다. 가상 머신 위에서 작동하는 응용 프로그램들은 하이퍼바이저모드로써 운영체제 서비스를 받을 수 있다.</p>
+</blockquote>
+
+<h1 id="커널">커널</h1>
+<p>운영체제의 핵심 서비스를 담당하는 부분을 커널이라고 하는데, 운영체제는 커널 이외에도 사용자 인터페이스 (GUI, CLI)도 제공한다.</p>
+
+<h1 id="이중모드">이중모드</h1>
+<p>이중모드란, CPU가 명령어를 실행하는 모드를 <strong>사용자 모드</strong>와 <strong>커널 모드</strong>로 구분하는 방식이다.</p>
+<h2 id="사용-이유">사용 이유</h2>
+<p>운영체제는 응용 프로그램이 하드웨어 자원에 직접 접근하는 것을 방지하고, 오직 자신을 통해서만 접근하도록 하여 자원을 보호한다. <br />
+이러한 운영체제의 문지기 역할은 <strong>이중 모드</strong> 를 사용하여 구현된다.</p>
+<h2 id="사용자-모드">사용자 모드</h2>
+<p>운영체제의 서비스를 제공받을 수 없는 실행 모드 (슈퍼바이저 플래그 off)</p>
+<h2 id="커널-모드">커널 모드</h2>
+<p>운영체제 서비스를 제공받을 수 있는 실행 모드 (슈퍼바이저 플래그 on)</p>
+<h2 id="시스템-호출">시스템 호출</h2>
+<p>사용자 모드에서 실행되는 프로그램이 자원에 접근하기 위해 운영체제 서비스를 제공받으려면 커널 모드로 전환되어야 하는데, 이 때 <strong>시스템 호출</strong>을 통해 커널 모드로 전환할 수 있다.</p>
+<blockquote>
+  <p>시스템 호출도 일종의 소프트웨어 인터럽트이다.</p>
+  <ol>
+    <li>시스템 호출 실행 (사용자 모드 -&gt; 커널 모드)</li>
+    <li>운영체제 코드 실행 (커널 모드)</li>
+    <li>시스템 호출로부터 복귀 (커널 모드 -&gt; 사용자 모드)</li>
+  </ol>
+</blockquote>
+
+<p>응용 프로그램은 실행 도중 빈번하게 시스템 호출을 발생시키고, 사용자 모드와 커널 모드를 오가며 실행된다.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#hongong" class="page__taxonomy-item p-category" rel="tag">HonGong</a><span class="sep">, </span>
+    
+      <a href="/tags/#operatingsystem" class="page__taxonomy-item p-category" rel="tag">OperatingSystem</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#operatingsystem" class="page__taxonomy-item p-category" rel="tag">OperatingSystem</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-02T00:00:00+00:00">June 2, 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%20https%3A%2F%2Fsho1007.github.io%2Foperatingsystem%2FOperatingSystem%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Foperatingsystem%2FOperatingSystem%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Foperatingsystem%2FOperatingSystem%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/datastructure/Stable&UnStableSort/" class="pagination--pager" title="Stable &amp; Unstable Sort
+">Previous</a>
+    
+    
+      <a href="/c++/UniformInitialization/" class="pagination--pager" title="Uniform Initialization
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/c++/UniformInitialization/" rel="permalink">Uniform Initialization
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-02T00:00:00+00:00">June 2, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Uniform Initialization
+유니폼 초기화 혹은 균일 초기화라고 부른다.
+생기게된 계기
+C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다.
+    int a();
+    MyClass b();
+
+이 때, a와 b는 작동 방식이 다르다. a는 int자료형을...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/datastructure/Stable&UnStableSort/" rel="permalink">Stable &amp; Unstable Sort
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-02T00:00:00+00:00">June 2, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Stable &amp; Unstalbe Sort
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/programmers/43163/" rel="permalink">99클럽 코테 스터디 14일차 TIL - 43163 단어 변환
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-02T00:00:00+00:00">June 2, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">43163. 단어 변환 / c++ / level3 / 18분
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/programmers/87964/" rel="permalink">99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-01T00:00:00+00:00">June 1, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">87964. 아이템 줍기 / c++ / level3 / 1시간+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/Sho1007" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> GitLab</a></li>
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Sho1007. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+
+  </body>
+</html>

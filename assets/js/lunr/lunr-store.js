@@ -893,6 +893,12 @@ var store = [{
         "url": "/datastructure/Stable&UnStableSort/",
         "teaser": null
       },{
+        "title": "운영체제 시작하기",
+        "excerpt":"운영체제란 실행할 프로그램에 필요한 자원을 할당하고, 프로그램이 올바르게 실행되도록 돕는 특별한 프로그램 커널 영역 / 사용자 영역 커널 영역 : 운영체제가 적재되는 메모리 공간 사용자 영역 : 사용자가 이용하는 응용 프로그램이 적재될 커널 영역 이외의 공간 운영체제의 핵심 서비스 프로세스 관리 실행 중인 프로그램을 프로세스라고 하는데, 일반적으로 CPU는 한번에 한...","categories": ["OperatingSystem"],
+        "tags": ["OperatingSystem","HonGong"],
+        "url": "/operatingsystem/OperatingSystem/",
+        "teaser": null
+      },{
         "title": "Uniform Initialization",
         "excerpt":"Uniform Initialization 유니폼 초기화 혹은 균일 초기화라고 부른다. 생기게된 계기 C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다. int a(); MyClass b(); 이 때, a와 b는 작동 방식이 다르다. a는 int자료형을 Direct Initialization한 것이고, b는 MyClass라고 하는 자료형을 반환하는 함수를 정의한 것 이기 때문에, 생성자가 호줄되지 않는다. (전방선언)...","categories": ["C++"],
         "tags": ["C++","Initialization"],
