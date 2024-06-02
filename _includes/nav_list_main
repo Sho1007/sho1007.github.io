@@ -21,14 +21,6 @@
                         {% endif %}
                     {% endfor %}
                 </ul>
-            <span class = "nav__sub-title">Data Structure</span>
-                <ul>
-                    {% for category in site.categories %}
-                        {% if category[0] == "DataStructure" %}
-                            <li><a href="/categories/DataStructure" class=""> 자료구조 ({{category[1].size}})</a></li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
             <span class = "nav__sub-title">Programming Language</span>
                 <ul>
                     {% for category in site.categories %}
@@ -41,6 +33,14 @@
                     {% for category in site.categories %}
                         {% if category[0] == "C Sharp" %}
                             <li><a href="/categories/ProgrammingLanguage/CSharp" class=""> C# ({{category[1].size}})</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            <span class = "nav__sub-title">Data Structure</span>
+                <ul>
+                    {% for category in site.categories %}
+                        {% if category[0] == "DataStructure" %}
+                            <li><a href="/categories/DataStructure" class=""> 자료구조 ({{category[1].size}})</a></li>
                         {% endif %}
                     {% endfor %}
                 </ul>
@@ -73,6 +73,14 @@
                     {% for category in site.categories %}
                         {% if category[0] == "Algorithm" %}
                             <li><a href="/categories/algorithm" class="">Algorithm ({{category[1].size}})</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            <span class = "nav__sub-title">Operating System</span>
+                <ul>
+                    {% for category in site.categories %}
+                        {% if category[0] == "OperatingSystem" %}
+                            <li><a href="/categories/OperatingSystem" class=""> 운영체제 ({{category[1].size}})</a></li>
                         {% endif %}
                     {% endfor %}
                 </ul>
