@@ -892,4 +892,10 @@ var store = [{
         "tags": ["Sort","DataStructure"],
         "url": "/datastructure/Stable&UnStableSort/",
         "teaser": null
+      },{
+        "title": "Uniform Initialization",
+        "excerpt":"Uniform Initialization 유니폼 초기화 혹은 균일 초기화라고 부른다. 생기게된 계기 C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다. int a(); MyClass b(); 이 때, a와 b는 작동 방식이 다르다. a는 int자료형을 Direct Initialization한 것이고, b는 MyClass라고 하는 자료형을 반환하는 함수를 정의한 것 이기 때문에, 생성자가 호줄되지 않는다. (전방선언)...","categories": ["C++"],
+        "tags": ["C++","Initialization"],
+        "url": "/c++/UniformInitialization/",
+        "teaser": null
       }]

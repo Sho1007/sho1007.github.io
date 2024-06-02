@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>1303 전쟁 - 전투 - Today I Learned</title>
-<meta name="description" content="1303. 전쟁 - 전투 / c++ / Silver1 / 18분">
+<!-- begin _includes/seo.html --><title>Uniform Initialization - Today I Learned</title>
+<meta name="description" content="Uniform Initialization 유니폼 초기화 혹은 균일 초기화라고 부른다. 생기게된 계기 C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다.     int a();     MyClass b();  이 때, a와 b는 작동 방식이 다르다. a는 int자료형을 Direct Initialization한 것이고, b는 MyClass라고 하는 자료형을 반환하는 함수를 정의한 것 이기 때문에, 생성자가 호줄되지 않는다. (전방선언)">
 
 
   <meta name="author" content="Sho1007">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Today I Learned">
-<meta property="og:title" content="1303 전쟁 - 전투">
-<meta property="og:url" content="https://sho1007.github.io/boj/1303/">
+<meta property="og:title" content="Uniform Initialization">
+<meta property="og:url" content="https://sho1007.github.io/c++/UniformInitialization/">
 
 
-  <meta property="og:description" content="1303. 전쟁 - 전투 / c++ / Silver1 / 18분">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-03-28T00:00:00+00:00">
+  <meta property="og:description" content="Uniform Initialization 유니폼 초기화 혹은 균일 초기화라고 부른다. 생기게된 계기 C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다.     int a();     MyClass b();  이 때, a와 b는 작동 방식이 다르다. a는 int자료형을 Direct Initialization한 것이고, b는 MyClass라고 하는 자료형을 반환하는 함수를 정의한 것 이기 때문에, 생성자가 호줄되지 않는다. (전방선언)">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-02T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://sho1007.github.io/boj/1303/">
+
+<link rel="canonical" href="https://sho1007.github.io/c++/UniformInitialization/">
 
 
 
@@ -640,16 +640,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="1303 전쟁 - 전투">
-    <meta itemprop="description" content="1303. 전쟁 - 전투 / c++ / Silver1 / 18분">
-    <meta itemprop="datePublished" content="2024-03-28T00:00:00+00:00">
+    <meta itemprop="headline" content="Uniform Initialization">
+    <meta itemprop="description" content="Uniform Initialization유니폼 초기화 혹은 균일 초기화라고 부른다.생기게된 계기C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다.    int a();    MyClass b();이 때, a와 b는 작동 방식이 다르다. a는 int자료형을 Direct Initialization한 것이고, b는 MyClass라고 하는 자료형을 반환하는 함수를 정의한 것 이기 때문에, 생성자가 호줄되지 않는다. (전방선언)">
+    <meta itemprop="datePublished" content="2024-06-02T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://sho1007.github.io/boj/1303/" class="u-url" itemprop="url">1303 전쟁 - 전투
+            <a href="https://sho1007.github.io/c++/UniformInitialization/" class="u-url" itemprop="url">Uniform Initialization
 </a>
           </h1>
           
@@ -660,7 +660,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2024-03-28T00:00:00+00:00">March 28, 2024</time>
+        <time datetime="2024-06-02T00:00:00+00:00">June 2, 2024</time>
       </span>
     
 
@@ -673,7 +673,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          2 minute read
         
       </span>
     
@@ -688,37 +688,140 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#1303-전쟁---전투--c--silver1--18분">1303. 전쟁 - 전투 / c++ / Silver1 / 18분</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#bfs">BFS</a></li></ul></li><li><a href="#다시-생각해-볼-점">다시 생각해 볼 점</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#uniform-initialization">Uniform Initialization</a><ul><li><a href="#생기게된-계기">생기게된 계기</a></li><li><a href="#uniform-initialization-의-특징">Uniform Initialization 의 특징</a><ul><li><a href="#생성과-생성의-차이점">()생성과 {}생성의 차이점</a></li><li><a href="#반환-할-때의-특징">반환 할 때의 특징</a></li><li><a href="#initializer_list-초기화자-리스트">Initializer_list (초기화자 리스트)</a></li><li><a href="#initializer_list-사용시-주의할-점">Initializer_list 사용시 주의할 점</a></li></ul></li></ul></li><li><a href="#reference">Reference</a></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="1303-전쟁---전투--c--silver1--18분">1303. 전쟁 - 전투 / c++ / Silver1 / 18분</h1>
+        <h1 id="uniform-initialization">Uniform Initialization</h1>
+<p>유니폼 초기화 혹은 균일 초기화라고 부른다.</p>
+<h2 id="생기게된-계기">생기게된 계기</h2>
+<p>C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">int</span> <span class="nf">a</span><span class="p">();</span>
+    <span class="n">MyClass</span> <span class="nf">b</span><span class="p">();</span>
+</code></pre></div></div>
+<p>이 때, a와 b는 작동 방식이 다르다. a는 int자료형을 Direct Initialization한 것이고, b는 MyClass라고 하는 자료형을 반환하는 함수를 정의한 것 이기 때문에, 생성자가 호줄되지 않는다. (전방선언)</p>
 
-<h2 id="문제-및-코드">문제 및 코드</h2>
+<blockquote>
+  <p>함수의 정의처럼 보이는 것들은 모두 함수의 정의로 해석</p>
+</blockquote>
 
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Silver/1303.%E2%80%85%EC%A0%84%EC%9F%81%E2%80%85%EF%BC%8D%E2%80%85%EC%A0%84%ED%88%AC"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+<p>다른 예로는,</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">B</span> <span class="nf">b</span><span class="p">(</span><span class="n">A</span><span class="p">());</span>
+</code></pre></div></div>
+<p>의 경우, 인자값을 받지 않고 A를 return 하는 함수를, 다시 인자값으로 받아 B를 return하는 함수 b인 것이다. (우리는 class A의 기본 생성자로 생성된 객체 A를 인자값으로 받는 B 생성자로 b를 생성했다고 생각했지만)</p>
+<blockquote>
+  <p>문제는, 소괄호 ()가 함수를 인자를 정의할 때도, 객체의 생성자를 호출할 때도 사용되기 때문</p>
+</blockquote>
 
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="bfs">BFS</h3>
-<ol>
-  <li>전체 보드를 순회
-    <ol>
-      <li>아직 방문하지 않은 칸이라면 BFS
-        <ol>
-          <li>상하좌우로 아직 방문하지 않은 칸 중 시작 칸과 같은 문자의 칸 갯수 세기</li>
-          <li>시작 칸의 문자열이 ‘W’라면 백팀에 ‘B’라면 청팀에 갯수의 제곱만큼 더해주기</li>
-        </ol>
+<p>그래서 이런 문제를 해결하고자 나온 것이, {}를 사용하는 Uniform Initialization이다.</p>
+
+<h2 id="uniform-initialization-의-특징">Uniform Initialization 의 특징</h2>
+
+<h3 id="생성과-생성의-차이점">()생성과 {}생성의 차이점</h3>
+<p>데이터 손실이 있는 형 변환 (Narro Conversion) 의 가능 여부</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">int</span> <span class="n">A</span><span class="p">(</span><span class="mf">3.5</span><span class="n">f</span><span class="p">)</span> <span class="c1">// Narrow-Conversion 가능</span>
+    <span class="kt">int</span> <span class="n">B</span><span class="p">{</span><span class="mf">3.</span><span class="n">f</span><span class="p">}</span> <span class="c1">// Narro-Conversion 불가 -&gt; Error 발생</span>
+</code></pre></div></div>
+
+<h3 id="반환-할-때의-특징">반환 할 때의 특징</h3>
+<p>Uniform Initialization 으로 반환할 때에는, 생성할 객체의 타입을 명시하지 않아도 된다는 특징이 있다.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">A</span>
+<span class="p">{</span>
+    <span class="nl">public:</span>
+    <span class="n">A</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">}</span>
+
+<span class="n">A</span> <span class="n">func</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">};</span>    <span class="c1">// A(3, 3.5) 와 동일</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>이 경우 컴파일러가 함수의 반환값을 보고 추론하여 A의 생성자를 호출한다.</p>
+<h3 id="initializer_list-초기화자-리스트">Initializer_list (초기화자 리스트)</h3>
+<p>배열을 초기화할 때, {}를 사용할 수 있다.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">arr</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>
+</code></pre></div></div>
+<p>Uniform Initialization을 사용하면, 객체도 이처럼 초기화할 수 있는데, 이 때 Initializer_list 가 사용된다.</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">A</span>
+<span class="p">{</span>
+    <span class="nl">public:</span>
+    <span class="n">A</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">initializer_list</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">l</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">l</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">iter</span> <span class="o">!=</span> <span class="n">l</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">iter</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Todo : Use *iter</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">A</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+<h3 id="initializer_list-사용시-주의할-점">Initializer_list 사용시 주의할 점</h3>
+<ul>
+  <li>()을 사용해 생성하면  를 사용할 수 없다.</li>
+  <li>원소의 갯수가 1개일 때 주의할점
+    <ul>
+      <li>벡터 생성 시
+        <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">// 원소 10개짜리 벡터 생성</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span> <span class="c1">// 10을 원소로 가지는 1개짜리 벡터 생성</span>
+  <span class="c1">// vector&lt;int&gt; b = {10} 와 동일;</span>
+</code></pre></div>        </div>
       </li>
-    </ol>
+    </ul>
   </li>
-  <li>순회가 끝나면 백팀 청팀 순으로 출력</li>
-</ol>
+  <li>initializer_list 가 최우선으로 고려되어 생기는 문제점
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+  <span class="nl">public:</span>
+  <span class="n">A</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"일반 생성자! "</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
 
-<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
-<ol>
-  <li>가로가 N 세로가 M 이었다. 항상 문제를 꼼꼼히 읽어볼 것</li>
-</ol>
+  <span class="n">A</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">initializer_list</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">lst</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"초기화자 사용 생성자! "</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="kt">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">A</span> <span class="n">a</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">);</span>  <span class="c1">// Good</span>
+  <span class="n">A</span> <span class="n">b</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">};</span>  <span class="c1">// Bad! -&gt; initializer_list&lt;int&gt; 인데, 1.5인 double 이 들어왔음 -&gt; Narrow-Conversion이 안되므로 error 발생</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>auto를 사용하여 생기는 문제점
+    <ul>
+      <li>원소의 갯수에 따른 문제(해결됨)
+        <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">auto</span> <span class="n">a</span><span class="p">{</span><span class="mi">1</span><span class="p">};</span>          <span class="c1">//std::initializer_list&lt;int&gt;</span>
+  <span class="k">auto</span> <span class="n">b</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>    <span class="c1">//std::initializer_list&lt;int&gt;</span>
+  <span class="c1">// 즉 둘 다 배열로 간주된다는 점</span>
+</code></pre></div>        </div>
+        <ul>
+          <li>하지만 이는 원소의 갯수가 1개이나, 2개 이상이냐로 나뉘어 해결됨
+            <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">auto</span> <span class="n">a</span><span class="p">{</span><span class="mi">1</span><span class="p">};</span>          <span class="c1">// 그냥 int</span>
+  <span class="k">auto</span> <span class="n">b</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>    <span class="c1">//std::initializer_list&lt;int&gt;</span>
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>문자열에 대한 문제
+        <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">auto</span> <span class="n">list</span> <span class="o">=</span> <span class="p">{</span><span class="s">"abc"</span><span class="p">,</span> <span class="s">"def"</span><span class="p">,</span> <span class="s">"ghi"</span><span class="p">};</span>
+  <span class="c1">//std::initilizer_list&lt;string&gt;이 아닌 std::initilizer_list&lt;const char*&gt;이 됨</span>
+
+  <span class="c1">// 이를 해결하기 위해서는 C++14에서 추가된 리터럴 연산자를 사용</span>
+
+  <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">literals</span><span class="p">;</span>
+  <span class="k">auto</span> <span class="n">stringList</span> <span class="o">=</span> <span class="p">{</span><span class="s">"abc"</span><span class="n">s</span><span class="p">,</span> <span class="s">"def"</span><span class="n">s</span><span class="p">,</span> <span class="s">"ghi"</span><span class="n">s</span><span class="p">};</span>
+  <span class="c1">// 이러면 std::initilaizer_list&lt;string&gt;으로 처리됨</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="reference">Reference</h1>
+<p>https://modoocode.com/286</p>
 
         
       </section>
@@ -735,13 +838,9 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#bfs" class="page__taxonomy-item p-category" rel="tag">BFS</a><span class="sep">, </span>
+      <a href="/tags/#c" class="page__taxonomy-item p-category" rel="tag">C++</a><span class="sep">, </span>
     
-      <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
-    
-      <a href="/tags/#graph" class="page__taxonomy-item p-category" rel="tag">Graph</a><span class="sep">, </span>
-    
-      <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
+      <a href="/tags/#initialization" class="page__taxonomy-item p-category" rel="tag">Initialization</a>
     
     </span>
   </p>
@@ -758,7 +857,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#boj" class="page__taxonomy-item p-category" rel="tag">BOJ</a>
+      <a href="/categories/#c" class="page__taxonomy-item p-category" rel="tag">C++</a>
     
     </span>
   </p>
@@ -766,7 +865,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-03-28T00:00:00+00:00">March 28, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-02T00:00:00+00:00">June 2, 2024</time></p>
 
       </footer>
 
@@ -775,23 +874,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=1303+%EC%A0%84%EC%9F%81+-+%EC%A0%84%ED%88%AC%20https%3A%2F%2Fsho1007.github.io%2Fboj%2F1303%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Uniform+Initialization%20https%3A%2F%2Fsho1007.github.io%2Fc%2B%2B%2FUniformInitialization%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fboj%2F1303%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fc%2B%2B%2FUniformInitialization%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fboj%2F1303%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fc%2B%2B%2FUniformInitialization%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/hongong/Week6/" class="pagination--pager" title="[혼공컴운] 6주차
+      <a href="/datastructure/Stable&UnStableSort/" class="pagination--pager" title="Stable &amp; Unstable Sort
 ">Previous</a>
     
     
-      <a href="/programmers/169198/" class="pagination--pager" title="169198 당구 연습
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -805,59 +903,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/c++/UniformInitialization/" rel="permalink">Uniform Initialization
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2024-06-02T00:00:00+00:00">June 2, 2024</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Uniform Initialization
-유니폼 초기화 혹은 균일 초기화라고 부른다.
-생기게된 계기
-C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다.
-    int a();
-    MyClass b();
-
-이 때, a와 b는 작동 방식이 다르다. a는 int자료형을...</p>
-  </article>
-</div>
-
         
           
 
@@ -995,6 +1040,53 @@ C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다.
 
 
     <p class="archive__item-excerpt" itemprop="description">87964. 아이템 줍기 / c++ / level3 / 1시간+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/programmers/43164/" rel="permalink">99클럽 코테 스터디 12일차 TIL - 43164 여행경로
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-05-31T00:00:00+00:00">May 31, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">43164. 여행경로 / c++ / level3 / 1시간+
 </p>
   </article>
 </div>
