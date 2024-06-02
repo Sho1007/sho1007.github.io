@@ -886,4 +886,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","DFS"],
         "url": "/programmers/43163/",
         "teaser": null
+      },{
+        "title": "Stable & Unstable Sort",
+        "excerpt":"Stable &amp; Unstalbe Sort   정렬 시 같은 key 값을 가지는 원소들의 순서가 유지된다면 stable sort이고, 순서가 유지되지 않는다면 unstable sort이다.  ","categories": ["DataStructure"],
+        "tags": ["Sort","DataStructure"],
+        "url": "/datastructure/Stable&UnStableSort/",
+        "teaser": null
       }]
