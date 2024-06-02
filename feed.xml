@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-01T17:40:32+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기</title><link href="https://sho1007.github.io/programmers/87964/" rel="alternate" type="text/html" title="99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기" /><published>2024-06-01T00:00:00+00:00</published><updated>2024-06-01T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/87964</id><content type="html" xml:base="https://sho1007.github.io/programmers/87964/"><![CDATA[<h1 id="87964-아이템-줍기--c--level3--1시간">87964. 아이템 줍기 / c++ / level3 / 1시간+</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-02T08:30:51+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 14일차 TIL - 43163 단어 변환</title><link href="https://sho1007.github.io/programmers/43163/" rel="alternate" type="text/html" title="99클럽 코테 스터디 14일차 TIL - 43163 단어 변환" /><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43163</id><content type="html" xml:base="https://sho1007.github.io/programmers/43163/"><![CDATA[<h1 id="43163-단어-변환--c--level3--18분">43163. 단어 변환 / c++ / level3 / 18분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/43163.%E2%80%85%EB%8B%A8%EC%96%B4%E2%80%85%EB%B3%80%ED%99%98"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="그래프-탐색--dfs">그래프 탐색 / DFS</h3>
+<ol>
+  <li>두 단어가 하나의 문자만 다른 경우 해당 단어로 바꿀 수 있다면, 두 단어를 이어진 두 노드라고 볼 수 있다.</li>
+  <li>단어를 순회하면서 해당 단어와 한 문자만 다른 단어를 찾아 unordered_map&lt;string, vector<string>&gt; adjMap 에 넣는다.</string></li>
+  <li>이 때 주의할 점은, 시작 단어는 words에 포함되어 있지 않기 때문에, wordgs 순회 전 begin도 words에 넣어줘야 한다.</li>
+  <li>그리고 DFS에 사용하기 위한 방문 기록용 unordered_map&lt;string, boo&gt; vistedMap을 선언하고, words를 순회할 때 모든 단어를 false로 초기화 해준다.</li>
+  <li>adjMap 초기화가 끝나면 begin을 시작점으로 해서 DFS를 진행</li>
+  <li>DFS의 매개변수인 vector<string>&amp; path 의 마지막 단어가 target일 경우 path.size() 가 answer 보다 작다면 answer 를 초기화 해준다. (이 때 사용한 answer는 미리 MAX값으로 초기화)</string></li>
+  <li>DFS가 끝나고 answer 가 여전히 MAX이면 0을 반환, 아니라면 answer를 반환한다. (나는 DFS를 위해 path에 시작값으로 begin을 넣어놨었기 때문에, answer-1을 반환했다.)</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>DFS를 사용하면 백트래킹을 활용하여 경로탐색이 용이하다는 점을 다시금 느낄 수 있었다.</li>
+  <li>begin을 미리 words에 넣어서 순회를 돌리는 것이 좋았다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="DFS" /><summary type="html"><![CDATA[43163. 단어 변환 / c++ / level3 / 18분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기</title><link href="https://sho1007.github.io/programmers/87964/" rel="alternate" type="text/html" title="99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기" /><published>2024-06-01T00:00:00+00:00</published><updated>2024-06-01T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/87964</id><content type="html" xml:base="https://sho1007.github.io/programmers/87964/"><![CDATA[<h1 id="87964-아이템-줍기--c--level3--1시간">87964. 아이템 줍기 / c++ / level3 / 1시간+</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -303,35 +328,4 @@
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Heap" /><summary type="html"><![CDATA[42627. 디스크 컨트롤러 / c++ / level3 / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호</title><link href="https://sho1007.github.io/programmers/12909/" rel="alternate" type="text/html" title="99클럽 코테 스터디 4일차 TIL - 12909 옳바른 괄호" /><published>2024-05-23T00:00:00+00:00</published><updated>2024-05-23T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/12909</id><content type="html" xml:base="https://sho1007.github.io/programmers/12909/"><![CDATA[<h1 id="12909-옳바른-괄호--c--level2--8분">12909. 옳바른 괄호 / c++ / level2 / 8분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12909.%E2%80%85%EC%98%AC%EB%B0%94%EB%A5%B8%E2%80%85%EA%B4%84%ED%98%B8"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="자료구조--스택">자료구조 / 스택</h3>
-<ol>
-  <li>괄호 문제는 일단 스택을 생각하고 봐야한다.</li>
-  <li>만약 배열의 원소의 갯수가 홀수라면 false를 리턴</li>
-  <li>아니라면 배열을 순회하며
-    <ol>
-      <li>여는 괄호가 나오면 스택에 push</li>
-      <li>닫는 괄호가 나오면 스택의 top이 여는 괄호인지 체크
-        <ol>
-          <li>스택이 비어있거나 스택의 top이 여는 괄호가 아니라면 false 리턴</li>
-          <li>스택의 top이 여는 괄호라면 스택을 pop</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>배열 순회가 무사히 끝나면 true 리턴</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>괄호 문제 = 스택이라는 공식을 다시 한번 체감할 수 있는 문제였다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Stack" /><summary type="html"><![CDATA[12909. 옳바른 괄호 / c++ / level2 / 8분]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Data Structure" /><category term="Heap" /><summary type="html"><![CDATA[42627. 디스크 컨트롤러 / c++ / level3 / 1시간+]]></summary></entry></feed>

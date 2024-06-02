@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>11286 절대값 힙 - Today I Learned</title>
-<meta name="description" content="11286 절대값 힙 (c++)">
+<!-- begin _includes/seo.html --><title>99클럽 코테 스터디 14일차 TIL - 43163 단어 변환 - Today I Learned</title>
+<meta name="description" content="43163. 단어 변환 / c++ / level3 / 18분">
 
 
   <meta name="author" content="Sho1007">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Today I Learned">
-<meta property="og:title" content="11286 절대값 힙">
-<meta property="og:url" content="https://sho1007.github.io/boj/11286/">
+<meta property="og:title" content="99클럽 코테 스터디 14일차 TIL - 43163 단어 변환">
+<meta property="og:url" content="https://sho1007.github.io/programmers/43163/">
 
 
-  <meta property="og:description" content="11286 절대값 힙 (c++)">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-10-20T00:00:00+00:00">
+  <meta property="og:description" content="43163. 단어 변환 / c++ / level3 / 18분">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-02T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://sho1007.github.io/boj/11286/">
+
+<link rel="canonical" href="https://sho1007.github.io/programmers/43163/">
 
 
 
@@ -541,16 +541,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="11286 절대값 힙">
-    <meta itemprop="description" content="11286 절대값 힙 (c++)">
-    <meta itemprop="datePublished" content="2022-10-20T00:00:00+00:00">
+    <meta itemprop="headline" content="99클럽 코테 스터디 14일차 TIL - 43163 단어 변환">
+    <meta itemprop="description" content="43163. 단어 변환 / c++ / level3 / 18분">
+    <meta itemprop="datePublished" content="2024-06-02T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://sho1007.github.io/boj/11286/" class="u-url" itemprop="url">11286 절대값 힙
+            <a href="https://sho1007.github.io/programmers/43163/" class="u-url" itemprop="url">99클럽 코테 스터디 14일차 TIL - 43163 단어 변환
 </a>
           </h1>
           
@@ -561,7 +561,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2022-10-20T00:00:00+00:00">October 20, 2022</time>
+        <time datetime="2024-06-02T00:00:00+00:00">June 2, 2024</time>
       </span>
     
 
@@ -589,67 +589,37 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#11286-절대값-힙-c">11286 절대값 힙 (c++)</a><ul><li><a href="#문제">문제</a></li><li><a href="#접근-방식">접근 방식</a></li><li><a href="#문제-풀이">문제 풀이</a></li><li><a href="#다시-생각해볼-점">다시 생각해볼 점</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#43163-단어-변환--c--level3--18분">43163. 단어 변환 / c++ / level3 / 18분</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#그래프-탐색--dfs">그래프 탐색 / DFS</a></li></ul></li><li><a href="#생각해-볼-점">생각해 볼 점</a><ul><li><a href="#해시태그">해시태그</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="11286-절대값-힙-c">11286 절대값 힙 (c++)</h1>
+        <h1 id="43163-단어-변환--c--level3--18분">43163. 단어 변환 / c++ / level3 / 18분</h1>
 
-<h2 id="문제">문제</h2>
-<p>https://www.acmicpc.net/problem/11286</p>
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/43163.%E2%80%85%EB%8B%A8%EC%96%B4%E2%80%85%EB%B3%80%ED%99%98"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
 
 <h2 id="접근-방식">접근 방식</h2>
-<p>우선순위 큐
-우선순위 큐에 특정 비교 함수를 넣어주면 해결되는 문제</p>
-<ul>
-  <li>순위권에 들기 위해선 직접 MeanHip을 작성해야 한다.</li>
-</ul>
-
-<h2 id="문제-풀이">문제 풀이</h2>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;queue&gt;</span><span class="cp">
-</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="kr">inline</span> <span class="kt">int</span> <span class="nf">Abs</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="o">-</span><span class="n">a</span> <span class="o">:</span> <span class="n">a</span><span class="p">;</span> <span class="p">}</span>
-<span class="kr">inline</span> <span class="kt">int</span> <span class="n">Min</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="p">;</span> <span class="p">}</span>
-<span class="k">struct</span> <span class="nc">cmp</span>
-<span class="p">{</span>
-    <span class="kt">bool</span> <span class="k">operator</span><span class="p">()(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
-    <span class="p">{</span> 
-        <span class="k">if</span> <span class="p">(</span><span class="n">Abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="n">Abs</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-            <span class="k">return</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">;</span>
-        <span class="k">return</span> <span class="n">Abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">Abs</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">};</span> 
-
-<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">priority_queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">cmp</span><span class="o">&gt;</span> <span class="n">pq</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">num</span><span class="p">;</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">N</span><span class="p">);</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">N</span><span class="o">--</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">pq</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="n">printf</span><span class="p">(</span><span class="s">"0</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-            <span class="k">else</span> <span class="p">{</span> <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">pq</span><span class="p">.</span><span class="n">top</span><span class="p">());</span> <span class="n">pq</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span> <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">else</span>
-        <span class="p">{</span>
-            <span class="n">pq</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="다시-생각해볼-점">다시 생각해볼 점</h2>
+<h3 id="그래프-탐색--dfs">그래프 탐색 / DFS</h3>
 <ol>
-  <li>항상 (최소/최대)값을 출력한다 -&gt; 우선순위 큐</li>
+  <li>두 단어가 하나의 문자만 다른 경우 해당 단어로 바꿀 수 있다면, 두 단어를 이어진 두 노드라고 볼 수 있다.</li>
+  <li>단어를 순회하면서 해당 단어와 한 문자만 다른 단어를 찾아 unordered_map&lt;string, vector<string>&gt; adjMap 에 넣는다.</string></li>
+  <li>이 때 주의할 점은, 시작 단어는 words에 포함되어 있지 않기 때문에, wordgs 순회 전 begin도 words에 넣어줘야 한다.</li>
+  <li>그리고 DFS에 사용하기 위한 방문 기록용 unordered_map&lt;string, boo&gt; vistedMap을 선언하고, words를 순회할 때 모든 단어를 false로 초기화 해준다.</li>
+  <li>adjMap 초기화가 끝나면 begin을 시작점으로 해서 DFS를 진행</li>
+  <li>DFS의 매개변수인 vector<string>&amp; path 의 마지막 단어가 target일 경우 path.size() 가 answer 보다 작다면 answer 를 초기화 해준다. (이 때 사용한 answer는 미리 MAX값으로 초기화)</string></li>
+  <li>DFS가 끝나고 answer 가 여전히 MAX이면 0을 반환, 아니라면 answer를 반환한다. (나는 DFS를 위해 path에 시작값으로 begin을 넣어놨었기 때문에, answer-1을 반환했다.)</li>
 </ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>DFS를 사용하면 백트래킹을 활용하여 경로탐색이 용이하다는 점을 다시금 느낄 수 있었다.</li>
+  <li>begin을 미리 words에 넣어서 순회를 돌리는 것이 좋았다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>
 
         
       </section>
@@ -666,9 +636,17 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
+      <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a><span class="sep">, </span>
+    
+      <a href="/tags/#codingtest" class="page__taxonomy-item p-category" rel="tag">CodingTest</a><span class="sep">, </span>
+    
       <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
     
-      <a href="/tags/#priority-queue" class="page__taxonomy-item p-category" rel="tag">Priority Queue</a>
+      <a href="/tags/#dfs" class="page__taxonomy-item p-category" rel="tag">DFS</a><span class="sep">, </span>
+    
+      <a href="/tags/#graph" class="page__taxonomy-item p-category" rel="tag">Graph</a><span class="sep">, </span>
+    
+      <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
     
     </span>
   </p>
@@ -685,7 +663,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#boj" class="page__taxonomy-item p-category" rel="tag">BOJ</a>
+      <a href="/categories/#programmers" class="page__taxonomy-item p-category" rel="tag">Programmers</a>
     
     </span>
   </p>
@@ -693,7 +671,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-10-20T00:00:00+00:00">October 20, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-02T00:00:00+00:00">June 2, 2024</time></p>
 
       </footer>
 
@@ -702,23 +680,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=11286+%EC%A0%88%EB%8C%80%EA%B0%92+%ED%9E%99%20https%3A%2F%2Fsho1007.github.io%2Fboj%2F11286%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=99%ED%81%B4%EB%9F%BD+%EC%BD%94%ED%85%8C+%EC%8A%A4%ED%84%B0%EB%94%94+14%EC%9D%BC%EC%B0%A8+TIL+-+43163+%EB%8B%A8%EC%96%B4+%EB%B3%80%ED%99%98%20https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F43163%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fboj%2F11286%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F43163%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fboj%2F11286%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F43163%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/boj/16928/" class="pagination--pager" title="16928 뱀과 사다리 게임
+      <a href="/programmers/87964/" class="pagination--pager" title="99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기
 ">Previous</a>
     
     
-      <a href="/boj/14500/" class="pagination--pager" title="14500 테트로미노
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -732,53 +709,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/programmers/43163/" rel="permalink">99클럽 코테 스터디 14일차 TIL - 43163 단어 변환
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2024-06-02T00:00:00+00:00">June 2, 2024</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">43163. 단어 변환 / c++ / level3 / 18분
-</p>
-  </article>
-</div>
-
         
           
 
@@ -916,6 +846,53 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">84021. 퍼즐 조각 채우기 / c++ / level3 / 1시간+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/programmers/86971/" rel="permalink">99클럽 코테 스터디 10일차 TIL - 86971 전력망을 둘로 나누기
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-05-29T00:00:00+00:00">May 29, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">86971. 전력망을 둘로 나누기 / c++ / level2 / 18분
 </p>
   </article>
 </div>
