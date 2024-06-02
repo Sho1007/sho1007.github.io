@@ -132,4 +132,4 @@ int main()
 
 
 # Reference
-https://modoocode.com/286
+[모두의 코드](https://modoocode.com/286)
