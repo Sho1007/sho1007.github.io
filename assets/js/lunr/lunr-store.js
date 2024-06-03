@@ -904,4 +904,10 @@ var store = [{
         "tags": ["C++","Initialization"],
         "url": "/c++/UniformInitialization/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 15일차 TIL - 43162 네트워크",
+        "excerpt":"43162. 네트워크 / c++ / level3 / 12분 문제 및 코드 접근 방식 그래프 탐색 / BFS 처음엔 Union-Find 알고리즘을 활용하여, 부모가 다른 노드의 갯수를 세면 될것이라고 생각했는데, 비효율적이라고 판단했다. 다시 생각해보니 인접행렬을 따라 BFS 했을 때, 만들어지는 sub-graph들의 갯수를 세면 되는 문제였다. 생각해 볼 점 이 전에도 풀어봤던 문제였지만,...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","BFS"],
+        "url": "/programmers/43162/",
+        "teaser": null
       }]

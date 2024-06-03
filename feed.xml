@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-02T12:39:41+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 14일차 TIL - 43163 단어 변환</title><link href="https://sho1007.github.io/programmers/43163/" rel="alternate" type="text/html" title="99클럽 코테 스터디 14일차 TIL - 43163 단어 변환" /><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43163</id><content type="html" xml:base="https://sho1007.github.io/programmers/43163/"><![CDATA[<h1 id="43163-단어-변환--c--level3--18분">43163. 단어 변환 / c++ / level3 / 18분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-03T12:51:48+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 15일차 TIL - 43162 네트워크</title><link href="https://sho1007.github.io/programmers/43162/" rel="alternate" type="text/html" title="99클럽 코테 스터디 15일차 TIL - 43162 네트워크" /><published>2024-06-03T00:00:00+00:00</published><updated>2024-06-03T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43162</id><content type="html" xml:base="https://sho1007.github.io/programmers/43162/"><![CDATA[<h1 id="43162-네트워크--c--level3--12분">43162. 네트워크 / c++ / level3 / 12분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/43162.%E2%80%85%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="그래프-탐색--bfs">그래프 탐색 / BFS</h3>
+<ol>
+  <li>처음엔 Union-Find 알고리즘을 활용하여, 부모가 다른 노드의 갯수를 세면 될것이라고 생각했는데, 비효율적이라고 판단했다.</li>
+  <li>다시 생각해보니 인접행렬을 따라 BFS 했을 때, 만들어지는 sub-graph들의 갯수를 세면 되는 문제였다.</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>이 전에도 풀어봤던 문제였지만, 다시 풀 때접근법부터 생각하고 풀어보니 빠른 시간 안에 풀 수 있었다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="BFS" /><summary type="html"><![CDATA[43162. 네트워크 / c++ / level3 / 12분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 14일차 TIL - 43163 단어 변환</title><link href="https://sho1007.github.io/programmers/43163/" rel="alternate" type="text/html" title="99클럽 코테 스터디 14일차 TIL - 43163 단어 변환" /><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43163</id><content type="html" xml:base="https://sho1007.github.io/programmers/43163/"><![CDATA[<h1 id="43163-단어-변환--c--level3--18분">43163. 단어 변환 / c++ / level3 / 18분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -334,61 +353,4 @@
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Brute Force" /><summary type="html"><![CDATA[84512. 모음 사전 / c++ / level2 / 8분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 8일차 TIL - 899 Orderly Queue</title><link href="https://sho1007.github.io/leetcode/899/" rel="alternate" type="text/html" title="99클럽 코테 스터디 8일차 TIL - 899 Orderly Queue" /><published>2024-05-27T00:00:00+00:00</published><updated>2024-05-27T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/899</id><content type="html" xml:base="https://sho1007.github.io/leetcode/899/"><![CDATA[<h1 id="899-orderly-queue--c--hard--30분">899. Orderly Queue / c++ / Hard / 30분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;queue&gt;</span><span class="cp">
-</span>
-<span class="k">struct</span> <span class="nc">Cmp</span>
-<span class="p">{</span>
-    <span class="kt">bool</span> <span class="k">operator</span><span class="p">()(</span><span class="kt">char</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="kt">char</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-
-<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="nl">public:</span>
-    <span class="n">string</span> <span class="n">orderlyQueue</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">string</span> <span class="n">Answer</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="k">while</span> <span class="p">(</span><span class="n">count</span><span class="o">--&gt;</span><span class="mi">0</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-
-                <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">&lt;</span> <span class="n">Answer</span><span class="p">)</span> <span class="n">Answer</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">else</span>
-        <span class="p">{</span>
-            <span class="n">sort</span><span class="p">(</span><span class="n">Answer</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">Answer</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-        <span class="p">}</span>
-
-        <span class="k">return</span> <span class="n">Answer</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div></div>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="정렬">정렬</h3>
-<ol>
-  <li>처음엔 단순 정렬인 줄 알았는데, k가 1인 경우엔 정렬할 수 없이 계속 순환할 뿐이었다.</li>
-  <li>그래서 Answer를 s로 초기화 해주고 k가 1인 경우와 아닌 경우로 나눈 뒤
-    <ol>
-      <li>k가 1이면 s.size() - 1 번 만큼 (한번 더 돌면 원래 상태이므로 -1 해줌) 돌면서 맨 앞 글자를 맨 뒤로 보내준다. 그 후 Answer 보다 작다면 Answer 갱신</li>
-      <li>k가 2 이상이면 단순히 Answer를 정렬해준다.</li>
-    </ol>
-  </li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>리트코드 문제는 단순히 구현하는게 아니라 해당 문제의 본질을 찾는 것이 다른 곳들보다 더 중요하다고 느꼈다.</li>
-  <li>앞에서 2개 중 하나만 골라 뒤로 보낼 수 있더라도 정렬이 가능하다는 것을 다시금 깨달았다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Sort" /><summary type="html"><![CDATA[899. Orderly Queue / c++ / Hard / 30분]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Brute Force" /><summary type="html"><![CDATA[84512. 모음 사전 / c++ / level2 / 8분]]></summary></entry></feed>
