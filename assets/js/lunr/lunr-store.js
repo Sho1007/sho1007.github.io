@@ -910,4 +910,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","BFS"],
         "url": "/programmers/43162/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 16일차 TIL - 42861 섬 연결하기",
+        "excerpt":"42861. 섬 연결하기 / c++ / level3 / 7분 문제 및 코드 접근 방식 그리디 / 그래프 / Union-Find / 크루스칼 크루스칼 알고리즘을 이용하여 최소 신장 트리를 만들었을 때의 비용을 구하는 문제였다. 생각해 볼 점 MST와 Union-Find 를 알고 있다면 쉽게 풀 수 있는 문제였다. 해시태그 #99클럽 #코딩테스트 준비 #개발자...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","Greedy","UnionFind","Kruskal"],
+        "url": "/programmers/42861/",
+        "teaser": null
       }]
