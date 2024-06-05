@@ -916,4 +916,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","Greedy","UnionFind","Kruskal"],
         "url": "/programmers/42861/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 17일차 TIL - 42884 단속카메라",
+        "excerpt":"42884. 단속카메라 / c++ / level3 / 32분 문제 및 코드 접근 방식 그리디 / 정렬 / 라인 스위핑 이런 문제는 일단 시작점과 끝점 양쪽을 기준으로 빠른 순으로 정렬한다. 그러면 모든 차(선분)이 겹치거나 겹치지 않는 형태로 일렬로 정렬이 된다. 정렬된 벡터를 순회하면서, 만약 두 차의 경로가 겹친다면, 겹치는 부분으로 합친다....","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","Greedy","Sort","LineSweeping"],
+        "url": "/programmers/42884/",
+        "teaser": null
       }]
