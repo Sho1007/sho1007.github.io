@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-05T15:04:18+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 17일차 TIL - 42884 단속카메라</title><link href="https://sho1007.github.io/programmers/42884/" rel="alternate" type="text/html" title="99클럽 코테 스터디 17일차 TIL - 42884 단속카메라" /><published>2024-06-05T00:00:00+00:00</published><updated>2024-06-05T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42884</id><content type="html" xml:base="https://sho1007.github.io/programmers/42884/"><![CDATA[<h1 id="42884-단속카메라--c--level3--32분">42884. 단속카메라 / c++ / level3 / 32분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-06T18:19:49+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 18일차 TIL - 42895 N으로 표현</title><link href="https://sho1007.github.io/programmers/42895/" rel="alternate" type="text/html" title="99클럽 코테 스터디 18일차 TIL - 42895 N으로 표현" /><published>2024-06-06T00:00:00+00:00</published><updated>2024-06-06T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42895</id><content type="html" xml:base="https://sho1007.github.io/programmers/42895/"><![CDATA[<h1 id="42895-n으로-표현--c--level3--1시간">42895. N으로 표현 / c++ / level3 / 1시간+</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/42895.%E2%80%85N%EC%9C%BC%EB%A1%9C%E2%80%85%ED%91%9C%ED%98%84"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="동적-계획법">동적 계획법</h3>
+<ol>
+  <li>사칙 연산으로 이루어져 있다는 점에서 착안</li>
+  <li>N이 들어간 횟수를 i라고 했을 때, i + 1은 결국 1 ~ (i-1)까지의 사칙 연산으로 이루어져 있다고 판단</li>
+  <li>dp[i]는 N이 i번 들어갔을 때 만들어질 수 있는 수들의 배열 (여기선 중복을 방지하기 위해 unordered_set을 사용)</li>
+  <li>i 를 1부터 8까지 증가시켜가면서, i를 이룰 수 있는 경우의 수 (i가 4라면 1 + 3 부터 3 + 1) 까지의 두 수 j, k를 인덱스로 하는 dp[j], dp[k]를 가져와서, 거기에 해당하는 모든 수의 사칙 연산을 다시 dp[i]에 삽입 (이 때, 0보다 클 경우에만 삽입)</li>
+  <li>그리고 여기서부터는 막혀서 결국 다른 코드를 보고 깨달았음</li>
+  <li>기존엔 32,001 보다 작아야 dp[i]에 삽입했었는데, 그건 단지 number가 32’000이하라는 소리이고, 계산 과정이 32’000보다 작아야하는게 아니라서, 오히려 32’001보다 작을 때만 dp[i]에 삽입하는 것이 오류였음. (그래서 그 부분을 삭제)</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>큰 틀의 로직은 생각을 했는데, 계산 과정에서 32’000보다 큰 수가 들어갈 수 있다는 점을 놓쳐서 그것 때문에 너무 많은 시간을 허비한 것 같다. 항상 예외처리에 많은 시간을 투자하고 있는데, 어떨 때는 그게 불필요한 경우일 수도 있다는 걸 생각해봐야겠다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[42895. N으로 표현 / c++ / level3 / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 17일차 TIL - 42884 단속카메라</title><link href="https://sho1007.github.io/programmers/42884/" rel="alternate" type="text/html" title="99클럽 코테 스터디 17일차 TIL - 42884 단속카메라" /><published>2024-06-05T00:00:00+00:00</published><updated>2024-06-05T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42884</id><content type="html" xml:base="https://sho1007.github.io/programmers/42884/"><![CDATA[<h1 id="42884-단속카메라--c--level3--32분">42884. 단속카메라 / c++ / level3 / 32분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -314,37 +337,4 @@
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="BFS" /><category term="BackTracking" /><summary type="html"><![CDATA[43164. 여행경로 / c++ / level3 / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 11일차 TIL - 84021 퍼즐 조각 채우기</title><link href="https://sho1007.github.io/programmers/84021/" rel="alternate" type="text/html" title="99클럽 코테 스터디 11일차 TIL - 84021 퍼즐 조각 채우기" /><published>2024-05-30T00:00:00+00:00</published><updated>2024-05-30T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/84021</id><content type="html" xml:base="https://sho1007.github.io/programmers/84021/"><![CDATA[<h1 id="84021-퍼즐-조각-채우기--c--level3--1시간">84021. 퍼즐 조각 채우기 / c++ / level3 / 1시간+</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/84021.%E2%80%85%ED%8D%BC%EC%A6%90%E2%80%85%EC%A1%B0%EA%B0%81%E2%80%85%EC%B1%84%EC%9A%B0%EA%B8%B0"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="그래프-탐색--bfs--구현">그래프 탐색 / BFS / 구현</h3>
-<ol>
-  <li>먼저 table 에서 블록(위치값의 벡터)들을 BFS 로 구한다.</li>
-  <li>table을 탐색할 때, 좌상단부터 우하단 방향으로 탐색하기에, 블록의 첫 번째 부분은 항상 가장 위에 있고, 그 중 가장 왼쪽에 위치한다.</li>
-  <li>구한 블록을 첫 번째 부분 기준으로 다시 표현한다. (모든 칸에서 첫 번째 칸의 위치를 빼주면 됨, 이 때 첫 번째 부분이 1에서 설명한 것처럼 가장 작으므로 모든 값은 양수로 표시됨)</li>
-  <li>블록을 총 3번 회전시켜서 4개의 형태를 모두 구한다. (이 때는 블록의 x,y 좌표를 바꾸고, y 좌표에 -1을 곱해줌)</li>
-  <li>해당 블록들을 다시 정렬한다. (4번으로 인해 정렬이 틀어졌기 때문)</li>
-  <li>블록 구하기가 끝나면 이제 board에서 빈칸을 찾는다. (블록과 마찬가지로 위치값의 벡터로 구함)</li>
-  <li>빈칸이 구해지면, 3번에서처럼 빈칸을 첫 번째 부분을 기준으로 다시 표현한다.</li>
-  <li>그 후 빈칸을 정렬한다.</li>
-  <li>정렬된 빈칸을 블록 벡터를 순회하면서 맞는 블록이 있는지 찾는다. (이 때, usedBlock 이라는 bool 벡터를 하나 선언해서 블록의 재사용을 막는다. 또한 한 블록은 4개의 회전 형태를 모두 고려한다.)
-    <ol>
-      <li>맞는 블록이 있다면, usedBlock 에 해당 블록을 체크해주고, 블록의 칸 갯수를 answer에 더한다.</li>
-      <li>맞는 블록이 없다면, BFS에서 사용한 방문 정보를 초기화시킨다. (해당 빈칸을 다른 부분에서 다시 찾기 위함)</li>
-    </ol>
-  </li>
-  <li>위의 과정으로 board를 모두 탐색하면 answer를 반환한다.</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>이미 풀어봤던 문제임에도 시간이 꽤 걸렸다. 틀을 잡는건 금방 했는데, 블록을 탐색한 후 정렬을 언제 해줘야하는지가 많이 헷갈렸다. 문제를 정확하게 먼저 분석하고 풀었어야했는데, 또 바로 푸는 습관이 나와서 더 오래 걸렸던 것 같다.</li>
-  <li>게더타운에서 풀기 위해 밤 늦게 풀었더니 졸려서 머리가 더 안돌아갔던 것 같다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="BFS" /><summary type="html"><![CDATA[84021. 퍼즐 조각 채우기 / c++ / level3 / 1시간+]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="BFS" /><category term="BackTracking" /><summary type="html"><![CDATA[43164. 여행경로 / c++ / level3 / 1시간+]]></summary></entry></feed>

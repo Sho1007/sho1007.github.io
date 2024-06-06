@@ -922,4 +922,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","Greedy","Sort","LineSweeping"],
         "url": "/programmers/42884/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 18일차 TIL - 42895 N으로 표현",
+        "excerpt":"42895. N으로 표현 / c++ / level3 / 1시간+ 문제 및 코드 접근 방식 동적 계획법 사칙 연산으로 이루어져 있다는 점에서 착안 N이 들어간 횟수를 i라고 했을 때, i + 1은 결국 1 ~ (i-1)까지의 사칙 연산으로 이루어져 있다고 판단 dp[i]는 N이 i번 들어갔을 때 만들어질 수 있는 수들의 배열...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","DynamicProgramming"],
+        "url": "/programmers/42895/",
+        "teaser": null
       }]
