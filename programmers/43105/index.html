@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>LoadScene - Today I Learned</title>
-<meta name="description" content="이 문서는 Udemy의  ‘RPG Core Combat Creator’ 강의를 보고 배운 점을 적은 것입니다.">
+<!-- begin _includes/seo.html --><title>99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형 - Today I Learned</title>
+<meta name="description" content="43105. 정수 삼각형 / c++ / level3 / 26분">
 
 
   <meta name="author" content="Sho1007">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Today I Learned">
-<meta property="og:title" content="LoadScene">
-<meta property="og:url" content="https://sho1007.github.io/unity%20udemy/LoadScene/">
+<meta property="og:title" content="99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형">
+<meta property="og:url" content="https://sho1007.github.io/programmers/43105/">
 
 
-  <meta property="og:description" content="이 문서는 Udemy의  ‘RPG Core Combat Creator’ 강의를 보고 배운 점을 적은 것입니다.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-01-05T00:00:00+00:00">
+  <meta property="og:description" content="43105. 정수 삼각형 / c++ / level3 / 26분">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-07T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://sho1007.github.io/unity%20udemy/LoadScene/">
+
+<link rel="canonical" href="https://sho1007.github.io/programmers/43105/">
 
 
 
@@ -696,16 +696,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="LoadScene">
-    <meta itemprop="description" content="이 문서는 Udemy의  ‘RPG Core Combat Creator’ 강의를 보고 배운 점을 적은 것입니다.">
-    <meta itemprop="datePublished" content="2023-01-05T00:00:00+00:00">
+    <meta itemprop="headline" content="99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형">
+    <meta itemprop="description" content="43105. 정수 삼각형 / c++ / level3 / 26분">
+    <meta itemprop="datePublished" content="2024-06-07T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://sho1007.github.io/unity%20udemy/LoadScene/" class="u-url" itemprop="url">LoadScene
+            <a href="https://sho1007.github.io/programmers/43105/" class="u-url" itemprop="url">99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형
 </a>
           </h1>
           
@@ -716,7 +716,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2023-01-05T00:00:00+00:00">January 5, 2023</time>
+        <time datetime="2024-06-07T00:00:00+00:00">June 7, 2024</time>
       </span>
     
 
@@ -744,66 +744,34 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#설명">설명</a></li><li><a href="#사용법">사용법</a><ul><li><a href="#동기화-버전">동기화 버전</a></li><li><a href="#비동기-버전">비동기 버전</a></li></ul></li><li><a href="#dontdestroyonload">DontDestroyOnLoad</a><ul><li><a href="#사용법-1">사용법</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#43105-정수-삼각형--c--level3--26분">43105. 정수 삼각형 / c++ / level3 / 26분</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#동적-계획법">동적 계획법</a></li></ul></li><li><a href="#생각해-볼-점">생각해 볼 점</a><ul><li><a href="#해시태그">해시태그</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <p class="notice">이 문서는 Udemy의  ‘RPG Core Combat Creator’ 강의를 보고 배운 점을 적은 것입니다.</p>
+        <h1 id="43105-정수-삼각형--c--level3--26분">43105. 정수 삼각형 / c++ / level3 / 26분</h1>
 
-<h1 id="설명">설명</h1>
-<p>SceneManager 안에 속한 함수로, 해당 Scene을 로드 후 이동한다. <br />
-BuildSetting에 Scene들을 등록해놔야 사용 가능하다.</p>
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/43105.%E2%80%85%EC%A0%95%EC%88%98%E2%80%85%EC%82%BC%EA%B0%81%ED%98%95"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="동적-계획법">동적 계획법</h3>
 <ol>
-  <li>이름으로 이동</li>
-  <li>Build에 등록된 번호로 이동</li>
+  <li>위에서 아래로 내려간다면, 어떤 루트를 결정해야 큰 값이 나올지 모를 수 있지만, 반대로 아래에서 위의 값을 고른다면, 무조건 둘 중 큰 값을 고르기만 하면 된다.</li>
+  <li>해당 식을 DP라는 함수로 만들어서 저장 (이 때, 인자값으로 row, col 변수를 넘겨주는데, 만약 삼각형의 범위를 넘어간 값이라면 0을 리턴)</li>
+  <li>맨 아랫줄의 모든 칸에 대해 DP를 수행하면, 순차적으로 위로 타고 올라가며 결국 모든 칸의 계산값이 구해지게 된다.</li>
+  <li>따라서 맨 아랫줄의 계산 값 중, 가장 큰 값을 고르면 그 값이 나올 수 있는 가장 큰 값이다.</li>
 </ol>
 
-<h1 id="사용법">사용법</h1>
-<h2 id="동기화-버전">동기화 버전</h2>
-<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">UnityEngine.SceneManagement</span><span class="p">;</span>  <span class="c1">// 여기 안에 SceneManager 있음</span>
-<span class="p">[</span><span class="n">SerializeField</span><span class="p">]</span> <span class="kt">int</span> <span class="n">SceneToLoad</span> <span class="p">=</span> <span class="p">-</span><span class="m">1</span><span class="p">;</span>  <span class="c1">// 로드 할 Scene의 번호</span>
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>예전에 풀었던 문제라 로직 자체는 쉽게 생각해낼 수 있었는데, 배열로 선언하여 아랫줄에서 윗줄을 검사할 때는 실패가 떴었다. (아마 내가 구현을 잘못하거나, 예외처리를 빠트린게 있었겠지..?)</li>
+  <li>다시 처음부터 만들 때, DP를 함수로 빼고, dp[row][col]이 계산되어 있지 않다면, 윗줄의 왼쪽 값, 오른쪽 값을 다시 재귀적으로  DP 함수를 호출하도록 구현했더니 통과했다.</li>
+</ol>
 
-<span class="k">public</span> <span class="k">class</span> <span class="nc">Portal</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
-<span class="p">{</span>
-    <span class="k">private</span> <span class="k">void</span> <span class="nf">OnTriggerEnter</span><span class="p">(</span><span class="n">Collider</span> <span class="n">other</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">tag</span> <span class="p">==</span> <span class="s">"Player"</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">SceneManager</span><span class="p">.</span><span class="nf">LoadScene</span><span class="p">(</span><span class="n">SceneToLoad</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<h2 id="비동기-버전">비동기 버전</h2>
-<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">UnityEngine.SceneManagement</span><span class="p">;</span>  <span class="c1">// 여기 안에 SceneManager 있음</span>
-<span class="p">[</span><span class="n">SerializeField</span><span class="p">]</span> <span class="kt">int</span> <span class="n">SceneToLoad</span> <span class="p">=</span> <span class="p">-</span><span class="m">1</span><span class="p">;</span>  <span class="c1">// 로드 할 Scene의 번호</span>
-
-<span class="k">public</span> <span class="k">class</span> <span class="nc">Portal</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
-<span class="p">{</span>
-    <span class="k">private</span> <span class="k">void</span> <span class="nf">OnTriggerEnter</span><span class="p">(</span><span class="n">Collider</span> <span class="n">other</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">tag</span> <span class="p">==</span> <span class="s">"Player"</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="nf">StartCoroutine</span><span class="p">(</span><span class="nf">Transition</span><span class="p">());</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="k">private</span> <span class="n">IEnumerator</span> <span class="nf">Transition</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="k">yield</span> <span class="k">return</span> <span class="n">SceneManager</span><span class="p">.</span><span class="nf">LoadSceneAsync</span><span class="p">(</span><span class="n">SceneToLoad</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h1 id="dontdestroyonload">DontDestroyOnLoad</h1>
-<p>다른 Scene으로 이동해도 해당 GameObject가 파괴하지 않는다.</p>
-<h2 id="사용법-1">사용법</h2>
-<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="nf">DontDestroyOnLoad</span><span class="p">(</span><span class="n">gameObject</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>
 
         
       </section>
@@ -820,13 +788,15 @@ BuildSetting에 Scene들을 등록해놔야 사용 가능하다.</p>
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#loadscene" class="page__taxonomy-item p-category" rel="tag">LoadScene</a><span class="sep">, </span>
+      <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a><span class="sep">, </span>
     
-      <a href="/tags/#scenemanager" class="page__taxonomy-item p-category" rel="tag">SceneManager</a><span class="sep">, </span>
+      <a href="/tags/#codingtest" class="page__taxonomy-item p-category" rel="tag">CodingTest</a><span class="sep">, </span>
     
-      <a href="/tags/#udemy" class="page__taxonomy-item p-category" rel="tag">Udemy</a><span class="sep">, </span>
+      <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
     
-      <a href="/tags/#unity" class="page__taxonomy-item p-category" rel="tag">Unity</a>
+      <a href="/tags/#dynamicprogramming" class="page__taxonomy-item p-category" rel="tag">DynamicProgramming</a><span class="sep">, </span>
+    
+      <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
     
     </span>
   </p>
@@ -843,7 +813,7 @@ BuildSetting에 Scene들을 등록해놔야 사용 가능하다.</p>
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#unity-udemy" class="page__taxonomy-item p-category" rel="tag">Unity Udemy</a>
+      <a href="/categories/#programmers" class="page__taxonomy-item p-category" rel="tag">Programmers</a>
     
     </span>
   </p>
@@ -851,7 +821,7 @@ BuildSetting에 Scene들을 등록해놔야 사용 가능하다.</p>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-01-05T00:00:00+00:00">January 5, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-07T00:00:00+00:00">June 7, 2024</time></p>
 
       </footer>
 
@@ -860,23 +830,22 @@ BuildSetting에 Scene들을 등록해놔야 사용 가능하다.</p>
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=LoadScene%20https%3A%2F%2Fsho1007.github.io%2Funity%2520udemy%2FLoadScene%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=99%ED%81%B4%EB%9F%BD+%EC%BD%94%ED%85%8C+%EC%8A%A4%ED%84%B0%EB%94%94+19%EC%9D%BC%EC%B0%A8+TIL+-+43105+%EC%A0%95%EC%88%98+%EC%82%BC%EA%B0%81%ED%98%95%20https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F43105%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Funity%2520udemy%2FLoadScene%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F43105%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Funity%2520udemy%2FLoadScene%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F43105%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/unity%20udemy/Coroutine/" class="pagination--pager" title="Coroutine
+      <a href="/programmers/42895/" class="pagination--pager" title="99클럽 코테 스터디 18일차 TIL - 42895 N으로 표현
 ">Previous</a>
     
     
-      <a href="/unity%20udemy/Fader/" class="pagination--pager" title="Fader (장면 전환)
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -890,53 +859,6 @@ BuildSetting에 Scene들을 등록해놔야 사용 가능하다.</p>
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/programmers/43105/" rel="permalink">99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2024-06-07T00:00:00+00:00">June 7, 2024</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">43105. 정수 삼각형 / c++ / level3 / 26분
-</p>
-  </article>
-</div>
-
         
           
 
@@ -972,7 +894,7 @@ BuildSetting에 Scene들을 등록해놔야 사용 가능하다.</p>
       <span class="page__meta-readtime">
         <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          less than 1 minute read
         
       </span>
     
@@ -1074,6 +996,53 @@ BuildSetting에 Scene들을 등록해놔야 사용 가능하다.</p>
 
 
     <p class="archive__item-excerpt" itemprop="description">42861. 섬 연결하기 / c++ / level3 / 7분
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/programmers/43162/" rel="permalink">99클럽 코테 스터디 15일차 TIL - 43162 네트워크
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-03T00:00:00+00:00">June 3, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">43162. 네트워크 / c++ / level3 / 12분
 </p>
   </article>
 </div>

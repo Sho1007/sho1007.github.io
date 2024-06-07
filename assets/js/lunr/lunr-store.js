@@ -928,4 +928,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph","DynamicProgramming"],
         "url": "/programmers/42895/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형",
+        "excerpt":"43105. 정수 삼각형 / c++ / level3 / 26분 문제 및 코드 접근 방식 동적 계획법 위에서 아래로 내려간다면, 어떤 루트를 결정해야 큰 값이 나올지 모를 수 있지만, 반대로 아래에서 위의 값을 고른다면, 무조건 둘 중 큰 값을 고르기만 하면 된다. 해당 식을 DP라는 함수로 만들어서 저장 (이 때, 인자값으로...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","DynamicProgramming"],
+        "url": "/programmers/43105/",
+        "teaser": null
       }]

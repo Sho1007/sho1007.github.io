@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-06T18:19:49+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 18일차 TIL - 42895 N으로 표현</title><link href="https://sho1007.github.io/programmers/42895/" rel="alternate" type="text/html" title="99클럽 코테 스터디 18일차 TIL - 42895 N으로 표현" /><published>2024-06-06T00:00:00+00:00</published><updated>2024-06-06T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42895</id><content type="html" xml:base="https://sho1007.github.io/programmers/42895/"><![CDATA[<h1 id="42895-n으로-표현--c--level3--1시간">42895. N으로 표현 / c++ / level3 / 1시간+</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-07T09:07:11+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형</title><link href="https://sho1007.github.io/programmers/43105/" rel="alternate" type="text/html" title="99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형" /><published>2024-06-07T00:00:00+00:00</published><updated>2024-06-07T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43105</id><content type="html" xml:base="https://sho1007.github.io/programmers/43105/"><![CDATA[<h1 id="43105-정수-삼각형--c--level3--26분">43105. 정수 삼각형 / c++ / level3 / 26분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/43105.%E2%80%85%EC%A0%95%EC%88%98%E2%80%85%EC%82%BC%EA%B0%81%ED%98%95"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="동적-계획법">동적 계획법</h3>
+<ol>
+  <li>위에서 아래로 내려간다면, 어떤 루트를 결정해야 큰 값이 나올지 모를 수 있지만, 반대로 아래에서 위의 값을 고른다면, 무조건 둘 중 큰 값을 고르기만 하면 된다.</li>
+  <li>해당 식을 DP라는 함수로 만들어서 저장 (이 때, 인자값으로 row, col 변수를 넘겨주는데, 만약 삼각형의 범위를 넘어간 값이라면 0을 리턴)</li>
+  <li>맨 아랫줄의 모든 칸에 대해 DP를 수행하면, 순차적으로 위로 타고 올라가며 결국 모든 칸의 계산값이 구해지게 된다.</li>
+  <li>따라서 맨 아랫줄의 계산 값 중, 가장 큰 값을 고르면 그 값이 나올 수 있는 가장 큰 값이다.</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>예전에 풀었던 문제라 로직 자체는 쉽게 생각해낼 수 있었는데, 배열로 선언하여 아랫줄에서 윗줄을 검사할 때는 실패가 떴었다. (아마 내가 구현을 잘못하거나, 예외처리를 빠트린게 있었겠지..?)</li>
+  <li>다시 처음부터 만들 때, DP를 함수로 빼고, dp[row][col]이 계산되어 있지 않다면, 윗줄의 왼쪽 값, 오른쪽 값을 다시 재귀적으로  DP 함수를 호출하도록 구현했더니 통과했다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[43105. 정수 삼각형 / c++ / level3 / 26분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 18일차 TIL - 42895 N으로 표현</title><link href="https://sho1007.github.io/programmers/42895/" rel="alternate" type="text/html" title="99클럽 코테 스터디 18일차 TIL - 42895 N으로 표현" /><published>2024-06-06T00:00:00+00:00</published><updated>2024-06-06T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42895</id><content type="html" xml:base="https://sho1007.github.io/programmers/42895/"><![CDATA[<h1 id="42895-n으로-표현--c--level3--1시간">42895. N으로 표현 / c++ / level3 / 1시간+</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -310,31 +332,4 @@
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="BFS" /><summary type="html"><![CDATA[87964. 아이템 줍기 / c++ / level3 / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 12일차 TIL - 43164 여행경로</title><link href="https://sho1007.github.io/programmers/43164/" rel="alternate" type="text/html" title="99클럽 코테 스터디 12일차 TIL - 43164 여행경로" /><published>2024-05-31T00:00:00+00:00</published><updated>2024-05-31T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43164</id><content type="html" xml:base="https://sho1007.github.io/programmers/43164/"><![CDATA[<h1 id="43164-여행경로--c--level3--1시간">43164. 여행경로 / c++ / level3 / 1시간+</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/43164.%E2%80%85%EC%97%AC%ED%96%89%EA%B2%BD%EB%A1%9C"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="그래프-탐색--bfs--구현--백트래킹">그래프 탐색 / BFS / 구현 / 백트래킹</h3>
-<ol>
-  <li>우선 tickets 을 순회 하면서 인접리스트인 adjMap (unordered_map&lt;string,vector<string>&gt;) 을 준비</string></li>
-  <li>여행 경로를 담을 vector<string> currentPath를 선언</string></li>
-  <li>currentPath에 출발지인 ICN을 삽입</li>
-  <li>adjMap에서 ICN을 출발지로 하는 인접리스트를 돌면서 백트래킹 시작</li>
-  <li>currentPath.back (마지막 여행지) 를 출발점으로 하는 인접행렬을 순회하며 다시 백트래킹 반복</li>
-  <li>백트래킹 도중 currentPath가 ticket + 1 (출발지인 ICN까지 포함하므로) 가 되면, vector<stirng> 인 answer와 비교하여, 사전순으로 앞서있는지 체크</stirng></li>
-  <li>currentPath 가 answer 보다 사전순으로 앞서있다면 answer 갱신</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>공항의 수가 최대 10’000개였기 때문에 백트래킹 (재귀) 은 과하게 depth가 깊어지면 stack overflow 가 날 수 있다고 걱정했다.</li>
-  <li>그래서 처음엔 백트래킹을 사용하지 않고 BFS를 써서 어떻게든 풀어보려고 온몸비틀기를 했는데, 출발지 + 도착지를 한 string으로 묶어서 순서를 매겼더니, 중복되는 티켓을 처리하지 못하는 문제가 생겼다.</li>
-  <li>그래서 밑져야 본전이라고 백트래킹으로 풀어봤더니 너무 잘 풀리고, 시간도 2번에서 풀었던 것보다 1ms 더 빨랐다.</li>
-  <li>항상 가장 간단한 방법부터 시도해봐야한다고 머리로는 알고 있는데, 시간 제한이 있다고 생각하면 그게 잘 안되는 것 같다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="BFS" /><category term="BackTracking" /><summary type="html"><![CDATA[43164. 여행경로 / c++ / level3 / 1시간+]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="BFS" /><summary type="html"><![CDATA[87964. 아이템 줍기 / c++ / level3 / 1시간+]]></summary></entry></feed>
