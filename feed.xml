@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-07T09:07:11+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형</title><link href="https://sho1007.github.io/programmers/43105/" rel="alternate" type="text/html" title="99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형" /><published>2024-06-07T00:00:00+00:00</published><updated>2024-06-07T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43105</id><content type="html" xml:base="https://sho1007.github.io/programmers/43105/"><![CDATA[<h1 id="43105-정수-삼각형--c--level3--26분">43105. 정수 삼각형 / c++ / level3 / 26분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-08T13:01:04+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 20일차 TIL - 1843 사칙연산</title><link href="https://sho1007.github.io/programmers/1843/" rel="alternate" type="text/html" title="99클럽 코테 스터디 20일차 TIL - 1843 사칙연산" /><published>2024-06-08T00:00:00+00:00</published><updated>2024-06-08T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/1843</id><content type="html" xml:base="https://sho1007.github.io/programmers/1843/"><![CDATA[<h1 id="1843-사칙연산--c--level4--1시간">1843. 사칙연산 / c++ / level4 / 1시간+</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/4/1843.%E2%80%85%EC%82%AC%EC%B9%99%EC%97%B0%EC%82%B0"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="동적-계획법">동적 계획법</h3>
+<ol>
+  <li>식을 적절히 괄호로 감싸서 계산 순서를 정했을 때 나올 수 있는 최대 값을 구하는 문제였다.</li>
+  <li>dp라는건 결국 이전 값을 다음 계산에 활용할 수 있다는 것이므로, 이걸 어떻게 문제에 대입할 수 있을지 생각해봤다.</li>
+  <li>연산자 하나에 대해 양쪽 옆에 새로운 부분식이 생긴다고 했을 때, 다시 그 작은 식을 재귀적으로 해결할 수 있을거라고 생각했다.</li>
+  <li>그 부분식의 계산값을 저장해두면, 매번 계산하지 않아도 되므로, 이 방법으로 풀었더니 통과했다. (이 때, 포인트는 부분식의 최대값과 최소값을 동시에 저장해서, 연산자가 - 일 때 오른쪽 부분식의 최대값과 최소값 중 어떤걸 활용하는지를 정하는 것이었다.)</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>진짜 어려웠다. level4 문제를 정말 오랜만에 풀어봤다. 그래도 정답을 찾아보지 않고 직접 생각해서 풀어서 성취감을 느낄 수 있었다.</li>
+  <li>마지막에 unordered_set으로도 시간초과가 나서 공간복잡도를 생각한 뒤, 2차원 배열로 바꾼게 효과적이었다. unordered_set 이 hash를 사용해서 일반 map보다 검색 속도가 빠르다고 하더라도, 굳이 int,int를 string으로 바꾸기보다, 2차원 배열로 직접 접근하는게 훨씬 빨랐다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[1843. 사칙연산 / c++ / level4 / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형</title><link href="https://sho1007.github.io/programmers/43105/" rel="alternate" type="text/html" title="99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형" /><published>2024-06-07T00:00:00+00:00</published><updated>2024-06-07T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43105</id><content type="html" xml:base="https://sho1007.github.io/programmers/43105/"><![CDATA[<h1 id="43105-정수-삼각형--c--level3--26분">43105. 정수 삼각형 / c++ / level3 / 26분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -307,29 +329,4 @@
 </ul>
 
 <h1 id="reference">Reference</h1>
-<p><a href="https://modoocode.com/286">모두의 코드</a></p>]]></content><author><name>Sho1007</name></author><category term="[&quot;C++&quot;]" /><category term="C++" /><category term="Initialization" /><summary type="html"><![CDATA[Uniform Initialization 유니폼 초기화 혹은 균일 초기화라고 부른다. 생기게된 계기 C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다. int a(); MyClass b(); 이 때, a와 b는 작동 방식이 다르다. a는 int자료형을 Direct Initialization한 것이고, b는 MyClass라고 하는 자료형을 반환하는 함수를 정의한 것 이기 때문에, 생성자가 호줄되지 않는다. (전방선언)]]></summary></entry><entry><title type="html">99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기</title><link href="https://sho1007.github.io/programmers/87964/" rel="alternate" type="text/html" title="99클럽 코테 스터디 13일차 TIL - 87964 아이템 줍기" /><published>2024-06-01T00:00:00+00:00</published><updated>2024-06-01T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/87964</id><content type="html" xml:base="https://sho1007.github.io/programmers/87964/"><![CDATA[<h1 id="87964-아이템-줍기--c--level3--1시간">87964. 아이템 줍기 / c++ / level3 / 1시간+</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/87694.%E2%80%85%EC%95%84%EC%9D%B4%ED%85%9C%E2%80%85%EC%A4%8D%EA%B8%B0"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="그래프-탐색--bfs">그래프 탐색 / BFS</h3>
-<ol>
-  <li>점이 겹치는 뭉치는 문제를 해결하기 위해 사각형의 각 좌표를 * 2 해줌</li>
-  <li>사각형을 돌면서 2차원 bool 배열 map에 테두리를 true 표시해줌</li>
-  <li>다시 사각형을 돌면서 사각형 안쪽을 false로 바꿔줌</li>
-  <li>해당 map을 기준으로 BFS 진행 (이 때, 시작 좌표도 각각 *2)</li>
-  <li>마지막으로 item 좌표 * 2 한 위치의 비용값의 절반을 return</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>사각형들의 테두리를 잇는 부분은 크게 어렵지 않았다.</li>
-  <li>그런데 좌표가 1단위로 나눠져서, 분명 이어져있지 않은 길인데도 bfs할 때 이어진 것처럼 작동하는 문제가 있었다.</li>
-  <li>예전에 이걸 *2해서 (지도가 커지면 좌표가 더 세밀해지는 느낌) 해결했던 경험이 있었는데, 이걸 다시 생각해내기까지가 정말 오래 걸렸다.</li>
-  <li>다음에는 지금처럼 좌표값을 더 세분화해야 할 때, * 2 하는 방법을 바로 기억해낼 수 있도록 해야겠다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="BFS" /><summary type="html"><![CDATA[87964. 아이템 줍기 / c++ / level3 / 1시간+]]></summary></entry></feed>
+<p><a href="https://modoocode.com/286">모두의 코드</a></p>]]></content><author><name>Sho1007</name></author><category term="[&quot;C++&quot;]" /><category term="C++" /><category term="Initialization" /><summary type="html"><![CDATA[Uniform Initialization 유니폼 초기화 혹은 균일 초기화라고 부른다. 생기게된 계기 C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다. int a(); MyClass b(); 이 때, a와 b는 작동 방식이 다르다. a는 int자료형을 Direct Initialization한 것이고, b는 MyClass라고 하는 자료형을 반환하는 함수를 정의한 것 이기 때문에, 생성자가 호줄되지 않는다. (전방선언)]]></summary></entry></feed>

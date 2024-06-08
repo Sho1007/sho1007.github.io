@@ -934,4 +934,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","DynamicProgramming"],
         "url": "/programmers/43105/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 20일차 TIL - 1843 사칙연산",
+        "excerpt":"1843. 사칙연산 / c++ / level4 / 1시간+ 문제 및 코드 접근 방식 동적 계획법 식을 적절히 괄호로 감싸서 계산 순서를 정했을 때 나올 수 있는 최대 값을 구하는 문제였다. dp라는건 결국 이전 값을 다음 계산에 활용할 수 있다는 것이므로, 이걸 어떻게 문제에 대입할 수 있을지 생각해봤다. 연산자 하나에 대해...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","DynamicProgramming"],
+        "url": "/programmers/1843/",
+        "teaser": null
       }]
