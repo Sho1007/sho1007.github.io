@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-09T15:32:03+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 20일차 TIL - 1843 사칙연산</title><link href="https://sho1007.github.io/programmers/1843/" rel="alternate" type="text/html" title="99클럽 코테 스터디 20일차 TIL - 1843 사칙연산" /><published>2024-06-08T00:00:00+00:00</published><updated>2024-06-08T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/1843</id><content type="html" xml:base="https://sho1007.github.io/programmers/1843/"><![CDATA[<h1 id="1843-사칙연산--c--level4--1시간">1843. 사칙연산 / c++ / level4 / 1시간+</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-09T15:34:35+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 21일차 TIL - 42897 도둑질</title><link href="https://sho1007.github.io/programmers/42897/" rel="alternate" type="text/html" title="99클럽 코테 스터디 21일차 TIL - 42897 도둑질" /><published>2024-06-09T00:00:00+00:00</published><updated>2024-06-09T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42897</id><content type="html" xml:base="https://sho1007.github.io/programmers/42897/"><![CDATA[<h1 id="42897-도둑질--c--level4--1시간">42897. 도둑질 / c++ / level4 / 1시간+</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/4/42897.%E2%80%85%EB%8F%84%EB%91%91%EC%A7%88"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="동적-계획법">동적 계획법</h3>
+<ol>
+  <li>이런 식의 문제는 보통, 현재 칸에서 행동함 = 전 칸의 행동 안한 결과 + 현재 칸의 값 으로 풀 수 있다.</li>
+  <li>다만 이 문제의 경우 순환 배열이어서 시작 원소와 마지막 원소 역시 위의 조건을 만족해야 했다.</li>
+  <li>고민 끝에 내가 생각한 방법은, 배열을 아래처럼 총 4개 만들어주는 것이었다.
+    <ol>
+      <li>현재 집을 도둑질 함 (시작 지점을 도둑질한 경우)</li>
+      <li>현재 집을 도둑질 하지 않음 (시작 지점을 도둑질한 경우)</li>
+      <li>현재 집을 도둑질 함 (시작 지점을 도둑질하지 않은 경우)</li>
+      <li>현재 집을 도둑질 하지 않음 (시작 지점을 도둑질하지 않은 경우)</li>
+    </ol>
+  </li>
+  <li>이렇게 한 뒤, 맨 마지막 집 전까지만, 배열을 순회하며 dp값을 저장해주고, <br />
+ 맨 마지막 집의 경우 3-3번에만 값을 더 해주었다. (3-1의 경우 시작 지점을 도둑질 했기 때문에 마지막 집을 도둑질할 수 없다.)</li>
+  <li>그 후, 나온 값들 중 가장 큰 값을 비교하여 반환</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>확실히 level4 문제들은 난이도가 있다고 생각이 들었다.</li>
+  <li>다만 이 문제의 경우 이전에도 접해본 dp문제 유형이었는데, 거기에 시작 지점의 값도 추가로 신경써줘야하는 응용 문제여서 생각만 잘 했다면 충분히 빨리 풀 수 있었는데, 이건 좀 더 반복적으로 연습을 해야겠다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[42897. 도둑질 / c++ / level4 / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 20일차 TIL - 1843 사칙연산</title><link href="https://sho1007.github.io/programmers/1843/" rel="alternate" type="text/html" title="99클럽 코테 스터디 20일차 TIL - 1843 사칙연산" /><published>2024-06-08T00:00:00+00:00</published><updated>2024-06-08T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/1843</id><content type="html" xml:base="https://sho1007.github.io/programmers/1843/"><![CDATA[<h1 id="1843-사칙연산--c--level4--1시간">1843. 사칙연산 / c++ / level4 / 1시간+</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -201,132 +232,4 @@
   </ol>
 </blockquote>
 
-<p>응용 프로그램은 실행 도중 빈번하게 시스템 호출을 발생시키고, 사용자 모드와 커널 모드를 오가며 실행된다.</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;OperatingSystem&quot;]" /><category term="OperatingSystem" /><category term="HonGong" /><summary type="html"><![CDATA[운영체제란]]></summary></entry><entry><title type="html">Uniform Initialization</title><link href="https://sho1007.github.io/c++/UniformInitialization/" rel="alternate" type="text/html" title="Uniform Initialization" /><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://sho1007.github.io/c++/UniformInitialization</id><content type="html" xml:base="https://sho1007.github.io/c++/UniformInitialization/"><![CDATA[<h1 id="uniform-initialization">Uniform Initialization</h1>
-<p>유니폼 초기화 혹은 균일 초기화라고 부른다.</p>
-<h2 id="생기게된-계기">생기게된 계기</h2>
-<p>C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다.</p>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">int</span> <span class="nf">a</span><span class="p">();</span>
-    <span class="n">MyClass</span> <span class="nf">b</span><span class="p">();</span>
-</code></pre></div></div>
-<p>이 때, a와 b는 작동 방식이 다르다. a는 int자료형을 Direct Initialization한 것이고, b는 MyClass라고 하는 자료형을 반환하는 함수를 정의한 것 이기 때문에, 생성자가 호줄되지 않는다. (전방선언)</p>
-
-<blockquote>
-  <p>함수의 정의처럼 보이는 것들은 모두 함수의 정의로 해석</p>
-</blockquote>
-
-<p>다른 예로는,</p>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">B</span> <span class="nf">b</span><span class="p">(</span><span class="n">A</span><span class="p">());</span>
-</code></pre></div></div>
-<p>의 경우, 인자값을 받지 않고 A를 return 하는 함수를, 다시 인자값으로 받아 B를 return하는 함수 b인 것이다. (우리는 class A의 기본 생성자로 생성된 객체 A를 인자값으로 받는 B 생성자로 b를 생성했다고 생각했지만)</p>
-<blockquote>
-  <p>문제는, 소괄호 ()가 함수를 인자를 정의할 때도, 객체의 생성자를 호출할 때도 사용되기 때문</p>
-</blockquote>
-
-<p>그래서 이런 문제를 해결하고자 나온 것이, {}를 사용하는 Uniform Initialization이다.</p>
-
-<h2 id="uniform-initialization-의-특징">Uniform Initialization 의 특징</h2>
-
-<h3 id="생성과-생성의-차이점">()생성과 {}생성의 차이점</h3>
-<p>데이터 손실이 있는 형 변환 (Narro Conversion) 의 가능 여부</p>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">int</span> <span class="n">A</span><span class="p">(</span><span class="mf">3.5</span><span class="n">f</span><span class="p">)</span> <span class="c1">// Narrow-Conversion 가능</span>
-    <span class="kt">int</span> <span class="n">B</span><span class="p">{</span><span class="mf">3.</span><span class="n">f</span><span class="p">}</span> <span class="c1">// Narro-Conversion 불가 -&gt; Error 발생</span>
-</code></pre></div></div>
-
-<h3 id="반환-할-때의-특징">반환 할 때의 특징</h3>
-<p>Uniform Initialization 으로 반환할 때에는, 생성할 객체의 타입을 명시하지 않아도 된다는 특징이 있다.</p>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">A</span>
-<span class="p">{</span>
-    <span class="nl">public:</span>
-    <span class="n">A</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">)</span> <span class="p">{}</span>
-<span class="p">}</span>
-
-<span class="n">A</span> <span class="n">func</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">};</span>    <span class="c1">// A(3, 3.5) 와 동일</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<p>이 경우 컴파일러가 함수의 반환값을 보고 추론하여 A의 생성자를 호출한다.</p>
-<h3 id="initializer_list-초기화자-리스트">Initializer_list (초기화자 리스트)</h3>
-<p>배열을 초기화할 때, {}를 사용할 수 있다.</p>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">arr</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>
-</code></pre></div></div>
-<p>Uniform Initialization을 사용하면, 객체도 이처럼 초기화할 수 있는데, 이 때 Initializer_list 가 사용된다.</p>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">A</span>
-<span class="p">{</span>
-    <span class="nl">public:</span>
-    <span class="n">A</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">initializer_list</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">l</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">l</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">iter</span> <span class="o">!=</span> <span class="n">l</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">iter</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="c1">// Todo : Use *iter</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">A</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>
-<span class="p">}</span>
-
-</code></pre></div></div>
-<h3 id="initializer_list-사용시-주의할-점">Initializer_list 사용시 주의할 점</h3>
-<ul>
-  <li>()을 사용해 생성하면 initializer_list 를 사용할 수 없다.</li>
-  <li>원소의 갯수가 1개일 때 주의할점
-    <ul>
-      <li>벡터 생성 시
-        <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">// 원소 10개짜리 벡터 생성</span>
-  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span> <span class="c1">// 10을 원소로 가지는 1개짜리 벡터 생성</span>
-  <span class="c1">// vector&lt;int&gt; b = {10} 와 동일;</span>
-</code></pre></div>        </div>
-      </li>
-    </ul>
-  </li>
-  <li>initializer_list 가 최우선으로 고려되어 생기는 문제점
-    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
-  <span class="nl">public:</span>
-  <span class="n">A</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"일반 생성자! "</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
-
-  <span class="n">A</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">initializer_list</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">lst</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"초기화자 사용 생성자! "</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="p">};</span>
-
-  <span class="kt">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">A</span> <span class="n">a</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">);</span>  <span class="c1">// Good</span>
-  <span class="n">A</span> <span class="n">b</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">};</span>  <span class="c1">// Bad! -&gt; initializer_list&lt;int&gt; 인데, 1.5인 double 이 들어왔음 -&gt; Narrow-Conversion이 안되므로 error 발생</span>
-  <span class="p">}</span>
-</code></pre></div>    </div>
-  </li>
-  <li>auto를 사용하여 생기는 문제점
-    <ul>
-      <li>원소의 갯수에 따른 문제(해결됨)
-        <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">auto</span> <span class="n">a</span><span class="p">{</span><span class="mi">1</span><span class="p">};</span>          <span class="c1">//std::initializer_list&lt;int&gt;</span>
-  <span class="k">auto</span> <span class="n">b</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>    <span class="c1">//std::initializer_list&lt;int&gt;</span>
-  <span class="c1">// 즉 둘 다 배열로 간주된다는 점</span>
-</code></pre></div>        </div>
-        <ul>
-          <li>하지만 이는 원소의 갯수가 1개이나, 2개 이상이냐로 나뉘어 해결됨
-            <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">auto</span> <span class="n">a</span><span class="p">{</span><span class="mi">1</span><span class="p">};</span>          <span class="c1">// 그냥 int</span>
-  <span class="k">auto</span> <span class="n">b</span><span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>    <span class="c1">//std::initializer_list&lt;int&gt;</span>
-</code></pre></div>            </div>
-          </li>
-        </ul>
-      </li>
-      <li>문자열에 대한 문제
-        <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">auto</span> <span class="n">list</span> <span class="o">=</span> <span class="p">{</span><span class="s">"abc"</span><span class="p">,</span> <span class="s">"def"</span><span class="p">,</span> <span class="s">"ghi"</span><span class="p">};</span>
-  <span class="c1">//std::initilizer_list&lt;string&gt;이 아닌 std::initilizer_list&lt;const char*&gt;이 됨</span>
-
-  <span class="c1">// 이를 해결하기 위해서는 C++14에서 추가된 리터럴 연산자를 사용</span>
-
-  <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">literals</span><span class="p">;</span>
-  <span class="k">auto</span> <span class="n">stringList</span> <span class="o">=</span> <span class="p">{</span><span class="s">"abc"</span><span class="n">s</span><span class="p">,</span> <span class="s">"def"</span><span class="n">s</span><span class="p">,</span> <span class="s">"ghi"</span><span class="n">s</span><span class="p">};</span>
-  <span class="c1">// 이러면 std::initilaizer_list&lt;string&gt;으로 처리됨</span>
-</code></pre></div>        </div>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="reference">Reference</h1>
-<p><a href="https://modoocode.com/286">모두의 코드</a></p>]]></content><author><name>Sho1007</name></author><category term="[&quot;C++&quot;]" /><category term="C++" /><category term="Initialization" /><summary type="html"><![CDATA[Uniform Initialization 유니폼 초기화 혹은 균일 초기화라고 부른다. 생기게된 계기 C++ 에서 변수를 초기화 할 때, 아래와 같은 실수를 저지른다. int a(); MyClass b(); 이 때, a와 b는 작동 방식이 다르다. a는 int자료형을 Direct Initialization한 것이고, b는 MyClass라고 하는 자료형을 반환하는 함수를 정의한 것 이기 때문에, 생성자가 호줄되지 않는다. (전방선언)]]></summary></entry></feed>
+<p>응용 프로그램은 실행 도중 빈번하게 시스템 호출을 발생시키고, 사용자 모드와 커널 모드를 오가며 실행된다.</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;OperatingSystem&quot;]" /><category term="OperatingSystem" /><category term="HonGong" /><summary type="html"><![CDATA[운영체제란]]></summary></entry></feed>

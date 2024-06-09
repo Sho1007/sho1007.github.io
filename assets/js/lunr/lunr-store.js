@@ -940,4 +940,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","DynamicProgramming"],
         "url": "/programmers/1843/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 21일차 TIL - 42897 도둑질",
+        "excerpt":"42897. 도둑질 / c++ / level4 / 1시간+ 문제 및 코드 접근 방식 동적 계획법 이런 식의 문제는 보통, 현재 칸에서 행동함 = 전 칸의 행동 안한 결과 + 현재 칸의 값 으로 풀 수 있다. 다만 이 문제의 경우 순환 배열이어서 시작 원소와 마지막 원소 역시 위의 조건을 만족해야...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","DynamicProgramming"],
+        "url": "/programmers/42897/",
+        "teaser": null
       }]
