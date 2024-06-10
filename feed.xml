@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-09T15:34:35+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 21일차 TIL - 42897 도둑질</title><link href="https://sho1007.github.io/programmers/42897/" rel="alternate" type="text/html" title="99클럽 코테 스터디 21일차 TIL - 42897 도둑질" /><published>2024-06-09T00:00:00+00:00</published><updated>2024-06-09T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42897</id><content type="html" xml:base="https://sho1007.github.io/programmers/42897/"><![CDATA[<h1 id="42897-도둑질--c--level4--1시간">42897. 도둑질 / c++ / level4 / 1시간+</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-10T16:42:19+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 22일차 TIL - 43236 징검다리</title><link href="https://sho1007.github.io/programmers/43236/" rel="alternate" type="text/html" title="99클럽 코테 스터디 22일차 TIL - 43236 징검다리" /><published>2024-06-10T00:00:00+00:00</published><updated>2024-06-10T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43236</id><content type="html" xml:base="https://sho1007.github.io/programmers/43236/"><![CDATA[<h1 id="43236-징검다리--c--level4--2시간">43236. 징검다리 / c++ / level4 / 2시간+</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/4/43236.%E2%80%85%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="이분탐색">이분탐색</h3>
+<ol>
+  <li>결론은 돌을 n개 이하로 제거했을 때, 시작점(0), 각 다리 사이의 거리, 끝점(distance)가 모두 x이상일 때, 이 x에 들어갈 수 있는 수 중 가장 큰 값을 구하는 문제였다.</li>
+  <li>이분탐색을 안쓰고 정렬이랑 우선순위큐를 써서 풀어보려고 시간을 엄청 썼다.</li>
+  <li>결국 이분탐색으로 풀었는데, AI가 무슨 시작점과 끝점은 상관 없고, 각 돌 사이의 거리만 구하라고 해서, 내가 문제를 잘못 읽었나보다 하고 그렇게 풀었는데, 틀렸다.</li>
+  <li>다시 결과를 보니 내가 원래 읽었던 게 맞았다. 프로그래머스 AI는 문제가 많아 보인다.</li>
+  <li>마지막 돌과 distance까지의 거리를 어떻게 구할까 고민했는데, (그 돌이 제거됐는지에 따라 달라지므로)</li>
+  <li>그냥 매번 비교할 때, 이전돌과의 거리 &amp; distance와의 거리가 모두 mid 이상인지 체크하고, 아니면 제거하면 됐었다. (이걸 생각해내기까지 또 오래 걸렸다.)</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>level4 문제는 맛있다. 그런데 너무 오래 걸려서 붙잡고 있다보면 시간이 사라진다.</li>
+  <li>그래도 계속 풀다보면 익숙해지고 점차 속도가 붙지 않을까 생각하고 있다.</li>
+  <li>99클럽 덕분에 기존에는 잘 도전하지 않던 문제들도 많이 접하게 돼서 도움이 된다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="BinarySearch" /><summary type="html"><![CDATA[43236. 징검다리 / c++ / level4 / 2시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 21일차 TIL - 42897 도둑질</title><link href="https://sho1007.github.io/programmers/42897/" rel="alternate" type="text/html" title="99클럽 코테 스터디 21일차 TIL - 42897 도둑질" /><published>2024-06-09T00:00:00+00:00</published><updated>2024-06-09T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42897</id><content type="html" xml:base="https://sho1007.github.io/programmers/42897/"><![CDATA[<h1 id="42897-도둑질--c--level4--1시간">42897. 도둑질 / c++ / level4 / 1시간+</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -183,53 +208,4 @@
 <h3 id="해시태그">해시태그</h3>
 <p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="DFS" /><summary type="html"><![CDATA[43163. 단어 변환 / c++ / level3 / 18분]]></summary></entry><entry><title type="html">Stable &amp;amp; Unstable Sort</title><link href="https://sho1007.github.io/datastructure/Stable&UnStableSort/" rel="alternate" type="text/html" title="Stable &amp;amp; Unstable Sort" /><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://sho1007.github.io/datastructure/Stable&amp;UnStableSort</id><content type="html" xml:base="https://sho1007.github.io/datastructure/Stable&amp;UnStableSort/"><![CDATA[<h1 id="stable--unstalbe-sort">Stable &amp; Unstalbe Sort</h1>
 
-<p>정렬 시 같은 key 값을 가지는 원소들의 순서가 유지된다면 stable sort이고, 순서가 유지되지 않는다면 unstable sort이다.</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;DataStructure&quot;]" /><category term="Sort" /><category term="DataStructure" /><summary type="html"><![CDATA[Stable &amp; Unstalbe Sort]]></summary></entry><entry><title type="html">운영체제 시작하기</title><link href="https://sho1007.github.io/operatingsystem/OperatingSystem/" rel="alternate" type="text/html" title="운영체제 시작하기" /><published>2024-06-02T00:00:00+00:00</published><updated>2024-06-02T00:00:00+00:00</updated><id>https://sho1007.github.io/operatingsystem/OperatingSystem</id><content type="html" xml:base="https://sho1007.github.io/operatingsystem/OperatingSystem/"><![CDATA[<h1 id="운영체제란">운영체제란</h1>
-
-<p>실행할 프로그램에 필요한 자원을 할당하고, 프로그램이 올바르게 실행되도록 돕는 특별한 프로그램</p>
-
-<h1 id="커널-영역--사용자-영역">커널 영역 / 사용자 영역</h1>
-<p><strong>커널 영역</strong> : 운영체제가 적재되는 메모리 공간 <br />
-<strong>사용자 영역</strong> : 사용자가 이용하는 응용 프로그램이 적재될 커널 영역 이외의 공간</p>
-
-<h1 id="운영체제의-핵심-서비스">운영체제의 핵심 서비스</h1>
-<h2 id="프로세스-관리">프로세스 관리</h2>
-<p>실행 중인 프로그램을 프로세스라고 하는데, 일반적으로 CPU는 한번에 한 프로세스만 처리할 수 있으므로 운영체제가 프로세스들을 전환해가며 CPU를 사용하게 한다. 이 때 <strong>프로세스 동기화</strong>가 필수적이고, <strong>교착 상태</strong>를 해결해야 한다.</p>
-<h2 id="자원-접근-및-할당">자원 접근 및 할당</h2>
-<h3 id="cpu">CPU</h3>
-<p>일반적으로 메모리에 여러 프로세스가 적재되고, 하나의 CPU에는 한번에 하나의 프로세스만 실행되므로, 다른 프로세스들은 CPU를 사용할 동안 기다려야 하는데, 운영체제에서 이를 관리하는 것을 <strong>CPU 스케쥴링</strong>이라고 한다.</p>
-<h3 id="메모리">메모리</h3>
-<p>메모리에 적재된 프로세스들은 크기도, 주소도 다 다르다.
-운영체제는 새로운 프로세스가 적재될 때의 주소를 결정해야 하고, 메모리 공간도 관리해야 한다.</p>
-<h3 id="입출력장치">입출력장치</h3>
-<p>인터럽트 서비스 루틴은 운영체제의 기능으로 커널 영역에 있다. 입출력장치가 발생시키는 하드웨어 인터럽트도 마찬가지이다.</p>
-<h2 id="파일-시스템">파일 시스템</h2>
-<p>파일 열기, 닫기, 생성, 삭제, 디렉터리 관리도 운영체제가 담당한다.</p>
-
-<blockquote>
-  <p>가상 머신은 응용 프로그램으로 사용자 모드로 실행된다. 하지만 가상 머신에 운영체제가 존재할 때, 이 운영체제는 어떻게 커널 영역의 서비스를 제공받을 수 있을까? -&gt; 가상화를 지원하는 CPU는 커널 모드와 사용자 모드 이외에 <strong>하이퍼바이저 모드</strong>를 따로 둔다. 가상 머신 위에서 작동하는 응용 프로그램들은 하이퍼바이저모드로써 운영체제 서비스를 받을 수 있다.</p>
-</blockquote>
-
-<h1 id="커널">커널</h1>
-<p>운영체제의 핵심 서비스를 담당하는 부분을 커널이라고 하는데, 운영체제는 커널 이외에도 사용자 인터페이스 (GUI, CLI)도 제공한다.</p>
-
-<h1 id="이중모드">이중모드</h1>
-<p>이중모드란, CPU가 명령어를 실행하는 모드를 <strong>사용자 모드</strong>와 <strong>커널 모드</strong>로 구분하는 방식이다.</p>
-<h2 id="사용-이유">사용 이유</h2>
-<p>운영체제는 응용 프로그램이 하드웨어 자원에 직접 접근하는 것을 방지하고, 오직 자신을 통해서만 접근하도록 하여 자원을 보호한다. <br />
-이러한 운영체제의 문지기 역할은 <strong>이중 모드</strong> 를 사용하여 구현된다.</p>
-<h2 id="사용자-모드">사용자 모드</h2>
-<p>운영체제의 서비스를 제공받을 수 없는 실행 모드 (슈퍼바이저 플래그 off)</p>
-<h2 id="커널-모드">커널 모드</h2>
-<p>운영체제 서비스를 제공받을 수 있는 실행 모드 (슈퍼바이저 플래그 on)</p>
-<h2 id="시스템-호출">시스템 호출</h2>
-<p>사용자 모드에서 실행되는 프로그램이 자원에 접근하기 위해 운영체제 서비스를 제공받으려면 커널 모드로 전환되어야 하는데, 이 때 <strong>시스템 호출</strong>을 통해 커널 모드로 전환할 수 있다.</p>
-<blockquote>
-  <p>시스템 호출도 일종의 소프트웨어 인터럽트이다.</p>
-  <ol>
-    <li>시스템 호출 실행 (사용자 모드 -&gt; 커널 모드)</li>
-    <li>운영체제 코드 실행 (커널 모드)</li>
-    <li>시스템 호출로부터 복귀 (커널 모드 -&gt; 사용자 모드)</li>
-  </ol>
-</blockquote>
-
-<p>응용 프로그램은 실행 도중 빈번하게 시스템 호출을 발생시키고, 사용자 모드와 커널 모드를 오가며 실행된다.</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;OperatingSystem&quot;]" /><category term="OperatingSystem" /><category term="HonGong" /><summary type="html"><![CDATA[운영체제란]]></summary></entry></feed>
+<p>정렬 시 같은 key 값을 가지는 원소들의 순서가 유지된다면 stable sort이고, 순서가 유지되지 않는다면 unstable sort이다.</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;DataStructure&quot;]" /><category term="Sort" /><category term="DataStructure" /><summary type="html"><![CDATA[Stable &amp; Unstalbe Sort]]></summary></entry></feed>

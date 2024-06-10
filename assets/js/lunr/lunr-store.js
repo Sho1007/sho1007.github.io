@@ -946,4 +946,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","DynamicProgramming"],
         "url": "/programmers/42897/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 22일차 TIL - 43236 징검다리",
+        "excerpt":"43236. 징검다리 / c++ / level4 / 2시간+ 문제 및 코드 접근 방식 이분탐색 결론은 돌을 n개 이하로 제거했을 때, 시작점(0), 각 다리 사이의 거리, 끝점(distance)가 모두 x이상일 때, 이 x에 들어갈 수 있는 수 중 가장 큰 값을 구하는 문제였다. 이분탐색을 안쓰고 정렬이랑 우선순위큐를 써서 풀어보려고 시간을 엄청 썼다....","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","BinarySearch"],
+        "url": "/programmers/43236/",
+        "teaser": null
       }]
