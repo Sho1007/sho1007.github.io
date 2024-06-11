@@ -952,4 +952,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","BinarySearch"],
         "url": "/programmers/43236/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 23일차 TIL - 786 K-th Smallest Prime Fraction",
+        "excerpt":"786. K-th Smallest Prime Fraction / c++ / Medium / 14분 문제 및 코드 #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; class Solution { public: vector&lt;int&gt; kthSmallestPrimeFraction(vector&lt;int&gt;&amp; arr, int k) { vector&lt;vector&lt;int&gt;&gt; vec; for (int i = 0; i &lt; arr.size(); ++i) { for (int j = i + 1;...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Sort"],
+        "url": "/leetcode/786/",
+        "teaser": null
       }]
