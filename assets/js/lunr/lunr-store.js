@@ -958,4 +958,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Sort"],
         "url": "/leetcode/786/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 24일차 TIL - 49190 방의 개수",
+        "excerpt":"49190. 방의 개수 / c++ / level5 / 2시간+ 문제 및 코드 접근 방식 그래프 방을 만드는 조건을 찾아야했다. 이미 방문한 좌표를 다시 방문할 때 방이 생성됐다. 방문한적 없는 간선(arrow)로 방문해야 방이 생성됐다. unordered_set으로 좌표와 간선의 방문여부를 체크했고, 테스트 케이스를 통과했지만, 문제는 틀렸다. 아무리 생각해도 이유를 알 수 없어서, 다른...","categories": ["Programmers"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph"],
+        "url": "/programmers/49190/",
+        "teaser": null
       }]
