@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-12T15:13:55+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 24일차 TIL - 49190 방의 개수</title><link href="https://sho1007.github.io/programmers/49190/" rel="alternate" type="text/html" title="99클럽 코테 스터디 24일차 TIL - 49190 방의 개수" /><published>2024-06-12T00:00:00+00:00</published><updated>2024-06-12T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/49190</id><content type="html" xml:base="https://sho1007.github.io/programmers/49190/"><![CDATA[<h1 id="49190-방의-개수--c--level5--2시간">49190. 방의 개수 / c++ / level5 / 2시간+</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-13T13:37:54+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 25일차 TIL - 1971 Find if Path Exists in Graph</title><link href="https://sho1007.github.io/leetcode/1971/" rel="alternate" type="text/html" title="99클럽 코테 스터디 25일차 TIL - 1971 Find if Path Exists in Graph" /><published>2024-06-13T00:00:00+00:00</published><updated>2024-06-13T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/1971</id><content type="html" xml:base="https://sho1007.github.io/leetcode/1971/"><![CDATA[<h1 id="1971-find-if-path-exists-in-graph--c--easy--26분">1971. Find if Path Exists in Graph / c++ / Easy / 26분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">parent</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">Find</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">parent</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">==</span> <span class="n">num</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">parent</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">parent</span><span class="p">[</span><span class="n">num</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">Union</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">parentA</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">parentB</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">parentA</span> <span class="o">==</span><span class="n">parentB</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+    <span class="n">parent</span><span class="p">[</span><span class="n">parentB</span><span class="p">]</span> <span class="o">=</span> <span class="n">parentA</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">bool</span> <span class="n">validPath</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">edges</span><span class="p">,</span> <span class="kt">int</span> <span class="n">source</span><span class="p">,</span> <span class="kt">int</span> <span class="n">destination</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">parent</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">parent</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">edges</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Union</span><span class="p">(</span><span class="n">edges</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">edges</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">Find</span><span class="p">(</span><span class="n">source</span><span class="p">)</span> <span class="o">==</span> <span class="n">Find</span><span class="p">(</span><span class="n">destination</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="유니온파인드">유니온파인드</h3>
+<ol>
+  <li>양방향 그래프에서 두 정점 사이의 경로가 존재하는지를 반환하는 문제였다.</li>
+  <li>유니온파인드(디스조인트셋/서로소 집합)을 사용하면 두 정점의 부모가 같을 경우 두 정점의 경로가 존재함을 알 수 있다.</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>99클럽의 챌린저 문제 치고는 너무 쉬웠다. (리트 코드 난이도 조차도 easy)</li>
+  <li>아마 source 정점에서 BFS나 DFS등을 써서 destination 정점까지 도착할 수 있는지를 파악할 수도 있을 것 같다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="UnionFind" /><summary type="html"><![CDATA[1971. Find if Path Exists in Graph / c++ / Easy / 26분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 24일차 TIL - 49190 방의 개수</title><link href="https://sho1007.github.io/programmers/49190/" rel="alternate" type="text/html" title="99클럽 코테 스터디 24일차 TIL - 49190 방의 개수" /><published>2024-06-12T00:00:00+00:00</published><updated>2024-06-12T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/49190</id><content type="html" xml:base="https://sho1007.github.io/programmers/49190/"><![CDATA[<h1 id="49190-방의-개수--c--level5--2시간">49190. 방의 개수 / c++ / level5 / 2시간+</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -240,23 +304,4 @@ k 번째로 작은 수가 되는 경우를 구하는 것이었다.</li>
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="Greedy" /><category term="UnionFind" /><category term="Kruskal" /><summary type="html"><![CDATA[42861. 섬 연결하기 / c++ / level3 / 7분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 15일차 TIL - 43162 네트워크</title><link href="https://sho1007.github.io/programmers/43162/" rel="alternate" type="text/html" title="99클럽 코테 스터디 15일차 TIL - 43162 네트워크" /><published>2024-06-03T00:00:00+00:00</published><updated>2024-06-03T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43162</id><content type="html" xml:base="https://sho1007.github.io/programmers/43162/"><![CDATA[<h1 id="43162-네트워크--c--level3--12분">43162. 네트워크 / c++ / level3 / 12분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/43162.%E2%80%85%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="그래프-탐색--bfs">그래프 탐색 / BFS</h3>
-<ol>
-  <li>처음엔 Union-Find 알고리즘을 활용하여, 부모가 다른 노드의 갯수를 세면 될것이라고 생각했는데, 비효율적이라고 판단했다.</li>
-  <li>다시 생각해보니 인접행렬을 따라 BFS 했을 때, 만들어지는 sub-graph들의 갯수를 세면 되는 문제였다.</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>이 전에도 풀어봤던 문제였지만, 다시 풀 때접근법부터 생각하고 풀어보니 빠른 시간 안에 풀 수 있었다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="BFS" /><summary type="html"><![CDATA[43162. 네트워크 / c++ / level3 / 12분]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="Greedy" /><category term="UnionFind" /><category term="Kruskal" /><summary type="html"><![CDATA[42861. 섬 연결하기 / c++ / level3 / 7분]]></summary></entry></feed>

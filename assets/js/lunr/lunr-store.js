@@ -964,4 +964,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Graph"],
         "url": "/programmers/49190/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 25일차 TIL - 1971 Find if Path Exists in Graph",
+        "excerpt":"1971. Find if Path Exists in Graph / c++ / Easy / 26분 문제 및 코드 #include &lt;iostream&gt; using namespace std; vector&lt;int&gt; parent; int Find(int num) { if (parent[num] == num) { return num; } return parent[num] = Find(parent[num]); } void Union(int a, int b) { int parentA = Find(a);...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","UnionFind"],
+        "url": "/leetcode/1971/",
+        "teaser": null
       }]
