@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-13T13:37:54+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 25일차 TIL - 1971 Find if Path Exists in Graph</title><link href="https://sho1007.github.io/leetcode/1971/" rel="alternate" type="text/html" title="99클럽 코테 스터디 25일차 TIL - 1971 Find if Path Exists in Graph" /><published>2024-06-13T00:00:00+00:00</published><updated>2024-06-13T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/1971</id><content type="html" xml:base="https://sho1007.github.io/leetcode/1971/"><![CDATA[<h1 id="1971-find-if-path-exists-in-graph--c--easy--26분">1971. Find if Path Exists in Graph / c++ / Easy / 26분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-14T08:59:21+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 26일차 TIL - 275 H-Index II</title><link href="https://sho1007.github.io/leetcode/1971-copy/" rel="alternate" type="text/html" title="99클럽 코테 스터디 26일차 TIL - 275 H-Index II" /><published>2024-06-14T00:00:00+00:00</published><updated>2024-06-14T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/1971%20copy</id><content type="html" xml:base="https://sho1007.github.io/leetcode/1971-copy/"><![CDATA[<h1 id="275-h-index-ii--c--medium--4분">275. H-Index II / c++ / Medium / 4분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">hIndex</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">citations</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">citations</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">citations</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">citations</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">citations</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">citations</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="p">{</span>
+                <span class="k">return</span> <span class="n">citations</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="n">i</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="배열--정렬">배열 / 정렬</h3>
+<ol>
+  <li>H-Index는 h번 이상 인용된 논문이 h개 이상일 때의 최대값이다.</li>
+  <li>우선 배열을 정렬한뒤, 순회한다.</li>
+  <li>순회하면서 현재 남은 논문 갯수 (citations.size()-i)보다 현재 논문의 인용 횟수(citations[i])가 크거나 같다면, H-Index는 는 남은 논문의 갯수이므로 그것을 반환한다.</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>H-Index는 백준에서 이미 풀어본 경험이 있는 문제여서 쉽게 풀 수 있었다.</li>
+  <li>백준에서 처음 이 문제를 접했을 때는 최대값 범위를 어떻게 잡아야하고 어떻게 접근할지 감이 잘 안왔었는데, 그 때 제대로 이해하고 넘어가니 다음에 다시 이 문제가 나왔을 때, 쉽게 다시 풀 수 있었던 것 같다.</li>
+  <li>h-index는 결국 논문의 개수로 제한되니 최대값은 최대 논문의 개수이다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Array" /><summary type="html"><![CDATA[275. H-Index II / c++ / Medium / 4분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 25일차 TIL - 1971 Find if Path Exists in Graph</title><link href="https://sho1007.github.io/leetcode/1971/" rel="alternate" type="text/html" title="99클럽 코테 스터디 25일차 TIL - 1971 Find if Path Exists in Graph" /><published>2024-06-13T00:00:00+00:00</published><updated>2024-06-13T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/1971</id><content type="html" xml:base="https://sho1007.github.io/leetcode/1971/"><![CDATA[<h1 id="1971-find-if-path-exists-in-graph--c--easy--26분">1971. Find if Path Exists in Graph / c++ / Easy / 26분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -286,22 +325,4 @@ k 번째로 작은 수가 되는 경우를 구하는 것이었다.</li>
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="Greedy" /><category term="Sort" /><category term="LineSweeping" /><summary type="html"><![CDATA[42884. 단속카메라 / c++ / level3 / 32분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 16일차 TIL - 42861 섬 연결하기</title><link href="https://sho1007.github.io/programmers/42861/" rel="alternate" type="text/html" title="99클럽 코테 스터디 16일차 TIL - 42861 섬 연결하기" /><published>2024-06-04T00:00:00+00:00</published><updated>2024-06-04T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42861</id><content type="html" xml:base="https://sho1007.github.io/programmers/42861/"><![CDATA[<h1 id="42861-섬-연결하기--c--level3--7분">42861. 섬 연결하기 / c++ / level3 / 7분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/42861.%E2%80%85%EC%84%AC%E2%80%85%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="그리디--그래프--union-find--크루스칼">그리디 / 그래프 / Union-Find / 크루스칼</h3>
-<ol>
-  <li>크루스칼 알고리즘을 이용하여 최소 신장 트리를 만들었을 때의 비용을 구하는 문제였다.</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>MST와 Union-Find 를 알고 있다면 쉽게 풀 수 있는 문제였다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="Greedy" /><category term="UnionFind" /><category term="Kruskal" /><summary type="html"><![CDATA[42861. 섬 연결하기 / c++ / level3 / 7분]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="Greedy" /><category term="Sort" /><category term="LineSweeping" /><summary type="html"><![CDATA[42884. 단속카메라 / c++ / level3 / 32분]]></summary></entry></feed>

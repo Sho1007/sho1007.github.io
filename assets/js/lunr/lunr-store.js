@@ -970,4 +970,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","UnionFind"],
         "url": "/leetcode/1971/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 26일차 TIL - 275 H-Index II",
+        "excerpt":"275. H-Index II / c++ / Medium / 4분 문제 및 코드 #include &lt;algorithm&gt; class Solution { public: int hIndex(vector&lt;int&gt;&amp; citations) { sort(citations.begin(), citations.end()); for (int i = 0; i &lt; citations.size(); ++i) { if (citations.size() - i &lt;= citations[i]) { return citations.size() - i; } } return 0; }...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Array"],
+        "url": "/leetcode/1971-copy/",
+        "teaser": null
       }]
