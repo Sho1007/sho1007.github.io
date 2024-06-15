@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-14T09:00:48+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 26일차 TIL - 275 H-Index II</title><link href="https://sho1007.github.io/leetcode/275/" rel="alternate" type="text/html" title="99클럽 코테 스터디 26일차 TIL - 275 H-Index II" /><published>2024-06-14T00:00:00+00:00</published><updated>2024-06-14T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/275</id><content type="html" xml:base="https://sho1007.github.io/leetcode/275/"><![CDATA[<h1 id="275-h-index-ii--c--medium--4분">275. H-Index II / c++ / Medium / 4분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-15T15:38:49+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys</title><link href="https://sho1007.github.io/leetcode/2861/" rel="alternate" type="text/html" title="99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys" /><published>2024-06-15T00:00:00+00:00</published><updated>2024-06-15T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2861</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2861/"><![CDATA[<h1 id="2861-maximum-number-of-alloys--c--medium--1시간">2861. Maximum Number of Alloys / c++ / Medium / 1시간</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">bool</span> <span class="n">CheckMakeAlloys</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="kt">int</span> <span class="n">budget</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">composition</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">stock</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">cost</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">count</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">currentBudget</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">needCount</span> <span class="o">=</span> <span class="n">count</span> <span class="o">*</span> <span class="n">composition</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">stock</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">needCount</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+
+                <span class="n">currentBudget</span> <span class="o">+=</span> <span class="p">(</span><span class="n">needCount</span> <span class="o">-</span> <span class="n">stock</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">*</span> <span class="n">cost</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">currentBudget</span> <span class="o">&lt;=</span> <span class="n">budget</span><span class="p">)</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">maxNumberOfAlloys</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="kt">int</span> <span class="n">budget</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">composition</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">stock</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">cost</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="kt">int</span> <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">987'654'321</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">answer</span><span class="p">;</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span> <span class="o">+</span> <span class="n">right</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">CheckMakeAlloys</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">budget</span><span class="p">,</span> <span class="n">composition</span><span class="p">,</span> <span class="n">stock</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="n">mid</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">answer</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>
+                <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">answer</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="배열--이분탐색">배열 / 이분탐색</h3>
+<ol>
+  <li>갯수를 기준으로 이분탐색을 해서, k개의 기계 중 mid 개 만큼의 합금을 budget 이하의 금액으로 만들 수 있는 최대 mid 를 반환하는 문제였다.</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>이분탐색 치고는 조건이 많이 들어가는 편이었고, 명확한 제한값도 찾지 못해서 꽤나 번거로웠다.</li>
+  <li>count개의 합금을 만들 때, stock[j]개만큼을 빼고 계산해야한는데 그 식을 composition[i][j] * (count - stock[j]) * cost[j] 로 계산해서 틀렸었다. (count개를 만들 때, 합금 한개 당 composition[i][j]만큼의 광석이 들어가므로, 제대로 된 식은 (composition[i][j] * count - stock[j]) * cost[j] 이다.)</li>
+  <li>별 생각없이 left값을 1로 설정해서 또 한번 틀렸었다. (최대 한개도 만들 수 없으므로, 0으로 설정해야했다.)</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Array" /><category term="BinarySearch" /><summary type="html"><![CDATA[2861. Maximum Number of Alloys / c++ / Medium / 1시간]]></summary></entry><entry><title type="html">99클럽 코테 스터디 26일차 TIL - 275 H-Index II</title><link href="https://sho1007.github.io/leetcode/275/" rel="alternate" type="text/html" title="99클럽 코테 스터디 26일차 TIL - 275 H-Index II" /><published>2024-06-14T00:00:00+00:00</published><updated>2024-06-14T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/275</id><content type="html" xml:base="https://sho1007.github.io/leetcode/275/"><![CDATA[<h1 id="275-h-index-ii--c--medium--4분">275. H-Index II / c++ / Medium / 4분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -302,27 +364,4 @@ k 번째로 작은 수가 되는 경우를 구하는 것이었다.</li>
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[42895. N으로 표현 / c++ / level3 / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 17일차 TIL - 42884 단속카메라</title><link href="https://sho1007.github.io/programmers/42884/" rel="alternate" type="text/html" title="99클럽 코테 스터디 17일차 TIL - 42884 단속카메라" /><published>2024-06-05T00:00:00+00:00</published><updated>2024-06-05T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42884</id><content type="html" xml:base="https://sho1007.github.io/programmers/42884/"><![CDATA[<h1 id="42884-단속카메라--c--level3--32분">42884. 단속카메라 / c++ / level3 / 32분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/42884.%E2%80%85%EB%8B%A8%EC%86%8D%EC%B9%B4%EB%A9%94%EB%9D%BC"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="그리디--정렬--라인-스위핑">그리디 / 정렬 / 라인 스위핑</h3>
-<ol>
-  <li>이런 문제는 일단 시작점과 끝점 양쪽을 기준으로 빠른 순으로 정렬한다.</li>
-  <li>그러면 모든 차(선분)이 겹치거나 겹치지 않는 형태로 일렬로 정렬이 된다.</li>
-  <li>정렬된 벡터를 순회하면서, 만약 두 차의 경로가 겹친다면, 겹치는 부분으로 합친다. <br />
- ([-20, -15], [-18, -13] 인 두 차량의 경우 [-18, -15]로 합친다.)</li>
-  <li>그러다 겹치지 않는 차량이 나오면, 이전까지의 겹친 차량들은 카메라가 필요하므로 answer++</li>
-  <li>그렇게 모든 차량을 순회하여 나온 answer를 반환한다.</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>처음엔 두 차량의 경로를 비교해서 겹친다면 합치지 않고 경로의 끝 지점을 두 경로 중 큰 값으로 정했었는데, 이렇게 되면, 1[ 2[ ] 3[O] ] 이렇게 1번 경로가 2번 경로보다 경우, 3번을 포함하는 부분에 카메라를 설치하게 되면, 1,3번은 영향을 받지만, 2번은 놓치게 된다. 그래서 겹치는 부분이 존재한다면 무조건 [두 차의 경로의 시작 값 중 큰 수] 부터 [두 차의 경로의 끝 값 중 작으 수] 로 경로를 합쳐야했다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="Greedy" /><category term="Sort" /><category term="LineSweeping" /><summary type="html"><![CDATA[42884. 단속카메라 / c++ / level3 / 32분]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[42895. N으로 표현 / c++ / level3 / 1시간+]]></summary></entry></feed>

@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>12865 평범한 배낭 - Today I Learned</title>
-<meta name="description" content="12865 평범한 배낭 (c++)">
+<!-- begin _includes/seo.html --><title>99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys - Today I Learned</title>
+<meta name="description" content="2861. Maximum Number of Alloys / c++ / Medium / 1시간">
 
 
   <meta name="author" content="Sho1007">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Today I Learned">
-<meta property="og:title" content="12865 평범한 배낭">
-<meta property="og:url" content="https://sho1007.github.io/boj/12865/">
+<meta property="og:title" content="99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys">
+<meta property="og:url" content="https://sho1007.github.io/leetcode/2861/">
 
 
-  <meta property="og:description" content="12865 평범한 배낭 (c++)">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-11-04T00:00:00+00:00">
+  <meta property="og:description" content="2861. Maximum Number of Alloys / c++ / Medium / 1시간">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-15T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://sho1007.github.io/boj/12865/">
+
+<link rel="canonical" href="https://sho1007.github.io/leetcode/2861/">
 
 
 
@@ -696,16 +696,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="12865 평범한 배낭">
-    <meta itemprop="description" content="12865 평범한 배낭 (c++)">
-    <meta itemprop="datePublished" content="2022-11-04T00:00:00+00:00">
+    <meta itemprop="headline" content="99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys">
+    <meta itemprop="description" content="2861. Maximum Number of Alloys / c++ / Medium / 1시간">
+    <meta itemprop="datePublished" content="2024-06-15T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://sho1007.github.io/boj/12865/" class="u-url" itemprop="url">12865 평범한 배낭
+            <a href="https://sho1007.github.io/leetcode/2861/" class="u-url" itemprop="url">99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys
 </a>
           </h1>
           
@@ -716,7 +716,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2022-11-04T00:00:00+00:00">November 4, 2022</time>
+        <time datetime="2024-06-15T00:00:00+00:00">June 15, 2024</time>
       </span>
     
 
@@ -729,7 +729,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
@@ -744,49 +744,74 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#12865-평범한-배낭-c">12865 평범한 배낭 (c++)</a><ul><li><a href="#문제">문제</a></li><li><a href="#접근-방식">접근 방식</a></li><li><a href="#문제-풀이">문제 풀이</a></li><li><a href="#다시-생각해-볼-점">다시 생각해 볼 점</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#2861-maximum-number-of-alloys--c--medium--1시간">2861. Maximum Number of Alloys / c++ / Medium / 1시간</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#배열--이분탐색">배열 / 이분탐색</a></li></ul></li><li><a href="#생각해-볼-점">생각해 볼 점</a><ul><li><a href="#해시태그">해시태그</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="12865-평범한-배낭-c">12865 평범한 배낭 (c++)</h1>
+        <h1 id="2861-maximum-number-of-alloys--c--medium--1시간">2861. Maximum Number of Alloys / c++ / Medium / 1시간</h1>
 
-<h2 id="문제">문제</h2>
-<p>https://www.acmicpc.net/problem/12865</p>
+<h2 id="문제-및-코드">문제 및 코드</h2>
 
-<h2 id="접근-방식">접근 방식</h2>
-<p>Knapsack Problem, DP <br />
-쪼개질 수 없는 배낭 문제</p>
-
-<h2 id="문제-풀이">문제 풀이</h2>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp">
-</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">v</span><span class="p">;</span> <span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">N</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">K</span><span class="p">);</span>
-    <span class="kt">int</span> <span class="n">dp</span><span class="p">[</span><span class="n">K</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">bool</span> <span class="n">CheckMakeAlloys</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="kt">int</span> <span class="n">budget</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">composition</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">stock</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">cost</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">count</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">w</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">K</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="n">w</span><span class="p">;</span> <span class="o">--</span><span class="n">j</span><span class="p">)</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">v</span> <span class="o">+</span> <span class="n">dp</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="n">w</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span> <span class="o">+</span> <span class="n">dp</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="n">w</span><span class="p">];</span>
+            <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">currentBudget</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">needCount</span> <span class="o">=</span> <span class="n">count</span> <span class="o">*</span> <span class="n">composition</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">stock</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">needCount</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+
+                <span class="n">currentBudget</span> <span class="o">+=</span> <span class="p">(</span><span class="n">needCount</span> <span class="o">-</span> <span class="n">stock</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">*</span> <span class="n">cost</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">currentBudget</span> <span class="o">&lt;=</span> <span class="n">budget</span><span class="p">)</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
         <span class="p">}</span>
+
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">dp</span><span class="p">[</span><span class="n">K</span><span class="p">]);</span>
-<span class="p">}</span>
+    <span class="kt">int</span> <span class="n">maxNumberOfAlloys</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="kt">int</span> <span class="n">budget</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">composition</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">stock</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">cost</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="kt">int</span> <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">987'654'321</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">answer</span><span class="p">;</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span> <span class="o">+</span> <span class="n">right</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">CheckMakeAlloys</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">budget</span><span class="p">,</span> <span class="n">composition</span><span class="p">,</span> <span class="n">stock</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="n">mid</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">answer</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>
+                <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">answer</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
 </code></pre></div></div>
 
-<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="배열--이분탐색">배열 / 이분탐색</h3>
 <ol>
-  <li>배낭문제는
-    <ol>
-      <li>쪼개지면 그리디</li>
-      <li>쪼개지지 않으면 DP</li>
-    </ol>
-  </li>
-  <li>dp를 한줄로 최적화가 가능하다.</li>
+  <li>갯수를 기준으로 이분탐색을 해서, k개의 기계 중 mid 개 만큼의 합금을 budget 이하의 금액으로 만들 수 있는 최대 mid 를 반환하는 문제였다.</li>
 </ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>이분탐색 치고는 조건이 많이 들어가는 편이었고, 명확한 제한값도 찾지 못해서 꽤나 번거로웠다.</li>
+  <li>count개의 합금을 만들 때, stock[j]개만큼을 빼고 계산해야한는데 그 식을 composition[i][j] * (count - stock[j]) * cost[j] 로 계산해서 틀렸었다. (count개를 만들 때, 합금 한개 당 composition[i][j]만큼의 광석이 들어가므로, 제대로 된 식은 (composition[i][j] * count - stock[j]) * cost[j] 이다.)</li>
+  <li>별 생각없이 left값을 1로 설정해서 또 한번 틀렸었다. (최대 한개도 만들 수 없으므로, 0으로 설정해야했다.)</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>
 
         
       </section>
@@ -803,11 +828,17 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
+      <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a><span class="sep">, </span>
+    
+      <a href="/tags/#array" class="page__taxonomy-item p-category" rel="tag">Array</a><span class="sep">, </span>
+    
+      <a href="/tags/#binarysearch" class="page__taxonomy-item p-category" rel="tag">BinarySearch</a><span class="sep">, </span>
+    
+      <a href="/tags/#codingtest" class="page__taxonomy-item p-category" rel="tag">CodingTest</a><span class="sep">, </span>
+    
       <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
     
-      <a href="/tags/#dynamic-programming" class="page__taxonomy-item p-category" rel="tag">Dynamic Programming</a><span class="sep">, </span>
-    
-      <a href="/tags/#knapsack-problem" class="page__taxonomy-item p-category" rel="tag">Knapsack Problem</a>
+      <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
     
     </span>
   </p>
@@ -824,7 +855,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#boj" class="page__taxonomy-item p-category" rel="tag">BOJ</a>
+      <a href="/categories/#leetcode" class="page__taxonomy-item p-category" rel="tag">LeetCode</a>
     
     </span>
   </p>
@@ -832,7 +863,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-11-04T00:00:00+00:00">November 4, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-15T00:00:00+00:00">June 15, 2024</time></p>
 
       </footer>
 
@@ -841,23 +872,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=12865+%ED%8F%89%EB%B2%94%ED%95%9C+%EB%B0%B0%EB%82%AD%20https%3A%2F%2Fsho1007.github.io%2Fboj%2F12865%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=99%ED%81%B4%EB%9F%BD+%EC%BD%94%ED%85%8C+%EC%8A%A4%ED%84%B0%EB%94%94+27%EC%9D%BC%EC%B0%A8+TIL+-+2861+Maximum+Number+of+Alloys%20https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2861%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fboj%2F12865%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2861%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fboj%2F12865%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2861%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/algorithm/KnapsackProblem/" class="pagination--pager" title="배낭 문제 (Knapsack Problem)
+      <a href="/leetcode/275/" class="pagination--pager" title="99클럽 코테 스터디 26일차 TIL - 275 H-Index II
 ">Previous</a>
     
     
-      <a href="/boj/1916/" class="pagination--pager" title="1916 최소비용 구하기 (80등)
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -871,53 +901,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/leetcode/2861/" rel="permalink">99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2024-06-15T00:00:00+00:00">June 15, 2024</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">2861. Maximum Number of Alloys / c++ / Medium / 1시간
-</p>
-  </article>
-</div>
-
         
           
 
@@ -1055,6 +1038,53 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">49190. 방의 개수 / c++ / level5 / 2시간+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/leetcode/786/" rel="permalink">99클럽 코테 스터디 23일차 TIL - 786 K-th Smallest Prime Fraction
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-11T00:00:00+00:00">June 11, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">786. K-th Smallest Prime Fraction / c++ / Medium / 14분
 </p>
   </article>
 </div>

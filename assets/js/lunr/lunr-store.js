@@ -976,4 +976,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Array"],
         "url": "/leetcode/275/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys",
+        "excerpt":"2861. Maximum Number of Alloys / c++ / Medium / 1시간 문제 및 코드 class Solution { public: bool CheckMakeAlloys(int n, int k, int budget, vector&lt;vector&lt;int&gt;&gt;&amp; composition, vector&lt;int&gt;&amp; stock, vector&lt;int&gt;&amp; cost, unsigned long long count) { for (int i = 0; i &lt; k; ++i) { unsigned long long currentBudget...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Array","BinarySearch"],
+        "url": "/leetcode/2861/",
+        "teaser": null
       }]
