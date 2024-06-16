@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>1940 주몽 - Today I Learned</title>
-<meta name="description" content="1940. 주몽 / c++ / Silver4 / 7분">
+<!-- begin _includes/seo.html --><title>99클럽 코테 스터디 28일차 TIL - 2145 Count the Hidden Sequences - Today I Learned</title>
+<meta name="description" content="2145. Count the Hidden Sequences / c++ / Medium / 47분">
 
 
   <meta name="author" content="Sho1007">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Today I Learned">
-<meta property="og:title" content="1940 주몽">
-<meta property="og:url" content="https://sho1007.github.io/boj/1940/">
+<meta property="og:title" content="99클럽 코테 스터디 28일차 TIL - 2145 Count the Hidden Sequences">
+<meta property="og:url" content="https://sho1007.github.io/leetcode/2145/">
 
 
-  <meta property="og:description" content="1940. 주몽 / c++ / Silver4 / 7분">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-04-22T00:00:00+00:00">
+  <meta property="og:description" content="2145. Count the Hidden Sequences / c++ / Medium / 47분">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-16T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://sho1007.github.io/boj/1940/">
+
+<link rel="canonical" href="https://sho1007.github.io/leetcode/2145/">
 
 
 
@@ -696,16 +696,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="1940 주몽">
-    <meta itemprop="description" content="1940. 주몽 / c++ / Silver4 / 7분">
-    <meta itemprop="datePublished" content="2024-04-22T00:00:00+00:00">
+    <meta itemprop="headline" content="99클럽 코테 스터디 28일차 TIL - 2145 Count the Hidden Sequences">
+    <meta itemprop="description" content="2145. Count the Hidden Sequences / c++ / Medium / 47분">
+    <meta itemprop="datePublished" content="2024-06-16T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://sho1007.github.io/boj/1940/" class="u-url" itemprop="url">1940 주몽
+            <a href="https://sho1007.github.io/leetcode/2145/" class="u-url" itemprop="url">99클럽 코테 스터디 28일차 TIL - 2145 Count the Hidden Sequences
 </a>
           </h1>
           
@@ -716,7 +716,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2024-04-22T00:00:00+00:00">April 22, 2024</time>
+        <time datetime="2024-06-16T00:00:00+00:00">June 16, 2024</time>
       </span>
     
 
@@ -729,7 +729,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          2 minute read
         
       </span>
     
@@ -744,27 +744,80 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#1940-주몽--c--silver4--7분">1940. 주몽 / c++ / Silver4 / 7분</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#투-포인터">투 포인터</a></li></ul></li><li><a href="#다시-생각해-볼-점">다시 생각해 볼 점</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#2145-count-the-hidden-sequences--c--medium--47분">2145. Count the Hidden Sequences / c++ / Medium / 47분</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#배열">배열</a></li></ul></li><li><a href="#생각해-볼-점">생각해 볼 점</a><ul><li><a href="#해시태그">해시태그</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="1940-주몽--c--silver4--7분">1940. 주몽 / c++ / Silver4 / 7분</h1>
+        <h1 id="2145-count-the-hidden-sequences--c--medium--47분">2145. Count the Hidden Sequences / c++ / Medium / 47분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Silver/1940.%E2%80%85%EC%A3%BC%EB%AA%BD"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">numberOfArrays</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">differences</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lower</span><span class="p">,</span> <span class="kt">int</span> <span class="n">upper</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">differences</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">upper</span> <span class="o">-</span> <span class="n">lower</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kt">int</span> <span class="n">minNum</span> <span class="o">=</span> <span class="n">differences</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">maxNum</span> <span class="o">=</span> <span class="n">differences</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="kt">long</span> <span class="kt">long</span> <span class="n">current</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">differences</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">current</span> <span class="o">+=</span> <span class="n">differences</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">current</span> <span class="o">&gt;</span> <span class="n">maxNum</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">maxNum</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">current</span> <span class="o">&lt;</span> <span class="n">minNum</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">minNum</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="kt">int</span> <span class="n">newLower</span> <span class="o">=</span> <span class="n">lower</span> <span class="o">-</span> <span class="n">minNum</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">newLower</span> <span class="o">&lt;</span> <span class="n">lower</span><span class="p">)</span> <span class="n">newLower</span> <span class="o">=</span> <span class="n">lower</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">newUpper</span> <span class="o">=</span> <span class="n">upper</span> <span class="o">-</span> <span class="n">maxNum</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">newUpper</span> <span class="o">&gt;</span> <span class="n">upper</span><span class="p">)</span> <span class="n">newUpper</span> <span class="o">=</span> <span class="n">upper</span><span class="p">;</span>
+
+        <span class="c1">// cout &lt;&lt; newLower &lt;&lt; ' ' &lt;&lt; newUpper &lt;&lt; '\n';</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">newUpper</span> <span class="o">&lt;</span> <span class="n">newLower</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="n">newUpper</span> <span class="o">-</span> <span class="n">newLower</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
 
 <h2 id="접근-방식">접근 방식</h2>
-<h3 id="투-포인터">투 포인터</h3>
+<h3 id="배열">배열</h3>
 <ol>
-  <li>정렬 후 두 수의 합으로 판별</li>
-  <li>작으면 Left 증가</li>
-  <li>크면 Right 감소</li>
-  <li>같으면 Answer 증가 후 Right 감소</li>
+  <li>어떤 배열의 인접한 두 원소의 차이를 기록한 differences 배열과, 원소의 최소값 기준 lower, 최대값 기준 upper 가 주어졌을 때, 이 조건을 만족하는 배열의 개수를 반환하는 문제였다.</li>
+  <li>우선 0-indexed였으므로, differences의 원소의 갯수가 0개인 경우를 상정했다.</li>
+  <li>이 경우, (upper - lower + 1) 이 가능한 배열의 개수였다.</li>
+  <li>다음으로 differences 배열에 원소가 있는 경우에도 3번 식을 적용할 수 있었는데, 내 생각은 모든 경우를 다 따질게 아니라, 0을 기준으로 differences를 순회하며 차이값들을 다 적용해보고, 그 중 최소값과 최대값을 찾아서 활용하는 것이었다.</li>
+  <li>예를 들어, 기존 upper 가 4 인데, 0을 기준으로 찾은 배열의 최대값이 10인 경우, 배열은 최소 -6으로 시작해야한다. (그래야 최대값 10이 나오는 시점에 시작값이 0이 아닌 -6이므로, 10-6 = 4가 되어, 기존의 upper를 충족한다.)</li>
+  <li>즉 조건을 만족하기 위한 시작값의 새로운 최대값 기준 newUpper, newLower을 위의 식처럼 계산하여 구한다.</li>
+  <li>그리고 newUpper가 newLower보다 작으면 (같을 땐 최소 만족하는 원소가 1개라도 있음) 0을 반환, 크거나 같으면 newUpper - newLower + 1을 반환한다. (3번식과 유사)</li>
+  <li>하지만 여기서 문제가 생겼다. 이건 leetcode의 좋은 점이자 안좋은 점인데, 틀리면 틀린 케이스를 보여준다는 것이다. 내가 발견한 문제점은 newUpper가 기존의 upper보다 큰 경우였다. (이러면 7번식으로 계산한 값이 upper을 초과하여 조건이 성립하지 않는다.)</li>
+  <li>그래서 생각해낸게, newUpper가 upper를 초과하면, newUpper 값 대신 upper 값을 쓰는 것이었다. (newLower도 마찬가지)</li>
+  <li>그렇게 수정했더니 통과했다.</li>
 </ol>
 
-<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>배열의 규칙 (최대값 - 최소값 + 1)을 찾아서 해결한 문제라 뿌듯했다.</li>
+  <li>0-indexed 문제는 해결했는데, newUpper가 upper보다 커질거라고는 생각하지 못했다. 만약 실제 코딩 테스트였다면 왜 틀렸는지 몰랐을 것이다. (이런 부분을 잘 찾아내는게 중요하다는걸 다시 한번 느낀다.)</li>
+  <li>중간에 minNum,maxNum 을 구할 때, int의 범위를 넘어가서 long long 으로 바꿔서 해결했다. (배열의 원소가 int여서 current를 int로 선언했었는데, 뭔가 수식 도중에 갑싱 넘쳤던 것 같다.)</li>
+  <li>여러모로 자료형과 제한 범위에 대해 생각해 볼 수 있는 문제였다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>
 
         
       </section>
@@ -783,13 +836,13 @@
     
       <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a><span class="sep">, </span>
     
+      <a href="/tags/#array" class="page__taxonomy-item p-category" rel="tag">Array</a><span class="sep">, </span>
+    
       <a href="/tags/#codingtest" class="page__taxonomy-item p-category" rel="tag">CodingTest</a><span class="sep">, </span>
     
       <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
     
-      <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a><span class="sep">, </span>
-    
-      <a href="/tags/#two-pointer" class="page__taxonomy-item p-category" rel="tag">Two Pointer</a>
+      <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
     
     </span>
   </p>
@@ -806,7 +859,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#boj" class="page__taxonomy-item p-category" rel="tag">BOJ</a>
+      <a href="/categories/#leetcode" class="page__taxonomy-item p-category" rel="tag">LeetCode</a>
     
     </span>
   </p>
@@ -814,7 +867,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-04-22T00:00:00+00:00">April 22, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-16T00:00:00+00:00">June 16, 2024</time></p>
 
       </footer>
 
@@ -823,23 +876,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=1940+%EC%A3%BC%EB%AA%BD%20https%3A%2F%2Fsho1007.github.io%2Fboj%2F1940%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=99%ED%81%B4%EB%9F%BD+%EC%BD%94%ED%85%8C+%EC%8A%A4%ED%84%B0%EB%94%94+28%EC%9D%BC%EC%B0%A8+TIL+-+2145+Count+the+Hidden+Sequences%20https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2145%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fboj%2F1940%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2145%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fboj%2F1940%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2145%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/boj/1806/" class="pagination--pager" title="3273 두 수의 합
+      <a href="/leetcode/2861/" class="pagination--pager" title="99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys
 ">Previous</a>
     
     
-      <a href="/boj/2470/" class="pagination--pager" title="2470 두 용액
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -853,53 +905,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/leetcode/2145/" rel="permalink">99클럽 코테 스터디 28일차 TIL - 2145 Count the Hidden Sequences
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2024-06-16T00:00:00+00:00">June 16, 2024</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">2145. Count the Hidden Sequences / c++ / Medium / 47분
-</p>
-  </article>
-</div>
-
         
           
 
@@ -1037,6 +1042,53 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">1971. Find if Path Exists in Graph / c++ / Easy / 26분
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/programmers/49190/" rel="permalink">99클럽 코테 스터디 24일차 TIL - 49190 방의 개수
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-12T00:00:00+00:00">June 12, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">49190. 방의 개수 / c++ / level5 / 2시간+
 </p>
   </article>
 </div>

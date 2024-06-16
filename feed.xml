@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-15T15:38:49+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys</title><link href="https://sho1007.github.io/leetcode/2861/" rel="alternate" type="text/html" title="99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys" /><published>2024-06-15T00:00:00+00:00</published><updated>2024-06-15T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2861</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2861/"><![CDATA[<h1 id="2861-maximum-number-of-alloys--c--medium--1시간">2861. Maximum Number of Alloys / c++ / Medium / 1시간</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-16T12:15:34+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 28일차 TIL - 2145 Count the Hidden Sequences</title><link href="https://sho1007.github.io/leetcode/2145/" rel="alternate" type="text/html" title="99클럽 코테 스터디 28일차 TIL - 2145 Count the Hidden Sequences" /><published>2024-06-16T00:00:00+00:00</published><updated>2024-06-16T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2145</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2145/"><![CDATA[<h1 id="2145-count-the-hidden-sequences--c--medium--47분">2145. Count the Hidden Sequences / c++ / Medium / 47분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">numberOfArrays</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">differences</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lower</span><span class="p">,</span> <span class="kt">int</span> <span class="n">upper</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">differences</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">upper</span> <span class="o">-</span> <span class="n">lower</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kt">int</span> <span class="n">minNum</span> <span class="o">=</span> <span class="n">differences</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">maxNum</span> <span class="o">=</span> <span class="n">differences</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="kt">long</span> <span class="kt">long</span> <span class="n">current</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">differences</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">current</span> <span class="o">+=</span> <span class="n">differences</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">current</span> <span class="o">&gt;</span> <span class="n">maxNum</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">maxNum</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">current</span> <span class="o">&lt;</span> <span class="n">minNum</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">minNum</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="kt">int</span> <span class="n">newLower</span> <span class="o">=</span> <span class="n">lower</span> <span class="o">-</span> <span class="n">minNum</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">newLower</span> <span class="o">&lt;</span> <span class="n">lower</span><span class="p">)</span> <span class="n">newLower</span> <span class="o">=</span> <span class="n">lower</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">newUpper</span> <span class="o">=</span> <span class="n">upper</span> <span class="o">-</span> <span class="n">maxNum</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">newUpper</span> <span class="o">&gt;</span> <span class="n">upper</span><span class="p">)</span> <span class="n">newUpper</span> <span class="o">=</span> <span class="n">upper</span><span class="p">;</span>
+
+        <span class="c1">// cout &lt;&lt; newLower &lt;&lt; ' ' &lt;&lt; newUpper &lt;&lt; '\n';</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">newUpper</span> <span class="o">&lt;</span> <span class="n">newLower</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="n">newUpper</span> <span class="o">-</span> <span class="n">newLower</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="배열">배열</h3>
+<ol>
+  <li>어떤 배열의 인접한 두 원소의 차이를 기록한 differences 배열과, 원소의 최소값 기준 lower, 최대값 기준 upper 가 주어졌을 때, 이 조건을 만족하는 배열의 개수를 반환하는 문제였다.</li>
+  <li>우선 0-indexed였으므로, differences의 원소의 갯수가 0개인 경우를 상정했다.</li>
+  <li>이 경우, (upper - lower + 1) 이 가능한 배열의 개수였다.</li>
+  <li>다음으로 differences 배열에 원소가 있는 경우에도 3번 식을 적용할 수 있었는데, 내 생각은 모든 경우를 다 따질게 아니라, 0을 기준으로 differences를 순회하며 차이값들을 다 적용해보고, 그 중 최소값과 최대값을 찾아서 활용하는 것이었다.</li>
+  <li>예를 들어, 기존 upper 가 4 인데, 0을 기준으로 찾은 배열의 최대값이 10인 경우, 배열은 최소 -6으로 시작해야한다. (그래야 최대값 10이 나오는 시점에 시작값이 0이 아닌 -6이므로, 10-6 = 4가 되어, 기존의 upper를 충족한다.)</li>
+  <li>즉 조건을 만족하기 위한 시작값의 새로운 최대값 기준 newUpper, newLower을 위의 식처럼 계산하여 구한다.</li>
+  <li>그리고 newUpper가 newLower보다 작으면 (같을 땐 최소 만족하는 원소가 1개라도 있음) 0을 반환, 크거나 같으면 newUpper - newLower + 1을 반환한다. (3번식과 유사)</li>
+  <li>하지만 여기서 문제가 생겼다. 이건 leetcode의 좋은 점이자 안좋은 점인데, 틀리면 틀린 케이스를 보여준다는 것이다. 내가 발견한 문제점은 newUpper가 기존의 upper보다 큰 경우였다. (이러면 7번식으로 계산한 값이 upper을 초과하여 조건이 성립하지 않는다.)</li>
+  <li>그래서 생각해낸게, newUpper가 upper를 초과하면, newUpper 값 대신 upper 값을 쓰는 것이었다. (newLower도 마찬가지)</li>
+  <li>그렇게 수정했더니 통과했다.</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>배열의 규칙 (최대값 - 최소값 + 1)을 찾아서 해결한 문제라 뿌듯했다.</li>
+  <li>0-indexed 문제는 해결했는데, newUpper가 upper보다 커질거라고는 생각하지 못했다. 만약 실제 코딩 테스트였다면 왜 틀렸는지 몰랐을 것이다. (이런 부분을 잘 찾아내는게 중요하다는걸 다시 한번 느낀다.)</li>
+  <li>중간에 minNum,maxNum 을 구할 때, int의 범위를 넘어가서 long long 으로 바꿔서 해결했다. (배열의 원소가 int여서 current를 int로 선언했었는데, 뭔가 수식 도중에 갑싱 넘쳤던 것 같다.)</li>
+  <li>여러모로 자료형과 제한 범위에 대해 생각해 볼 수 있는 문제였다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Array" /><summary type="html"><![CDATA[2145. Count the Hidden Sequences / c++ / Medium / 47분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys</title><link href="https://sho1007.github.io/leetcode/2861/" rel="alternate" type="text/html" title="99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys" /><published>2024-06-15T00:00:00+00:00</published><updated>2024-06-15T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2861</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2861/"><![CDATA[<h1 id="2861-maximum-number-of-alloys--c--medium--1시간">2861. Maximum Number of Alloys / c++ / Medium / 1시간</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -341,27 +409,4 @@ k 번째로 작은 수가 되는 경우를 구하는 것이었다.</li>
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[43105. 정수 삼각형 / c++ / level3 / 26분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 18일차 TIL - 42895 N으로 표현</title><link href="https://sho1007.github.io/programmers/42895/" rel="alternate" type="text/html" title="99클럽 코테 스터디 18일차 TIL - 42895 N으로 표현" /><published>2024-06-06T00:00:00+00:00</published><updated>2024-06-06T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42895</id><content type="html" xml:base="https://sho1007.github.io/programmers/42895/"><![CDATA[<h1 id="42895-n으로-표현--c--level3--1시간">42895. N으로 표현 / c++ / level3 / 1시간+</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/42895.%E2%80%85N%EC%9C%BC%EB%A1%9C%E2%80%85%ED%91%9C%ED%98%84"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="동적-계획법">동적 계획법</h3>
-<ol>
-  <li>사칙 연산으로 이루어져 있다는 점에서 착안</li>
-  <li>N이 들어간 횟수를 i라고 했을 때, i + 1은 결국 1 ~ (i-1)까지의 사칙 연산으로 이루어져 있다고 판단</li>
-  <li>dp[i]는 N이 i번 들어갔을 때 만들어질 수 있는 수들의 배열 (여기선 중복을 방지하기 위해 unordered_set을 사용)</li>
-  <li>i 를 1부터 8까지 증가시켜가면서, i를 이룰 수 있는 경우의 수 (i가 4라면 1 + 3 부터 3 + 1) 까지의 두 수 j, k를 인덱스로 하는 dp[j], dp[k]를 가져와서, 거기에 해당하는 모든 수의 사칙 연산을 다시 dp[i]에 삽입 (이 때, 0보다 클 경우에만 삽입)</li>
-  <li>그리고 여기서부터는 막혀서 결국 다른 코드를 보고 깨달았음</li>
-  <li>기존엔 32,001 보다 작아야 dp[i]에 삽입했었는데, 그건 단지 number가 32’000이하라는 소리이고, 계산 과정이 32’000보다 작아야하는게 아니라서, 오히려 32’001보다 작을 때만 dp[i]에 삽입하는 것이 오류였음. (그래서 그 부분을 삭제)</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>큰 틀의 로직은 생각을 했는데, 계산 과정에서 32’000보다 큰 수가 들어갈 수 있다는 점을 놓쳐서 그것 때문에 너무 많은 시간을 허비한 것 같다. 항상 예외처리에 많은 시간을 투자하고 있는데, 어떨 때는 그게 불필요한 경우일 수도 있다는 걸 생각해봐야겠다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[42895. N으로 표현 / c++ / level3 / 1시간+]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[43105. 정수 삼각형 / c++ / level3 / 26분]]></summary></entry></feed>

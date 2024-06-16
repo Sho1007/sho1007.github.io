@@ -982,4 +982,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Array","BinarySearch"],
         "url": "/leetcode/2861/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 28일차 TIL - 2145 Count the Hidden Sequences",
+        "excerpt":"2145. Count the Hidden Sequences / c++ / Medium / 47분 문제 및 코드 #include &lt;iostream&gt; using namespace std; class Solution { public: int numberOfArrays(vector&lt;int&gt;&amp; differences, int lower, int upper) { if (differences.size() == 0) { return upper - lower + 1; } int minNum = differences[0], maxNum = differences[0];...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Array"],
+        "url": "/leetcode/2145/",
+        "teaser": null
       }]
