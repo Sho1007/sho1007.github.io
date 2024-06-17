@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-16T12:19:03+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 28일차 TIL - 2145 Count the Hidden Sequences</title><link href="https://sho1007.github.io/leetcode/2145/" rel="alternate" type="text/html" title="99클럽 코테 스터디 28일차 TIL - 2145 Count the Hidden Sequences" /><published>2024-06-16T00:00:00+00:00</published><updated>2024-06-16T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2145</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2145/"><![CDATA[<h1 id="2145-count-the-hidden-sequences--c--medium--47분">2145. Count the Hidden Sequences / c++ / Medium / 47분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-17T12:44:53+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 29일차 TIL - 556 Next Greater Element III</title><link href="https://sho1007.github.io/leetcode/556/" rel="alternate" type="text/html" title="99클럽 코테 스터디 29일차 TIL - 556 Next Greater Element III" /><published>2024-06-17T00:00:00+00:00</published><updated>2024-06-17T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/556</id><content type="html" xml:base="https://sho1007.github.io/leetcode/556/"><![CDATA[<h1 id="556-next-greater-element-iii--c--medium--18분">556. Next Greater Element III / c++ / Medium / 18분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;unordered_set&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">target</span><span class="p">,</span> <span class="n">answer</span><span class="p">;</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">numberVector</span><span class="p">;</span>
+<span class="n">unordered_set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">resultSet</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">result</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">intLimit</span> <span class="o">=</span> <span class="mi">2'147'483'647</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">BackTracking</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">numberVector</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">&lt;=</span> <span class="n">intLimit</span> <span class="o">&amp;&amp;</span> <span class="n">result</span> <span class="o">&gt;</span> <span class="n">target</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">resultSet</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">numberVector</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">numberVector</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">numberVector</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">numberVector</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+        <span class="n">BackTracking</span><span class="p">();</span>
+        <span class="n">numberVector</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">numberVector</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">result</span> <span class="o">%</span> <span class="mi">10</span><span class="p">);</span>
+        <span class="n">result</span> <span class="o">/=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">nextGreaterElement</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">target</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+        <span class="n">answer</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">numberVector</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+        <span class="n">resultSet</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+
+        <span class="n">string</span> <span class="n">nString</span> <span class="o">=</span> <span class="n">to_string</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nString</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">numberVector</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">nString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">'0'</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">BackTracking</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">resultSet</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">resultVector</span><span class="p">(</span><span class="n">resultSet</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">resultSet</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">resultVector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">resultVector</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+        <span class="k">return</span> <span class="n">resultVector</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="문자열--백트래킹">문자열 / 백트래킹</h3>
+<ol>
+  <li>n과 같은 숫자로 만들어진 수 중, n보다 크고, 그 중에서 가장 작은 수를 반환하는 문제</li>
+  <li>1번 조건이 약간 이상하게 쓰여져있지만, 해석해보면 n과 같은 숫자의 조합으로 만들어진 수 중에서, n 바로 다음으로 큰 수를 구하는 문제였다.</li>
+  <li>숫자를 각 자리마다 접근하기 위해서 to_string으로 문자열로 바꿔서 접근해줬다.</li>
+  <li>모든 자리를 numberVector에 담아준다.</li>
+  <li>그 후 백트래킹을 하면서 numberVector에 있는 수로 만들 수 있는 모든 수를 구해준다.</li>
+  <li>숫자가 다 만들어지면, 해당 숫자가 n보다 크고, intLimit(32bit int의 최대 범위) 보다 작거나 같은지 체크한 뒤 resultSet에 담아준다. (중복을 피하기 위해서 unordered_set을 이용)</li>
+  <li>위의 과정이 끝나면, resultSet을 다시 resultVector에 담는다. (만약 resultSet이 비었다면, 이 시점에서 -1을 반환)</li>
+  <li>resultVector를 정렬 후 0번째 숫자 (즉, intLimit보다 작거나 같고, n보다 큰 수 중 가장 작은 수)를 반환한다.</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>백트래킹과 set 그리고 정렬을 이용해서 풆 수 있는 문제였다.</li>
+  <li>32-bit int 라고 해서 unsigned int 는 아니겠지 하고 int의 최대 범위를 사용했는데 맞았다.</li>
+  <li>조합할 수 있는 수는, 앞에 9가 오게 되고 10자리 인 경우 int의 최대 범위르 넘어갈 수 있으므로, 통 크게 unsigned long long 으로 잡아줬다. (n이 양의 정수이므로 음수는 가정하지 않았다)</li>
+  <li>leetcode의 경우 전역변수를 공유해서 테스트케이스들을 처리하다보니, 전역변수를 선언하고 함수 안에서 초기화해주는 방식으로 사용했다. (이번엔 백트래킹에 사용되는 전역변수가 좀 많았다.)</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="String" /><summary type="html"><![CDATA[556. Next Greater Element III / c++ / Medium / 18분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 28일차 TIL - 2145 Count the Hidden Sequences</title><link href="https://sho1007.github.io/leetcode/2145/" rel="alternate" type="text/html" title="99클럽 코테 스터디 28일차 TIL - 2145 Count the Hidden Sequences" /><published>2024-06-16T00:00:00+00:00</published><updated>2024-06-16T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2145</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2145/"><![CDATA[<h1 id="2145-count-the-hidden-sequences--c--medium--47분">2145. Count the Hidden Sequences / c++ / Medium / 47분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -387,26 +473,4 @@ k 번째로 작은 수가 되는 경우를 구하는 것이었다.</li>
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[1843. 사칙연산 / c++ / level4 / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형</title><link href="https://sho1007.github.io/programmers/43105/" rel="alternate" type="text/html" title="99클럽 코테 스터디 19일차 TIL - 43105 정수 삼각형" /><published>2024-06-07T00:00:00+00:00</published><updated>2024-06-07T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/43105</id><content type="html" xml:base="https://sho1007.github.io/programmers/43105/"><![CDATA[<h1 id="43105-정수-삼각형--c--level3--26분">43105. 정수 삼각형 / c++ / level3 / 26분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/43105.%E2%80%85%EC%A0%95%EC%88%98%E2%80%85%EC%82%BC%EA%B0%81%ED%98%95"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="동적-계획법">동적 계획법</h3>
-<ol>
-  <li>위에서 아래로 내려간다면, 어떤 루트를 결정해야 큰 값이 나올지 모를 수 있지만, 반대로 아래에서 위의 값을 고른다면, 무조건 둘 중 큰 값을 고르기만 하면 된다.</li>
-  <li>해당 식을 DP라는 함수로 만들어서 저장 (이 때, 인자값으로 row, col 변수를 넘겨주는데, 만약 삼각형의 범위를 넘어간 값이라면 0을 리턴)</li>
-  <li>맨 아랫줄의 모든 칸에 대해 DP를 수행하면, 순차적으로 위로 타고 올라가며 결국 모든 칸의 계산값이 구해지게 된다.</li>
-  <li>따라서 맨 아랫줄의 계산 값 중, 가장 큰 값을 고르면 그 값이 나올 수 있는 가장 큰 값이다.</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>예전에 풀었던 문제라 로직 자체는 쉽게 생각해낼 수 있었는데, 배열로 선언하여 아랫줄에서 윗줄을 검사할 때는 실패가 떴었다. (아마 내가 구현을 잘못하거나, 예외처리를 빠트린게 있었겠지..?)</li>
-  <li>다시 처음부터 만들 때, DP를 함수로 빼고, dp[row][col]이 계산되어 있지 않다면, 윗줄의 왼쪽 값, 오른쪽 값을 다시 재귀적으로  DP 함수를 호출하도록 구현했더니 통과했다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[43105. 정수 삼각형 / c++ / level3 / 26분]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[1843. 사칙연산 / c++ / level4 / 1시간+]]></summary></entry></feed>

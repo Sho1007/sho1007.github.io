@@ -988,4 +988,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Array"],
         "url": "/leetcode/2145/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 29일차 TIL - 556 Next Greater Element III",
+        "excerpt":"556. Next Greater Element III / c++ / Medium / 18분 문제 및 코드 #include &lt;iostream&gt; #include &lt;unordered_set&gt; #include &lt;algorithm&gt; using namespace std; int target, answer; vector&lt;int&gt; numberVector; unordered_set&lt;int&gt; resultSet; unsigned long long result; unsigned long long intLimit = 2'147'483'647; void BackTracking() { if (numberVector.size() == 0) { if (result...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","String"],
+        "url": "/leetcode/556/",
+        "teaser": null
       }]
