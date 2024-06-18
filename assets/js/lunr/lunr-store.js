@@ -994,4 +994,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","String"],
         "url": "/leetcode/556/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 30일차 TIL - 5 Longest Palindromic Substring",
+        "excerpt":"5. Longest Palindromic Substring / c++ / Medium / 13분 문제 및 코드 class Solution { public: string longestPalindrome(string s) { string answer = \"\"; for (int i = 0; i &lt; s.length() &amp;&amp; s.length() - i &gt; answer.length(); ++i) { for (int j = s.length()-1; j &gt;= i; --j)...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","String"],
+        "url": "/leetcode/5/",
+        "teaser": null
       }]

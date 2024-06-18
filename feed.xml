@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-17T12:44:53+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 29일차 TIL - 556 Next Greater Element III</title><link href="https://sho1007.github.io/leetcode/556/" rel="alternate" type="text/html" title="99클럽 코테 스터디 29일차 TIL - 556 Next Greater Element III" /><published>2024-06-17T00:00:00+00:00</published><updated>2024-06-17T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/556</id><content type="html" xml:base="https://sho1007.github.io/leetcode/556/"><![CDATA[<h1 id="556-next-greater-element-iii--c--medium--18분">556. Next Greater Element III / c++ / Medium / 18분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-18T11:34:10+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 30일차 TIL - 5 Longest Palindromic Substring</title><link href="https://sho1007.github.io/leetcode/5/" rel="alternate" type="text/html" title="99클럽 코테 스터디 30일차 TIL - 5 Longest Palindromic Substring" /><published>2024-06-18T00:00:00+00:00</published><updated>2024-06-18T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/5</id><content type="html" xml:base="https://sho1007.github.io/leetcode/5/"><![CDATA[<h1 id="5-longest-palindromic-substring--c--medium--13분">5. Longest Palindromic Substring / c++ / Medium / 13분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">string</span> <span class="n">longestPalindrome</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">string</span> <span class="n">answer</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">-</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">answer</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="n">i</span><span class="p">;</span> <span class="o">--</span><span class="n">j</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">answer</span><span class="p">.</span><span class="n">length</span><span class="p">())</span> <span class="k">break</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                <span class="p">{</span>
+                    <span class="kt">bool</span> <span class="n">isPalindrome</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">+</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">-</span> <span class="n">k</span><span class="p">;</span> <span class="o">++</span><span class="n">k</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="n">k</span><span class="p">])</span>
+                        <span class="p">{</span>
+                            <span class="n">isPalindrome</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+                            <span class="k">break</span><span class="p">;</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+
+                    <span class="k">if</span> <span class="p">(</span><span class="n">isPalindrome</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="n">answer</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">answer</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="문자열--백트래킹">문자열 / 백트래킹</h3>
+<ol>
+  <li>문자열 s의 부분문자열 중, 길이가 가장 긴 팰린드롬 문자열(거꾸로 뒤집어도 똑같은 문자) 를 반환하는 문제였다.</li>
+  <li>가장 단순하게 완전 탐색을 시도해보았다.</li>
+  <li>s의 시작부터 i 기준으로 순회한다.
+    <ol>
+      <li>s의 끝부터 j 기준으로 순회한다.</li>
+      <li>만약 s[i] == s[j]이면, 첫 글자가 같으므로 팰린드롬일 가능성이 있다.
+        <ol>
+          <li>여기서 다시 k 를 기준으로 i + k &lt;= j - k 일 때까지 순회한다.</li>
+          <li>s[i + k] != s[j - k]이면 팰린드롬이 아니므로 isPalindrome을 false로 바꾸고 break</li>
+          <li>순회가 끝났는데 isPalindrome 이 true라면 answer를 갱신해준다.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>권장이 3시간이어서 걱정했는데 13분 만에 풀려서 허무했다.</li>
+  <li>역시 가장 쉽고 간편한건 완전 탐색!</li>
+  <li>풀다보니 계속 최적화 할 수 있는 부분 (탐색하려는 길이가 이미 answer의 길이보다 작거나 같으면 무의미) 이 계속 보여서 추가적으로 넣어줬지만, 결과상 큰 변화는 없었다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="String" /><summary type="html"><![CDATA[5. Longest Palindromic Substring / c++ / Medium / 13분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 29일차 TIL - 556 Next Greater Element III</title><link href="https://sho1007.github.io/leetcode/556/" rel="alternate" type="text/html" title="99클럽 코테 스터디 29일차 TIL - 556 Next Greater Element III" /><published>2024-06-17T00:00:00+00:00</published><updated>2024-06-17T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/556</id><content type="html" xml:base="https://sho1007.github.io/leetcode/556/"><![CDATA[<h1 id="556-next-greater-element-iii--c--medium--18분">556. Next Greater Element III / c++ / Medium / 18분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -451,26 +516,4 @@ k 번째로 작은 수가 되는 경우를 구하는 것이었다.</li>
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[42897. 도둑질 / c++ / level4 / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 20일차 TIL - 1843 사칙연산</title><link href="https://sho1007.github.io/programmers/1843/" rel="alternate" type="text/html" title="99클럽 코테 스터디 20일차 TIL - 1843 사칙연산" /><published>2024-06-08T00:00:00+00:00</published><updated>2024-06-08T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/1843</id><content type="html" xml:base="https://sho1007.github.io/programmers/1843/"><![CDATA[<h1 id="1843-사칙연산--c--level4--1시간">1843. 사칙연산 / c++ / level4 / 1시간+</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/4/1843.%E2%80%85%EC%82%AC%EC%B9%99%EC%97%B0%EC%82%B0"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="동적-계획법">동적 계획법</h3>
-<ol>
-  <li>식을 적절히 괄호로 감싸서 계산 순서를 정했을 때 나올 수 있는 최대 값을 구하는 문제였다.</li>
-  <li>dp라는건 결국 이전 값을 다음 계산에 활용할 수 있다는 것이므로, 이걸 어떻게 문제에 대입할 수 있을지 생각해봤다.</li>
-  <li>연산자 하나에 대해 양쪽 옆에 새로운 부분식이 생긴다고 했을 때, 다시 그 작은 식을 재귀적으로 해결할 수 있을거라고 생각했다.</li>
-  <li>그 부분식의 계산값을 저장해두면, 매번 계산하지 않아도 되므로, 이 방법으로 풀었더니 통과했다. (이 때, 포인트는 부분식의 최대값과 최소값을 동시에 저장해서, 연산자가 - 일 때 오른쪽 부분식의 최대값과 최소값 중 어떤걸 활용하는지를 정하는 것이었다.)</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>진짜 어려웠다. level4 문제를 정말 오랜만에 풀어봤다. 그래도 정답을 찾아보지 않고 직접 생각해서 풀어서 성취감을 느낄 수 있었다.</li>
-  <li>마지막에 unordered_set으로도 시간초과가 나서 공간복잡도를 생각한 뒤, 2차원 배열로 바꾼게 효과적이었다. unordered_set 이 hash를 사용해서 일반 map보다 검색 속도가 빠르다고 하더라도, 굳이 int,int를 string으로 바꾸기보다, 2차원 배열로 직접 접근하는게 훨씬 빨랐다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[1843. 사칙연산 / c++ / level4 / 1시간+]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[42897. 도둑질 / c++ / level4 / 1시간+]]></summary></entry></feed>
