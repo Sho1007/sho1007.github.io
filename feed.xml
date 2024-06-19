@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-19T08:00:09+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 30일차 TIL - 5 Longest Palindromic Substring</title><link href="https://sho1007.github.io/leetcode/5/" rel="alternate" type="text/html" title="99클럽 코테 스터디 30일차 TIL - 5 Longest Palindromic Substring" /><published>2024-06-18T00:00:00+00:00</published><updated>2024-06-18T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/5</id><content type="html" xml:base="https://sho1007.github.io/leetcode/5/"><![CDATA[<h1 id="5-longest-palindromic-substring--c--medium--13분">5. Longest Palindromic Substring / c++ / Medium / 13분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-19T08:07:41+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 31일차 TIL - 402 Remove K Digits</title><link href="https://sho1007.github.io/leetcode/402/" rel="alternate" type="text/html" title="99클럽 코테 스터디 31일차 TIL - 402 Remove K Digits" /><published>2024-06-19T00:00:00+00:00</published><updated>2024-06-19T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/402</id><content type="html" xml:base="https://sho1007.github.io/leetcode/402/"><![CDATA[<h1 id="402-remove-k-digits--c--medium--46분">402. Remove K Digits / c++ / Medium / 46분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">string</span> <span class="n">removeKdigits</span><span class="p">(</span><span class="n">string</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">num</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">==</span> <span class="n">k</span><span class="p">)</span> <span class="k">return</span> <span class="s">"0"</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">removeCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;)</span>
+        <span class="p">{</span>
+            <span class="c1">// cout &lt;&lt; removeCount &lt;&lt; " : " &lt;&lt; num &lt;&lt; '\n';</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'0'</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">num</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">num</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>
+                <span class="k">continue</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">removeCount</span><span class="o">&lt;</span> <span class="n">k</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">removeCount</span><span class="o">++</span><span class="p">;</span>
+                    <span class="n">num</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">num</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">i</span><span class="o">--</span><span class="p">;</span>
+                    <span class="k">continue</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">num</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="n">removeCount</span> <span class="o">&gt;=</span> <span class="n">num</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">?</span> <span class="s">""</span> <span class="o">:</span> <span class="n">num</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">-</span> <span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="n">removeCount</span><span class="p">));</span>
+
+        <span class="k">return</span> <span class="n">num</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">num</span> <span class="o">:</span> <span class="s">"0"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="문자열">문자열</h3>
+<ol>
+  <li>처음엔 완전탐색과 백트래킹으로 k개 만큼 제거한 뒤에 배열에 넣어서 정렬 후 최소값을 찾아볼까 했다.</li>
+  <li>하지만 k와 num의 길이의 최대값은 10^5였고 1번 방식으로 풀다간 시간 / 공간 복잡도가 엄청 늘어남은 물론이고 해당 숫자를 담을 자료형 조차 없었다.</li>
+  <li>그래서 단순 숫자대 숫자로 비교가 안된다는 것을 깨닫고, 그럼 문제를 풀기 위해선 규칙이 있을 것이라고 판단했다.</li>
+  <li>첫 번째로 찾은 규칙은 이러했다. 만약 현재 자리의 수가 다음 자리의 수보다 크다면 제거하는 것이다. <br />
+ (ex. 1243 에서 하나를 제거한다고 했을 때, 123이 제일 작은 수이다. 즉 4가 3보다 
+ 크므로 4를 제거하는 것이 정답이다.)</li>
+  <li>4번 규칙대로 풀었더니 1234567890 에서 결과가 123456780 이 나왔다. i + 1에 접근해야 해서 for 문의 규칙을 i &lt; num.length() - 1로 걸었더니, 9가 제거되면서 num의 길이가 하나 줄어서 i &lt; num.length() - 1 에 걸려서 종료된 것이었다.</li>
+  <li>5번을 해결하기 위해 한 자리를 제거할 때, i 도 1 감소시켜줬다. 그러면 1234567890에서 9를 제거하면 num[i]는 0이 아닌 8을 가리키게 되므로, 연쇄적으로 num[i] &gt; num[i+1] 조건문을 통해 연쇄적으로 줄여나갈 수 있게 된다.</li>
+  <li>다음 문제는 6번까지의 for문 순회를 돌고 난 다음 removeCount(제거한 횟수)가 k보다 작아서 생기는 문제였다. 예를 들어 11111 처럼 다 같은 문자여서 조건식에 걸리지 않았던가, 10001 처럼 중간에 0이 들어가서 자동적으로 탈락된 경우 (이 경우엔 자동 탈락이므로 removeCount는 증가하지 않는다.), k = 5 일 때 둘 다 정답은 0이 나와야 했다.</li>
+  <li>7번 문제점을 해결하면서 한가지 추가적인 규칙을 찾아냈다. for문 순회가 끝난 수를 보면 마치 12345 처럼 정렬된 모양새를 띈다는 점이었다.</li>
+  <li>그래서 이 경우엔 앞에서 제거하는게 아닌, 뒷부분을 제거하는 것이 결과값을 줄이는 방법이었다.</li>
+  <li>따라서 만약 k - removeCount (남은 제거 횟수)가 만약 현재 num의 길이보다 크거나 같다면, 다 지워야하는 경우이므로 num을 “” 로 만들어줬고 (이 경우 반환 과정에서 “0”으로 치환된다.), 그게 아니라면 num을 num.length() - (k - removeCount)로 만들어줬다. (num을 뒤에서부터 남은 제거 횟수만큼 제거한 부분 문자열)</li>
+  <li>해결</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>medium 난이도 치고는 생각보다 풀이시간이 오래 걸렸다. (역시나 난 문자열에 약한 것 같다.)</li>
+  <li>leetcode는 틀린 케이스를 자꾸 알려줘서 거기에 맞춰서 풀게되는 느낌이다. (내가 찾아낸 것들도 있지만 생각하지 않은 엣지 케이스를 알려줘서 뇌 빼고 보는 느낌)</li>
+  <li>그래도 99클럽을 시작한 뒤로 꾸준히 하루 한 문제씩 풀면서 문제 해결 능력도 많이 올라온 것 같다.</li>
+  <li>단적인 예로 이런 막히는 문제들도 이제는 다른 사람들의 풀이를 보지 않고 혼자 해결할 수 있게 되었다. (특히 내 약점인 문자열 문제였음에도)</li>
+  <li>또한 오늘 내 글이 우수 TIL로 선정되었다는 공지가 올라왔고 성취감이 배로 늘었다.</li>
+  <li>다시 한번 이런 커리큘럼을 만들어준 팀스파르타에 감사함을 느낀다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="String" /><summary type="html"><![CDATA[402. Remove K Digits / c++ / Medium / 46분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 30일차 TIL - 5 Longest Palindromic Substring</title><link href="https://sho1007.github.io/leetcode/5/" rel="alternate" type="text/html" title="99클럽 코테 스터디 30일차 TIL - 5 Longest Palindromic Substring" /><published>2024-06-18T00:00:00+00:00</published><updated>2024-06-18T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/5</id><content type="html" xml:base="https://sho1007.github.io/leetcode/5/"><![CDATA[<h1 id="5-longest-palindromic-substring--c--medium--13분">5. Longest Palindromic Substring / c++ / Medium / 13분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -485,35 +553,4 @@ k 번째로 작은 수가 되는 경우를 구하는 것이었다.</li>
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="BinarySearch" /><summary type="html"><![CDATA[43236. 징검다리 / c++ / level4 / 2시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 21일차 TIL - 42897 도둑질</title><link href="https://sho1007.github.io/programmers/42897/" rel="alternate" type="text/html" title="99클럽 코테 스터디 21일차 TIL - 42897 도둑질" /><published>2024-06-09T00:00:00+00:00</published><updated>2024-06-09T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/42897</id><content type="html" xml:base="https://sho1007.github.io/programmers/42897/"><![CDATA[<h1 id="42897-도둑질--c--level4--1시간">42897. 도둑질 / c++ / level4 / 1시간+</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/4/42897.%E2%80%85%EB%8F%84%EB%91%91%EC%A7%88"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="동적-계획법">동적 계획법</h3>
-<ol>
-  <li>이런 식의 문제는 보통, 현재 칸에서 행동함 = 전 칸의 행동 안한 결과 + 현재 칸의 값 으로 풀 수 있다.</li>
-  <li>다만 이 문제의 경우 순환 배열이어서 시작 원소와 마지막 원소 역시 위의 조건을 만족해야 했다.</li>
-  <li>고민 끝에 내가 생각한 방법은, 배열을 아래처럼 총 4개 만들어주는 것이었다.
-    <ol>
-      <li>현재 집을 도둑질 함 (시작 지점을 도둑질한 경우)</li>
-      <li>현재 집을 도둑질 하지 않음 (시작 지점을 도둑질한 경우)</li>
-      <li>현재 집을 도둑질 함 (시작 지점을 도둑질하지 않은 경우)</li>
-      <li>현재 집을 도둑질 하지 않음 (시작 지점을 도둑질하지 않은 경우)</li>
-    </ol>
-  </li>
-  <li>이렇게 한 뒤, 맨 마지막 집 전까지만, 배열을 순회하며 dp값을 저장해주고, <br />
- 맨 마지막 집의 경우 3-3번에만 값을 더 해주었다. (3-1의 경우 시작 지점을 도둑질 했기 때문에 마지막 집을 도둑질할 수 없다.)</li>
-  <li>그 후, 나온 값들 중 가장 큰 값을 비교하여 반환</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>확실히 level4 문제들은 난이도가 있다고 생각이 들었다.</li>
-  <li>다만 이 문제의 경우 이전에도 접해본 dp문제 유형이었는데, 거기에 시작 지점의 값도 추가로 신경써줘야하는 응용 문제여서 생각만 잘 했다면 충분히 빨리 풀 수 있었는데, 이건 좀 더 반복적으로 연습을 해야겠다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[42897. 도둑질 / c++ / level4 / 1시간+]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="BinarySearch" /><summary type="html"><![CDATA[43236. 징검다리 / c++ / level4 / 2시간+]]></summary></entry></feed>

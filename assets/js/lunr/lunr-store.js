@@ -1000,4 +1000,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","String"],
         "url": "/leetcode/5/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 31일차 TIL - 402 Remove K Digits",
+        "excerpt":"402. Remove K Digits / c++ / Medium / 46분 문제 및 코드 class Solution { public: string removeKdigits(string num, int k) { if (num.length() == k) return \"0\"; int removeCount = 0; for (int i = 0; i &lt; num.length() - 1;) { // cout &lt;&lt; removeCount &lt;&lt; \"...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","String"],
+        "url": "/leetcode/402/",
+        "teaser": null
       }]
