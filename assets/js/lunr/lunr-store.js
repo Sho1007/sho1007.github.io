@@ -1006,4 +1006,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","String"],
         "url": "/leetcode/402/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 32일차 TIL - 2280 Minimum Lines to Represent a Line Chart",
+        "excerpt":"2280. Minimum Lines to Represent a Line Chart / c++ / Medium / 1시간+ 문제 및 코드 #include&lt;algorithm&gt; class Solution { public: int minimumLines(vector&lt;vector&lt;int&gt;&gt;&amp; stockPrices) { sort(stockPrices.begin(), stockPrices.end(), [](vector&lt;int&gt;&amp; a, vector&lt;int&gt;&amp; b)-&gt;bool { return a[0] &lt; b[0]; }); if (stockPrices.size() &lt; 3) return stockPrices.size() - 1; int answer = 0;...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Sort"],
+        "url": "/leetcode/2280/",
+        "teaser": null
       }]
