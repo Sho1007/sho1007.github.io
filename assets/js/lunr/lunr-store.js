@@ -1012,4 +1012,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Sort"],
         "url": "/leetcode/2280/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 33일차 TIL - 2195 Append K Integers With Minimal Sum",
+        "excerpt":"2195. Append K Integers With Minimal Sum / c++ / Medium / 8분+ 문제 및 코드 #include &lt;iostream&gt; class Solution { public: long long minimalKSum(vector&lt;int&gt;&amp; nums, int k) { long long answer = 0; int addCount = 0; long long nextNum = 1; sort(nums.begin(), nums.end()); for (int i = 0;...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Sort"],
+        "url": "/leetcode/2195/",
+        "teaser": null
       }]
