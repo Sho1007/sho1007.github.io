@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-21T09:02:35+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 33일차 TIL - 2195 Append K Integers With Minimal Sum</title><link href="https://sho1007.github.io/leetcode/2195/" rel="alternate" type="text/html" title="99클럽 코테 스터디 33일차 TIL - 2195 Append K Integers With Minimal Sum" /><published>2024-06-21T00:00:00+00:00</published><updated>2024-06-21T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2195</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2195/"><![CDATA[<h1 id="2195-append-k-integers-with-minimal-sum--c--medium--8분">2195. Append K Integers With Minimal Sum / c++ / Medium / 8분+</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-22T18:57:51+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 34일차 TIL - 2944 Minimum Number of Coins for Fruits</title><link href="https://sho1007.github.io/leetcode/2944/" rel="alternate" type="text/html" title="99클럽 코테 스터디 34일차 TIL - 2944 Minimum Number of Coins for Fruits" /><published>2024-06-22T00:00:00+00:00</published><updated>2024-06-22T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2944</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2944/"><![CDATA[<h1 id="2944-minimum-number-of-coins-for-fruits--c--medium--1시간">2944. Minimum Number of Coins for Fruits / c++ / Medium / 1시간+</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">inline</span> <span class="kt">int</span> <span class="nf">MIN</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="p">;}</span>
+
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dp</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">Calculate</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">prices</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">prices</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">index</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">minResult</span> <span class="o">=</span> <span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">endIndex</span> <span class="o">=</span> <span class="n">index</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">endIndex</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">minResult</span> <span class="o">=</span> <span class="n">MIN</span><span class="p">(</span><span class="n">minResult</span><span class="p">,</span> <span class="n">Calculate</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="n">i</span><span class="p">));</span>
+        <span class="p">}</span>
+        <span class="n">dp</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">prices</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">+</span> <span class="n">minResult</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">index</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">minimumCoins</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">prices</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">dp</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">prices</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="n">Calculate</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="동적-계획법">동적 계획법</h3>
+<ol>
+  <li>i번째 과일을 사면, 그 이후의 i + 1 개만큼의 과일을 무료로 받을 수 있을 때, 모든 과일을 사는 최소 가격을 반환하는 문제</li>
+  <li>현재 과일을 사는 것, 사지 않는 것 (이전에 과일을 산 경우) 로 나뉘어 풀리게 되므로 분할 정복, 그 중에서도 이전 값을 활용할 수 있으므로 DP를 사용했다.</li>
+  <li>계산식은, i번째 과일의 가격 + (2 * i + 2) 번째까지 중 가장 작은 값이 된다. <br />
+(여기서 왜 2 * i + 1 이 아닌 2 * i + 2가 되냐면, 무료로 받는 과일은 2 * i + 1 까지 이지만, 그렇게 되면 하나 뒤의 과일은 무조건 사야하는 상황이 된다. 하지만 3번 예시에서 알 수 있듯이, 무료로 받을 수 있는 과일을 삼으로써 값을 더 아낄 수 있는 경우가 있기 때문에, 결국 2 * i + 2 까지의 과일들 중 하나만 사면 되고, 그 최소값을 구해야하는 것이다.)</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>점화식 도출이 어려워서 다른 사람들의 접근 방식을 참고했다. 역시나 DP는 아직까지도 점화식 도출이 어려운 것 같다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DynamicProgramming" /><summary type="html"><![CDATA[2944. Minimum Number of Coins for Fruits / c++ / Medium / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 33일차 TIL - 2195 Append K Integers With Minimal Sum</title><link href="https://sho1007.github.io/leetcode/2195/" rel="alternate" type="text/html" title="99클럽 코테 스터디 33일차 TIL - 2195 Append K Integers With Minimal Sum" /><published>2024-06-21T00:00:00+00:00</published><updated>2024-06-21T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2195</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2195/"><![CDATA[<h1 id="2195-append-k-integers-with-minimal-sum--c--medium--8분">2195. Append K Integers With Minimal Sum / c++ / Medium / 8분+</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -558,35 +608,4 @@
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="UnionFind" /><summary type="html"><![CDATA[1971. Find if Path Exists in Graph / c++ / Easy / 26분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 24일차 TIL - 49190 방의 개수</title><link href="https://sho1007.github.io/programmers/49190/" rel="alternate" type="text/html" title="99클럽 코테 스터디 24일차 TIL - 49190 방의 개수" /><published>2024-06-12T00:00:00+00:00</published><updated>2024-06-12T00:00:00+00:00</updated><id>https://sho1007.github.io/programmers/49190</id><content type="html" xml:base="https://sho1007.github.io/programmers/49190/"><![CDATA[<h1 id="49190-방의-개수--c--level5--2시간">49190. 방의 개수 / c++ / level5 / 2시간+</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/5/49190.%E2%80%85%EB%B0%A9%EC%9D%98%E2%80%85%EA%B0%9C%EC%88%98"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="그래프">그래프</h3>
-<ol>
-  <li>방을 만드는 조건을 찾아야했다.
-    <ol>
-      <li>이미 방문한 좌표를 다시 방문할 때 방이 생성됐다.</li>
-      <li>방문한적 없는 간선(arrow)로 방문해야 방이 생성됐다.</li>
-    </ol>
-  </li>
-  <li>unordered_set으로 좌표와 간선의 방문여부를 체크했고, 테스트 케이스를 통과했지만, 문제는 틀렸다.</li>
-  <li>아무리 생각해도 이유를 알 수 없어서, 다른 분들의 접근 방법을 찾아봤다.</li>
-  <li>점 4개를 모래시계 형태로 교차해서 지나가게 되면, 이론상 방이 1개 생성되어야 하지만, 실제로는 방이 2개가 생성됐다.</li>
-  <li>좌표 문제에서 가끔 나오는, 정밀도의 문제 (내가 이름지은..) 였다.</li>
-  <li>이 문제의 해결법은 좌표계 자체를 2배씩 키우고, 한번 하던 이동을 2번으로 바꿔주는 것이었다.</li>
-  <li>arrows의 각 원소를 2번씩으로 늘린, newArrows를 만들고, 이전까지의 로직을 newArrows를 기반으로 실행했더니 통과했다.</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>level5문제는 아마 이번이 처음 푼 것 같다.</li>
-  <li>이쯤오니 문제가 정확히 요구하는 바가 무엇인지 안에 숨어있는 원리를 찾아내는게 정말 중요하게 느껴졌다.</li>
-  <li>특히 좌표계가 나오면 항상 정밀도 문제를 생각해봐야겠다. (와 모래시계 모양으로 꽈서 연결하는건 정말 생각하지 못했다…)</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;Programmers&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Graph" /><summary type="html"><![CDATA[49190. 방의 개수 / c++ / level5 / 2시간+]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="UnionFind" /><summary type="html"><![CDATA[1971. Find if Path Exists in Graph / c++ / Easy / 26분]]></summary></entry></feed>

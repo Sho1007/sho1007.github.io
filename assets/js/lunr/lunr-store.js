@@ -1018,4 +1018,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Sort"],
         "url": "/leetcode/2195/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 34일차 TIL - 2944 Minimum Number of Coins for Fruits",
+        "excerpt":"2944. Minimum Number of Coins for Fruits / c++ / Medium / 1시간+ 문제 및 코드 inline int MIN(int a, int b) {return a &lt; b ? a : b;} vector&lt;int&gt; dp; int Calculate(vector&lt;int&gt;&amp; prices, int index) { if (prices.size() &lt;= index) return 0; if (dp[index] == -1) { int...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","DynamicProgramming"],
+        "url": "/leetcode/2944/",
+        "teaser": null
       }]
