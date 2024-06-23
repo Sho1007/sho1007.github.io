@@ -9,28 +9,32 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Today I Learned - Page 19</title>
-<meta name="description" content="내가 공부한 것들을 기록하는 공간">
+<!-- begin _includes/seo.html --><title>99클럽 코테 스터디 35일차 TIL - 2762 Continuous Subarrays - Today I Learned</title>
+<meta name="description" content="2762. Continuous Subarrays / c++ / Medium / 2시간+">
 
 
   <meta name="author" content="Sho1007">
   
+  <meta property="article:author" content="Sho1007">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Today I Learned">
-<meta property="og:title" content="Today I Learned">
-<meta property="og:url" content="https://sho1007.github.io/page19/">
+<meta property="og:title" content="99클럽 코테 스터디 35일차 TIL - 2762 Continuous Subarrays">
+<meta property="og:url" content="https://sho1007.github.io/leetcode/2762/">
 
 
-  <meta property="og:description" content="내가 공부한 것들을 기록하는 공간">
-
-
-
+  <meta property="og:description" content="2762. Continuous Subarrays / c++ / Medium / 2시간+">
 
 
 
+
+
+
+
+  <meta property="article:published_time" content="2024-06-23T00:00:00+00:00">
 
 
 
@@ -41,13 +45,9 @@
   
 
 
-<link rel="canonical" href="https://sho1007.github.io/page19/">
+<link rel="canonical" href="https://sho1007.github.io/leetcode/2762/">
 
 
-  <link rel="prev" href="https://sho1007.github.io/page18/">
-
-
-  <link rel="next" href="https://sho1007.github.io/page20/">
 
 
 <script type="application/ld+json">
@@ -100,7 +100,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -135,6 +135,8 @@
 
     <div class="initial-content">
       
+
+
 
 
 
@@ -693,33 +695,20 @@
 
 
 
-  <div class="archive">
-    
-      <h1 id="page-title" class="page__title"></h1>
-    
-    
-
-<h3 class="archive__subtitle">Recent posts</h3>
-
-
-
-
-<div class="entries-list">
-  
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="99클럽 코테 스터디 35일차 TIL - 2762 Continuous Subarrays">
+    <meta itemprop="description" content="2762. Continuous Subarrays / c++ / Medium / 2시간+">
+    <meta itemprop="datePublished" content="2024-06-23T00:00:00+00:00">
     
 
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="/boj/11722/" rel="permalink">11722 가장 긴 감소하는 부분 수열
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://sho1007.github.io/leetcode/2762/" class="u-url" itemprop="url">99클럽 코테 스터디 35일차 TIL - 2762 Continuous Subarrays
 </a>
-      
-    </h2>
-    
+          </h1>
+          
 
   <p class="page__meta">
     
@@ -727,7 +716,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2023-02-10T00:00:00+00:00">February 10, 2023</time>
+        <time datetime="2024-06-23T00:00:00+00:00">June 23, 2024</time>
       </span>
     
 
@@ -740,29 +729,200 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          2 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">11722. 가장 긴 감소하는 부분 수열 / c++ / Silver2 / 13분
-</p>
-  </article>
-</div>
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#2762-continuous-subarrays--c--medium--2시간">2762. Continuous Subarrays / c++ / Medium / 2시간+</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#투-포인터">투 포인터</a></li></ul></li><li><a href="#생각해-볼-점">생각해 볼 점</a><ul><li><a href="#해시태그">해시태그</a></li></ul></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="2762-continuous-subarrays--c--medium--2시간">2762. Continuous Subarrays / c++ / Medium / 2시간+</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;set&gt;</span><span class="cp">
+</span>
+<span class="kr">inline</span> <span class="kt">int</span> <span class="nf">MAX</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="p">;</span> <span class="p">}</span>
+<span class="kr">inline</span> <span class="kt">int</span> <span class="n">MIN</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="p">;</span> <span class="p">}</span>
+<span class="kr">inline</span> <span class="kt">int</span> <span class="n">ABS</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="o">-</span><span class="n">a</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">long</span> <span class="kt">long</span> <span class="n">continuousSubarrays</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">long</span> <span class="kt">long</span> <span class="n">answer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">multiset</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ms</span><span class="p">;</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="n">left</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">right</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ms</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+                <span class="p">{</span>
+                    <span class="kt">int</span> <span class="n">minNum</span> <span class="o">=</span> <span class="n">MIN</span><span class="p">(</span><span class="o">*</span><span class="n">ms</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">nums</span><span class="p">[</span><span class="n">right</span><span class="p">]);</span>
+                    <span class="kt">int</span> <span class="n">maxNum</span> <span class="o">=</span> <span class="n">MAX</span><span class="p">(</span><span class="o">*</span><span class="n">ms</span><span class="p">.</span><span class="n">rbegin</span><span class="p">(),</span> <span class="n">nums</span><span class="p">[</span><span class="n">right</span><span class="p">]);</span>
+
+                    <span class="k">if</span> <span class="p">(</span><span class="n">ABS</span><span class="p">(</span><span class="n">minNum</span> <span class="o">-</span> <span class="n">maxNum</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="n">ms</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">right</span><span class="o">++</span><span class="p">]);</span>
+            <span class="p">}</span>
+            <span class="n">answer</span> <span class="o">+=</span> <span class="n">right</span> <span class="o">-</span> <span class="n">left</span><span class="p">;</span>
+            <span class="n">ms</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">ms</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">left</span><span class="o">++</span><span class="p">]));</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">answer</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="투-포인터">투 포인터</h3>
+<ol>
+  <li>배열 nums의 부분 배열 중 모든 원소의 차이의 절대값이 2보다 작거나 같은 부분배열의 갯수를 반환하는 문제</li>
+  <li>처음엔 원소의 개수에 따른 부분 배열의 개수를 저장하는 continuous 벡터를 사용했다. (ex. 원소가 1개인 부분배열이 2개라면 continuous[1] = 2)</li>
+  <li>i로 1번 순회하면서 다시 j = i부터 2차 순회한다.
+    <ol>
+      <li>모든 nums[j]에 대해 min, max 값을 초기화해준다.</li>
+      <li>max - min &gt; 2 이면 break;</li>
+      <li>2번이 아니라면, (j - i + 1)개의 원소를 가지는 부분 배열이 하나 새로 생긴 것이므로 continuous[j - i + 1]++;</li>
+    </ol>
+  </li>
+  <li>이런식으로 한 뒤, continuous의 모든 원소를 다 더한 값을 반환</li>
+  <li>하지만 이 방법은 시간초과가 났었다. (지금 생각해보면 매번 i부터 시작해서 부분 배열을 만들 필요가 없었다.)</li>
+  <li>여러 방법을 시도해봤지만 해결하지 못했고, 다른 사람들의 접근법을 참고했다.</li>
+  <li>요점은 투 포인터였다, 내가 시도했던 방법은 원 포인터 i에 대해 2차 순회를 통해 매번 부분 배열을 만들었던 반면, 투 포인터를 쓰게 되면
+    <ol>
+      <li>left부터 right까지의 부분 배열을 구한다. (시작은 둘 다 0), left &lt; nums.size()로 1차 반복, 그 안에서 right &lt; nums.size()로 2차 반복한다.</li>
+      <li>새로운 원소를 넣을 때 min, max 검사를 해주고 (이 때, multiset을 사용하여 begin(), rbegin()으로 부분 배열의 최소, 최대값을 가져올 수 있다.)</li>
+      <li>조건에 만족한다면 부분 배열에 넣고, right를 1 증가</li>
+      <li>조건에 만족하지 못한다면 answer에 거기까지의 부분배열의 개수 (해당 부분 배열의 원소 수, 여기서는 right - left)를 더해준다.</li>
+      <li>그리고 부분 배열에서 nums[left] 원소를 빼주고, left를 1 증가</li>
+      <li>2중 반복이 모두 완료되면, answer를 반환</li>
+    </ol>
+  </li>
+  <li>해결</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>요즘 나오는 스택 / 큐 카테고리의 문제들이 꽤나 어렵다. (그리고 스택 / 큐를 활용한 풀이법도 모르겠고 다른 알고리즘을 사용해서 풀게 된다.)</li>
+  <li>어떤 배열의 연속된 부분 배열의 개수는 그 배열의 원소의 수였다. (ex. [1, 2, 3, 4]의 경우 [1], [1, 2], [1, 2, 3], [1, 2, 3, 4]의 부분 배열이 있는데, 이는 배열의 원소의 개수인 4와 동일하다.)</li>
+  <li>첫 번째 풀이법에서 시간초과가 났었는데, 그 때 만들어둔 부분 배열을 초기화 하지 않고, 해당 배열에서 left 원소만 제거하고 다시 이어나갔어야했다. (사실 이게 투 포인터의 핵심 원리, 그 때는 투 포인터라고 생각하지 않고 접근해서 이 방법을 생각하지 못했다.)</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
 
   
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
     
+      <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a><span class="sep">, </span>
+    
+      <a href="/tags/#codingtest" class="page__taxonomy-item p-category" rel="tag">CodingTest</a><span class="sep">, </span>
+    
+      <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
+    
+      <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a><span class="sep">, </span>
+    
+      <a href="/tags/#twopointer" class="page__taxonomy-item p-category" rel="tag">TwoPointer</a>
+    
+    </span>
+  </p>
 
 
 
-<div class="list__item">
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#leetcode" class="page__taxonomy-item p-category" rel="tag">LeetCode</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-23T00:00:00+00:00">June 23, 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=99%ED%81%B4%EB%9F%BD+%EC%BD%94%ED%85%8C+%EC%8A%A4%ED%84%B0%EB%94%94+35%EC%9D%BC%EC%B0%A8+TIL+-+2762+Continuous+Subarrays%20https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2762%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2762%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2762%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/leetcode/2944/" class="pagination--pager" title="99클럽 코테 스터디 34일차 TIL - 2944 Minimum Number of Coins for Fruits
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/boj/1699/" rel="permalink">1699 제곱수의 합
+        <a href="/leetcode/2944/" rel="permalink">99클럽 코테 스터디 34일차 TIL - 2944 Minimum Number of Coins for Fruits
 </a>
       
     </h2>
@@ -772,9 +932,9 @@
     
       
       <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2023-02-09T00:00:00+00:00">February 9, 2023</time>
+        <time datetime="2024-06-22T00:00:00+00:00">June 22, 2024</time>
       </span>
     
 
@@ -785,7 +945,7 @@
       
 
       <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
           1 minute read
         
@@ -794,22 +954,22 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">1699. 제곱수의 합 / c++ / Silver2 / 36분
+    <p class="archive__item-excerpt" itemprop="description">2944. Minimum Number of Coins for Fruits / c++ / Medium / 1시간+
 </p>
   </article>
 </div>
 
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/boj/11055/" rel="permalink">11055 가장 큰 증가 부분 수열
+        <a href="/leetcode/2195/" rel="permalink">99클럽 코테 스터디 33일차 TIL - 2195 Append K Integers With Minimal Sum
 </a>
       
     </h2>
@@ -819,9 +979,9 @@
     
       
       <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2023-02-09T00:00:00+00:00">February 9, 2023</time>
+        <time datetime="2024-06-21T00:00:00+00:00">June 21, 2024</time>
       </span>
     
 
@@ -832,54 +992,7 @@
       
 
       <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">11055. 가장 큰 증가 부분 수열 / c++ / Silver2 / 10분
-</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/boj/11054/" rel="permalink">11054 가장 긴 바이토닉 부분 수열
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2023-02-09T00:00:00+00:00">February 9, 2023</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
           1 minute read
         
@@ -888,22 +1001,22 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">11054. 가장 긴 바이토닉 부분 수열 / c++ / Gold4 / 30분
+    <p class="archive__item-excerpt" itemprop="description">2195. Append K Integers With Minimal Sum / c++ / Medium / 8분+
 </p>
   </article>
 </div>
 
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/boj/11051/" rel="permalink">11051 이항 계수2
+        <a href="/leetcode/2280/" rel="permalink">99클럽 코테 스터디 32일차 TIL - 2280 Minimum Lines to Represent a Line Chart
 </a>
       
     </h2>
@@ -913,9 +1026,9 @@
     
       
       <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2023-02-09T00:00:00+00:00">February 9, 2023</time>
+        <time datetime="2024-06-20T00:00:00+00:00">June 20, 2024</time>
       </span>
     
 
@@ -926,104 +1039,74 @@
       
 
       <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">11051. 이항 계수 / c++ / Silver2 / 11분
+    <p class="archive__item-excerpt" itemprop="description">2280. Minimum Lines to Represent a Line Chart / c++ / Medium / 1시간+
 </p>
   </article>
 </div>
 
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/leetcode/402/" rel="permalink">99클럽 코테 스터디 31일차 TIL - 402 Remove K Digits
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-19T00:00:00+00:00">June 19, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">402. Remove K Digits / c++ / Medium / 46분
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
   
 </div>
 
-
-<nav class="pagination">
-  
-  <ul>
-    
-    
-      
-        <li><a href="/page18/">Previous</a></li>
-      
-    
-
-    
-    
-      <li><a href="/">1</a></li>
-    
-
-    
-    
-      
-      
-      <li><a href="#" class="disabled">&hellip;</a></li>
-    
-
-    
-    
-    
-
-    
-      
-        
-        
-        
-        <li><a href="/page17/">17</a></li>
-      
-    
-      
-        
-        
-        
-        <li><a href="/page18/">18</a></li>
-      
-    
-      
-        <li><a href="/page19/" class="disabled current">19</a></li>
-      
-    
-      
-        
-        
-        
-        <li><a href="/page20/">20</a></li>
-      
-    
-      
-        
-        
-        
-        <li><a href="/page21/">21</a></li>
-      
-    
-
-    
-    
-      <li><a href="#" class="disabled">&hellip;</a></li>
-    
-
-    
-      <li><a href="/page35/">35</a></li>
-    
-
-    
-    
-      <li><a href="/page20/">Next</a></li>
-    
-  </ul>
-</nav>
-
-
-
-  </div>
-</div>
     </div>
 
     
