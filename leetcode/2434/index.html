@@ -9,28 +9,32 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>C # - Today I Learned</title>
-<meta name="description" content="내가 공부한 것들을 기록하는 공간">
+<!-- begin _includes/seo.html --><title>99클럽 코테 스터디 36일차 TIL - 2434 Using a Robot to Print the Lexicographically Smallest String - Today I Learned</title>
+<meta name="description" content="2434. Using a Robot to Print the Lexicographically Smallest String / c++ / Medium / 1시간+">
 
 
   <meta name="author" content="Sho1007">
   
+  <meta property="article:author" content="Sho1007">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Today I Learned">
-<meta property="og:title" content="C #">
-<meta property="og:url" content="https://sho1007.github.io/categories/ProgrammingLanguage/CSharp">
+<meta property="og:title" content="99클럽 코테 스터디 36일차 TIL - 2434 Using a Robot to Print the Lexicographically Smallest String">
+<meta property="og:url" content="https://sho1007.github.io/leetcode/2434/">
 
 
-  <meta property="og:description" content="내가 공부한 것들을 기록하는 공간">
-
-
-
+  <meta property="og:description" content="2434. Using a Robot to Print the Lexicographically Smallest String / c++ / Medium / 1시간+">
 
 
 
+
+
+
+
+  <meta property="article:published_time" content="2024-06-24T00:00:00+00:00">
 
 
 
@@ -41,7 +45,7 @@
   
 
 
-<link rel="canonical" href="https://sho1007.github.io/categories/ProgrammingLanguage/CSharp">
+<link rel="canonical" href="https://sho1007.github.io/leetcode/2434/">
 
 
 
@@ -96,7 +100,7 @@
 
   </head>
 
-  <body class="layout--archive">
+  <body class="layout--single">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -131,6 +135,8 @@
 
     <div class="initial-content">
       
+
+
 
 
 
@@ -689,21 +695,20 @@
 
 
 
-  <div class="archive">
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="99클럽 코테 스터디 36일차 TIL - 2434 Using a Robot to Print the Lexicographically Smallest String">
+    <meta itemprop="description" content="2434. Using a Robot to Print the Lexicographically Smallest String / c++ / Medium / 1시간+">
+    <meta itemprop="datePublished" content="2024-06-24T00:00:00+00:00">
     
-      <h1 id="page-title" class="page__title">C #</h1>
-    
-    
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+
+    <div class="page__inner-wrap">
       
-        <a href="/c%20sharp/DelegateAndEvent/" rel="permalink">Delegate / Event
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://sho1007.github.io/leetcode/2434/" class="u-url" itemprop="url">99클럽 코테 스터디 36일차 TIL - 2434 Using a Robot to Print the Lexicographically Smallest String
 </a>
-      
-    </h2>
-    
+          </h1>
+          
 
   <p class="page__meta">
     
@@ -711,7 +716,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2023-02-17T00:00:00+00:00">February 17, 2023</time>
+        <time datetime="2024-06-24T00:00:00+00:00">June 24, 2024</time>
       </span>
     
 
@@ -731,20 +736,377 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Delegate
-정의
-같은 형식의 [단일 / 복수] 함수를 대신하여 호출해주는 대리자
+        </header>
+      
 
-  메서드만 호출 가능
-  외부에서도 호출 가능 (단, private / protected 메서드는 호출 불가)
-    형식
-    // [접근 한정자] delegate [반환형] [델리게이트 ...</p>
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#2434-using-a-robot-to-print-the-lexicographically-smallest-string--c--medium--1시간">2434. Using a Robot to Print the Lexicographically Smallest String / c++ / Medium / 1시간+</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#자료-구조--스택">자료 구조 / 스택</a></li></ul></li><li><a href="#생각해-볼-점">생각해 볼 점</a><ul><li><a href="#해시태그">해시태그</a></li></ul></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="2434-using-a-robot-to-print-the-lexicographically-smallest-string--c--medium--1시간">2434. Using a Robot to Print the Lexicographically Smallest String / c++ / Medium / 1시간+</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stack&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;set&gt;</span><span class="cp">
+</span><span class="n">stack</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="n">Stack</span><span class="p">;</span>
+<span class="n">multiset</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="n">ms</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">string</span> <span class="n">robotWithString</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+        <span class="n">Stack</span> <span class="o">=</span> <span class="n">stack</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">ms</span> <span class="o">=</span> <span class="n">multiset</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">ms</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="p">}</span>
+        <span class="n">string</span> <span class="n">answer</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">Stack</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+            <span class="p">{</span>
+                <span class="n">Stack</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">index</span><span class="p">]);</span>
+                <span class="n">ms</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">ms</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">index</span><span class="o">++</span><span class="p">]));</span>
+            <span class="p">}</span>
+
+            <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">ms</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">Stack</span><span class="p">.</span><span class="n">top</span><span class="p">()</span> <span class="o">&gt;</span> <span class="o">*</span><span class="n">ms</span><span class="p">.</span><span class="n">begin</span><span class="p">())</span>
+            <span class="p">{</span>
+                <span class="n">Stack</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">index</span><span class="p">]);</span>
+                <span class="n">ms</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">ms</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">index</span><span class="o">++</span><span class="p">]));</span>
+            <span class="p">}</span>
+
+            <span class="n">answer</span> <span class="o">+=</span> <span class="n">Stack</span><span class="p">.</span><span class="n">top</span><span class="p">();</span> <span class="n">Stack</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="c1">// cout &lt;&lt; answer &lt;&lt; '\n';</span>
+        <span class="p">}</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">Stack</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="n">answer</span> <span class="o">+=</span> <span class="n">Stack</span><span class="p">.</span><span class="n">top</span><span class="p">();</span> <span class="n">Stack</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">answer</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="자료-구조--스택">자료 구조 / 스택</h3>
+<ol>
+  <li>주어진 문자열 s와, 저장 공간 t를 활용하여 만들어질 수 있는 문자열 중, 사전적으로 가장 앞에 오는 문자열을 반환하는 문제</li>
+  <li>답은 문제에 있었다. 1번 동작은 s의 가장 앞 문자를 t의 가장 뒤에 붙이는 것, 2번 동작은 t의 가장 뒤에 있는 문자를 종이 (여기선는 answer)에 추가하는 것이었다.</li>
+  <li>2번에서 알 수 있듯이, t는 뒤에 추가되고, 뒤에서 제거된다. (LIFO) 즉, 스택 자료형이다.</li>
+  <li>이를 토대로 로직을 재구성해보면</li>
+  <li>우선 최소값을 알아야 하기 때문에 s의 모든 문자를 multiset인 ms에 넣는다.</li>
+  <li>index가 n (s의 length)보다 작을 동안 아래를 반복</li>
+  <li>만약 t가 비어있다면 s[index]를 t에 넣고, ms에서 s[index]를 제거해준 후 index 증가</li>
+  <li>t.top()이 *ms.begin() (남은 문자열 중 가장 작은 문자) 보다 크다면, 계속 t에 넣는다.</li>
+  <li>그러다 t.top()이 *ms.begin() 보다 작거나 같다면 (적지 않는 모든 문자 중 가장 작은 문자라면) answer에 적고 t에서 제거한다. (t.pop())</li>
+  <li>결국 s의 모든 문자가 t에 들어가고 그 중 일부는 answer에 적힌 채로 반복이 종료된다.</li>
+  <li>마지막으로 t가 빌 때까지, t에 들어있는 모든 문자를 answer에 추가해준다.</li>
+  <li>answer를 반환</li>
+  <li>해결</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>여러 방법을 생각하다 t의 구조가 stack과 유사하다고 생각했고, 남은 문자열의 최소 문자를 찾기 위해 multiset을 활용했다. 99클럽의 이전 문제에서 multiset을 활용했던 경험이 도움이 되었다.</li>
+  <li>나름 어렵게 느껴진 문제였지만, stl을 활용하여 스스로 풀었다는 점에서 성취감을 느낄 수 있었다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a><span class="sep">, </span>
+    
+      <a href="/tags/#codingtest" class="page__taxonomy-item p-category" rel="tag">CodingTest</a><span class="sep">, </span>
+    
+      <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
+    
+      <a href="/tags/#datastructure" class="page__taxonomy-item p-category" rel="tag">DataStructure</a><span class="sep">, </span>
+    
+      <a href="/tags/#stack" class="page__taxonomy-item p-category" rel="tag">Stack</a><span class="sep">, </span>
+    
+      <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#leetcode" class="page__taxonomy-item p-category" rel="tag">LeetCode</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-24T00:00:00+00:00">June 24, 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=99%ED%81%B4%EB%9F%BD+%EC%BD%94%ED%85%8C+%EC%8A%A4%ED%84%B0%EB%94%94+36%EC%9D%BC%EC%B0%A8+TIL+-+2434+Using+a+Robot+to+Print+the+Lexicographically+Smallest+String%20https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2434%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2434%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2434%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/leetcode/2762/" class="pagination--pager" title="99클럽 코테 스터디 35일차 TIL - 2762 Continuous Subarrays
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/leetcode/2762/" rel="permalink">99클럽 코테 스터디 35일차 TIL - 2762 Continuous Subarrays
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-23T00:00:00+00:00">June 23, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">2762. Continuous Subarrays / c++ / Medium / 2시간+
+</p>
   </article>
 </div>
 
+        
+          
 
-  </div>
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/leetcode/2944/" rel="permalink">99클럽 코테 스터디 34일차 TIL - 2944 Minimum Number of Coins for Fruits
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-22T00:00:00+00:00">June 22, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">2944. Minimum Number of Coins for Fruits / c++ / Medium / 1시간+
+</p>
+  </article>
 </div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/leetcode/2195/" rel="permalink">99클럽 코테 스터디 33일차 TIL - 2195 Append K Integers With Minimal Sum
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-21T00:00:00+00:00">June 21, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">2195. Append K Integers With Minimal Sum / c++ / Medium / 8분+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/leetcode/2280/" rel="permalink">99클럽 코테 스터디 32일차 TIL - 2280 Minimum Lines to Represent a Line Chart
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-20T00:00:00+00:00">June 20, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">2280. Minimum Lines to Represent a Line Chart / c++ / Medium / 1시간+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
     </div>
 
     

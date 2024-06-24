@@ -1030,4 +1030,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","TwoPointer"],
         "url": "/leetcode/2762/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 36일차 TIL - 2434 Using a Robot to Print the Lexicographically Smallest String",
+        "excerpt":"2434. Using a Robot to Print the Lexicographically Smallest String / c++ / Medium / 1시간+ 문제 및 코드 #include &lt;stack&gt; #include &lt;set&gt; stack&lt;char&gt; Stack; multiset&lt;char&gt; ms; class Solution { public: string robotWithString(string s) { int n = s.length(); Stack = stack&lt;char&gt;(); ms = multiset&lt;char&gt;(); for (int i = 0;...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","Stack"],
+        "url": "/leetcode/2434/",
+        "teaser": null
       }]

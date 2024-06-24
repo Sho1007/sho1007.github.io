@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-23T17:33:52+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 35일차 TIL - 2762 Continuous Subarrays</title><link href="https://sho1007.github.io/leetcode/2762/" rel="alternate" type="text/html" title="99클럽 코테 스터디 35일차 TIL - 2762 Continuous Subarrays" /><published>2024-06-23T00:00:00+00:00</published><updated>2024-06-23T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2762</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2762/"><![CDATA[<h1 id="2762-continuous-subarrays--c--medium--2시간">2762. Continuous Subarrays / c++ / Medium / 2시간+</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-24T15:07:50+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 36일차 TIL - 2434 Using a Robot to Print the Lexicographically Smallest String</title><link href="https://sho1007.github.io/leetcode/2434/" rel="alternate" type="text/html" title="99클럽 코테 스터디 36일차 TIL - 2434 Using a Robot to Print the Lexicographically Smallest String" /><published>2024-06-24T00:00:00+00:00</published><updated>2024-06-24T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2434</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2434/"><![CDATA[<h1 id="2434-using-a-robot-to-print-the-lexicographically-smallest-string--c--medium--1시간">2434. Using a Robot to Print the Lexicographically Smallest String / c++ / Medium / 1시간+</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stack&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;set&gt;</span><span class="cp">
+</span><span class="n">stack</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="n">Stack</span><span class="p">;</span>
+<span class="n">multiset</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="n">ms</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">string</span> <span class="n">robotWithString</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+        <span class="n">Stack</span> <span class="o">=</span> <span class="n">stack</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">ms</span> <span class="o">=</span> <span class="n">multiset</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">ms</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="p">}</span>
+        <span class="n">string</span> <span class="n">answer</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">Stack</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+            <span class="p">{</span>
+                <span class="n">Stack</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">index</span><span class="p">]);</span>
+                <span class="n">ms</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">ms</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">index</span><span class="o">++</span><span class="p">]));</span>
+            <span class="p">}</span>
+
+            <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">ms</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">Stack</span><span class="p">.</span><span class="n">top</span><span class="p">()</span> <span class="o">&gt;</span> <span class="o">*</span><span class="n">ms</span><span class="p">.</span><span class="n">begin</span><span class="p">())</span>
+            <span class="p">{</span>
+                <span class="n">Stack</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">index</span><span class="p">]);</span>
+                <span class="n">ms</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">ms</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">index</span><span class="o">++</span><span class="p">]));</span>
+            <span class="p">}</span>
+
+            <span class="n">answer</span> <span class="o">+=</span> <span class="n">Stack</span><span class="p">.</span><span class="n">top</span><span class="p">();</span> <span class="n">Stack</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="c1">// cout &lt;&lt; answer &lt;&lt; '\n';</span>
+        <span class="p">}</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">Stack</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="n">answer</span> <span class="o">+=</span> <span class="n">Stack</span><span class="p">.</span><span class="n">top</span><span class="p">();</span> <span class="n">Stack</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">answer</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="자료-구조--스택">자료 구조 / 스택</h3>
+<ol>
+  <li>주어진 문자열 s와, 저장 공간 t를 활용하여 만들어질 수 있는 문자열 중, 사전적으로 가장 앞에 오는 문자열을 반환하는 문제</li>
+  <li>답은 문제에 있었다. 1번 동작은 s의 가장 앞 문자를 t의 가장 뒤에 붙이는 것, 2번 동작은 t의 가장 뒤에 있는 문자를 종이 (여기선는 answer)에 추가하는 것이었다.</li>
+  <li>2번에서 알 수 있듯이, t는 뒤에 추가되고, 뒤에서 제거된다. (LIFO) 즉, 스택 자료형이다.</li>
+  <li>이를 토대로 로직을 재구성해보면</li>
+  <li>우선 최소값을 알아야 하기 때문에 s의 모든 문자를 multiset인 ms에 넣는다.</li>
+  <li>index가 n (s의 length)보다 작을 동안 아래를 반복</li>
+  <li>만약 t가 비어있다면 s[index]를 t에 넣고, ms에서 s[index]를 제거해준 후 index 증가</li>
+  <li>t.top()이 *ms.begin() (남은 문자열 중 가장 작은 문자) 보다 크다면, 계속 t에 넣는다.</li>
+  <li>그러다 t.top()이 *ms.begin() 보다 작거나 같다면 (적지 않는 모든 문자 중 가장 작은 문자라면) answer에 적고 t에서 제거한다. (t.pop())</li>
+  <li>결국 s의 모든 문자가 t에 들어가고 그 중 일부는 answer에 적힌 채로 반복이 종료된다.</li>
+  <li>마지막으로 t가 빌 때까지, t에 들어있는 모든 문자를 answer에 추가해준다.</li>
+  <li>answer를 반환</li>
+  <li>해결</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>여러 방법을 생각하다 t의 구조가 stack과 유사하다고 생각했고, 남은 문자열의 최소 문자를 찾기 위해 multiset을 활용했다. 99클럽의 이전 문제에서 multiset을 활용했던 경험이 도움이 되었다.</li>
+  <li>나름 어렵게 느껴진 문제였지만, stl을 활용하여 스스로 풀었다는 점에서 성취감을 느낄 수 있었다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DataStructure" /><category term="Stack" /><summary type="html"><![CDATA[2434. Using a Robot to Print the Lexicographically Smallest String / c++ / Medium / 1시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 35일차 TIL - 2762 Continuous Subarrays</title><link href="https://sho1007.github.io/leetcode/2762/" rel="alternate" type="text/html" title="99클럽 코테 스터디 35일차 TIL - 2762 Continuous Subarrays" /><published>2024-06-23T00:00:00+00:00</published><updated>2024-06-23T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2762</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2762/"><![CDATA[<h1 id="2762-continuous-subarrays--c--medium--2시간">2762. Continuous Subarrays / c++ / Medium / 2시간+</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -580,43 +653,4 @@
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Array" /><category term="BinarySearch" /><summary type="html"><![CDATA[2861. Maximum Number of Alloys / c++ / Medium / 1시간]]></summary></entry><entry><title type="html">99클럽 코테 스터디 26일차 TIL - 275 H-Index II</title><link href="https://sho1007.github.io/leetcode/275/" rel="alternate" type="text/html" title="99클럽 코테 스터디 26일차 TIL - 275 H-Index II" /><published>2024-06-14T00:00:00+00:00</published><updated>2024-06-14T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/275</id><content type="html" xml:base="https://sho1007.github.io/leetcode/275/"><![CDATA[<h1 id="275-h-index-ii--c--medium--4분">275. H-Index II / c++ / Medium / 4분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
-</span><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="nl">public:</span>
-    <span class="kt">int</span> <span class="n">hIndex</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">citations</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">sort</span><span class="p">(</span><span class="n">citations</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">citations</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">citations</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">citations</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">citations</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-            <span class="p">{</span>
-                <span class="k">return</span> <span class="n">citations</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="n">i</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div></div>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="배열--정렬">배열 / 정렬</h3>
-<ol>
-  <li>H-Index는 h번 이상 인용된 논문이 h개 이상일 때의 최대값이다.</li>
-  <li>우선 배열을 정렬한뒤, 순회한다.</li>
-  <li>순회하면서 현재 남은 논문 갯수 (citations.size()-i)보다 현재 논문의 인용 횟수(citations[i])가 크거나 같다면, H-Index는 는 남은 논문의 갯수이므로 그것을 반환한다.</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>H-Index는 백준에서 이미 풀어본 경험이 있는 문제여서 쉽게 풀 수 있었다.</li>
-  <li>백준에서 처음 이 문제를 접했을 때는 최대값 범위를 어떻게 잡아야하고 어떻게 접근할지 감이 잘 안왔었는데, 그 때 제대로 이해하고 넘어가니 다음에 다시 이 문제가 나왔을 때, 쉽게 다시 풀 수 있었던 것 같다.</li>
-  <li>h-index는 결국 논문의 개수로 제한되니 최대값은 최대 논문의 개수이다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Array" /><summary type="html"><![CDATA[275. H-Index II / c++ / Medium / 4분]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Array" /><category term="BinarySearch" /><summary type="html"><![CDATA[2861. Maximum Number of Alloys / c++ / Medium / 1시간]]></summary></entry></feed>
