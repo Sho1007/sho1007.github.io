@@ -1036,4 +1036,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","Stack"],
         "url": "/leetcode/2434/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 37일차 TIL - 385 Mini Parser",
+        "excerpt":"385. Mini Parser / c++ / Medium / 2시간+ 문제 및 코드 class Solution { public: NestedInteger deserialize(string s) { if (s[0] != '[') return NestedInteger(stoi(s)); s = s.substr(1, s.length() - 2); NestedInteger ni; string current = \"\"; for (int i = 0; i &lt; s.length(); ++i) { if (s[i]...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","Stack"],
+        "url": "/leetcode/385/",
+        "teaser": null
       }]

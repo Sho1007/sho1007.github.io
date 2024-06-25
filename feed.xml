@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-24T15:07:50+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 36일차 TIL - 2434 Using a Robot to Print the Lexicographically Smallest String</title><link href="https://sho1007.github.io/leetcode/2434/" rel="alternate" type="text/html" title="99클럽 코테 스터디 36일차 TIL - 2434 Using a Robot to Print the Lexicographically Smallest String" /><published>2024-06-24T00:00:00+00:00</published><updated>2024-06-24T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2434</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2434/"><![CDATA[<h1 id="2434-using-a-robot-to-print-the-lexicographically-smallest-string--c--medium--1시간">2434. Using a Robot to Print the Lexicographically Smallest String / c++ / Medium / 1시간+</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-25T19:20:25+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 37일차 TIL - 385 Mini Parser</title><link href="https://sho1007.github.io/leetcode/385/" rel="alternate" type="text/html" title="99클럽 코테 스터디 37일차 TIL - 385 Mini Parser" /><published>2024-06-25T00:00:00+00:00</published><updated>2024-06-25T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/385</id><content type="html" xml:base="https://sho1007.github.io/leetcode/385/"><![CDATA[<h1 id="385-mini-parser--c--medium--2시간">385. Mini Parser / c++ / Medium / 2시간+</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">NestedInteger</span> <span class="n">deserialize</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">'['</span><span class="p">)</span> <span class="k">return</span> <span class="n">NestedInteger</span><span class="p">(</span><span class="n">stoi</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+
+        <span class="n">NestedInteger</span> <span class="n">ni</span><span class="p">;</span>
+
+        <span class="n">string</span> <span class="n">current</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">','</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">current</span> <span class="o">!=</span> <span class="s">""</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">ni</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">NestedInteger</span><span class="p">(</span><span class="n">stoi</span><span class="p">(</span><span class="n">current</span><span class="p">)));</span>
+                    <span class="n">current</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'['</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">bracketCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+                <span class="k">for</span> <span class="p">(;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span><span class="sc">'['</span><span class="p">)</span> <span class="n">bracketCount</span><span class="o">++</span><span class="p">;</span>
+                    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span><span class="sc">']'</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="o">--</span><span class="n">bracketCount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="n">ni</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">deserialize</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)));</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">current</span> <span class="o">+=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">current</span> <span class="o">!=</span> <span class="s">""</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">ni</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">NestedInteger</span><span class="p">(</span><span class="n">stoi</span><span class="p">(</span><span class="n">current</span><span class="p">)));</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">ni</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="자료-구조--스택">자료 구조 / 스택</h3>
+<ol>
+  <li>주어진 문자열을 NestedInteger라고 하는 자료형구조로 변환(복원)하는 문제였다.</li>
+  <li>문자열이 ‘[‘로 시작하면 앞뒤의 ‘[‘와 ‘]’를 제거해준다.</li>
+  <li>NestedInteger를 생성하고 문자열을 순회하면서 아래의 규칙으로 진행
+    <ol>
+      <li>’[‘을 만난다면, 괄호갯수를 카운트해주며 짝이 맞는 닫힌 괄호까지를 새롭게 deserialize에 넣어서 현재 NestedInteger에 add해준다. (그리고 i를 닫힌 괄호의 다음으로 이동)</li>
+      <li>’,’를 만나면, 만약 current (integer로 바꿀 string)이 비어있지 않다면 NestedInteger로 만들어서 현재 NestedInteger에 추가해준다.</li>
+      <li>위의 두 경우가 아니라면 숫자이므로 current에 추가해준다.</li>
+    </ol>
+  </li>
+  <li>위의 방법으로 생성된 NestedInteger를 반환</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>문제 자체는 재귀적으로 해결하면 쉬운 문제였지만, 이해를 잘못해서 시간을 엄청 잡아먹었다.</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="DataStructure" /><category term="Stack" /><summary type="html"><![CDATA[385. Mini Parser / c++ / Medium / 2시간+]]></summary></entry><entry><title type="html">99클럽 코테 스터디 36일차 TIL - 2434 Using a Robot to Print the Lexicographically Smallest String</title><link href="https://sho1007.github.io/leetcode/2434/" rel="alternate" type="text/html" title="99클럽 코테 스터디 36일차 TIL - 2434 Using a Robot to Print the Lexicographically Smallest String" /><published>2024-06-24T00:00:00+00:00</published><updated>2024-06-24T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2434</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2434/"><![CDATA[<h1 id="2434-using-a-robot-to-print-the-lexicographically-smallest-string--c--medium--1시간">2434. Using a Robot to Print the Lexicographically Smallest String / c++ / Medium / 1시간+</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -591,66 +666,4 @@
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Array" /><summary type="html"><![CDATA[2145. Count the Hidden Sequences / c++ / Medium / 47분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys</title><link href="https://sho1007.github.io/leetcode/2861/" rel="alternate" type="text/html" title="99클럽 코테 스터디 27일차 TIL - 2861 Maximum Number of Alloys" /><published>2024-06-15T00:00:00+00:00</published><updated>2024-06-15T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2861</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2861/"><![CDATA[<h1 id="2861-maximum-number-of-alloys--c--medium--1시간">2861. Maximum Number of Alloys / c++ / Medium / 1시간</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="nl">public:</span>
-    <span class="kt">bool</span> <span class="n">CheckMakeAlloys</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="kt">int</span> <span class="n">budget</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">composition</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">stock</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">cost</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">count</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">currentBudget</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">needCount</span> <span class="o">=</span> <span class="n">count</span> <span class="o">*</span> <span class="n">composition</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">stock</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">needCount</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
-
-                <span class="n">currentBudget</span> <span class="o">+=</span> <span class="p">(</span><span class="n">needCount</span> <span class="o">-</span> <span class="n">stock</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">*</span> <span class="n">cost</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
-            <span class="p">}</span>
-
-            <span class="k">if</span> <span class="p">(</span><span class="n">currentBudget</span> <span class="o">&lt;=</span> <span class="n">budget</span><span class="p">)</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="kt">int</span> <span class="n">maxNumberOfAlloys</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="kt">int</span> <span class="n">budget</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">composition</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">stock</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">cost</span><span class="p">)</span> <span class="p">{</span>
-
-        <span class="kt">int</span> <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">987'654'321</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">answer</span><span class="p">;</span>
-
-        <span class="k">while</span> <span class="p">(</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span> <span class="o">+</span> <span class="n">right</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-
-            <span class="k">if</span> <span class="p">(</span><span class="n">CheckMakeAlloys</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">budget</span><span class="p">,</span> <span class="n">composition</span><span class="p">,</span> <span class="n">stock</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="n">mid</span><span class="p">))</span>
-            <span class="p">{</span>
-                <span class="n">answer</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>
-                <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="k">else</span>
-            <span class="p">{</span>
-                <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-        <span class="k">return</span> <span class="n">answer</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div></div>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="배열--이분탐색">배열 / 이분탐색</h3>
-<ol>
-  <li>갯수를 기준으로 이분탐색을 해서, k개의 기계 중 mid 개 만큼의 합금을 budget 이하의 금액으로 만들 수 있는 최대 mid 를 반환하는 문제였다.</li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>이분탐색 치고는 조건이 많이 들어가는 편이었고, 명확한 제한값도 찾지 못해서 꽤나 번거로웠다.</li>
-  <li>count개의 합금을 만들 때, stock[j]개만큼을 빼고 계산해야한는데 그 식을 composition[i][j] * (count - stock[j]) * cost[j] 로 계산해서 틀렸었다. (count개를 만들 때, 합금 한개 당 composition[i][j]만큼의 광석이 들어가므로, 제대로 된 식은 (composition[i][j] * count - stock[j]) * cost[j] 이다.)</li>
-  <li>별 생각없이 left값을 1로 설정해서 또 한번 틀렸었다. (최대 한개도 만들 수 없으므로, 0으로 설정해야했다.)</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Array" /><category term="BinarySearch" /><summary type="html"><![CDATA[2861. Maximum Number of Alloys / c++ / Medium / 1시간]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Array" /><summary type="html"><![CDATA[2145. Count the Hidden Sequences / c++ / Medium / 47분]]></summary></entry></feed>

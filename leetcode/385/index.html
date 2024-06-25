@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>99클럽 코테 스터디 11일차 TIL - 84021 퍼즐 조각 채우기 - Today I Learned</title>
-<meta name="description" content="84021. 퍼즐 조각 채우기 / c++ / level3 / 1시간+">
+<!-- begin _includes/seo.html --><title>99클럽 코테 스터디 37일차 TIL - 385 Mini Parser - Today I Learned</title>
+<meta name="description" content="385. Mini Parser / c++ / Medium / 2시간+">
 
 
   <meta name="author" content="Sho1007">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Today I Learned">
-<meta property="og:title" content="99클럽 코테 스터디 11일차 TIL - 84021 퍼즐 조각 채우기">
-<meta property="og:url" content="https://sho1007.github.io/programmers/84021/">
+<meta property="og:title" content="99클럽 코테 스터디 37일차 TIL - 385 Mini Parser">
+<meta property="og:url" content="https://sho1007.github.io/leetcode/385/">
 
 
-  <meta property="og:description" content="84021. 퍼즐 조각 채우기 / c++ / level3 / 1시간+">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-05-30T00:00:00+00:00">
+  <meta property="og:description" content="385. Mini Parser / c++ / Medium / 2시간+">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-25T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://sho1007.github.io/programmers/84021/">
+
+<link rel="canonical" href="https://sho1007.github.io/leetcode/385/">
 
 
 
@@ -696,16 +696,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="99클럽 코테 스터디 11일차 TIL - 84021 퍼즐 조각 채우기">
-    <meta itemprop="description" content="84021. 퍼즐 조각 채우기 / c++ / level3 / 1시간+">
-    <meta itemprop="datePublished" content="2024-05-30T00:00:00+00:00">
+    <meta itemprop="headline" content="99클럽 코테 스터디 37일차 TIL - 385 Mini Parser">
+    <meta itemprop="description" content="385. Mini Parser / c++ / Medium / 2시간+">
+    <meta itemprop="datePublished" content="2024-06-25T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://sho1007.github.io/programmers/84021/" class="u-url" itemprop="url">99클럽 코테 스터디 11일차 TIL - 84021 퍼즐 조각 채우기
+            <a href="https://sho1007.github.io/leetcode/385/" class="u-url" itemprop="url">99클럽 코테 스터디 37일차 TIL - 385 Mini Parser
 </a>
           </h1>
           
@@ -716,7 +716,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2024-05-30T00:00:00+00:00">May 30, 2024</time>
+        <time datetime="2024-06-25T00:00:00+00:00">June 25, 2024</time>
       </span>
     
 
@@ -744,41 +744,83 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#84021-퍼즐-조각-채우기--c--level3--1시간">84021. 퍼즐 조각 채우기 / c++ / level3 / 1시간+</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#그래프-탐색--bfs--구현">그래프 탐색 / BFS / 구현</a></li></ul></li><li><a href="#생각해-볼-점">생각해 볼 점</a><ul><li><a href="#해시태그">해시태그</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#385-mini-parser--c--medium--2시간">385. Mini Parser / c++ / Medium / 2시간+</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#자료-구조--스택">자료 구조 / 스택</a></li></ul></li><li><a href="#생각해-볼-점">생각해 볼 점</a><ul><li><a href="#해시태그">해시태그</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="84021-퍼즐-조각-채우기--c--level3--1시간">84021. 퍼즐 조각 채우기 / c++ / level3 / 1시간+</h1>
+        <h1 id="385-mini-parser--c--medium--2시간">385. Mini Parser / c++ / Medium / 2시간+</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
-<p><a href="https://github.com/Sho1007/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/84021.%E2%80%85%ED%8D%BC%EC%A6%90%E2%80%85%EC%A1%B0%EA%B0%81%E2%80%85%EC%B1%84%EC%9A%B0%EA%B8%B0"><img src="https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/github-logo-vector.png?raw=true" width="200" height="100" /></a></p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">NestedInteger</span> <span class="n">deserialize</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">'['</span><span class="p">)</span> <span class="k">return</span> <span class="n">NestedInteger</span><span class="p">(</span><span class="n">stoi</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+
+        <span class="n">NestedInteger</span> <span class="n">ni</span><span class="p">;</span>
+
+        <span class="n">string</span> <span class="n">current</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">','</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">current</span> <span class="o">!=</span> <span class="s">""</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">ni</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">NestedInteger</span><span class="p">(</span><span class="n">stoi</span><span class="p">(</span><span class="n">current</span><span class="p">)));</span>
+                    <span class="n">current</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'['</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">bracketCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+                <span class="k">for</span> <span class="p">(;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span><span class="sc">'['</span><span class="p">)</span> <span class="n">bracketCount</span><span class="o">++</span><span class="p">;</span>
+                    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span><span class="sc">']'</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="o">--</span><span class="n">bracketCount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="n">ni</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">deserialize</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)));</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">current</span> <span class="o">+=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">current</span> <span class="o">!=</span> <span class="s">""</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">ni</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">NestedInteger</span><span class="p">(</span><span class="n">stoi</span><span class="p">(</span><span class="n">current</span><span class="p">)));</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">ni</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
 
 <h2 id="접근-방식">접근 방식</h2>
-<h3 id="그래프-탐색--bfs--구현">그래프 탐색 / BFS / 구현</h3>
+<h3 id="자료-구조--스택">자료 구조 / 스택</h3>
 <ol>
-  <li>먼저 table 에서 블록(위치값의 벡터)들을 BFS 로 구한다.</li>
-  <li>table을 탐색할 때, 좌상단부터 우하단 방향으로 탐색하기에, 블록의 첫 번째 부분은 항상 가장 위에 있고, 그 중 가장 왼쪽에 위치한다.</li>
-  <li>구한 블록을 첫 번째 부분 기준으로 다시 표현한다. (모든 칸에서 첫 번째 칸의 위치를 빼주면 됨, 이 때 첫 번째 부분이 1에서 설명한 것처럼 가장 작으므로 모든 값은 양수로 표시됨)</li>
-  <li>블록을 총 3번 회전시켜서 4개의 형태를 모두 구한다. (이 때는 블록의 x,y 좌표를 바꾸고, y 좌표에 -1을 곱해줌)</li>
-  <li>해당 블록들을 다시 정렬한다. (4번으로 인해 정렬이 틀어졌기 때문)</li>
-  <li>블록 구하기가 끝나면 이제 board에서 빈칸을 찾는다. (블록과 마찬가지로 위치값의 벡터로 구함)</li>
-  <li>빈칸이 구해지면, 3번에서처럼 빈칸을 첫 번째 부분을 기준으로 다시 표현한다.</li>
-  <li>그 후 빈칸을 정렬한다.</li>
-  <li>정렬된 빈칸을 블록 벡터를 순회하면서 맞는 블록이 있는지 찾는다. (이 때, usedBlock 이라는 bool 벡터를 하나 선언해서 블록의 재사용을 막는다. 또한 한 블록은 4개의 회전 형태를 모두 고려한다.)
+  <li>주어진 문자열을 NestedInteger라고 하는 자료형구조로 변환(복원)하는 문제였다.</li>
+  <li>문자열이 ‘[‘로 시작하면 앞뒤의 ‘[‘와 ‘]’를 제거해준다.</li>
+  <li>NestedInteger를 생성하고 문자열을 순회하면서 아래의 규칙으로 진행
     <ol>
-      <li>맞는 블록이 있다면, usedBlock 에 해당 블록을 체크해주고, 블록의 칸 갯수를 answer에 더한다.</li>
-      <li>맞는 블록이 없다면, BFS에서 사용한 방문 정보를 초기화시킨다. (해당 빈칸을 다른 부분에서 다시 찾기 위함)</li>
+      <li>’[‘을 만난다면, 괄호갯수를 카운트해주며 짝이 맞는 닫힌 괄호까지를 새롭게 deserialize에 넣어서 현재 NestedInteger에 add해준다. (그리고 i를 닫힌 괄호의 다음으로 이동)</li>
+      <li>’,’를 만나면, 만약 current (integer로 바꿀 string)이 비어있지 않다면 NestedInteger로 만들어서 현재 NestedInteger에 추가해준다.</li>
+      <li>위의 두 경우가 아니라면 숫자이므로 current에 추가해준다.</li>
     </ol>
   </li>
-  <li>위의 과정으로 board를 모두 탐색하면 answer를 반환한다.</li>
+  <li>위의 방법으로 생성된 NestedInteger를 반환</li>
 </ol>
 
 <h2 id="생각해-볼-점">생각해 볼 점</h2>
 <ol>
-  <li>이미 풀어봤던 문제임에도 시간이 꽤 걸렸다. 틀을 잡는건 금방 했는데, 블록을 탐색한 후 정렬을 언제 해줘야하는지가 많이 헷갈렸다. 문제를 정확하게 먼저 분석하고 풀었어야했는데, 또 바로 푸는 습관이 나와서 더 오래 걸렸던 것 같다.</li>
-  <li>게더타운에서 풀기 위해 밤 늦게 풀었더니 졸려서 머리가 더 안돌아갔던 것 같다.</li>
+  <li>문제 자체는 재귀적으로 해결하면 쉬운 문제였지만, 이해를 잘못해서 시간을 엄청 잡아먹었다.</li>
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
@@ -801,13 +843,13 @@
     
       <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a><span class="sep">, </span>
     
-      <a href="/tags/#bfs" class="page__taxonomy-item p-category" rel="tag">BFS</a><span class="sep">, </span>
-    
       <a href="/tags/#codingtest" class="page__taxonomy-item p-category" rel="tag">CodingTest</a><span class="sep">, </span>
     
       <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
     
-      <a href="/tags/#graph" class="page__taxonomy-item p-category" rel="tag">Graph</a><span class="sep">, </span>
+      <a href="/tags/#datastructure" class="page__taxonomy-item p-category" rel="tag">DataStructure</a><span class="sep">, </span>
+    
+      <a href="/tags/#stack" class="page__taxonomy-item p-category" rel="tag">Stack</a><span class="sep">, </span>
     
       <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
     
@@ -826,7 +868,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#programmers" class="page__taxonomy-item p-category" rel="tag">Programmers</a>
+      <a href="/categories/#leetcode" class="page__taxonomy-item p-category" rel="tag">LeetCode</a>
     
     </span>
   </p>
@@ -834,7 +876,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-05-30T00:00:00+00:00">May 30, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-25T00:00:00+00:00">June 25, 2024</time></p>
 
       </footer>
 
@@ -843,23 +885,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=99%ED%81%B4%EB%9F%BD+%EC%BD%94%ED%85%8C+%EC%8A%A4%ED%84%B0%EB%94%94+11%EC%9D%BC%EC%B0%A8+TIL+-+84021+%ED%8D%BC%EC%A6%90+%EC%A1%B0%EA%B0%81+%EC%B1%84%EC%9A%B0%EA%B8%B0%20https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F84021%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=99%ED%81%B4%EB%9F%BD+%EC%BD%94%ED%85%8C+%EC%8A%A4%ED%84%B0%EB%94%94+37%EC%9D%BC%EC%B0%A8+TIL+-+385+Mini+Parser%20https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F385%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F84021%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F385%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fprogrammers%2F84021%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F385%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/programmers/86971/" class="pagination--pager" title="99클럽 코테 스터디 10일차 TIL - 86971 전력망을 둘로 나누기
+      <a href="/leetcode/2434/" class="pagination--pager" title="99클럽 코테 스터디 36일차 TIL - 2434 Using a Robot to Print the Lexicographically Smallest String
 ">Previous</a>
     
     
-      <a href="/programmers/43164/" class="pagination--pager" title="99클럽 코테 스터디 12일차 TIL - 43164 여행경로
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -873,53 +914,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/leetcode/385/" rel="permalink">99클럽 코테 스터디 37일차 TIL - 385 Mini Parser
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2024-06-25T00:00:00+00:00">June 25, 2024</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">385. Mini Parser / c++ / Medium / 2시간+
-</p>
-  </article>
-</div>
-
         
           
 
@@ -1057,6 +1051,53 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">2944. Minimum Number of Coins for Fruits / c++ / Medium / 1시간+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/leetcode/2195/" rel="permalink">99클럽 코테 스터디 33일차 TIL - 2195 Append K Integers With Minimal Sum
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-21T00:00:00+00:00">June 21, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">2195. Append K Integers With Minimal Sum / c++ / Medium / 8분+
 </p>
   </article>
 </div>
