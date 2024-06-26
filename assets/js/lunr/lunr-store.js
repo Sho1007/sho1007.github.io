@@ -1042,4 +1042,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","Stack"],
         "url": "/leetcode/385/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 38일차 TIL - 3112 Minimum Time to Visit Disappearing Nodes",
+        "excerpt":"3112. Minimum Time to Visit Disappearing Nodes / c++ / Medium / 1시간+ 문제 및 코드 class Solution { public: vector&lt;int&gt; minimumTime(int n, vector&lt;vector&lt;int&gt;&gt;&amp; edges, vector&lt;int&gt;&amp; disappear) { vector&lt;int&gt; answer = vector&lt;int&gt;(n, -1); answer[0] = 0; vector&lt;vector&lt;pair&lt;int,int&gt;&gt;&gt; adjVector = vector&lt;vector&lt;pair&lt;int,int&gt;&gt;&gt;(n); for (int i = 0; i &lt; edges.size(); ++i) {...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","Heap"],
+        "url": "/leetcode/3112/",
+        "teaser": null
       }]
