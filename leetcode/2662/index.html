@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>1916 최소비용 구하기 (80등) - Today I Learned</title>
-<meta name="description" content="1916 최소비용 구하기 (c++)">
+<!-- begin _includes/seo.html --><title>99클럽 코테 스터디 39일차 TIL - 2662 Minimum Cost of a Path With Special Roads - Today I Learned</title>
+<meta name="description" content="2662. Minimum Cost of a Path With Special Roads / c++ / Medium / 2시간+">
 
 
   <meta name="author" content="Sho1007">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Today I Learned">
-<meta property="og:title" content="1916 최소비용 구하기 (80등)">
-<meta property="og:url" content="https://sho1007.github.io/boj/1916/">
+<meta property="og:title" content="99클럽 코테 스터디 39일차 TIL - 2662 Minimum Cost of a Path With Special Roads">
+<meta property="og:url" content="https://sho1007.github.io/leetcode/2662/">
 
 
-  <meta property="og:description" content="1916 최소비용 구하기 (c++)">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-11-04T00:00:00+00:00">
+  <meta property="og:description" content="2662. Minimum Cost of a Path With Special Roads / c++ / Medium / 2시간+">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-27T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://sho1007.github.io/boj/1916/">
+
+<link rel="canonical" href="https://sho1007.github.io/leetcode/2662/">
 
 
 
@@ -696,16 +696,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="1916 최소비용 구하기 (80등)">
-    <meta itemprop="description" content="1916 최소비용 구하기 (c++)">
-    <meta itemprop="datePublished" content="2022-11-04T00:00:00+00:00">
+    <meta itemprop="headline" content="99클럽 코테 스터디 39일차 TIL - 2662 Minimum Cost of a Path With Special Roads">
+    <meta itemprop="description" content="2662. Minimum Cost of a Path With Special Roads / c++ / Medium / 2시간+">
+    <meta itemprop="datePublished" content="2024-06-27T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://sho1007.github.io/boj/1916/" class="u-url" itemprop="url">1916 최소비용 구하기 (80등)
+            <a href="https://sho1007.github.io/leetcode/2662/" class="u-url" itemprop="url">99클럽 코테 스터디 39일차 TIL - 2662 Minimum Cost of a Path With Special Roads
 </a>
           </h1>
           
@@ -716,7 +716,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2022-11-04T00:00:00+00:00">November 4, 2022</time>
+        <time datetime="2024-06-27T00:00:00+00:00">June 27, 2024</time>
       </span>
     
 
@@ -729,7 +729,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -744,85 +744,97 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#1916-최소비용-구하기-c">1916 최소비용 구하기 (c++)</a><ul><li><a href="#문제">문제</a></li><li><a href="#접근-방식">접근 방식</a></li><li><a href="#문제-풀이">문제 풀이</a></li><li><a href="#다시-생각해-볼-점">다시 생각해 볼 점</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#2662-minimum-cost-of-a-path-with-special-roads--c--medium--2시간">2662. Minimum Cost of a Path With Special Roads / c++ / Medium / 2시간+</a><ul><li><a href="#문제-및-코드">문제 및 코드</a></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#다익스트라--set">다익스트라 / Set</a></li></ul></li><li><a href="#생각해-볼-점">생각해 볼 점</a><ul><li><a href="#해시태그">해시태그</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="1916-최소비용-구하기-c">1916 최소비용 구하기 (c++)</h1>
+        <h1 id="2662-minimum-cost-of-a-path-with-special-roads--c--medium--2시간">2662. Minimum Cost of a Path With Special Roads / c++ / Medium / 2시간+</h1>
 
-<h2 id="문제">문제</h2>
-<p>https://www.acmicpc.net/problem/1916</p>
+<h2 id="문제-및-코드">문제 및 코드</h2>
 
-<h2 id="접근-방식">접근 방식</h2>
-<p>Dijkstra <br />
-시작 마을에서 도착 마을까지의 최소 비용 -&gt; (시작지점이 정해졌으니 Dijkstra로 한 행만 검사하면 최소비용 구하기 가능)</p>
-
-<h2 id="문제-풀이">문제 풀이</h2>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
-#define INF 987654321
-</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">startPos</span><span class="p">,</span> <span class="n">endPos</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">1'001</span><span class="p">][</span><span class="mi">1'001</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
-<span class="kt">void</span> <span class="n">Dijkstra</span><span class="p">()</span>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">inline</span> <span class="kt">int</span> <span class="nf">GetCost</span><span class="p">(</span><span class="kt">int</span> <span class="n">startX</span><span class="p">,</span> <span class="kt">int</span> <span class="n">startY</span><span class="p">,</span> <span class="kt">int</span> <span class="n">targetX</span><span class="p">,</span> <span class="kt">int</span> <span class="n">targetY</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="kt">bool</span> <span class="n">visited</span><span class="p">[</span><span class="mi">1'001</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
-    <span class="n">visited</span><span class="p">[</span><span class="n">startPos</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
-    <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">minNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">minCost</span> <span class="o">=</span> <span class="n">INF</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">abs</span><span class="p">(</span><span class="n">startX</span> <span class="o">-</span> <span class="n">targetX</span><span class="p">)</span> <span class="o">+</span> <span class="n">abs</span><span class="p">(</span><span class="n">startY</span> <span class="o">-</span> <span class="n">targetY</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">minimumCost</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">start</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">target</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">specialRoads</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">specialRoads</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dp</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">specialRoads</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">());</span>
+        <span class="n">set</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">Set</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">visited</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">continue</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">minCost</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">startPos</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">GetCost</span><span class="p">(</span><span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">start</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">specialRoads</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">specialRoads</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">specialRoads</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">4</span><span class="p">];</span>
+            <span class="n">Set</span><span class="p">.</span><span class="n">insert</span><span class="p">({</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">i</span><span class="p">});</span>
+        <span class="p">}</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="n">Set</span><span class="p">.</span><span class="n">size</span><span class="p">())</span>
+        <span class="p">{</span>
+            <span class="k">auto</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">Set</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+            <span class="kt">int</span> <span class="n">cost</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">iter</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+            <span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">iter</span><span class="p">)[</span><span class="mi">1</span><span class="p">];</span>
+
+            <span class="n">Set</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">iter</span><span class="p">);</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">!=</span> <span class="n">cost</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
             <span class="p">{</span>
-                <span class="n">minCost</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">startPos</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
-                <span class="n">minNum</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+                
+                <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">pos</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">nextCost</span> <span class="o">=</span> <span class="n">GetCost</span><span class="p">(</span><span class="n">specialRoads</span><span class="p">[</span><span class="n">pos</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">specialRoads</span><span class="p">[</span><span class="n">pos</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">specialRoads</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">specialRoads</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">specialRoads</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">cost</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">nextCost</span> <span class="o">&lt;</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                <span class="p">{</span>
+                    <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">nextCost</span><span class="p">;</span>
+                    <span class="n">Set</span><span class="p">.</span><span class="n">insert</span><span class="p">({</span><span class="n">nextCost</span><span class="p">,</span> <span class="n">i</span><span class="p">});</span>
+                <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">minNum</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
-        <span class="n">visited</span><span class="p">[</span><span class="n">minNum</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="c1">// 나 자신으로 돌아가는 경우 pass</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">startPos</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
-            <span class="c1">// 이미 길이 있고, 기존 값이 minNum을 거쳐서 가는 경우보다 더 빠른 경우 pass</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">startPos</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">minCost</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="n">minNum</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="k">continue</span><span class="p">;</span>
-            <span class="n">arr</span><span class="p">[</span><span class="n">startPos</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">minCost</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="n">minNum</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
 
-<span class="c1">// 이 버스는 일방 통행이다.</span>
-<span class="c1">// A 에서 B 로 가는 방법은 한가지가 아니다. (최소값 비교 필요)</span>
-<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span> <span class="o">&gt;&gt;</span> <span class="n">M</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">fill</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">INF</span><span class="p">);</span>
-        <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">answer</span> <span class="o">=</span> <span class="n">GetCost</span><span class="p">(</span><span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">start</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">target</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">target</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            
+            <span class="n">answer</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">GetCost</span><span class="p">(</span><span class="n">specialRoads</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">specialRoads</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="n">target</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">target</span><span class="p">[</span><span class="mi">1</span><span class="p">]));</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">answer</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
-        <span class="n">arr</span><span class="p">[</span><span class="n">a</span><span class="p">][</span><span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">a</span><span class="p">][</span><span class="n">b</span><span class="p">]</span> <span class="o">?</span> <span class="n">c</span> <span class="o">:</span> <span class="n">arr</span><span class="p">[</span><span class="n">a</span><span class="p">][</span><span class="n">b</span><span class="p">];</span>
-    <span class="p">}</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">startPos</span> <span class="o">&gt;&gt;</span> <span class="n">endPos</span><span class="p">;</span>
-    <span class="n">Dijkstra</span><span class="p">();</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">startPos</span><span class="p">][</span><span class="n">endPos</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="p">};</span>
 </code></pre></div></div>
 
-<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="다익스트라--set">다익스트라 / Set</h3>
 <ol>
-  <li>처음에 문제 읽을 때 분명 ‘A-&gt;B의 경우가 1개라는 말이 없네’라고 생각하고 적어뒀었다.</li>
-  <li>하지만 계속 실패가 뜨는데도 그걸 적용할 생각을 못했다.</li>
-  <li>처음에 미심쩍은 부분이 있었다면 확실히 검증하고 넘어가자.</li>
+  <li>fromX, fromY 지점부터 toX, toY 까지의 거리가 abs(fromX - toX) + abs(fromY - toY) 이고, 특정 fromPostion, toPosition, cost들 가지는 specialRoad가 있을 때, startX,startY 로부터 targetX, targetY 까지의 최단 거리를 구하는 문제</li>
+  <li>처음 생각한 방식은 start부터 target까지의 거리를 구할 때, specialRoad 를 순회하면서 임의의 원소를 road를 사용한다고 가정하고, start로부터 road의 시작점까지의 거리 + road 자체의 비용 + raod 끝점부터 target까지의 거리로 나눠서 최소값을 갱신하고, 다시 (start부터 road의 시작점까지)와 (road의 끝점부터 target까지)를 재귀적으로 2번 로직을 호출하면 되지 않을까? 였다.</li>
+  <li>하지만 이렇게 작성하니 stack overflow가 떴다. 역시나 재귀는 깊이가 깊어지면 사용이 불가능했다.</li>
+  <li>방법을 찾지 못해서 다른 사람들의 접근 방법을 봤다.</li>
+  <li>다익스트라를 써서 계속 비용을 최소로 갱신을 하신 식이었다.</li>
+  <li>생각해보니 노드에서 노드로 이동할 때 cost가 드는건 다익스트라를 쓸 생각을 했었는데, 이렇게 좌표값으로 주어질 때에는 다익스트라를 써볼 생각을 못했었다. (Cost 구하는 공식이 떡하니 있는데도..)</li>
+  <li>start부터 specialRoads[i]의 끝지점까지의 최소 비용을 저장하는 배열 dp[i]를 선언하고, 우선 기본 비용으로 갱신해준 다음 Set에 넣어준다.. (거리차 공식으로 측정한 비용, 이제는 PQ대신 Set을 활용하는 것으로 바꿨다.)</li>
+  <li>다음 Set이 빌 때까지 반복
+    <ol>
+      <li>Set의 가장 앞 원소 ([0]번 원소를 비용으로 뒀기 때문에, 비용이 가장 적은 원소)를 꺼낸다. 그 후 Set에서 지운다. (PQ.top(), PQ.pop()과 동일)</li>
+      <li>원소를 가지고 cost와 pos로 나눠서 저장</li>
+      <li>dp[pos]가 cost가 아니라면 continue (이전 문제에서도 PQ에 원소가 새롭게 갱신됐을 때의 문제를 Set의 erase로 해결했었는데, 여기서는 항상 갱신된 최소값이 dp[i]에 저장되어 있기 때문에 이것을 활용했다.)</li>
+      <li>다음 specialRoads를 순회하면서, 현재 speicalRoads[pos]의 끝지점부터 specialRoads[i]의 시작지점까지의 비용 + specialRoads[i]의 비용 + cost 를 계산해서 만약 그게 dp[i]보다 작다면, dp[i]를 갱신하고, {dp[i], i} 를 다시 Set에 넣어준다. (다익스트라에서 경로를 갱신하고 갱신된 노드를 다시 PQ에 넣어주는 것과 동일)</li>
+    </ol>
+  </li>
+  <li>8번을 마치고 나면, dp[i]에는 speicalRoads[i]를 사용했을 때의 최소 비용이 저장된다.</li>
+  <li>그럼 다시 dp를 순회하면서 dp[i] + speicalRoads[i]의 끝지점에서 target까지의 비용을 계산해서 그 중 최소값으로 answer를 갱신해준다.</li>
+  <li>answer를 반환, 해결</li>
 </ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>index만 존재하는 node가 아니라 좌표값으로 다익스트라를 적용해 볼 수 있는 좋은 경험이었다. (물론 스스로 생각해내지는 못했지만)</li>
+  <li>dp가 항상 약했었는데, 거기에 Heap까지 더해지니까 정신을 못차리고 풀이 방법을 빨리 파악해내지 못했었다. Heap 쪽을 좀 더 많이 풀어봐야겠다.</li>
+  <li>이제 내일이면 99클럽 2기가 끝나게 된다. 99클럽을 진행하면서 꾸준히 하루에 한문제씩을 풀 수 있었고, 덕분에 최근에 코테를 볼 일이 많았는데 불안함 없이 편하게 볼 수 있었던 것 같다. 99클럽 3기가 시작되면 또 신청해야겠다. (코테는 항상 준비하고 취미처럼 꾸준히 풀어야 실력이 녹슬지 않고 계속 발전할 수 있는 것 같다.)</li>
+</ol>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>
 
         
       </section>
@@ -839,9 +851,17 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
+      <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a><span class="sep">, </span>
+    
+      <a href="/tags/#codingtest" class="page__taxonomy-item p-category" rel="tag">CodingTest</a><span class="sep">, </span>
+    
       <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
     
-      <a href="/tags/#dijkstra" class="page__taxonomy-item p-category" rel="tag">Dijkstra</a>
+      <a href="/tags/#datastructure" class="page__taxonomy-item p-category" rel="tag">DataStructure</a><span class="sep">, </span>
+    
+      <a href="/tags/#heap" class="page__taxonomy-item p-category" rel="tag">Heap</a><span class="sep">, </span>
+    
+      <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
     
     </span>
   </p>
@@ -858,7 +878,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#boj" class="page__taxonomy-item p-category" rel="tag">BOJ</a>
+      <a href="/categories/#leetcode" class="page__taxonomy-item p-category" rel="tag">LeetCode</a>
     
     </span>
   </p>
@@ -866,7 +886,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-11-04T00:00:00+00:00">November 4, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-27T00:00:00+00:00">June 27, 2024</time></p>
 
       </footer>
 
@@ -875,23 +895,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=1916+%EC%B5%9C%EC%86%8C%EB%B9%84%EC%9A%A9+%EA%B5%AC%ED%95%98%EA%B8%B0+%2880%EB%93%B1%29%20https%3A%2F%2Fsho1007.github.io%2Fboj%2F1916%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=99%ED%81%B4%EB%9F%BD+%EC%BD%94%ED%85%8C+%EC%8A%A4%ED%84%B0%EB%94%94+39%EC%9D%BC%EC%B0%A8+TIL+-+2662+Minimum+Cost+of+a+Path+With+Special+Roads%20https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2662%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fboj%2F1916%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2662%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fboj%2F1916%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F2662%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/boj/12865/" class="pagination--pager" title="12865 평범한 배낭
+      <a href="/leetcode/3112/" class="pagination--pager" title="99클럽 코테 스터디 38일차 TIL - 3112 Minimum Time to Visit Disappearing Nodes
 ">Previous</a>
     
     
-      <a href="/boj/9019/" class="pagination--pager" title="9019 DSLR
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -905,53 +924,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/leetcode/2662/" rel="permalink">99클럽 코테 스터디 39일차 TIL - 2662 Minimum Cost of a Path With Special Roads
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2024-06-27T00:00:00+00:00">June 27, 2024</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">2662. Minimum Cost of a Path With Special Roads / c++ / Medium / 2시간+
-</p>
-  </article>
-</div>
-
         
           
 
@@ -1089,6 +1061,53 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">2434. Using a Robot to Print the Lexicographically Smallest String / c++ / Medium / 1시간+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/leetcode/2762/" rel="permalink">99클럽 코테 스터디 35일차 TIL - 2762 Continuous Subarrays
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-23T00:00:00+00:00">June 23, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">2762. Continuous Subarrays / c++ / Medium / 2시간+
 </p>
   </article>
 </div>

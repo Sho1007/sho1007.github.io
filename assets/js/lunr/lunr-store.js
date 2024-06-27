@@ -1048,4 +1048,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","Heap"],
         "url": "/leetcode/3112/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 39일차 TIL - 2662 Minimum Cost of a Path With Special Roads",
+        "excerpt":"2662. Minimum Cost of a Path With Special Roads / c++ / Medium / 2시간+ 문제 및 코드 inline int GetCost(int startX, int startY, int targetX, int targetY) { return abs(startX - targetX) + abs(startY - targetY); } class Solution { public: int minimumCost(vector&lt;int&gt;&amp; start, vector&lt;int&gt;&amp; target, vector&lt;vector&lt;int&gt;&gt;&amp; specialRoads) {...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","Heap"],
+        "url": "/leetcode/2662/",
+        "teaser": null
       }]
