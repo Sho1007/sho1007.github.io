@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-27T16:33:32+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 39일차 TIL - 2662 Minimum Cost of a Path With Special Roads</title><link href="https://sho1007.github.io/leetcode/2662/" rel="alternate" type="text/html" title="99클럽 코테 스터디 39일차 TIL - 2662 Minimum Cost of a Path With Special Roads" /><published>2024-06-27T00:00:00+00:00</published><updated>2024-06-27T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2662</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2662/"><![CDATA[<h1 id="2662-minimum-cost-of-a-path-with-special-roads--c--medium--2시간">2662. Minimum Cost of a Path With Special Roads / c++ / Medium / 2시간+</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-28T10:03:46+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 40일차 TIL - 738 Monotone Increasing Digits</title><link href="https://sho1007.github.io/leetcode/738/" rel="alternate" type="text/html" title="99클럽 코테 스터디 40일차 TIL - 738 Monotone Increasing Digits" /><published>2024-06-28T00:00:00+00:00</published><updated>2024-06-28T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/738</id><content type="html" xml:base="https://sho1007.github.io/leetcode/738/"><![CDATA[<h1 id="738-monotone-increasing-digits--c--medium--18분">738. Monotone Increasing Digits / c++ / Medium / 18분</h1>
+
+<h2 id="문제-및-코드">문제 및 코드</h2>
+<h3 id="문제-링크"><a href="https://leetcode.com/problems/monotone-increasing-digits/description/">문제 링크</a></h3>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="nf">CheckMID</span><span class="p">(</span><span class="n">string</span> <span class="n">current</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">current</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">current</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">current</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">monotoneIncreasingDigits</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">string</span> <span class="n">current</span> <span class="o">=</span> <span class="n">to_string</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+        <span class="c1">// n보다 작거나 같은 증가하는 수 (붙어있는 두 자리 ij가 i&lt;=j인 수)를 구하시오</span>
+        <span class="c1">// 만약 n이 증가하는 수면? return</span>
+        <span class="c1">// 만약 n이 증가하는 수가 아니라면? 감소 -&gt; 어떻게?</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">CheckMID</span><span class="p">(</span><span class="n">current</span><span class="p">))</span> <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">current</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">current</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">current</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="p">{</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">current</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">current</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="sc">'9'</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="n">current</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="c1">// cout &lt;&lt; current &lt;&lt; '\n';</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">stoi</span><span class="p">(</span><span class="n">current</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="그리디">그리디</h3>
+<ol>
+  <li>n보다 작거나 같은 <strong>단조롭게 증가하는 수</strong> 중 가장 큰 수를 반환하는 문제였다.</li>
+  <li>저 <strong>단조롭게 증가하는 수</strong> 가 뭔지 와닿질 않아서 검색해보니 인접한 두 자리의 수를 ij라고 할 때, (i &lt;= j) 를 만족하는 수였다. (즉, 이전자리가 다음자리 보다 작거나 같아야 한다.)</li>
+  <li>큰 흐름을 봤을 때, 일단 n이 단조롭게 증가하는 수 (줄여서 MID 라고 부르겠다.) 라면 그대로 n을 반환한다.</li>
+  <li>n이 MID가 아니라면 n보다 작은 MID 중 가장 큰 수를 반환하면 된다고 생각했다.</li>
+  <li>그러면 우선 MID인지를 판단하는 식이 필요했고, 임의의 숫자 current의 각자리를 돌면서 현재 자리가 다음 자리보다 크면 false, 모든 자리가 다음 자리보다 작거나 같으면 true를 반환하는 CheckMID를 만들었다. (그리고 각 자리의 비교를 편하게 하기 위해 string current = to_string(n) 를 사용했다.)</li>
+  <li>n이 MID라면 그대로 n을 반환</li>
+  <li>이제 n이 MID가 아닐 때, n보다 작은 수 중 가장 큰 MID를 찾는 규칙이 필요했다.</li>
+  <li>이럴 땐, 임의의 수들이 변화는 과정을 보는게 효율적이라고 생각했다. 우선 예제에 있는 수 중 1234는 이미 MID이므로 이걸 1243으로 바꿔봤다. 그러면 답은 1239가 나온다. 그리고 10을 넣으면 9가 답으로 나온다. 여기서 찾은 규칙은 MID가 아니라면, i &lt;= j 가 아닌 부분이 9로 바뀐다는 점이었다.</li>
+  <li>current[i] &gt; current[j] 이면, MID를 만들기 위해 current[i]가 1 감소해야하는데, 이 때, 결과값 current가 MID 중 가장 큰 수가 되려면 다음 자리인 current[j]는 9가 되어야했다.</li>
+  <li>여기서 어느정도 결과를 찾았고, current를 끝 (가장 작은 자리)부터 순회하면서, MID를 만족하지 않는 부분에서 current[i]는 1을 감소시키고, current[i+1] 은 9로 만들어줬다. 그러면 i가 한칸씩 앞으로 가면서 모든 자리의 MID를 맞추게 된다고 생각했다.</li>
+  <li>그리고 나서 엣지 케이스를 체크하기 위해 n의 범위의 양 끝 값인 0과 1’000’000’000을 TestCase에 넣어봤다.</li>
+  <li>0의 경우 값이 잘 나왔지만, 1’000’000’000의 경우 기대값은 999’999’999인데 결과값은 900’000’000이 나왔다.</li>
+  <li>왜인지 원인을 찾아보니, MID를 만족하지 않는 부분에서 current[i]는 1 감소, current[i+1]은 9로 만들어줬지만, i + 2, i + 3, … , current.length() - 1 까지의 값은 그대로였던 것이 문제였다.</li>
+  <li>즉, 앞으로는 연쇄가 일어났지만, 뒤로는 연쇄가 일어나지 않았다. (1’111은 999가 되지만, 1’000은 900이 되어버림)</li>
+  <li>그래서 새로운 규칙을 추가해줬다. MID를 만족하지 않는 부분이 생기면 그 뒤의 값을 다 9로 만들어줬다.</li>
+  <li>해결</li>
+</ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>다시 생각해보니 monotoneIncreasingDigits 함수에서 for문을 돌때, 변환이 일어나지 않았다면 n이 이미 MID이므로 CheckMID함수는 만들 필요가 없었다.</li>
+  <li>항상 엣지케이스를 많이 놓쳤었는데, 이번에 스스로 엣지케이스 검사를 통해 새로운 규칙을 찾아서 문제를 해결하는 경험을 했다.</li>
+  <li>어느덧 40일이라는 시간이 지났고 99클럽 2기도 마무리되었다. 정말 어떻게 흘러갔는지 모를 시간이었고, 만약 99클럽을 신청하지 않았다면 분명 나는 이렇게 열심히 코테 준비와 TIL 작성을 하지 않았을 것이라고 생각한다.</li>
+  <li>99클럽 덕분에 꾸준히 하루에 1문제씩 풀 수 있었고, TIL을 적으면서 내가 풀었던 문제를 돌아보고 다시 정리할 수 있었다.</li>
+  <li>난 99클럽을 진행하면서 꾸준히 하는 습관과 코딩 테스트 능력을 기를 수 있었고, 다음 99 클럽 3기가 시작된다면 또 신청할 생각이다.</li>
+  <li>주변에도 간증처럼 내 얘기를 하면서 99클럽을 신청하라고 하는데, 생각보다 사람들은 잘 참여를 안한다. (효과 좋은데..)</li>
+  <li>99클럽을 만들어주신 팀 스파르타와 40일동안 관리해주신 매니저님들, 클럽장님들 정말 수고 많으셨습니다. 제가 비록 기타언어인 C++이고, 문제를 푸는 시간이 오후 10시 이후라 문제 풀이 세션을 참석 못(안)할 때가 더 많았지만 그래도 항상 문제 출제해주시고 관리해주신 덕분에 완주할 수 있었습니다. 이 글을 보실진 모르겠지만 다시 한번 감사하다는 말씀 드리고 싶습니다.</li>
+  <li>언젠가 C++도 정규 언어가 되는 날을 기대하며 이만 99클럽 2기 마지막 TIL을 마친다.</li>
+</ol>
+
+<p><img src="/assets/images/240628.png" alt="99클럽 2기 학습 기록" /></p>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="Greedy" /><summary type="html"><![CDATA[738. Monotone Increasing Digits / c++ / Medium / 18분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 39일차 TIL - 2662 Minimum Cost of a Path With Special Roads</title><link href="https://sho1007.github.io/leetcode/2662/" rel="alternate" type="text/html" title="99클럽 코테 스터디 39일차 TIL - 2662 Minimum Cost of a Path With Special Roads" /><published>2024-06-27T00:00:00+00:00</published><updated>2024-06-27T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2662</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2662/"><![CDATA[<h1 id="2662-minimum-cost-of-a-path-with-special-roads--c--medium--2시간">2662. Minimum Cost of a Path With Special Roads / c++ / Medium / 2시간+</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 
@@ -603,69 +681,4 @@
 </ol>
 
 <h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="String" /><summary type="html"><![CDATA[402. Remove K Digits / c++ / Medium / 46분]]></summary></entry><entry><title type="html">99클럽 코테 스터디 30일차 TIL - 5 Longest Palindromic Substring</title><link href="https://sho1007.github.io/leetcode/5/" rel="alternate" type="text/html" title="99클럽 코테 스터디 30일차 TIL - 5 Longest Palindromic Substring" /><published>2024-06-18T00:00:00+00:00</published><updated>2024-06-18T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/5</id><content type="html" xml:base="https://sho1007.github.io/leetcode/5/"><![CDATA[<h1 id="5-longest-palindromic-substring--c--medium--13분">5. Longest Palindromic Substring / c++ / Medium / 13분</h1>
-
-<h2 id="문제-및-코드">문제 및 코드</h2>
-
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="nl">public:</span>
-    <span class="n">string</span> <span class="n">longestPalindrome</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">string</span> <span class="n">answer</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">-</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">answer</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="n">i</span><span class="p">;</span> <span class="o">--</span><span class="n">j</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">answer</span><span class="p">.</span><span class="n">length</span><span class="p">())</span> <span class="k">break</span><span class="p">;</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
-                <span class="p">{</span>
-                    <span class="kt">bool</span> <span class="n">isPalindrome</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
-                    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">+</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">-</span> <span class="n">k</span><span class="p">;</span> <span class="o">++</span><span class="n">k</span><span class="p">)</span>
-                    <span class="p">{</span>
-                        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="n">k</span><span class="p">])</span>
-                        <span class="p">{</span>
-                            <span class="n">isPalindrome</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
-                            <span class="k">break</span><span class="p">;</span>
-                        <span class="p">}</span>
-                    <span class="p">}</span>
-
-                    <span class="k">if</span> <span class="p">(</span><span class="n">isPalindrome</span><span class="p">)</span>
-                    <span class="p">{</span>
-                        <span class="n">answer</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-                    <span class="p">}</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-        <span class="k">return</span> <span class="n">answer</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div></div>
-
-<h2 id="접근-방식">접근 방식</h2>
-<h3 id="문자열--백트래킹">문자열 / 백트래킹</h3>
-<ol>
-  <li>문자열 s의 부분문자열 중, 길이가 가장 긴 팰린드롬 문자열(거꾸로 뒤집어도 똑같은 문자) 를 반환하는 문제였다.</li>
-  <li>가장 단순하게 완전 탐색을 시도해보았다.</li>
-  <li>s의 시작부터 i 기준으로 순회한다.
-    <ol>
-      <li>s의 끝부터 j 기준으로 순회한다.</li>
-      <li>만약 s[i] == s[j]이면, 첫 글자가 같으므로 팰린드롬일 가능성이 있다.
-        <ol>
-          <li>여기서 다시 k 를 기준으로 i + k &lt;= j - k 일 때까지 순회한다.</li>
-          <li>s[i + k] != s[j - k]이면 팰린드롬이 아니므로 isPalindrome을 false로 바꾸고 break</li>
-          <li>순회가 끝났는데 isPalindrome 이 true라면 answer를 갱신해준다.</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-</ol>
-
-<h2 id="생각해-볼-점">생각해 볼 점</h2>
-<ol>
-  <li>권장이 3시간이어서 걱정했는데 13분 만에 풀려서 허무했다.</li>
-  <li>역시 가장 쉽고 간편한건 완전 탐색!</li>
-  <li>풀다보니 계속 최적화 할 수 있는 부분 (탐색하려는 길이가 이미 answer의 길이보다 작거나 같으면 무의미) 이 계속 보여서 추가적으로 넣어줬지만, 결과상 큰 변화는 없었다.</li>
-</ol>
-
-<h3 id="해시태그">해시태그</h3>
-<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="String" /><summary type="html"><![CDATA[5. Longest Palindromic Substring / c++ / Medium / 13분]]></summary></entry></feed>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>]]></content><author><name>Sho1007</name></author><category term="[&quot;LeetCode&quot;]" /><category term="Algorithm" /><category term="CodingTest" /><category term="Cpp" /><category term="TIL" /><category term="String" /><summary type="html"><![CDATA[402. Remove K Digits / c++ / Medium / 46분]]></summary></entry></feed>

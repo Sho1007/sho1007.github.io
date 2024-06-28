@@ -1054,4 +1054,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","Heap"],
         "url": "/leetcode/2662/",
         "teaser": null
+      },{
+        "title": "99클럽 코테 스터디 40일차 TIL - 738 Monotone Increasing Digits",
+        "excerpt":"738. Monotone Increasing Digits / c++ / Medium / 18분 문제 및 코드 문제 링크 bool CheckMID(string current) { for (int i = 1; i &lt; current.length(); ++i) { if (current[i-1] &gt; current[i]) return false; } return true; } class Solution { public: int monotoneIncreasingDigits(int n) { string current =...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","Greedy"],
+        "url": "/leetcode/738/",
+        "teaser": null
       }]

@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>9521 LCS - Today I Learned</title>
-<meta name="description" content="9521 LCS (c++)">
+<!-- begin _includes/seo.html --><title>99클럽 코테 스터디 40일차 TIL - 738 Monotone Increasing Digits - Today I Learned</title>
+<meta name="description" content="738. Monotone Increasing Digits / c++ / Medium / 18분">
 
 
   <meta name="author" content="Sho1007">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Today I Learned">
-<meta property="og:title" content="9521 LCS">
-<meta property="og:url" content="https://sho1007.github.io/boj/9251/">
+<meta property="og:title" content="99클럽 코테 스터디 40일차 TIL - 738 Monotone Increasing Digits">
+<meta property="og:url" content="https://sho1007.github.io/leetcode/738/">
 
 
-  <meta property="og:description" content="9521 LCS (c++)">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-11-11T00:00:00+00:00">
+  <meta property="og:description" content="738. Monotone Increasing Digits / c++ / Medium / 18분">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-28T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://sho1007.github.io/boj/9251/">
+
+<link rel="canonical" href="https://sho1007.github.io/leetcode/738/">
 
 
 
@@ -696,16 +696,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="9521 LCS">
-    <meta itemprop="description" content="9521 LCS (c++)">
-    <meta itemprop="datePublished" content="2022-11-11T00:00:00+00:00">
+    <meta itemprop="headline" content="99클럽 코테 스터디 40일차 TIL - 738 Monotone Increasing Digits">
+    <meta itemprop="description" content="738. Monotone Increasing Digits / c++ / Medium / 18분">
+    <meta itemprop="datePublished" content="2024-06-28T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://sho1007.github.io/boj/9251/" class="u-url" itemprop="url">9521 LCS
+            <a href="https://sho1007.github.io/leetcode/738/" class="u-url" itemprop="url">99클럽 코테 스터디 40일차 TIL - 738 Monotone Increasing Digits
 </a>
           </h1>
           
@@ -716,7 +716,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2022-11-11T00:00:00+00:00">November 11, 2022</time>
+        <time datetime="2024-06-28T00:00:00+00:00">June 28, 2024</time>
       </span>
     
 
@@ -729,7 +729,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          3 minute read
         
       </span>
     
@@ -744,72 +744,90 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#9521-lcs-c">9521 LCS (c++)</a><ul><li><a href="#문제">문제</a></li><li><a href="#접근-방식">접근 방식</a></li><li><a href="#문제-풀이">문제 풀이</a></li><li><a href="#다시-생각해-볼-점">다시 생각해 볼 점</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#738-monotone-increasing-digits--c--medium--18분">738. Monotone Increasing Digits / c++ / Medium / 18분</a><ul><li><a href="#문제-및-코드">문제 및 코드</a><ul><li><a href="#문제-링크">문제 링크</a></li></ul></li><li><a href="#접근-방식">접근 방식</a><ul><li><a href="#그리디">그리디</a></li></ul></li><li><a href="#생각해-볼-점">생각해 볼 점</a><ul><li><a href="#해시태그">해시태그</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="9521-lcs-c">9521 LCS (c++)</h1>
+        <h1 id="738-monotone-increasing-digits--c--medium--18분">738. Monotone Increasing Digits / c++ / Medium / 18분</h1>
 
-<h2 id="문제">문제</h2>
-<p>https://www.acmicpc.net/problem/9521</p>
-
-<h2 id="접근-방식">접근 방식</h2>
-<p>LCS</p>
-
-<p>최장 공통 부분 수열 (LCS)는 알고리즘이 있다. <br />
-A와 B의 원소를 탐색하므로 문자열의 길이가 N이라면 시간 복잡도는 O(N<sup>2</sup>)이다. <br />
-문제에서 문자열의 최대 길이가 1’000이라고 했으므로 총 연산 수는 1’000’000(백만)이고, <br />
-시간 제한은 0.1초 이므로 최대 연산 가능 수는 1초당 약 1억이므로 그 10분의 1인 천만이다.</p>
-
-<h2 id="문제-풀이">문제 풀이</h2>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
-</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-<span class="kr">inline</span> <span class="kt">int</span> <span class="nf">Max</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="p">;</span> <span class="p">}</span>
-<span class="n">string</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">;</span>
-<span class="kt">int</span><span class="o">**</span> <span class="n">arr</span><span class="p">;</span>
-<span class="kt">void</span> <span class="n">Init</span><span class="p">()</span>
+<h2 id="문제-및-코드">문제 및 코드</h2>
+<h3 id="문제-링크"><a href="https://leetcode.com/problems/monotone-increasing-digits/description/">문제 링크</a></h3>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="nf">CheckMID</span><span class="p">(</span><span class="n">string</span> <span class="n">current</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">A</span> <span class="o">&gt;&gt;</span> <span class="n">B</span><span class="p">;</span>
-    <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">*</span> <span class="p">[</span><span class="n">A</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">A</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">current</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">B</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
-        <span class="n">fill</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">B</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">current</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">current</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
     <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="kt">void</span> <span class="n">Solve</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">A</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">B</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="kt">int</span> <span class="n">monotoneIncreasingDigits</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">string</span> <span class="n">current</span> <span class="o">=</span> <span class="n">to_string</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+        <span class="c1">// n보다 작거나 같은 증가하는 수 (붙어있는 두 자리 ij가 i&lt;=j인 수)를 구하시오</span>
+        <span class="c1">// 만약 n이 증가하는 수면? return</span>
+        <span class="c1">// 만약 n이 증가하는 수가 아니라면? 감소 -&gt; 어떻게?</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">CheckMID</span><span class="p">(</span><span class="n">current</span><span class="p">))</span> <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">current</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">B</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="k">else</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">Max</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">current</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">current</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="p">{</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">current</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">current</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="sc">'9'</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="n">current</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="c1">// cout &lt;&lt; current &lt;&lt; '\n';</span>
         <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">stoi</span><span class="p">(</span><span class="n">current</span><span class="p">);</span>
     <span class="p">}</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">A</span><span class="p">.</span><span class="n">length</span><span class="p">()][</span><span class="n">B</span><span class="p">.</span><span class="n">length</span><span class="p">()]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kt">void</span> <span class="n">Delete</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">A</span><span class="p">.</span><span class="n">length</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">delete</span><span class="p">[]</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-    <span class="p">}</span>
-    <span class="k">delete</span><span class="p">[]</span> <span class="n">arr</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kt">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">Init</span><span class="p">();</span> <span class="n">Solve</span><span class="p">();</span> <span class="n">Delete</span><span class="p">();</span>
-<span class="p">}</span>
+<span class="p">};</span>
 </code></pre></div></div>
 
-<h2 id="다시-생각해-볼-점">다시 생각해 볼 점</h2>
+<h2 id="접근-방식">접근 방식</h2>
+<h3 id="그리디">그리디</h3>
 <ol>
-  <li>LCS는 쪼갤 수 없는 배낭 문제와 닮았다. (DP로 최적화가 더 가능할 것 같다.)</li>
+  <li>n보다 작거나 같은 <strong>단조롭게 증가하는 수</strong> 중 가장 큰 수를 반환하는 문제였다.</li>
+  <li>저 <strong>단조롭게 증가하는 수</strong> 가 뭔지 와닿질 않아서 검색해보니 인접한 두 자리의 수를 ij라고 할 때, (i &lt;= j) 를 만족하는 수였다. (즉, 이전자리가 다음자리 보다 작거나 같아야 한다.)</li>
+  <li>큰 흐름을 봤을 때, 일단 n이 단조롭게 증가하는 수 (줄여서 MID 라고 부르겠다.) 라면 그대로 n을 반환한다.</li>
+  <li>n이 MID가 아니라면 n보다 작은 MID 중 가장 큰 수를 반환하면 된다고 생각했다.</li>
+  <li>그러면 우선 MID인지를 판단하는 식이 필요했고, 임의의 숫자 current의 각자리를 돌면서 현재 자리가 다음 자리보다 크면 false, 모든 자리가 다음 자리보다 작거나 같으면 true를 반환하는 CheckMID를 만들었다. (그리고 각 자리의 비교를 편하게 하기 위해 string current = to_string(n) 를 사용했다.)</li>
+  <li>n이 MID라면 그대로 n을 반환</li>
+  <li>이제 n이 MID가 아닐 때, n보다 작은 수 중 가장 큰 MID를 찾는 규칙이 필요했다.</li>
+  <li>이럴 땐, 임의의 수들이 변화는 과정을 보는게 효율적이라고 생각했다. 우선 예제에 있는 수 중 1234는 이미 MID이므로 이걸 1243으로 바꿔봤다. 그러면 답은 1239가 나온다. 그리고 10을 넣으면 9가 답으로 나온다. 여기서 찾은 규칙은 MID가 아니라면, i &lt;= j 가 아닌 부분이 9로 바뀐다는 점이었다.</li>
+  <li>current[i] &gt; current[j] 이면, MID를 만들기 위해 current[i]가 1 감소해야하는데, 이 때, 결과값 current가 MID 중 가장 큰 수가 되려면 다음 자리인 current[j]는 9가 되어야했다.</li>
+  <li>여기서 어느정도 결과를 찾았고, current를 끝 (가장 작은 자리)부터 순회하면서, MID를 만족하지 않는 부분에서 current[i]는 1을 감소시키고, current[i+1] 은 9로 만들어줬다. 그러면 i가 한칸씩 앞으로 가면서 모든 자리의 MID를 맞추게 된다고 생각했다.</li>
+  <li>그리고 나서 엣지 케이스를 체크하기 위해 n의 범위의 양 끝 값인 0과 1’000’000’000을 TestCase에 넣어봤다.</li>
+  <li>0의 경우 값이 잘 나왔지만, 1’000’000’000의 경우 기대값은 999’999’999인데 결과값은 900’000’000이 나왔다.</li>
+  <li>왜인지 원인을 찾아보니, MID를 만족하지 않는 부분에서 current[i]는 1 감소, current[i+1]은 9로 만들어줬지만, i + 2, i + 3, … , current.length() - 1 까지의 값은 그대로였던 것이 문제였다.</li>
+  <li>즉, 앞으로는 연쇄가 일어났지만, 뒤로는 연쇄가 일어나지 않았다. (1’111은 999가 되지만, 1’000은 900이 되어버림)</li>
+  <li>그래서 새로운 규칙을 추가해줬다. MID를 만족하지 않는 부분이 생기면 그 뒤의 값을 다 9로 만들어줬다.</li>
+  <li>해결</li>
 </ol>
+
+<h2 id="생각해-볼-점">생각해 볼 점</h2>
+<ol>
+  <li>다시 생각해보니 monotoneIncreasingDigits 함수에서 for문을 돌때, 변환이 일어나지 않았다면 n이 이미 MID이므로 CheckMID함수는 만들 필요가 없었다.</li>
+  <li>항상 엣지케이스를 많이 놓쳤었는데, 이번에 스스로 엣지케이스 검사를 통해 새로운 규칙을 찾아서 문제를 해결하는 경험을 했다.</li>
+  <li>어느덧 40일이라는 시간이 지났고 99클럽 2기도 마무리되었다. 정말 어떻게 흘러갔는지 모를 시간이었고, 만약 99클럽을 신청하지 않았다면 분명 나는 이렇게 열심히 코테 준비와 TIL 작성을 하지 않았을 것이라고 생각한다.</li>
+  <li>99클럽 덕분에 꾸준히 하루에 1문제씩 풀 수 있었고, TIL을 적으면서 내가 풀었던 문제를 돌아보고 다시 정리할 수 있었다.</li>
+  <li>난 99클럽을 진행하면서 꾸준히 하는 습관과 코딩 테스트 능력을 기를 수 있었고, 다음 99 클럽 3기가 시작된다면 또 신청할 생각이다.</li>
+  <li>주변에도 간증처럼 내 얘기를 하면서 99클럽을 신청하라고 하는데, 생각보다 사람들은 잘 참여를 안한다. (효과 좋은데..)</li>
+  <li>99클럽을 만들어주신 팀 스파르타와 40일동안 관리해주신 매니저님들, 클럽장님들 정말 수고 많으셨습니다. 제가 비록 기타언어인 C++이고, 문제를 푸는 시간이 오후 10시 이후라 문제 풀이 세션을 참석 못(안)할 때가 더 많았지만 그래도 항상 문제 출제해주시고 관리해주신 덕분에 완주할 수 있었습니다. 이 글을 보실진 모르겠지만 다시 한번 감사하다는 말씀 드리고 싶습니다.</li>
+  <li>언젠가 C++도 정규 언어가 되는 날을 기대하며 이만 99클럽 2기 마지막 TIL을 마친다.</li>
+</ol>
+
+<p><img src="/assets/images/240628.png" alt="99클럽 2기 학습 기록" /></p>
+
+<h3 id="해시태그">해시태그</h3>
+<p>#99클럽 #코딩테스트 준비 #개발자 취업 #항해99 #TIL</p>
 
         
       </section>
@@ -826,9 +844,15 @@ A와 B의 원소를 탐색하므로 문자열의 길이가 N이라면 시간 복
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
+      <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a><span class="sep">, </span>
+    
+      <a href="/tags/#codingtest" class="page__taxonomy-item p-category" rel="tag">CodingTest</a><span class="sep">, </span>
+    
       <a href="/tags/#cpp" class="page__taxonomy-item p-category" rel="tag">Cpp</a><span class="sep">, </span>
     
-      <a href="/tags/#longest-common-subsequence" class="page__taxonomy-item p-category" rel="tag">Longest Common Subsequence</a>
+      <a href="/tags/#greedy" class="page__taxonomy-item p-category" rel="tag">Greedy</a><span class="sep">, </span>
+    
+      <a href="/tags/#til" class="page__taxonomy-item p-category" rel="tag">TIL</a>
     
     </span>
   </p>
@@ -845,7 +869,7 @@ A와 B의 원소를 탐색하므로 문자열의 길이가 N이라면 시간 복
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#boj" class="page__taxonomy-item p-category" rel="tag">BOJ</a>
+      <a href="/categories/#leetcode" class="page__taxonomy-item p-category" rel="tag">LeetCode</a>
     
     </span>
   </p>
@@ -853,7 +877,7 @@ A와 B의 원소를 탐색하므로 문자열의 길이가 N이라면 시간 복
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-11-11T00:00:00+00:00">November 11, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-28T00:00:00+00:00">June 28, 2024</time></p>
 
       </footer>
 
@@ -862,23 +886,22 @@ A와 B의 원소를 탐색하므로 문자열의 길이가 N이라면 시간 복
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=9521+LCS%20https%3A%2F%2Fsho1007.github.io%2Fboj%2F9251%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=99%ED%81%B4%EB%9F%BD+%EC%BD%94%ED%85%8C+%EC%8A%A4%ED%84%B0%EB%94%94+40%EC%9D%BC%EC%B0%A8+TIL+-+738+Monotone+Increasing+Digits%20https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F738%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fboj%2F9251%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F738%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fboj%2F9251%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsho1007.github.io%2Fleetcode%2F738%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/boj/25921/" class="pagination--pager" title="25921 건너 아는 사이
+      <a href="/leetcode/2662/" class="pagination--pager" title="99클럽 코테 스터디 39일차 TIL - 2662 Minimum Cost of a Path With Special Roads
 ">Previous</a>
     
     
-      <a href="/boj/1967/" class="pagination--pager" title="1967 트리의 지름
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -892,53 +915,6 @@ A와 B의 원소를 탐색하므로 문자열의 길이가 N이라면 시간 복
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/leetcode/738/" rel="permalink">99클럽 코테 스터디 40일차 TIL - 738 Monotone Increasing Digits
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2024-06-28T00:00:00+00:00">June 28, 2024</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">738. Monotone Increasing Digits / c++ / Medium / 18분
-</p>
-  </article>
-</div>
-
         
           
 
@@ -1076,6 +1052,53 @@ A와 B의 원소를 탐색하므로 문자열의 길이가 N이라면 시간 복
 
 
     <p class="archive__item-excerpt" itemprop="description">385. Mini Parser / c++ / Medium / 2시간+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/leetcode/2434/" rel="permalink">99클럽 코테 스터디 36일차 TIL - 2434 Using a Robot to Print the Lexicographically Smallest String
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-24T00:00:00+00:00">June 24, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">2434. Using a Robot to Print the Lexicographically Smallest String / c++ / Medium / 1시간+
 </p>
   </article>
 </div>
