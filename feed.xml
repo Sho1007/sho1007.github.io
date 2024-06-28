@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-28T10:06:55+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 40일차 TIL - 738 Monotone Increasing Digits</title><link href="https://sho1007.github.io/leetcode/738/" rel="alternate" type="text/html" title="99클럽 코테 스터디 40일차 TIL - 738 Monotone Increasing Digits" /><published>2024-06-28T00:00:00+00:00</published><updated>2024-06-28T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/738</id><content type="html" xml:base="https://sho1007.github.io/leetcode/738/"><![CDATA[<h1 id="738-monotone-increasing-digits--c--medium--18분">738. Monotone Increasing Digits / c++ / Medium / 18분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-06-28T10:08:14+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">99클럽 코테 스터디 40일차 TIL - 738 Monotone Increasing Digits</title><link href="https://sho1007.github.io/leetcode/738/" rel="alternate" type="text/html" title="99클럽 코테 스터디 40일차 TIL - 738 Monotone Increasing Digits" /><published>2024-06-28T00:00:00+00:00</published><updated>2024-06-28T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/738</id><content type="html" xml:base="https://sho1007.github.io/leetcode/738/"><![CDATA[<h1 id="738-monotone-increasing-digits--c--medium--18분">738. Monotone Increasing Digits / c++ / Medium / 18분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 <h3 id="문제-링크"><a href="https://leetcode.com/problems/monotone-increasing-digits/description/">문제 링크</a></h3>
@@ -73,6 +73,7 @@
   <li>언젠가 C++도 정규 언어가 되는 날을 기대하며 이만 99클럽 2기 마지막 TIL을 마친다.</li>
 </ol>
 
+<h2 id="학습-기록">학습 기록</h2>
 <p><img src="/assets/images/240628.png" alt="99클럽 2기 학습 기록" /></p>
 
 <h3 id="해시태그">해시태그</h3>
