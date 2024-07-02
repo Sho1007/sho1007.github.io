@@ -1060,4 +1060,34 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","Greedy"],
         "url": "/leetcode/738/",
         "teaser": null
+      },{
+        "title": "CPU 스케줄링",
+        "excerpt":"CPU 스케줄링이란? 운영체제가 프로세스들에게 공정하고 합리적으로 CPU 자원을 배분하는 것 프로세스 우선순위 가장 공정한 CPU 스케줄링? 프로세스마다 우선순위가 다르다. (빨리 처리해야하는 프로세스와 늦게 처리해도 되는 프로세스) 입출력 집중 프로세스 (입출력 작업이 많은 프로세스) : 우선순위 높음 CPU 집중 프로세스 (CPU 작업이 많은 프로세스) : 우선순위 낮음 입출력 집중 프로세스는 어차피...","categories": ["OperatingSystem"],
+        "tags": ["OperatingSystem","HonGong"],
+        "url": "/operatingsystem/CPUScheduling/",
+        "teaser": null
+      },{
+        "title": "CPU 스케줄링 알고리즘",
+        "excerpt":"CPU 스케줄링이란? 운영체제가 프로세스들에게 공정하고 합리적으로 CPU 자원을 배분하는 것 프로세스 우선순위 가장 공정한 CPU 스케줄링? 프로세스마다 우선순위가 다르다. (빨리 처리해야하는 프로세스와 늦게 처리해도 되는 프로세스) 입출력 집중 프로세스 (입출력 작업이 많은 프로세스) : 우선순위 높음 CPU 집중 프로세스 (CPU 작업이 많은 프로세스) : 우선순위 낮음 입출력 집중 프로세스는 어차피...","categories": ["OperatingSystem"],
+        "tags": ["OperatingSystem","HonGong"],
+        "url": "/operatingsystem/CPUSchedulingAlgorithm/",
+        "teaser": null
+      },{
+        "title": "프로세스 개요",
+        "excerpt":"프로세스란? 실행되기 전 데이터 덩어리 -&gt; 프로그램 실행되어서 메모리에 적재된 것 -&gt; 프로세스 포그라운드 프로세스 사용자가 볼 수 있는 공간에서 실행되는 프로세스 백그라운드 프로세스 사용자의 간섭 없이 보이지 않는 뒷편에서 실행 중인 프로세스 (서비스 / 데몬) 프로세스 제어 블록 프로세스는 CPU가 필요하고, CPU 자원은 한정되어 있다. 프로세스는 한정된 시간 만큼만...","categories": ["OperatingSystem"],
+        "tags": ["OperatingSystem","HonGong"],
+        "url": "/operatingsystem/Process/",
+        "teaser": null
+      },{
+        "title": "프로세스 상태와 계층 구조",
+        "excerpt":"프로세스란? 실행되기 전 데이터 덩어리 -&gt; 프로그램 실행되어서 메모리에 적재된 것 -&gt; 프로세스 포그라운드 프로세스 사용자가 볼 수 있는 공간에서 실행되는 프로세스 백그라운드 프로세스 사용자의 간섭 없이 보이지 않는 뒷편에서 실행 중인 프로세스 (서비스 / 데몬) 프로세스 제어 블록 프로세스는 CPU가 필요하고, CPU 자원은 한정되어 있다. 프로세스는 한정된 시간 만큼만...","categories": ["OperatingSystem"],
+        "tags": ["OperatingSystem"],
+        "url": "/operatingsystem/ProcessStateAndHirerachy/",
+        "teaser": null
+      },{
+        "title": "프로세스 상태와 계층 구조",
+        "excerpt":"프로세스란? 실행되기 전 데이터 덩어리 -&gt; 프로그램 실행되어서 메모리에 적재된 것 -&gt; 프로세스 포그라운드 프로세스 사용자가 볼 수 있는 공간에서 실행되는 프로세스 백그라운드 프로세스 사용자의 간섭 없이 보이지 않는 뒷편에서 실행 중인 프로세스 (서비스 / 데몬) 프로세스 제어 블록 프로세스는 CPU가 필요하고, CPU 자원은 한정되어 있다. 프로세스는 한정된 시간 만큼만...","categories": ["OperatingSystem"],
+        "tags": ["OperatingSystem"],
+        "url": "/operatingsystem/Thread/",
+        "teaser": null
       }]
