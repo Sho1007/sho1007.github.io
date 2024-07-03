@@ -878,7 +878,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/operatingsystem/Thread/" rel="permalink">프로세스 상태와 계층 구조
+        <a href="/operatingsystem/Thread/" rel="permalink">스레드
 </a>
       
     </h2>
@@ -903,16 +903,18 @@
       <span class="page__meta-readtime">
         <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          less than 1 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">프로세스란?
-실행되기 전 데이터 덩어리 -&gt; 프로그램 
-실행되어서 메모리에 적재된 것 -&gt; 프로세스
+    <p class="archive__item-excerpt" itemprop="description">스레드란?
+
+  프로세스를 구성하는 실행 흐름의 단위
+  하나의 프로세스는 하나 이상의 스레드를 가질 수 있다.
+
 </p>
   </article>
 </div>
@@ -952,17 +954,24 @@
       <span class="page__meta-readtime">
         <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          1 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">프로세스란?
-실행되기 전 데이터 덩어리 -&gt; 프로그램 
-실행되어서 메모리에 적재된 것 -&gt; 프로세스
-</p>
+    <p class="archive__item-excerpt" itemprop="description">프로세스 상태
+PCB에 기록되는 프로세스의 상태
+생성 상태
+
+  이제 막 메모리에 적재되어 PBC를 할당 받은 상태
+  준비가 완료되었다면 준비 상태로
+    준비 상태
+  
+  당장이라도 CPU를 할당 받아 실행할 수 있지만,
+  자신의 차례가 아니므로 기다리는 상태
+  자신의 ...</p>
   </article>
 </div>
 
@@ -1050,16 +1059,19 @@
       <span class="page__meta-readtime">
         <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">CPU 스케줄링이란?
-운영체제가 프로세스들에게 공정하고 합리적으로 CPU 자원을 배분하는 것
-</p>
+    <p class="archive__item-excerpt" itemprop="description">선입 선처리 스케줄링
+FCFS(First Come First Served) 스케줄링
+
+  단순히 준비 큐에 삽입된 순서대로 처리하는 비선점 스케줄링
+  먼저 CPU를 요청한 프로세스부터 CPU 할당
+  단점 : 프로세스들이 기다리는 시간이 매우 길어질 수 있다는 부작용 (=호위 효...</p>
   </article>
 </div>
 

@@ -1068,7 +1068,7 @@ var store = [{
         "teaser": null
       },{
         "title": "CPU 스케줄링 알고리즘",
-        "excerpt":"CPU 스케줄링이란? 운영체제가 프로세스들에게 공정하고 합리적으로 CPU 자원을 배분하는 것 프로세스 우선순위 가장 공정한 CPU 스케줄링? 프로세스마다 우선순위가 다르다. (빨리 처리해야하는 프로세스와 늦게 처리해도 되는 프로세스) 입출력 집중 프로세스 (입출력 작업이 많은 프로세스) : 우선순위 높음 CPU 집중 프로세스 (CPU 작업이 많은 프로세스) : 우선순위 낮음 입출력 집중 프로세스는 어차피...","categories": ["OperatingSystem"],
+        "excerpt":"선입 선처리 스케줄링 FCFS(First Come First Served) 스케줄링 단순히 준비 큐에 삽입된 순서대로 처리하는 비선점 스케줄링 먼저 CPU를 요청한 프로세스부터 CPU 할당 단점 : 프로세스들이 기다리는 시간이 매우 길어질 수 있다는 부작용 (=호위 효과) 최단 작업 우선 스케줄링 SJF(Shortes Job First) 스케줄링 호위 효과를 방지하려면? CPU 사용이 긴 프로세스를 나중에...","categories": ["OperatingSystem"],
         "tags": ["OperatingSystem","HonGong"],
         "url": "/operatingsystem/CPUSchedulingAlgorithm/",
         "teaser": null
@@ -1080,14 +1080,14 @@ var store = [{
         "teaser": null
       },{
         "title": "프로세스 상태와 계층 구조",
-        "excerpt":"프로세스란? 실행되기 전 데이터 덩어리 -&gt; 프로그램 실행되어서 메모리에 적재된 것 -&gt; 프로세스 포그라운드 프로세스 사용자가 볼 수 있는 공간에서 실행되는 프로세스 백그라운드 프로세스 사용자의 간섭 없이 보이지 않는 뒷편에서 실행 중인 프로세스 (서비스 / 데몬) 프로세스 제어 블록 프로세스는 CPU가 필요하고, CPU 자원은 한정되어 있다. 프로세스는 한정된 시간 만큼만...","categories": ["OperatingSystem"],
-        "tags": ["OperatingSystem"],
+        "excerpt":"프로세스 상태 PCB에 기록되는 프로세스의 상태 생성 상태 이제 막 메모리에 적재되어 PBC를 할당 받은 상태 준비가 완료되었다면 준비 상태로 준비 상태 당장이라도 CPU를 할당 받아 실행할 수 있지만, 자신의 차례가 아니므로 기다리는 상태 자신의 차례가 되면, 실행 상태로 (디스패치) 실행 상태 CPU를 할당 받아 실행 중인 상태 할당된 시간을...","categories": ["OperatingSystem"],
+        "tags": ["OperatingSystem","HonGong"],
         "url": "/operatingsystem/ProcessStateAndHirerachy/",
         "teaser": null
       },{
-        "title": "프로세스 상태와 계층 구조",
-        "excerpt":"프로세스란? 실행되기 전 데이터 덩어리 -&gt; 프로그램 실행되어서 메모리에 적재된 것 -&gt; 프로세스 포그라운드 프로세스 사용자가 볼 수 있는 공간에서 실행되는 프로세스 백그라운드 프로세스 사용자의 간섭 없이 보이지 않는 뒷편에서 실행 중인 프로세스 (서비스 / 데몬) 프로세스 제어 블록 프로세스는 CPU가 필요하고, CPU 자원은 한정되어 있다. 프로세스는 한정된 시간 만큼만...","categories": ["OperatingSystem"],
-        "tags": ["OperatingSystem"],
+        "title": "스레드",
+        "excerpt":"스레드란? 프로세스를 구성하는 실행 흐름의 단위 하나의 프로세스는 하나 이상의 스레드를 가질 수 있다. 프로세스와 스레드 단일 스레드 프로세스 (실행 흐름이 하나인 프로세스) 멀티 스레드 프로세스 (실행 흐름이 여러 개인 프로세스) 스레드의 구성 요소 스레드 ID 프로그램 카운터를 비롯한 레지스터 값, 스택 등 실행에 필요한 최소한의 정보 값 프로세스의 자원을...","categories": ["OperatingSystem"],
+        "tags": ["OperatingSystem","HonGong"],
         "url": "/operatingsystem/Thread/",
         "teaser": null
       }]
