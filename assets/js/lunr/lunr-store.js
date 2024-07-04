@@ -1090,4 +1090,34 @@ var store = [{
         "tags": ["OperatingSystem","HonGong"],
         "url": "/operatingsystem/Thread/",
         "teaser": null
+      },{
+        "title": "교착 상태란?",
+        "excerpt":"교착 상태란? 일어나지 않을 (점유된 자원을 점유하는) 사건 을 기다리면서 진행이 멈추어 버림 식사하는 철학자 (Dining Philosopher) 문제 계속 생각하다 왼쪽 포크가 사용 가능하면 집어든다. 계속 생각하다 오른쪽 포크가 사용 가능하면 집어든다. 양쪽 포크를 모드 집어들면 정해진 시간동안 식사를 한다. 식사 시간이 끝나면 오른쪽 포크를 내려놓는다. 오른쪽 포크를 내려놓은 뒤...","categories": ["OperatingSystem"],
+        "tags": ["OperatingSystem","HonGong"],
+        "url": "/operatingsystem/DeadLock/",
+        "teaser": null
+      },{
+        "title": "교착 상태 해결 방법",
+        "excerpt":"교착 상태 해결 방법 예방 회피 검출 후 회복 무시 (가끔) 교착 상태 예방 애초에 교착 상태가 발생하지 않도록 교착 상태 발생 조건 (상호 배제, 점유와 대기, 비선점, 원형 대기) 중 하나를 없애버리기 상호 배제를 없애면? 모든 자원을 공유 가능하게 만든다? 현실적으로 불가능 점유와 대기를 없애면? 특정 프로세스에게 자원을 모두...","categories": ["OperatingSystem"],
+        "tags": ["OperatingSystem","HonGong"],
+        "url": "/operatingsystem/DeadLockSolution/",
+        "teaser": null
+      },{
+        "title": "프로세스 동기화",
+        "excerpt":"동시다발적으로 실행되는 프로세스 (스레드) 는 자원의 일관성을 보장해야 한다. -&gt; 동기화를 고려해야 한다. 동기화의 의미 프로세스의 수행 시기를 맞추는 것 실행 순서 제어 : 프로세스를 올바른 순서대로 실행하기 상호 배제 : 동시에 접근해서는 안되는 자원에 하나의 프로세스만 접근하기 Reader-Writer Problem Writer : Book.txt 파일에 값을 저장하는 프로세스 Reader : Book.txt...","categories": ["OperatingSystem"],
+        "tags": ["OperatingSystem","HonGong"],
+        "url": "/operatingsystem/ProcessSynchronization/",
+        "teaser": null
+      },{
+        "title": "동기화 기법",
+        "excerpt":"뮤텍스 락 상호 배제를 위한 동기화 도구 (자물쇠 역할) 전역 변수 하나, 함수 두개 lock : 자물쇠 역할의 전역 변수 acquire : 임계 구역을 잠그는 함수 release : 임계 구역의 잠금을 해제하는 함수 void acquire() { while (lock == true) ; /* 임계 구역이 잠겨 있는지를 잠겨 있지 않을 때까지,...","categories": ["OperatingSystem"],
+        "tags": ["OperatingSystem","HonGong"],
+        "url": "/operatingsystem/SynchronizationTechnique/",
+        "teaser": null
+      },{
+        "title": "2181. Merge Nodes in Between Zeros",
+        "excerpt":"2181. Merge Nodes in Between Zeros / c++ / Medium / 13분 문제 및 코드 문제 링크 class Solution { public: ListNode* mergeNodes(ListNode* head) { ListNode* current = head-&gt;next; delete head; head = current; while (current != nullptr) { ListNode* next = current-&gt;next; while (next-&gt;val != 0) { current-&gt;val +=...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","LinkedList"],
+        "url": "/leetcode/2181/",
+        "teaser": null
       }]
