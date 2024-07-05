@@ -1115,13 +1115,13 @@ var store = [{
         "url": "/operatingsystem/SynchronizationTechnique/",
         "teaser": null
       },{
-        "title": "2181. Merge Nodes in Between Zeros",
+        "title": "2181 Merge Nodes in Between Zeros",
         "excerpt":"2181. Merge Nodes in Between Zeros / c++ / Medium / 13분 문제 및 코드 문제 링크 class Solution { public: ListNode* mergeNodes(ListNode* head) { ListNode* current = head-&gt;next; delete head; head = current; while (current != nullptr) { ListNode* next = current-&gt;next; while (next-&gt;val != 0) { current-&gt;val +=...","categories": ["LeetCode"],
         "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","LinkedList"],
         "url": "/leetcode/2181/",
         "teaser": null
       },{
-        "title": "2058. Find the Minimum and Maximum Number of Nodes Between Critical Points",
+        "title": "2058 Find the Minimum and Maximum Number of Nodes Between Critical Points",
         "excerpt":"2058. Find the Minimum and Maximum Number of Nodes Between Critical Points / c++ / Medium / 30분 문제 및 코드 문제 링크 class Solution { public: vector&lt;int&gt; nodesBetweenCriticalPoints(ListNode* head) { vector&lt;int&gt; result; int pos = 1; int minDistance = 100'001; ListNode* prev = nullptr; ListNode* current = head; while...","categories": ["LeetCode"],
         "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","LinkedList"],
         "url": "/leetcode/2058/",
