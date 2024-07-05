@@ -1120,4 +1120,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","LinkedList"],
         "url": "/leetcode/2181/",
         "teaser": null
+      },{
+        "title": "2058. Find the Minimum and Maximum Number of Nodes Between Critical Points",
+        "excerpt":"2058. Find the Minimum and Maximum Number of Nodes Between Critical Points / c++ / Medium / 30분 문제 및 코드 문제 링크 class Solution { public: vector&lt;int&gt; nodesBetweenCriticalPoints(ListNode* head) { vector&lt;int&gt; result; int pos = 1; int minDistance = 100'001; ListNode* prev = nullptr; ListNode* current = head; while...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","LinkedList"],
+        "url": "/leetcode/2058/",
+        "teaser": null
       }]
