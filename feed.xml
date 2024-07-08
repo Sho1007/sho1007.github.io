@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-07-08T08:17:48+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">1823 Find the Winner of the Circular Game</title><link href="https://sho1007.github.io/leetcode/1823/" rel="alternate" type="text/html" title="1823 Find the Winner of the Circular Game" /><published>2024-07-08T00:00:00+00:00</published><updated>2024-07-08T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/1823</id><content type="html" xml:base="https://sho1007.github.io/leetcode/1823/"><![CDATA[<h1 id="1823-find-the-winner-of-the-circular-game--c--medium--5분">1823. Find the Winner of the Circular Game / c++ / Medium / 5분</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://sho1007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sho1007.github.io/" rel="alternate" type="text/html" /><updated>2024-07-08T08:19:54+00:00</updated><id>https://sho1007.github.io/feed.xml</id><title type="html">Today I Learned</title><subtitle>내가 공부한 것들을 기록하는 공간</subtitle><author><name>Sho1007</name></author><entry><title type="html">1823 Find the Winner of the Circular Game</title><link href="https://sho1007.github.io/leetcode/1823/" rel="alternate" type="text/html" title="1823 Find the Winner of the Circular Game" /><published>2024-07-08T00:00:00+00:00</published><updated>2024-07-08T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/1823</id><content type="html" xml:base="https://sho1007.github.io/leetcode/1823/"><![CDATA[<h1 id="1823-find-the-winner-of-the-circular-game--c--medium--5분">1823. Find the Winner of the Circular Game / c++ / Medium / 5분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 <h3 id="문제-링크"><a href="https://leetcode.com/problems/find-the-winner-of-the-circular-game/description/?envType=daily-question&amp;envId=2024-07-08">문제 링크</a></h3>
@@ -75,16 +75,22 @@
 <h3 id="스택">스택</h3>
 <blockquote>
   <p>한쪽 끝이 막혀 있는 통과 같은 저장 공간. 데이터를 빼낼 때는 <strong>저장한 반대 순서대로</strong> 빼낸다. 나중에 저장한 데이터를 가장 먼저 빼내는 후입선출이라는 점에서 LIFO (Last In First Out) 자료구조라고도 불린다.</p>
-  <ul>
-    <li>PUSH : 스택의 가장 위에 원소를 추가하는 연산</li>
-    <li>POP : 스택의 가장 위에 있는 원소를 꺼내는 연산
-      <h3 id="큐">큐</h3>
-      <p>양쪽 끝이 뚫려 있는 저장 공간. 한쪽으로 데이터를 저장하고, 다른 한쪽에서 <strong>저장한 순서대로</strong> 데이터를 빼낸다. 가장 먼저 저장된 데이터부터 빼내는 선입선출이라는 점에서 FIFO (First In First Out) 자료구조라고도 불린다.</p>
-    </li>
-    <li>PUSH : 큐의 가장 뒤에 원소를 추가하는 연산</li>
-    <li>POP : 큐의 가장 앞에 있는 원소를 꺼내는 연산</li>
-  </ul>
-</blockquote>]]></content><author><name>Sho1007</name></author><category term="[&quot;HonGong&quot;]" /><category term="Computer Structure" /><category term="Operating System" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">2058 Find the Minimum and Maximum Number of Nodes Between Critical Points</title><link href="https://sho1007.github.io/leetcode/2058/" rel="alternate" type="text/html" title="2058 Find the Minimum and Maximum Number of Nodes Between Critical Points" /><published>2024-07-05T00:00:00+00:00</published><updated>2024-07-05T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2058</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2058/"><![CDATA[<h1 id="2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points--c--medium--30분">2058. Find the Minimum and Maximum Number of Nodes Between Critical Points / c++ / Medium / 30분</h1>
+</blockquote>
+
+<ul>
+  <li>PUSH : 스택의 가장 위에 원소를 추가하는 연산</li>
+  <li>POP : 스택의 가장 위에 있는 원소를 꺼내는 연산</li>
+</ul>
+
+<h3 id="큐">큐</h3>
+<blockquote>
+  <p>양쪽 끝이 뚫려 있는 저장 공간. 한쪽으로 데이터를 저장하고, 다른 한쪽에서 <strong>저장한 순서대로</strong> 데이터를 빼낸다. 가장 먼저 저장된 데이터부터 빼내는 선입선출이라는 점에서 FIFO (First In First Out) 자료구조라고도 불린다.</p>
+</blockquote>
+
+<ul>
+  <li>PUSH : 큐의 가장 뒤에 원소를 추가하는 연산</li>
+  <li>POP : 큐의 가장 앞에 있는 원소를 꺼내는 연산</li>
+</ul>]]></content><author><name>Sho1007</name></author><category term="[&quot;HonGong&quot;]" /><category term="Computer Structure" /><category term="Operating System" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">2058 Find the Minimum and Maximum Number of Nodes Between Critical Points</title><link href="https://sho1007.github.io/leetcode/2058/" rel="alternate" type="text/html" title="2058 Find the Minimum and Maximum Number of Nodes Between Critical Points" /><published>2024-07-05T00:00:00+00:00</published><updated>2024-07-05T00:00:00+00:00</updated><id>https://sho1007.github.io/leetcode/2058</id><content type="html" xml:base="https://sho1007.github.io/leetcode/2058/"><![CDATA[<h1 id="2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points--c--medium--30분">2058. Find the Minimum and Maximum Number of Nodes Between Critical Points / c++ / Medium / 30분</h1>
 
 <h2 id="문제-및-코드">문제 및 코드</h2>
 <h3 id="문제-링크"><a href="https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/description/?envType=daily-question&amp;envId=2024-07-05">문제 링크</a></h3>
