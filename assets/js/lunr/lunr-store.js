@@ -1126,4 +1126,10 @@ var store = [{
         "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","LinkedList"],
         "url": "/leetcode/2058/",
         "teaser": null
+      },{
+        "title": "1823 Find the Winner of the Circular Game",
+        "excerpt":"1823. Find the Winner of the Circular Game / c++ / Medium / 5분 문제 및 코드 문제 링크 class Solution { public: int findTheWinner(int n, int k) { int removedCount = 0; vector&lt;int&gt; friends = vector&lt;int&gt;(n); for (int i = 0; i &lt; n; ++i) { friends[i] = i...","categories": ["LeetCode"],
+        "tags": ["Algorithm","CodingTest","Cpp","TIL","DataStructure","Array"],
+        "url": "/leetcode/1823/",
+        "teaser": null
       }]
