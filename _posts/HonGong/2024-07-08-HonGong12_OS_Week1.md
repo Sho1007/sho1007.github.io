@@ -10,7 +10,7 @@ toc_sticky: true
 date: 2024-07-08
 last-modified-at: 2024-07-08
 ---
-![image](https://github.com/Sho1007/sho1007.github.io/blob/main/assets/images/B9177037040_l.jpg?raw=true)
+![image](../../assets/images/HonGongCSOS.jpg)
 
 
 ## 진도 : Chapter 01 ~ 03
