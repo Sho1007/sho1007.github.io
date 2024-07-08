@@ -1136,6 +1136,6 @@ var store = [{
         "title": "[혼공 학습단 12기] 혼공컴운 1주차",
         "excerpt":"진도 : Chapter 01 ~ 03 기본 숙제 p. 51의 확인 문제 3번 프로그램이 실행되려면 반드시 메모리에 저장되어 있어야 합니다. p. 65의 확인 문제 3번 1101(2)의 음수를 2의 보수 표현법으로 구해 보세요. 1101 0010 (모든 0과 1 뒤집기) 0011 (1 더하기) 1101(2)을 음수로 표현한 값은 0011(2)입니다. 추가 숙제 p. 100의...","categories": ["HonGong"],
         "tags": ["Computer Structure","Operating System"],
-        "url": "/hongong/Week1/",
+        "url": "/hongong/HonGong12_OS_Week1/",
         "teaser": null
       }]
